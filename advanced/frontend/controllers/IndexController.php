@@ -16,7 +16,18 @@ use yii\filters\AccessControl;
 
 class IndexController extends Controller
 {
-    public function actionIndex(){
-       return $this->renderPartial("index");
-   }
+     //public $nav=null ;
+    
+    //首页
+     public function actionIndex(){
+        //加载布局文件
+        $this->layout='@app/views/layouts/public.php';
+          $rows = (new \yii\db\Query())
+                ->select('nav_title, nav_url')
+                ->from('wk_witkey_nav')
+                ->all();
+        //$this->nav=$rows;
+       $data['nav']=$rows;
+       return $this->render("index",$data);
+    }
 }
