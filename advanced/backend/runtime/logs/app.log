@@ -3229,3 +3229,118 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1418863742.668
     'REQUEST_TIME' => 1418863742
 ]
+2014-12-18 10:58:50 [127.0.0.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in F:\weike\advanced\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#2 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#3 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#5 {main}
+2014-12-18 10:58:50 [127.0.0.1][-][-][info][application] $_GET = [
+    'do' => 'config'
+    'view' => 'nav'
+]
+
+$_POST = [
+    'nav' => [
+        1 => [
+            'nav_title' => '首页'
+            'nav_style' => 'index'
+            'listorder' => '1'
+        ]
+        14 => [
+            'nav_title' => '任务大厅'
+            'nav_style' => 'task'
+            'listorder' => '2'
+        ]
+        5 => [
+            'nav_title' => '威客商城'
+            'nav_style' => 'shop'
+            'listorder' => '3'
+        ]
+        17 => [
+            'nav_title' => '服务商'
+            'nav_style' => 'seller_list'
+            'listorder' => '4'
+        ]
+        7 => [
+            'nav_title' => '成功案例'
+            'nav_style' => 'case'
+            'listorder' => '5'
+        ]
+        6 => [
+            'nav_title' => '资讯中心'
+            'nav_style' => 'article'
+            'listorder' => '6'
+        ]
+        26 => [
+            'nav_title' => '广场'
+            'nav_style' => 'square'
+            'listorder' => '8'
+        ]
+        27 => [
+            'nav_title' => '推广'
+            'nav_style' => 'prom'
+            'listorder' => '10'
+        ]
+    ]
+    'sbt_edit' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '62e8d7b7866da54e4124fe231668d40095d21e6785c5b02ff4e78b7cd228cb78s:32:\"pzHD_hgAlJeQPcDWVdETbNZSHKehnX7f\";'
+    'PHPSESSID' => 'mps2819b226fb938vis3pivh56'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJJC6sCoAZoAADj0zIUAAACS'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=config/nav'
+    'HTTP_COOKIE' => '_csrf=62e8d7b7866da54e4124fe231668d40095d21e6785c5b02ff4e78b7cd228cb78s%3A32%3A%22pzHD_hgAlJeQPcDWVdETbNZSHKehnX7f%22%3B; PHPSESSID=mps2819b226fb938vis3pivh56'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '949'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Program Files (x86)\\Common Files\\NetSarang;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '58029'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'do=config&view=nav'
+    'REQUEST_URI' => '/backend/web/index.php?do=config&view=nav'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1418871530.12
+    'REQUEST_TIME' => 1418871530
+]
