@@ -13,9 +13,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
-/**
- * Site controller
- */
+
 class IndexController extends Controller
 {
     public function actionIndex(){
