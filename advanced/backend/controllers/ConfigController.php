@@ -7,7 +7,7 @@ use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
 use app\models\BasicConfig;
-
+use app\models\Nav;
 
 /**
  * Site controller
@@ -30,7 +30,7 @@ class ConfigController extends Controller
 			$i=1;
 			foreach($_POST as $key=>$val)
 			{
-				$info=BasicConfig::updateAll(['v'=>$val],['k'=>$key]);
+				BasicConfig::updateAll(['v'=>$val],['k'=>$key]);
 				if($i==count($_POST))
 				{
 					echo "<script>alert('配置生效');location.href='index.php?r=config/".$_POST['submit']."'</script>";
@@ -107,27 +107,59 @@ class ConfigController extends Controller
     //模型管理(任务模型)
     public function actionModel(){
                 return $this->renderPartial('model');
-        }
+     }
      //商业模型
      public function actionModel_shop(){
          
          return $this->renderPartial("model_shop");
      }
-     
-
 
      //会员整合
-        public function actionIntegration(){
-                return $this->renderPartial('integration');
-        }
+	public function actionIntegration(){
+			return $this->renderPartial('integration');
+	}
 
-        //自定义导航
-         public function actionNav()
+	//自定义导航
+	public function actionNav()
     {
-        return $this->renderPartial('nav');
+		$res=Nav::find()->orderby('listorder')->all();
+		//echo '<pre>';print_r($data);die;
+        return $this->renderPartial('nav',['info'=>$res]);
     }
 
-        //汇率配置
+	//添加导航
+	public function actionNavinfo()
+    {
+		return $this->renderPartial('Navinfo');
+	}
+
+	//编辑导航信息
+	public function actionNavedit()
+    {
+		//echo '<pre>';print_r($_POST);die;
+		$transaction =Yii::$app->db->beginTransaction();
+		try 
+		{
+			$i=1;
+			foreach($_POST['nav'] as $key=>$val)
+			{
+				Nav::updateAll($val,['nav_id'=>$key]);
+				if($i==count($_POST['nav']))
+				{
+					echo "<script>alert('更改生效');location.href='index.php?r=config/".$_POST['submit']."'</script>";
+				}
+				$i++;
+			}
+			$transaction->commit();
+		}
+		catch(Exception $e)
+		{
+			$transaction->rollBack();
+			echo $e->getMessage();
+		}
+	}
+
+    //汇率配置
     public function actionCurrencies(){
                 return $this->renderPartial('currencies');
      }

@@ -3,8 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>keke admin</title>
-
-
 <link href="/public/tpl/css/admin_management.css" rel="stylesheet" type="text/css" />
 <link href="/public/resource/css/buttons.css" rel="stylesheet" type="text/css" />
 <link title="style1" href="/public/tpl/skin/default/style.css" rel="stylesheet" type="text/css" />
@@ -19,217 +17,77 @@
 <div class="box list">
 <div class="title"><h2>自定义导航</h2></div>
         <div class="detail">
-        	<form name="frm_config_basic" id="frm_config_basic" action="index.php?do=config&view=nav" method="post" enctype='application/x-www-form-urlencoded'>
-            <table cellspacing="0" cellpadding="0">
-            
+<form name="frm_config_basic" id="frm_config_basic" action="index.php?r=config/navedit" method="post" enctype='application/x-www-form-urlencoded'>
+<table cellspacing="0" cellpadding="0">
 <tr>
-                <th width="150">标题</th>
-                <th width="200" >链接</th>
-               <th width="12%">样式</th>
-                <th width="100">排序</th>
-                <th width="120">新窗口打开</th>
-                <th width="100">显示模式</th>
-                <th width="200">操作</th>
-            </tr>
+<th width="150">标题</th>
+<th width="200" >链接</th>
+<th width="12%">样式</th>
+<th width="100">排序</th>
+<th width="120">新窗口打开</th>
+<th width="100">显示模式</th>
+<th width="200">操作</th>
+</tr>
+<?php for($i=0;$i<count($info);$i++){?>
+	<tr id="olditem_<?php echo $info[$i]['nav_id']?>" class="item">
+		<td style='font-weight:bold'>
+		<input type="text" value="<?php echo $info[$i]['nav_title']?>" name="nav[<?php echo $info[$i]['nav_id']?>][nav_title]" class='txt' size='12'>
+		</td>
 
-                        <tr id="olditem_1" class="item">
-            	               	 	<td style='font-weight:bold'>
-              			<input type="text" value="首页" name="nav[1][nav_title]" class='txt' size='12'>
-(默认首页)
- 	</td>
-                                <td>                	index.php?do=index</td>
-                <td style="width:80px;">
-<input type="text" value="index" name="nav[1][nav_style]" class='txt' size='10'>
-</td>
-               	<td style="width:30px;">
-<input type="text" value="1" name="nav[1][listorder]" class='txt' size='3'>
-</td>
-                <td class="wraphide">
-                	<label>否</label>
-</td>
-                <td class="wraphide">
-                	<label>显示</label>
-                </td>
-                <td>
-                <a href="index.php?do=config&view=nav&nav_id=1&ac=edit" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                <a href="index.php?do=config&view=nav&nav_id=1&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-            	<a href="index.php?do=config&view=nav&nav_style=index&ac=set_index" class="button"><span class="check icon"></span>设为首页</a>
-            </td>
-            </tr>
-            <tr id="olditem_14" class="item">
-            	                	<td>
-              			<input type="text" value="任务大厅" name="nav[14][nav_title]" class='txt' size='12'>
-</td>
-                                <td>                	index.php?do=task_list</td>
-                <td style="width:80px;">
-<input type="text" value="task" name="nav[14][nav_style]" class='txt' size='10'>
-</td>
-               	<td style="width:30px;">
-<input type="text" value="2" name="nav[14][listorder]" class='txt' size='3'>
-</td>
-                <td class="wraphide">
-                	<label>否</label>
-</td>
-                <td class="wraphide">
-                	<label>显示</label>
-                </td>
-                <td>
-                <a href="index.php?do=config&view=nav&nav_id=14&ac=edit" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                <a href="index.php?do=config&view=nav&nav_id=14&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-            	<a href="index.php?do=config&view=nav&nav_style=task&ac=set_index" class="button"><span class="check icon"></span>设为首页</a>
-            </td>
-            </tr>
-            <tr id="olditem_5" class="item">
-            	                	<td>
-              			<input type="text" value="威客商城" name="nav[5][nav_title]" class='txt' size='12'>
-</td>
-                                <td>                	index.php?do=shop_list</td>
-                <td style="width:80px;">
-<input type="text" value="shop" name="nav[5][nav_style]" class='txt' size='10'>
-</td>
-               	<td style="width:30px;">
-<input type="text" value="3" name="nav[5][listorder]" class='txt' size='3'>
-</td>
-                <td class="wraphide">
-                	<label>否</label>
-</td>
-                <td class="wraphide">
-                	<label>显示</label>
-                </td>
-                <td>
-                <a href="index.php?do=config&view=nav&nav_id=5&ac=edit" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                <a href="index.php?do=config&view=nav&nav_id=5&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-            	<a href="index.php?do=config&view=nav&nav_style=shop&ac=set_index" class="button"><span class="check icon"></span>设为首页</a>
-            </td>
-            </tr>
-            <tr id="olditem_17" class="item">
-            	                	<td>
-              			<input type="text" value="服务商" name="nav[17][nav_title]" class='txt' size='12'>
-</td>
-                                <td>                	index.php?do=seller_list</td>
-                <td style="width:80px;">
-<input type="text" value="seller_list" name="nav[17][nav_style]" class='txt' size='10'>
-</td>
-               	<td style="width:30px;">
-<input type="text" value="4" name="nav[17][listorder]" class='txt' size='3'>
-</td>
-                <td class="wraphide">
-                	<label>否</label>
-</td>
-                <td class="wraphide">
-                	<label>显示</label>
-                </td>
-                <td>
-                <a href="index.php?do=config&view=nav&nav_id=17&ac=edit" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                <a href="index.php?do=config&view=nav&nav_id=17&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-            	<a href="index.php?do=config&view=nav&nav_style=seller_list&ac=set_index" class="button"><span class="check icon"></span>设为首页</a>
-            </td>
-            </tr>
-            <tr id="olditem_7" class="item">
-            	                	<td>
-              			<input type="text" value="成功案例" name="nav[7][nav_title]" class='txt' size='12'>
-</td>
-                                <td>                	index.php?do=case</td>
-                <td style="width:80px;">
-<input type="text" value="case" name="nav[7][nav_style]" class='txt' size='10'>
-</td>
-               	<td style="width:30px;">
-<input type="text" value="5" name="nav[7][listorder]" class='txt' size='3'>
-</td>
-                <td class="wraphide">
-                	<label>否</label>
-</td>
-                <td class="wraphide">
-                	<label>显示</label>
-                </td>
-                <td>
-                <a href="index.php?do=config&view=nav&nav_id=7&ac=edit" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                <a href="index.php?do=config&view=nav&nav_id=7&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-            	<a href="index.php?do=config&view=nav&nav_style=case&ac=set_index" class="button"><span class="check icon"></span>设为首页</a>
-            </td>
-            </tr>
-            <tr id="olditem_6" class="item">
-            	                	<td>
-              			<input type="text" value="资讯中心" name="nav[6][nav_title]" class='txt' size='12'>
-</td>
-                                <td>                	index.php?do=article</td>
-                <td style="width:80px;">
-<input type="text" value="article" name="nav[6][nav_style]" class='txt' size='10'>
-</td>
-               	<td style="width:30px;">
-<input type="text" value="6" name="nav[6][listorder]" class='txt' size='3'>
-</td>
-                <td class="wraphide">
-                	<label>否</label>
-</td>
-                <td class="wraphide">
-                	<label>显示</label>
-                </td>
-                <td>
-                <a href="index.php?do=config&view=nav&nav_id=6&ac=edit" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                <a href="index.php?do=config&view=nav&nav_id=6&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-            	<a href="index.php?do=config&view=nav&nav_style=article&ac=set_index" class="button"><span class="check icon"></span>设为首页</a>
-            </td>
-            </tr>
-            <tr id="olditem_26" class="item">
-            	                	<td>
-              			<input type="text" value="广场" name="nav[26][nav_title]" class='txt' size='12'>
-</td>
-                                <td>                	index.php?do=square</td>
-                <td style="width:80px;">
-<input type="text" value="square" name="nav[26][nav_style]" class='txt' size='10'>
-</td>
-               	<td style="width:30px;">
-<input type="text" value="8" name="nav[26][listorder]" class='txt' size='3'>
-</td>
-                <td class="wraphide">
-                	<label>否</label>
-</td>
-                <td class="wraphide">
-                	<label>显示</label>
-                </td>
-                <td>
-                <a href="index.php?do=config&view=nav&nav_id=26&ac=edit" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                <a href="index.php?do=config&view=nav&nav_id=26&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-            	<a href="index.php?do=config&view=nav&nav_style=square&ac=set_index" class="button"><span class="check icon"></span>设为首页</a>
-            </td>
-            </tr>
-            <tr id="olditem_27" class="item">
-            	                	<td>
-              			<input type="text" value="推广" name="nav[27][nav_title]" class='txt' size='12'>
-</td>
-                                <td>                	index.php?do=prom</td>
-                <td style="width:80px;">
-<input type="text" value="prom" name="nav[27][nav_style]" class='txt' size='10'>
-</td>
-               	<td style="width:30px;">
-<input type="text" value="10" name="nav[27][listorder]" class='txt' size='3'>
-</td>
-                <td class="wraphide">
-                	<label>否</label>
-</td>
-                <td class="wraphide">
-                	<label>显示</label>
-                </td>
-                <td>
-                <a href="index.php?do=config&view=nav&nav_id=27&ac=edit" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                <a href="index.php?do=config&view=nav&nav_id=27&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-            	<a href="index.php?do=config&view=nav&nav_style=prom&ac=set_index" class="button"><span class="check icon"></span>设为首页</a>
-            </td>
-            </tr>
-            <tbody id='newitemlist'></tbody>
+		<td><?php echo $info[$i]['nav_url']?></td>
 
-            <tr>
-            	<td colspan="6">
-<div class="clearfix">
-                  <button onclick="location.href='index.php?do=config&view=nav&ac=edit'" class="positive pill negative" type="button"><span class="plus icon"></span>添加</button>
-           		  <input type="hidden" name="sbt_edit" value="1">
-  <button onclick="modify();" class="positive pill negative" type="button"><span class="check icon"></span>提交更改</button>
-           		</div>
-</td>
-   </tr>
-           </table>
-   </form>
+		<td style="width:80px;">
+		<input type="text" value="<?php echo $info[$i]['nav_style']?>" name="nav[<?php echo $info[$i]['nav_id']?>][nav_style]" class='txt' size='10'>
+		</td>
+
+		<td style="width:30px;">
+		<input type="text" value="<?php echo $info[$i]['listorder']?>" name="nav[<?php echo $info[$i]['nav_id']?>][listorder]" class='txt' size='3'>
+		</td>
+
+		<td class="wraphide">
+		<label><?php if($info[$i]['newwindow']==0){echo '否';}else{echo '是';}?></label>
+		</td>
+
+		<td class="wraphide">
+		<label>
+		<?php 
+			switch($info[$i]['ishide'])
+			{
+				case 0:echo '全部显示';break;
+				case 1:echo '全部隐藏';break;
+				case 2:echo '首页隐藏';break;
+				case 3:echo '商城隐藏';break;
+			}
+		?>
+		</label>
+		</td>
+
+		<td>
+		<a href="index.php?r=config/navinfo" class="button dbl_target">
+		<span class="pen icon"></span>编辑</a>
+		<a href=""  onclick="return cdel(this);" class="button">
+		<span class="trash icon"></span>删除</a>
+		<a href="" class="button">
+		<span class="check icon"></span>设为首页</a>
+		</td>
+	</tr>
+<?php }?>
+<tbody id='newitemlist'></tbody>
+	<tr>
+		<td colspan="6">
+		<div class="clearfix">
+	   <button onclick="location.href='index.php?r=config/navinfo'" class="positive pill negative" type="button">
+			<span class="plus icon"></span>添加</button>
+<!--
+			<input type="hidden" name="sbt_edit" value="1">
+-->
+			<button class="positive pill negative" type="submit" name='submit' value='nav'>
+			<span class="check icon"></span>提交更改</button>
+		</div>
+		</td>
+	</tr>
+</table>
+</form>
       </div>
 </div>
 <!--主体结束-->
