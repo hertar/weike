@@ -46,6 +46,17 @@ public function actionBullentin_edit(){
   public function actionArt_edit(){
       return $this->renderPartial("art_edit");
   }
+
+  //分类管理
+  public function actionCat_list(){
+      return $this->renderPartial("cat_list");
+  }
+
+   //分类添加
+  public function actionCat_add(){
+      return $this->renderPartial("cat_add");
+  }
+  
 //帮助管理
   //帮助分类了列表
   public function actionCat_help(){

@@ -2897,3 +2897,335 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1418816408.653
     'REQUEST_TIME' => 1418816408
 ]
+2014-12-18 08:22:22 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in F:\weike\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 F:\weike\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 F:\weike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 F:\weike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 F:\weike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#5 F:\weike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#6 F:\weike\advanced\vendor\yiisoft\yii2\db\Command.php(393): yii\db\Command->queryInternal('fetchAll', 7)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(305): yii\db\Command->queryColumn()
+#8 F:\weike\advanced\vendor\yiisoft\yii2\db\Schema.php(205): yii\db\mysql\Schema->findTableNames('')
+#9 F:\weike\advanced\vendor\yiisoft\yii2-gii\generators\model\Generator.php(133): yii\db\Schema->getTableNames()
+#10 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#11 F:\weike\advanced\vendor\yiisoft\yii2-gii\components\ActiveField.php(41): call_user_func(Object(Closure))
+#12 F:\weike\advanced\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#13 [internal function]: yii\base\Object->__construct(Array)
+#14 F:\weike\advanced\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#15 F:\weike\advanced\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\\gii\\compone...', Array, Array)
+#16 F:\weike\advanced\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\gii\\compone...', Array, Array)
+#17 F:\weike\advanced\vendor\yiisoft\yii2\widgets\ActiveForm.php(280): yii\BaseYii::createObject(Array)
+#18 F:\weike\advanced\vendor\yiisoft\yii2-gii\generators\model\form.php(6): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#19 F:\weike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('F:\\weike\\advanc...')
+#20 F:\weike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\\weike\\advanc...', Array)
+#21 F:\weike\advanced\vendor\yiisoft\yii2-gii\views\default\view.php(38): yii\base\View->renderFile('F:\\weike\\advanc...', Array)
+#22 F:\weike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('F:\\weike\\advanc...')
+#23 F:\weike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\\weike\\advanc...', Array)
+#24 F:\weike\advanced\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\\weike\\advanc...', Array, Object(yii\gii\controllers\DefaultController))
+#25 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#26 F:\weike\advanced\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(56): yii\base\Controller->render('view', Array)
+#27 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#28 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#31 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('gii/default/vie...', Array)
+#32 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#34 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in F:\weike\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 F:\weike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 F:\weike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#3 F:\weike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#4 F:\weike\advanced\vendor\yiisoft\yii2\db\Command.php(393): yii\db\Command->queryInternal('fetchAll', 7)
+#5 F:\weike\advanced\vendor\yiisoft\yii2\db\mysql\Schema.php(305): yii\db\Command->queryColumn()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\db\Schema.php(205): yii\db\mysql\Schema->findTableNames('')
+#7 F:\weike\advanced\vendor\yiisoft\yii2-gii\generators\model\Generator.php(133): yii\db\Schema->getTableNames()
+#8 [internal function]: yii\gii\generators\model\Generator->yii\gii\generators\model\{closure}()
+#9 F:\weike\advanced\vendor\yiisoft\yii2-gii\components\ActiveField.php(41): call_user_func(Object(Closure))
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Object.php(107): yii\gii\components\ActiveField->init()
+#11 [internal function]: yii\base\Object->__construct(Array)
+#12 F:\weike\advanced\vendor\yiisoft\yii2\di\Container.php(364): ReflectionClass->newInstanceArgs(Array)
+#13 F:\weike\advanced\vendor\yiisoft\yii2\di\Container.php(147): yii\di\Container->build('yii\\gii\\compone...', Array, Array)
+#14 F:\weike\advanced\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\gii\\compone...', Array, Array)
+#15 F:\weike\advanced\vendor\yiisoft\yii2\widgets\ActiveForm.php(280): yii\BaseYii::createObject(Array)
+#16 F:\weike\advanced\vendor\yiisoft\yii2-gii\generators\model\form.php(6): yii\widgets\ActiveForm->field(Object(yii\gii\generators\model\Generator), 'tableName')
+#17 F:\weike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('F:\\weike\\advanc...')
+#18 F:\weike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\\weike\\advanc...', Array)
+#19 F:\weike\advanced\vendor\yiisoft\yii2-gii\views\default\view.php(38): yii\base\View->renderFile('F:\\weike\\advanc...', Array)
+#20 F:\weike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('F:\\weike\\advanc...')
+#21 F:\weike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('F:\\weike\\advanc...', Array)
+#22 F:\weike\advanced\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('F:\\weike\\advanc...', Array, Object(yii\gii\controllers\DefaultController))
+#23 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('view', Array, Object(yii\gii\controllers\DefaultController))
+#24 F:\weike\advanced\vendor\yiisoft\yii2-gii\controllers\DefaultController.php(56): yii\base\Controller->render('view', Array)
+#25 [internal function]: yii\gii\controllers\DefaultController->actionView('model')
+#26 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#27 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#28 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#29 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('gii/default/vie...', Array)
+#30 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#31 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#32 {main}
+Additional Information:
+
+2014-12-18 08:22:21 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'model'
+]
+
+$_COOKIE = [
+    '_csrf' => 'e0ac40c94be4fd7ba44567078aeca9c59622848f9d7715e5c4453f956329c69bs:32:\"SYUHVwF9kEmN9KPSwvIbgHSaUhxUIEBH\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJIePcCoAZoAADj0yd8AAACa'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=gii'
+    'HTTP_COOKIE' => '_csrf=e0ac40c94be4fd7ba44567078aeca9c59622848f9d7715e5c4453f956329c69bs%3A32%3A%22SYUHVwF9kEmN9KPSwvIbgHSaUhxUIEBH%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Program Files (x86)\\Common Files\\NetSarang;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52440'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=model'
+    'REQUEST_URI' => '/backend/web/index.php?r=gii%2Fdefault%2Fview&id=model'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1418862141.747
+    'REQUEST_TIME' => 1418862141
+]
+2014-12-18 08:44:23 [127.0.0.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in F:\weike\advanced\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#2 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#3 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#5 {main}
+2014-12-18 08:44:23 [127.0.0.1][-][-][info][application] $_GET = [
+    'do' => 'index'
+]
+
+$_POST = [
+    'ac' => 'add_shortcuts'
+    'r_id' => '34'
+]
+
+$_COOKIE = [
+    '_csrf' => 'e0ac40c94be4fd7ba44567078aeca9c59622848f9d7715e5c4453f956329c69bs:32:\"SYUHVwF9kEmN9KPSwvIbgHSaUhxUIEBH\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJIjZ8CoAZoAADj0ygcAAACT'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index'
+    'CONTENT_LENGTH' => '24'
+    'HTTP_COOKIE' => '_csrf=e0ac40c94be4fd7ba44567078aeca9c59622848f9d7715e5c4453f956329c69bs%3A32%3A%22SYUHVwF9kEmN9KPSwvIbgHSaUhxUIEBH%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Program Files (x86)\\Common Files\\NetSarang;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55406'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'do=index'
+    'REQUEST_URI' => '/backend/web/index.php?do=index'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1418863463.46
+    'REQUEST_TIME' => 1418863463
+]
+2014-12-18 08:49:01 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: article/cat_list' in F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('cat_list', Array)
+#1 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/cat_lis...', Array)
+#2 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request: article/cat_list' in F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2014-12-18 08:49:00 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/cat_list'
+]
+
+$_COOKIE = [
+    '_csrf' => 'e0ac40c94be4fd7ba44567078aeca9c59622848f9d7715e5c4453f956329c69bs:32:\"SYUHVwF9kEmN9KPSwvIbgHSaUhxUIEBH\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJIkfMCoAZoAADj0yhwAAACT'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index'
+    'HTTP_COOKIE' => '_csrf=e0ac40c94be4fd7ba44567078aeca9c59622848f9d7715e5c4453f956329c69bs%3A32%3A%22SYUHVwF9kEmN9KPSwvIbgHSaUhxUIEBH%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Program Files (x86)\\Common Files\\NetSarang;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56050'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/cat_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/cat_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1418863740.986
+    'REQUEST_TIME' => 1418863740
+]
+2014-12-18 08:49:02 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: article/cat_list' in F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('cat_list', Array)
+#1 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/cat_lis...', Array)
+#2 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request: article/cat_list' in F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2014-12-18 08:49:02 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/cat_list'
+]
+
+$_COOKIE = [
+    '_csrf' => 'e0ac40c94be4fd7ba44567078aeca9c59622848f9d7715e5c4453f956329c69bs:32:\"SYUHVwF9kEmN9KPSwvIbgHSaUhxUIEBH\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJIkfsCoAZoAADj0yiAAAACT'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index'
+    'HTTP_COOKIE' => '_csrf=e0ac40c94be4fd7ba44567078aeca9c59622848f9d7715e5c4453f956329c69bs%3A32%3A%22SYUHVwF9kEmN9KPSwvIbgHSaUhxUIEBH%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;C:\\Program Files (x86)\\Common Files\\NetSarang;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56050'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/cat_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/cat_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1418863742.668
+    'REQUEST_TIME' => 1418863742
+]
