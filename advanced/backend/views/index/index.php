@@ -601,7 +601,7 @@ $('.menu_bar dl dt').click(function(){
 
 $(this).parent().siblings().find('a').removeClass().children('.arrow_l').remove();
 $(this).parent().find('a').removeClass().children('.arrow_l').remove();
-//	$(this).siblings().find("a:first").addClass('select').prepend("<span class='arrow_l'><\/span>").end().slideDown();
+//$(this).siblings().find("a:first").addClass('select').prepend("<span class='arrow_l'><\/span>").end().slideDown();
 
 reset_shortcuts($(this).siblings().find('a:eq(0)'));
 })

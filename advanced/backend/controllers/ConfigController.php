@@ -6,35 +6,102 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
+use app\models\BasicConfig;
+
 
 /**
  * Site controller
  */
 class ConfigController extends Controller
 {
+	public $enableCsrfValidation=false;
     /**
      * @inheritdoc
      */
 
-        //全局变量
+	 //修改配置
+	public function actionEdit()
+	{
+		//echo '<pre>';print_r($_POST);die;
+		$_POST['website_title']='KPPW';
+		$transaction =Yii::$app->db->beginTransaction();
+		try 
+		{
+			$i=1;
+			foreach($_POST as $key=>$val)
+			{
+				$info=BasicConfig::updateAll(['v'=>$val],['k'=>$key]);
+				if($i==count($_POST))
+				{
+					echo "<script>alert('配置生效');location.href='index.php?r=config/".$_POST['submit']."'</script>";
+				}
+				$i++;
+			}
+			$transaction->commit();
+		}
+		catch(Exception $e)
+		{
+			$transaction->rollBack();
+			echo $e->getMessage();
+		}
+	}
+
+    //站点配置
     public function actionQuanju()
     {
-        return $this->renderPartial('quanju');
+		$res=BasicConfig::find()->where(['type'=>'web'])->all();
+		for($i=0;$i<BasicConfig::find()->where(['type'=>'web'])->count();$i++)
+		{
+			$data[$res[$i]['k']]=$res[$i]['v'];
+		}
+        return $this->renderPartial('quanju',$data);
     }
+
     //基本配置
-    public function actionConf(){
-        
-        return $this->renderPartial('conf');
+    public function actionConf()
+	{
+		$res=BasicConfig::find()->where(['type'=>'sys'])->all();
+		for($i=0;$i<BasicConfig::find()->where(['type'=>'sys'])->count();$i++)
+		{
+			$data[$res[$i]['k']]=$res[$i]['v'];
+		}
+		//echo '<pre>';print_r($data);die;
+        return $this->renderPartial('conf',$data);
     }
     
     //SEO配置
-    public function actionSeo(){
-        return $this->renderPartial('seo');
+    public function actionSeo()
+	{
+		$res=BasicConfig::find()->where(['type'=>'sys'])->all();
+		for($i=0;$i<BasicConfig::find()->where(['type'=>'sys'])->count();$i++)
+		{
+			$data[$res[$i]['k']]=$res[$i]['v'];
+		}
+		$res=BasicConfig::find()->where(['type'=>'seo'])->all();
+		for($i=0;$i<BasicConfig::find()->where(['type'=>'seo'])->count();$i++)
+		{
+			$data[$res[$i]['k']]=$res[$i]['v'];
+		}
+		//echo '<pre>';print_r($data);die;
+        return $this->renderPartial('seo',$data);
     }
+
+	//伪静态规则
+    public function actionSeorule()
+	{
+		return $this->renderPartial('seorule');
+	}
+
     //邮件配置
-    public function actionMail(){
-        
-        return $this->renderPartial("mail");
+    public function actionMail()
+	{
+		$res=BasicConfig::find()->where(['type'=>'mail'])->all();
+		for($i=0;$i<BasicConfig::find()->where(['type'=>'mail'])->count();$i++)
+		{
+			$data[$res[$i]['k']]=$res[$i]['v'];
+		}
+		//echo '<pre>';print_r($data);die;
+        return $this->renderPartial("mail",$data);
     }
 
     //模型管理(任务模型)

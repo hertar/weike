@@ -30,77 +30,84 @@
         <div class="tabcon">
         	<div class="title"><h2>基本配置</h2></div>
             <div class="detail">
-                 <form name="frm_config_basic" id="frm_config_basic" action="index.php?do=config&view=basic&op=conf" method="post" accept-charset="utf-8" enctype='multipart/form-data'>
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                     
-            <tr>
-                <th scope="row">
-                    代金券是否启用：                </th>
-                <td>
-                    <label for="rdo_credit_is_allow">
-                        <input type="radio" id="rdo_credit_is_allow" onclick="if(this.checked){$('#sp_inp_credit_rename').hide();}else{$('#sp_inp_credit_rename').show()}" name="credit_is_allow" checked="checked"  value="2">关闭                    </label>
-                    <label for="rdo_crdeit_is_allow2">
-                        <input type="radio" id="rdo_crdeit_is_allow2" onclick="if(this.checked){$('#sp_inp_credit_rename').show();}else{$('#sp_inp_credit_rename').hide()}" name="credit_is_allow"  value="1">开启                    </label><b style="font-weight:normal;" id="sp_inp_credit_rename" >代金券重命名：  <input type="text"  class="txt" name="credit_rename" id="inp_credit_rename" value="元宝">(默认清空)</b>
-                </td>
-            </tr>
-<tr>
-                <th scope="row">
-                    附件上限：                </th>
-                <td>
-                    <input type="text" size="50" name="max_size" value="1" limit="required:true;type:int;len:1-2" value="2" msg="附件上限" msgArea="txt_max_size_msg" class="txt"/><b style="color:red">*</b>
-                    <span id="txt_max_size_msg"></span>MB 系统配置值：2M，如果设定值超过系统配置值，则以系统配置值为准。                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    附件格式：                </th>
-                <td>
-                    <input type="text" size="50" name="file_type" value="pdf|doc|docx|xls|ppt|wps|zip|rar|txt|jpg|jpeg|gif|bmp|swf|png|lsp" limit="required:true;len:3-100;general:false" msg="上传文件格式长度：3-100：3-100" msgArea="txt_file_type_msg" class="txt"/><b style="color:red">*</b>
-                    <span id="txt_file_type_msg"></span>如果有多个关键字，(zip|rar|jpg|gif|png)(不含引号) 等符号分隔                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    用户禁止关键字：                </th>
-                <td>
-                    <textarea cols="50" name="ban_users" rows="3" class="textarea">admin|胡哥|亚麻跌|思密达</textarea>
-                    (用户名之间用~|~隔开，建议不要使用“*”号和“？”号)                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    内容禁止关键字：                </th>
-                <td>
-                    <textarea cols="50" name="ban_content" rows="3" class="textarea">胡萝卜|太上黄</textarea>
-                   (关键词必须是中文或英文字符串，多个请用~|~隔开，建议不要使用“*”号和“？”号)                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    新用户注册时间限制：                </th>
-                <td>
-                    <input type="text" size="51" name="reg_limit" value="0" limit="type:int" msg="注册时间为整数" msgArea="txt_reg_limit_msg" class="txt"/><span id="txt_reg_limit_msg"></span>(时间为分钟)                </td>
-            </tr>
-<tr>
-                <th scope="row">
-                   用户注册邮件激活：                </th>
-                <td>
-                	<label for="red_reg">
-                        <input type="radio" id="rdo_reg" name="allow_reg_action" value="1" />开启                    </label>
-                    <label for="rdo_reg2">
-                        <input type="radio" id="rdo_reg2" name="allow_reg_action" checked="checked" value="0" />关闭                    </label>
-(防止恶意注册)               
-                </td>
-            </tr>
-<th scope="row">&nbsp;</th>
-<td>
-<div class="clearfix padt10">
-                                <button class="positive pill primary button" type="submit" name='submit' value="提交"><span class="check icon"></span>提交</button>
-                                
-                </div>
-</td>
-                    
-                    </table>
-                    
-                      
-                    
-        </form>
+<form name="frm_config_basic" id="frm_config_basic" action="index.php?r=config/edit" method="post" accept-charset="utf-8" enctype='multipart/form-data'>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+	<tr>
+	<th scope="row">代金券是否启用：</th>
+	<td>
+	<label for="rdo_credit_is_allow">
+	<input type="radio" id="rdo_credit_is_allow" onclick="if(this.checked){$('#sp_inp_credit_rename').hide();}else{$('#sp_inp_credit_rename').show()}" name="credit_is_allow" value="2" <?php if($credit_is_allow==2){echo 'checked';}?>>关闭
+	</label>
+	<label for="rdo_crdeit_is_allow2">
+	<input type="radio" id="rdo_crdeit_is_allow2" onclick="if(this.checked){$('#sp_inp_credit_rename').show();}else{$('#sp_inp_credit_rename').hide()}" name="credit_is_allow"  value="1" <?php if($credit_is_allow==1){echo 'checked';}?>>开启 
+	</label>
+	<b style="font-weight:normal;" id="sp_inp_credit_rename" >代金券重命名：  
+	<input type="text"  class="txt" name="credit_rename" id="inp_credit_rename" value="<?php echo $credit_rename?>">(默认清空)
+	</b>
+	</td>
+	</tr>
+
+	<tr>
+	<th scope="row">附件上限：</th>
+	<td>
+	<input type="text" size="50" name="max_size" value="1" limit="required:true;type:int;len:1-2" value="<?php echo $max_size?>" msg="附件上限" msgArea="txt_max_size_msg" class="txt"/>
+	<b style="color:red">*</b>
+	<span id="txt_max_size_msg"></span>MB 系统配置值：2M，如果设定值超过系统配置值，则以系统配置值为准。 </td>
+	</tr>
+
+	<tr>
+		<th scope="row">附件格式：</th>
+		<td>
+		<input type="text" size="50" name="file_type" value="<?php echo $file_type?>" limit="required:true;len:3-100;general:false" msg="上传文件格式长度：3-100：3-100" msgArea="txt_file_type_msg" class="txt"/>
+		<b style="color:red">*</b>
+		<span id="txt_file_type_msg"></span>如果有多个关键字，(zip|rar|jpg|gif|png)(不含引号) 等符号分隔                </td>
+	</tr>
+
+	<tr>
+		<th scope="row">用户禁止关键字：</th>
+		<td>
+		<textarea cols="50" name="ban_users" rows="3" class="textarea"><?php echo $ban_users?></textarea>
+		(用户名之间用~|~隔开，建议不要使用“*”号和“？”号)
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">内容禁止关键字：</th>
+		<td>
+		<textarea cols="50" name="ban_content" rows="3" class="textarea"><?php echo $ban_content?></textarea>
+		(关键词必须是中文或英文字符串，多个请用~|~隔开，建议不要使用“*”号和“？”号)
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">新用户注册时间限制：</th>
+		<td>
+		<input type="text" size="51" name="reg_limit" value="<?php echo $reg_limit?>" limit="type:int" msg="注册时间为整数" msgArea="txt_reg_limit_msg" class="txt"/>
+		<span id="txt_reg_limit_msg"></span>(时间为分钟)
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">用户注册邮件激活：</th>
+		<td>
+		<label for="red_reg">
+		<input type="radio" id="rdo_reg" name="allow_reg_action" value="1" <?php if($allow_reg_action==1){echo 'checked';}?>/>开启</label>
+		<label for="rdo_reg2">
+		<input type="radio" id="rdo_reg2" name="allow_reg_action" value="0" <?php if($allow_reg_action==0){echo 'checked';}?>/>关闭</label>
+		(防止恶意注册)               
+		</td>
+	</tr>
+
+	<th scope="row">&nbsp;</th>
+	<td>
+	<div class="clearfix padt10">
+	<button class="positive pill primary button" type="submit" name='submit' value="conf">
+	<span class="check icon"></span>提交</button>
+	</div>
+	</td>
+</table>
+</form>
             </div>
         </div>
         
