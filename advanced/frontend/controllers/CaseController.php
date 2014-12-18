@@ -14,18 +14,20 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
 
-class TaskController extends Controller
+class CaseController extends Controller
 {
-    //任务大厅
-    public function actionTask_list(){
-        
+     //public $nav=null ;
+    
+    //首页
+     public function actionCase_list(){
+        //加载布局文件
         $this->layout='@app/views/layouts/public.php';
           $rows = (new \yii\db\Query())
                 ->select('nav_title, nav_url')
                 ->from('wk_witkey_nav')
                 ->all();
-        
-        $data['nav']=$rows;
-        return $this->render("task_list",$data);
-   }
+        //$this->nav=$rows;
+       $data['nav']=$rows;
+       return $this->renderPartial("case_list",$data);
+    }
 }

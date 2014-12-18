@@ -1,10 +1,38 @@
+ <nav id="nav" class="nav m_h">
+        <div class="container_24" >
+        	<div class="menu grid_24 clearfix">
+                <ul class="clearfix">
+     <?php
+        foreach($nav as $v){
+     ?>
+<li>
+    <a href="<?php echo $v['nav_url']?>"  ><span><?php echo $v['nav_title']?></span></a>
+</li>
 
+<li class="line"></li>
+<?php
+        }
+?>
+
+                </ul>
+                <!---->
+                  <div class="operate po_ab">
+                    	<a href="index.php?r=help" target="_blank" title="帮助中心">
+                        	<span class="icon16 help reverse"></span>
+帮助中心                        </a>
+                   </div>
+                <!---->
+</div>
+                <div class="clear"></div>
+        </div>
+    </nav>
 <div class="wrapper">	
 <!--页面头部-->
 <header class="clearfix page_header">
     	<div class="container_24">
 
-<div class='adv'><a href='http://www.kppw.cn' target='_blank' title='adv'><img src='data/uploads/sys/ad/adv.jpg' width='' height='' alt='adv' title='adv'></a></div>
+<div class='adv'><a href='http://www.kppw.cn' target='_blank' title='adv'>
+        <img src='/public/data/uploads/sys/ad/adv.jpg' width='' height='' alt='adv' title='adv'></a></div>
         <!--页面导航-->
         	<div class="breadcrumbs clearfix ">
             	<a href="index.php">首页</a> &gt; <span>任务大厅</span>
@@ -622,7 +650,8 @@
 
 <div style="margin:0 -5px">
 <!--任务大厅_右侧广告 start-->
-<div class='adv'><a href='http://www.kppw.com' target='_blank' title='adv'><img src='data/uploads/sys/ad/adv.jpg' width='' height='' alt='adv' title='adv'></a></div><!--任务大厅_右侧广告 end-->
+<div class='adv'><a href='http://www.kppw.com' target='_blank' title='adv'>
+        <img src='/public/data/uploads/sys/ad/adv.jpg' width='' height='' alt='adv' title='adv'></a></div><!--任务大厅_右侧广告 end-->
 </div>
 
 
@@ -636,7 +665,8 @@
 
 <div class="clear"></div>
 
-<div class='adv'><a href='http://www.kppw.cn' target='_blank' title='adv'><img src='data/uploads/sys/ad/adv.jpg' width='' height='' alt='adv' title='adv'></a></div>
+<div class='adv'><a href='http://www.kppw.cn' target='_blank' title='adv'>
+        <img src='/public/data/uploads/sys/ad/adv.jpg' width='' height='' alt='adv' title='adv'></a></div>
 <div class="clear"></div>
                 </div>
                 </section>
@@ -743,25 +773,26 @@ obj = $(obj).find("div:first").get(0);
                         ajaxmenu(obj, 250, '1', '2', '43');
                         return false;
                     }
+                  
                     //进度条
-                    function task_bar(){
-                        var min = Number();
-                        var max = Number();
+                 //  function task_bar(){
+                      //  var min = Number();
+                    //    var max = Number();
                         
-                        $("#slider-range").slider({
-                            range: true,
-                            min: 0,
-                            max: 5000,
-                            values: [min, max],
-                            slide: function(event, ui){
-                                $("#amount1").val(ui.values['0']);
-$("#amount2").val(ui.values['1']);
-                            }
-                        });
+                  //      $("#slider-range").slider({
+                     //       range: true,
+                     //       min: 0,
+                     //       max: 5000,
+                    //        values: [min, max],
+                      //      slide: function(event, ui){
+                            //    $("#amount1").val(ui.values['0']);
+                        //$("#amount2").val(ui.values['1']);
+                       //     }
+                      //  });
                     
-$("#amount1").val($("#slider-range").slider("values", 0));
-$("#amount2").val($("#slider-range").slider("values", 1));
-                   }
+//$("#amount1").val($("#slider-range").slider("values", 0));
+//$("#amount2").val($("#slider-range").slider("values", 1));
+  //                 }
                     
                     
                     //赏金搜索 
@@ -862,10 +893,10 @@ location.href=new_url;//跳转
   			  new PCAS("province","city","area","","","");
 }); 
     In.config('serial',true);
-In.add('ui_core',{path:"resource/js/others/ui.core.js",type:'js'});
-In.add('ui_slider',{path:"resource/js/others/ui.slider.js",type:'js',rely:['ui_core']});
-In.add('search',{path:"tpl/default/js/search.js",type:'js'}); 
-In('search','ui_slider',function(){task_bar()});
+In.add('ui_core',{path:"/public/resource/js/others/ui.core.js",type:'js'});
+In.add('ui_slider',{path:"/public/resource/js/others/ui.slider.js",type:'js',rely:['ui_core']});
+In.add('search',{path:"/public/tpl/default/js/search.js",type:'js'}); 
+//In('search','ui_slider',function(){task_bar()});
 
 </script>
 

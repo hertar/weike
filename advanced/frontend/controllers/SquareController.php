@@ -14,18 +14,19 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
 
-class TaskController extends Controller
+class SquareController extends Controller
 {
-    //任务大厅
-    public function actionTask_list(){
+    public function actionSquare_list(){
         
-        $this->layout='@app/views/layouts/public.php';
+       $this->layout='@app/views/layouts/public.php';
           $rows = (new \yii\db\Query())
                 ->select('nav_title, nav_url')
                 ->from('wk_witkey_nav')
                 ->all();
-        
+      
         $data['nav']=$rows;
-        return $this->render("task_list",$data);
+       return $this->renderPartial("square_list",$data);
+      // return $this->render("square_list",$data);
+      
    }
 }

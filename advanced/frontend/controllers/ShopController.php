@@ -14,10 +14,9 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
 
-class TaskController extends Controller
+class ShopController extends Controller
 {
-    //任务大厅
-    public function actionTask_list(){
+    public function actionShop_list(){
         
         $this->layout='@app/views/layouts/public.php';
           $rows = (new \yii\db\Query())
@@ -26,6 +25,6 @@ class TaskController extends Controller
                 ->all();
         
         $data['nav']=$rows;
-        return $this->render("task_list",$data);
+        return $this->render("shop_list",$data);
    }
 }

@@ -5,10 +5,10 @@
 <!--[if gt IE 8]><!--> <html dir="ltr" lang="zh-cn"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>客客出品专业威客系统</title>
+<title>威客商城</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE,chrome=1">
-<meta name="keywords" content="客客出品专业威客系统">
-<meta name="description" content="客客出品专业威客系统">
+<meta name="keywords" content="威客商城">
+<meta name="description" content="生生世世,">
 <meta name="generator" content="客客出品 2.2" />
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -21,7 +21,7 @@
 var SITEURL= "http://127.0.0.1/weike",
     SKIN_PATH = '/public/tpl/default',
 LANG       = 'cn',
-    INDEX      = 'index',
+    INDEX      = 'help',
     CHARSET    = "utf-8";
 </script>
 <link href="/public/resource/css/reset.css" rel="stylesheet" charset="utf-8">
@@ -76,7 +76,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 
 
 </head>
-    <body id="index">
+    <body id="help">
 
 <div class="blue_style" id="wrapper">
 
@@ -152,7 +152,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
             	<!--用户登录注册 start-->
             	<div class="user_box clearfix grid_5">
                 	<!--注册登录按钮 start-->
-                  	<ul id="login_sub" class="user_login hidden">
+                  	<ul id="login_sub" class="user_login ">
                         <li><a href="index.php?do=register" class="m_h">免费注册</a></li>
                         <li><a href="index.php?do=login">登录</a></li>
                     </ul>
@@ -163,22 +163,22 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 
 
                     <!--登录成功 start-->
-                    <div id="logined" class="">
+                    <div id="logined" class="hidden">
                     	<!--用户登录后内容 start-->
                         <ul class="user_logined clearfix">
                             <li id="avatar">
-                            	<a href="index.php?do=user" title="admin" rel="user_menu">
-                            		<img src='http://127.0.0.1/weike/data/avatar/default/man_small.jpg' uid='1' class='pic_small'>                                    <span class="user_named m_h">admin</span>
+                            	<a href="index.php?do=user" title="" rel="user_menu">
+                            		<img src='/public/data/avatar/default/man_small.jpg' uid='' class='pic_small'>                                    <span class="user_named m_h"></span>
                             	</a>
 <!--用户登录后导航菜单 start-->
                     <div id="user_menu" class="user_nav_pop grid_5 alpha omega hidden m_h">
                         <ul class="nav_list clearfix">
-                                    	<li class="clearfix"><a href="index.php?do=user&view=finance&op=detail" title="金钱 | 元宝" id="money"> <div class="icon16 cur-yen reverse"></div>￥405,405.06元| ￥77,529.19元</a></li>
+                                    	<li class="clearfix"><a href="index.php?do=user&view=finance&op=detail" title="金钱 | 元宝" id="money"> <div class="icon16 cur-yen reverse"></div>￥0.00元| ￥0.00元</a></li>
                                         <li class="clearfix"><a href="index.php?do=release" title="发布任务" class="selected" ><div class="icon16 doc-new reverse"></div>发布任务</a></li>
 <li class="clearfix"><a href="index.php?do=shop_release" title="发布商品" class="selected"><div class="icon16 doc-new reverse"></div>发布商品</a></li>
-<li class="clearfix " id="manage_center"><a href="control/admin/index.php" title="管理中心" ><div class="icon16 key reverse"></div>管理中心</a></li>
+<li class="clearfix hidden" id="manage_center"><a href="control/admin/index.php" title="管理中心" ><div class="icon16 key reverse"></div>管理中心</a></li>
 <li class="clearfix"><a href="index.php?do=user&view=index" title="用户中心"><div class="icon16 cog reverse"></div>用户中心</a></li>
-<li class="clearfix"><a href="http://127.0.0.1/weike/index.php?do=space&member_id=1" title="我的店铺" id="space"><div class="icon16 compass reverse"></div>我的店铺</a></li>
+<li class="clearfix"><a href="http://127.0.0.1/weike/index.php?do=space&member_id=" title="我的店铺" id="space"><div class="icon16 compass reverse"></div>我的店铺</a></li>
 <!--<li class="clearfix"><a href="index.php?do=user&view=message" title="站内信"><div class="icon16 mail reverse"></div>站内信</a></li>-->
 <li class="clearfix"><a onclick="showWindow('out','index.php?do=logout');return false;" title="退出" href="index.php?do=logout">退出</a></li>
                          </ul>
@@ -213,20 +213,194 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
     </header>
     <!--头部 end-->
         <!--tool_E-->
- 
+<nav id="nav" class="nav m_h">
+        <div class="container_24" >
+        	<div class="menu grid_24 clearfix">
+                <ul class="clearfix">
+     <?php
+        foreach($nav as $v){
+     ?>
+<li>
+    <a href="<?php echo $v['nav_url']?>"  ><span><?php echo $v['nav_title']?></span></a>
+</li>
+
+<li class="line"></li>
+<?php
+        }
+?>
+
+                </ul>
+                <!---->
+                  <div class="operate po_ab">
+                    	<a href="index.php?r=help" target="_blank" title="帮助中心">
+                        	<span class="icon16 help reverse"></span>
+帮助中心                        </a>
+                   </div>
+                <!---->
+</div>
+                <div class="clear"></div>
+        </div>
+    </nav>
     <div class="clear"></div>
-<script type="text/javascript" src="/public/resource/js/jqplugins/slides.min.jquery.js"></script>
-<script type="text/javascript" src="/public/resource/js/jqplugins/easySlider1.5.js"></script>
-<script type="text/javascript" src="/public/tpl/default/js/index.js"></script>
+ <div class="wrapper">
+ <!--页面头部-->
+ <header class="clearfix page_header">
+  <div class="container_24"> 
+   <!--页面导航-->
+    <div class="breadcrumbs clearfix"><a href="index.php?">首页</a> &gt; <span>帮助中心</span></div>
+   <!--end 页面导航-->
+   <!--页面标题(搜索前)-
+   <div class="page_title clearfix">
+     <div class="grid_4"><h2 class="title">帮助中心</h2></div>
+   </div>
+ <!--end 页面标题(搜索前)-->    
+ <!--页面子导航-->
+ <div class="grid_24 ">
+  <nav class="clearfix page_nav po_re">
+    <ul>
+    	       		 <li class="selected"><a href="index.php?r=help"><span>帮助中心</span></a></li>
+    </ul>
+  </nav>
+  </div>
+ <!--end 页面子导航--> 
+ </div>
+</header> 
+ <!--end 页面标题-->
+ <!--主内容-->
+  <section class="clearfix content">
+   <div class="container_24">
+     <div class="grid_24 ">
+      <div class="box  panel clearfix mb_10">
+          <!--左边导航-->
+          <div class="grid_6 alpha omega ">
+            <div class="nav_list clearfix">
+              <dl>
+              	               <dt>
+                  <a class="small_nav block clearfix po_re selected" fpid="100" spid="291" href="###">
+                 <span class="ml_20">威客商城</span>
+ 
+                  <div class="icon16 po_ab spread_back  sq-minus"></div>
+                   </a>                                           
+                </dt>
+<dd class="clearfix">
+ <ul>
+ 	     <li tpid="325">
+<a href="index.php?r=help/index" class="selected">威客服务</a>
+</li>
+        <li tpid="323">
+       	<a href="index.php?r=help/ruler" >商城规则</a>
+</li>
+        <li tpid="324">
+       	<a href="index.php?r=help/works" >威客作品</a>
+</li>
+        </ul>
+</dd>
+               <dt>
+                  <a class="small_nav block clearfix po_re " fpid="100" spid="294" href="###">
+                 <span class="ml_20">新手上路</span>
+ 
+                  <div class="icon16 po_ab spread_back sq-plus"></div>
+                   </a>                                           
+                </dt>
+<dd class="clearfix">
+ <ul>
+ 	  </ul>
+</dd>
+               <dt>
+                  <a class="small_nav block clearfix po_re " fpid="100" spid="290" href="###">
+                 <span class="ml_20">任务大厅</span>
+ 
+                  <div class="icon16 po_ab spread_back sq-plus"></div>
+                   </a>                                           
+                </dt>
+<dd class="clearfix">
+ <ul>
+ 	  </ul>
+</dd>
+               <dt>
+                  <a class="small_nav block clearfix po_re " fpid="100" spid="293" href="###">
+                 <span class="ml_20">常见问题</span>
+ 
+                  <div class="icon16 po_ab spread_back sq-plus"></div>
+                   </a>                                           
+                </dt>
+<dd class="clearfix">
+ <ul>
+ 	  </ul>
+</dd>
+            </dl>
+          </div>
+          </div>
+          <!--end 左边导航-->
+                            
+          <!--右边主体内容-->
+      	  <div class="bord_right clearfix pb_20 grid_18 omega ">
+            <!--右边主体上端内容-->
+<div class="top_content clearfix">
+              <form action="#" method="post" name="frm_help" id="frm_help" class="grid_9">
+                  <label class="icon32 zoom mr_5 fl_l"></label>
+                      <input name="keyword" type="text" id="keyword" value="想了解什么?"class="fl_l togg1 txt_input c999" t="想了解什么?" size="30"/><a class="button fl_l ml_5" href="javascript:void(0);" onclick="searchKeyword();">　搜索&nbsp;&nbsp;&nbsp;</a>
+              </form>
+  <div class="clear"></div>
+  <div class="tell clearfix mt_5">
+  <h2 class="fl_l clearfix"><span class="icon16  phone-2"></span>客服热线电话</h2>
+                  <span  class=" tell_phone c000 clearfix">  		<span>027-87733922</span>
+  </span>
+  </div>   
+            </div>	
+  		  		<!--end 右边主体上端内容-->
+             
+<!--右边主体下端内容-->                  
+             <div class="bottom_content">
+               <div class="loadcontent newcontent clearfix">
 
+  <div class="all_content ws_break ">
+ <a href="javascript:void(0);" class="question">
+  <span class="icon16 br-down"></span>
+ <strong class="q_title"> 生生世世</strong>
+  </a>
+ <div class="article hidden">
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooollbcghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</div>
+</div>
+  	
+  <!--page 翻页 start-->
+                       <div class="page">
+                           <span class="stats">统计1条匹配结果</span>                           <div class="clear"></div>
+                       </div>
+                      <!--page 翻页 end-->	
+               </div>
+             </div>
+            <!--end 右边主体下端内容--> 
+            <!--工具栏-->
+          <div class="operate mt_20 t_r">
+            <a href="index.php" class="" title="返回首页"><span class="icon16 home"></span></a>
+          </div>
+        <!--end 工具栏-->
+           </div>
+   <!--end 右边主体内容--> 
+          
+        
 
-<!--内容-->
-  <?= $content; ?>
-<!--内容end-->
+  </div>	  
+     </div>
+   </div>  
+  </section> 
+ <!--end 主内容--> 
+ </div>
+<script type="text/javascript">
+
+In.add('help',{path:"/public/tpl/default/js/help.js",type:'js'});
+In('help');
+</script>
+
 
 <!--页脚 satrt-->
 <footer class="footer clearfix">
 <!--网站链接以及语言栏 关注我们 搜索 start-->
+
+
+
+
 
 
             <!--网站版权声明 start-->
@@ -317,10 +491,10 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
     <!--页脚 end-->
 </div>
 <script type="text/javascript">
-var uid='1';
+var uid='';
 var xyq = "l7j743n462jfogqvjvalrom7a6";
 $(function(){
-   $.get('/public/tpl/js/js.php?op=time&r='+Math.random());	
+   $.get('js.php?op=time&r='+Math.random());	
 })
  //js异步加载
 In('header_top','custom','lavalamp','tipsy','autoIMG','slides');
@@ -335,4 +509,3 @@ In('header_top','custom','lavalamp','tipsy','autoIMG','slides');
 <!--[if IE 8]></div><![endif]-->
 </body>
 </html>
-

@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html dir="ltr" lang="zh-cn"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>客客出品专业威客系统</title>
+<title>新手任务- 客客出品专业威客系统</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE,chrome=1">
 <meta name="keywords" content="客客出品专业威客系统">
 <meta name="description" content="客客出品专业威客系统">
@@ -21,7 +21,7 @@
 var SITEURL= "http://127.0.0.1/weike",
     SKIN_PATH = '/public/tpl/default',
 LANG       = 'cn',
-    INDEX      = 'index',
+    INDEX      = 'prom',
     CHARSET    = "utf-8";
 </script>
 <link href="/public/resource/css/reset.css" rel="stylesheet" charset="utf-8">
@@ -76,7 +76,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 
 
 </head>
-    <body id="index">
+    <body id="prom">
 
 <div class="blue_style" id="wrapper">
 
@@ -152,7 +152,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
             	<!--用户登录注册 start-->
             	<div class="user_box clearfix grid_5">
                 	<!--注册登录按钮 start-->
-                  	<ul id="login_sub" class="user_login hidden">
+                  	<ul id="login_sub" class="user_login ">
                         <li><a href="index.php?do=register" class="m_h">免费注册</a></li>
                         <li><a href="index.php?do=login">登录</a></li>
                     </ul>
@@ -163,22 +163,22 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 
 
                     <!--登录成功 start-->
-                    <div id="logined" class="">
+                    <div id="logined" class="hidden">
                     	<!--用户登录后内容 start-->
                         <ul class="user_logined clearfix">
                             <li id="avatar">
-                            	<a href="index.php?do=user" title="admin" rel="user_menu">
-                            		<img src='http://127.0.0.1/weike/data/avatar/default/man_small.jpg' uid='1' class='pic_small'>                                    <span class="user_named m_h">admin</span>
+                            	<a href="index.php?do=user" title="" rel="user_menu">
+                            		<img src='http://127.0.0.1/weike/data/avatar/default/man_small.jpg' uid='' class='pic_small'>                                    <span class="user_named m_h"></span>
                             	</a>
 <!--用户登录后导航菜单 start-->
                     <div id="user_menu" class="user_nav_pop grid_5 alpha omega hidden m_h">
                         <ul class="nav_list clearfix">
-                                    	<li class="clearfix"><a href="index.php?do=user&view=finance&op=detail" title="金钱 | 元宝" id="money"> <div class="icon16 cur-yen reverse"></div>￥405,405.06元| ￥77,529.19元</a></li>
+                                    	<li class="clearfix"><a href="index.php?do=user&view=finance&op=detail" title="金钱 | 元宝" id="money"> <div class="icon16 cur-yen reverse"></div>￥0.00元| ￥0.00元</a></li>
                                         <li class="clearfix"><a href="index.php?do=release" title="发布任务" class="selected" ><div class="icon16 doc-new reverse"></div>发布任务</a></li>
 <li class="clearfix"><a href="index.php?do=shop_release" title="发布商品" class="selected"><div class="icon16 doc-new reverse"></div>发布商品</a></li>
-<li class="clearfix " id="manage_center"><a href="control/admin/index.php" title="管理中心" ><div class="icon16 key reverse"></div>管理中心</a></li>
+<li class="clearfix hidden" id="manage_center"><a href="control/admin/index.php" title="管理中心" ><div class="icon16 key reverse"></div>管理中心</a></li>
 <li class="clearfix"><a href="index.php?do=user&view=index" title="用户中心"><div class="icon16 cog reverse"></div>用户中心</a></li>
-<li class="clearfix"><a href="http://127.0.0.1/weike/index.php?do=space&member_id=1" title="我的店铺" id="space"><div class="icon16 compass reverse"></div>我的店铺</a></li>
+<li class="clearfix"><a href="http://127.0.0.1/weike/index.php?do=space&member_id=" title="我的店铺" id="space"><div class="icon16 compass reverse"></div>我的店铺</a></li>
 <!--<li class="clearfix"><a href="index.php?do=user&view=message" title="站内信"><div class="icon16 mail reverse"></div>站内信</a></li>-->
 <li class="clearfix"><a onclick="showWindow('out','index.php?do=logout');return false;" title="退出" href="index.php?do=logout">退出</a></li>
                          </ul>
@@ -213,20 +213,210 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
     </header>
     <!--头部 end-->
         <!--tool_E-->
- 
+ <nav id="nav" class="nav m_h">
+        <div class="container_24" >
+        	<div class="menu grid_24 clearfix">
+                <ul class="clearfix">
+     <?php
+        foreach($nav as $v){
+     ?>
+<li>
+    <a href="<?php echo $v['nav_url']?>"  ><span><?php echo $v['nav_title']?></span></a>
+</li>
+
+<li class="line"></li>
+<?php
+        }
+?>
+
+                </ul>
+                <!---->
+                  <div class="operate po_ab">
+                    	<a href="index.php?r=help" target="_blank" title="帮助中心">
+                        	<span class="icon16 help reverse"></span>
+帮助中心                        </a>
+                   </div>
+                <!---->
+</div>
+                <div class="clear"></div>
+        </div>
+    </nav>
     <div class="clear"></div>
-<script type="text/javascript" src="/public/resource/js/jqplugins/slides.min.jquery.js"></script>
-<script type="text/javascript" src="/public/resource/js/jqplugins/easySlider1.5.js"></script>
-<script type="text/javascript" src="/public/tpl/default/js/index.js"></script>
+<!--页面内容区-->
+ <div class="wrapper">
+ 	<div class="container_24 clearfix">
+<div class="mt_30 mb_30">
+<div class="grid_20 clearfix">
+<div class="simple_step clearfix all_4">
+        <div class="step step1"> </div>
+        <div class="step step2">
+        <div class="get_code">
+         获取推广代码
+   		</div>
+       </div>
+        <div class="step step3">
+            <div class="get_sys">
+               推广客客专业威客系统
+   			</div>
+        </div>
+        <div class="step step4">
+            <div>
+              获得丰厚收益
+   			</div>
+        </div>
+                	
+</div>
 
+            <div class="prom_border box mt_10 mb_10 clearfix">
+            	
+<div class="box_header">
+            	<div class="inner">
+            		<h2 class="title">新手任务：邀请好友注册，赚取第一笔佣金</h2>
+            	</div>
+            </div>
+<div class="prom_detail border_t_c">
+            	<div class="pad20">
+            		<div class="rowElem clearfix ">
+            			<label class="grid_2 t_c pt_10"><img src="/public/tpl/default/img/style/zhu.png"></label>
+            			<div class="grid_15">
+            				<div>成功推荐会员注册，并通过 <a href="index.php?do=auth">企业认证</a> ，获得<span class="cf60">￥3.00元</span> 元和<span class="cf60">￥3.00元</span> 代金券提成
+            				</div>
+            				<div class="font14b cf60">你的收益＝注册会员数×￥3.00元 
+            				</div>
+            				<div>
+            					用户通过推广链接\代码注册成为会员，并通过 <a href="index.php?do=user&view=payitem&op=auth&auth_code=enterprise_auth#userCenter">企业认证</a> ，推广员就能获得<span class="cf60">￥3.00元</span>的提成。在20天，您所推广的下线在网站上交易还有奖励。
+            					
+            				</div>
+            				<div> <span class="font14b cf60">比如：</span> 推荐100名会员注册并通过实名认证，您能获得现金提成<span class="cf60">100</span>元+<span class="cf60">100</span>代金券！</div>
+            			</div>
+</div>
+            		<div class="rowElem clearfix ">
+            			<label class="grid_2 t_r"><strong class="title">方法一：</strong></label>
+            			<div class="">
+            				复制以下邀请链接，通过QQ、微博私信等发送给你的亲朋好友。
+            			</div>
+            		</div>
+            		<div class="rowElem clearfix ">
+            			请您先<a href="index.php?do=login">登录</a>,再查看链接
+</div>
+            		<div class="rowElem clearfix ">
+            			<label class="grid_2 t_r"><strong class="title">方法二：</strong></label>
+            			<div class="">
+            				将内容分享到论坛、个人签名、人人网、QQ个人空间等。
+            			</div>
+            		</div>
+            		<div class="rowElem clearfix ">
+            			请您先<a href="index.php?do=login">登录</a>,再查看链接
+</div>
+            		
+</div>
+            </div>
+        	</div>
+        	<div class="prom_border box mt_10 mb_10 clearfix">
+        		<div class="box_header">
+            	<div class="inner">
+            		<h2 class="title">新手任务：邀请好友发布任务</h2>
+            	</div>
+            </div>
+            <div class="prom_detail border_t_c">
+            	<div class="pad20">
+            		<div class="rowElem clearfix ">
+            			<label class="grid_2 t_c pt_10"><img src="/public/tpl/default/img/style/fa.png"></label>
+            			<div class="grid_15">
+            				<div>
+            					邀请好友发布任务，任务成功结束后，可一次性获得<span class="cf60">￥4.00元</span> 推广金
+            				</div>
+            				<div class="fontb cf60">
+            					你的收益=￥4.00元 +￥4.00元代金劵
+            				
+            				</div>
+            				<div>
+            					用户通过推广链接\代码邀请好友发布任务，任务成功结束即为推广有效，推广员就能获得<span class="cf60">￥4.00元+￥4.00元</span>代金券推广提成。
+            				</div>
+            				<div> <span class="fontb cf60">比如：</span> 邀请好友发布了任务，任务结束后你能立刻获得
+            					<span class="cf60">￥4.00元+￥4.00元代金券！</span></div>
+            			</div>
+</div>
+            		
+            	<div class="rowElem clearfix ">
+            			<label class="grid_2 t_r"><strong class="title">呈现方式：</strong></label>
+            			<div class="">
+            				<span class="mr_10"><input type="radio" name="linkMode" id="linkMode1" value="1" checked="checked">原始链接</span>
+            									<input type="radio" name="linkMode" id="linkMode2" value="2">文字链接
+            			</div>
+            	</div>
+            	<div class="rowElem clearfix ">
+            		请您先<a href="index.php?do=login">登录</a>,再查看链接
+</div>
 
-<!--内容-->
-  <?= $content; ?>
-<!--内容end-->
+</div>
+        		</div>
+</div>
+</div>
+<div class="grid_4 clearfix">
+<div class="prom_border box  mb_10 clearfix">
+<div class="box_header backLava">
+            	<div class="inner">
+            		<strong class="title">赚钱工具</strong>
+            		<p class="pl_10">选择你习惯的推广方式</p>
+            	</div>
+            </div>
+            <div class="prom_detail clearfix">
+            	<div class="prom_list">
+            	<ul>
+            	<li> <a href="index.php?do=prom"  class="selected">新手任务</a></li>
+            	<li> <a href="index.php?do=prom&view=task" >任务推广</a></li>
+            	<li> <a href="index.php?do=prom&view=good" >商品推广</a></li>
+            	</ul>
+</div>
+            </div>
+        </div>
+        <div class="prom_border box  mb_10 clearfix">
+        	<div class="box_header border_b_c">
+            	<div class="inner">
+            		<h2 class="title">推广动态</h2>
+</div>
+            </div>
+            <div class="prom_detail">
+            <div class="pl_10 pr_10 pb_10">
+            	<div class="prom_rel">
+            	<ul>
+            		暂时还没有动态
+            	</ul>
+            	</div>
+            </div>
+        	</div>
+        </div>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+//新手任务：邀请好友注册，赚取第一笔佣金
+ function copytext(i){
+       if(check_user_login()){
+setCopy($("#" + i).val(),'复制成功');
+}
+    }
+//新手任务：邀请好友发布任务
+var link_pub = "http://127.0.0.1/weike/index.php?do=prom&u=&p=reg&p=pub_task&l=release";
+var link_pub_code = "<a href=http://127.0.0.1/weike/index.php?do=prom&u=&p=reg&p=pub_task&l=release target=_blank>客客出品专业威客系统</a>";
+$("#linkMode1").click(function(){
+$("#prompub").val(link_pub);
+})
+$("#linkMode2").click(function(){
+$("#prompub").val(link_pub_code);
+})
+</script>
 
 <!--页脚 satrt-->
 <footer class="footer clearfix">
 <!--网站链接以及语言栏 关注我们 搜索 start-->
+
+
+
+
 
 
             <!--网站版权声明 start-->
@@ -317,11 +507,8 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
     <!--页脚 end-->
 </div>
 <script type="text/javascript">
-var uid='1';
+var uid='';
 var xyq = "l7j743n462jfogqvjvalrom7a6";
-$(function(){
-   $.get('/public/tpl/js/js.php?op=time&r='+Math.random());	
-})
  //js异步加载
 In('header_top','custom','lavalamp','tipsy','autoIMG','slides');
 
@@ -335,4 +522,3 @@ In('header_top','custom','lavalamp','tipsy','autoIMG','slides');
 <!--[if IE 8]></div><![endif]-->
 </body>
 </html>
-
