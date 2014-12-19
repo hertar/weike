@@ -3,8 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>keke admin</title>
-
-
 <link href="/public/tpl/css/admin_management.css" rel="stylesheet" type="text/css" />
 <link href="/public/resource/css/buttons.css" rel="stylesheet" type="text/css" />
 <link title="style1" href="/public/tpl/skin/default/style.css" rel="stylesheet" type="text/css" />
@@ -28,102 +26,74 @@
   		<h2>商城模型管理</h2>
 </div>
         	<div class="detail">
-        		<form action="index.php?do=config&view=model&model_type=shop&op=add" method="post">
-        			 <table cellpadding="0" cellspacing="0">
-            	<tr>
-                <th scope="row">
-                    模型标识                </th>
-                <th scope="row">
-                    启用状态                </th>
-               <th scope="row">
-                    模型标识                </th>
-                <th scope="row">
-                    模型名                </th>
-               <th scope="row">
-                    模型目录                </th>
-               <th scope="row">
-                    模型作者                </th>
-                <th scope="row" width="50">
-                    排序                </th>
-                <th scope="row">
-                     设为禁用                </th>
-<th scope="row">
-       	             配置            
-                </th>
-<th scope="row">
-                    卸载                </th>
+<form action="index.php?do=config&view=model&model_type=shop&op=add" method="post">
+<table cellpadding="0" cellspacing="0">
+	<tr>
+	<th scope="row">模型标识</th>
+	<th scope="row">启用状态</th>
+	<th scope="row">模型标识s</th>
+	<th scope="row">模型名</th>
+	<th scope="row">模型目录</th>
+	<th scope="row">模型作者</th>
+	<!--<th scope="row" width="50">排序</th>-->
+	<th scope="row">设为禁用</th>
+	<th scope="row">配置</th>
+	<th scope="row">卸载</th>
+	</tr>
 
-            </tr>
-                             <tr>
-                <td>
-                    6                </td>
-                <td>
-                                        <font color="red">
-                        开启                    </font>                </td>
-                <td>
-                    goods                </td>
-                <td>
-                    威客作品                </td>
-                <td>
-                    goods                </td>
-                <td>
-                    kekezu                </td>
-                <td>
-                    <input size="3" class="txt" name="md_list_order6"  id="md_list_order6" value="6" type="text" onchange="set_listorder('6',this.value);">
-                </td>
-                <td>
-                    <a href="index.php?do=config&view=model&model_type=shop&op=close&model_id=6"  class="button">
-<span class="lock icon"></span>禁用</a>
-                    </td>
-<td>
- 	<a href="index.php?do=model&model_id=6&view=config" class="button">
- 	<span class="cog icon"></span>配置</a>
-</td>
-<td>
-<a href="index.php?do=config&view=model&model_type=shop&op=del&model_id=6" onclick="return uninstall(this);" class="button">
-<span class="downarrow icon"></span>卸载</a>
-                </td>
-            </tr>
-              <tr>
-                <td>
-                    7                </td>
-                <td>
-                                        <font color="red">
-                        开启                    </font>                </td>
-                <td>
-                    service                </td>
-                <td>
-                    威客服务                </td>
-                <td>
-                    service                </td>
-                <td>
-                    kekezu                </td>
-                <td>
-                    <input size="3" class="txt" name="md_list_order7"  id="md_list_order7" value="7" type="text" onchange="set_listorder('7',this.value);">
-                </td>
-                <td>
-                    <a href="index.php?do=config&view=model&model_type=shop&op=close&model_id=7"  class="button">
-<span class="lock icon"></span>禁用</a>
-                    </td>
-<td>
- 	<a href="index.php?do=model&model_id=7&view=config" class="button">
- 	<span class="cog icon"></span>配置</a>
-</td>
-<td>
-<a href="index.php?do=config&view=model&model_type=shop&op=del&model_id=7" onclick="return uninstall(this);" class="button">
-<span class="downarrow icon"></span>卸载</a>
-                </td>
-            </tr>
-              
-                <tr>
-                    <td colspan="7">
-                        安装新模型,请输入模板所在目录: <input type="text" name="txt_model_name" value="" class="txt">
-<button type="submit" name="submit" class="button pill" value=安装 ><span class="uparrow icon"></span>安装</button>
-                    </td>
-                </tr>
-           
-        </table>
- </form>
+<?php for($i=0;$i<count($info);$i++){?>
+	<tr>
+		<td><?php echo $info[$i]['model_id']?></td>
+		<td>
+		<?php if($info[$i]['model_status']==1){?>
+		<font color="red">开启</font>
+		<?php }else{echo '禁用';}?>
+		</td>
+		<td><?php echo $info[$i]['model_code']?></td>
+		<td><?php echo $info[$i]['model_name']?></td>
+		<td><?php echo $info[$i]['model_dir']?></td>
+		<td><?php echo $info[$i]['model_dev']?></td>
+		<!--
+		<td>
+		<input size="3" class="txt" name="md_list_order<?php echo $info[$i]['model_id']?>"  id="md_list_order<?php echo $info[$i]['model_id']?>" value="<?php echo $info[$i]['listorder']?>" type="text" onchange="set_listorder('<?php echo $info[$i]['model_id']?>',this.value);">
+		</td>
+		-->
+		<td>
+		<?php if($info[$i]['model_status']==1){?>
+		<a href="index.php?r=config/model_shop&id=<?php echo $info[$i]['model_id']?>"  class="button">
+		<span class="lock icon"></span>禁用</a>
+		<?php }else{?>
+		<a href="index.php?r=config/model_shop&id=<?php echo $info[$i]['model_id']?>"  class="button">
+		<span class="lock icon"></span>设为启用</a>
+		<?php }?>
+		</td>
+		<td>
+		<?php if($info[$i]['model_status']==1){?>
+		<a href="index.php?r=store/
+		<?php
+		switch($info[$i]['model_id'])
+		{
+			case 6:echo 'works_config';break;
+			case 7:echo 'server_config';break;
+		}?>" class="button">
+		<span class="cog icon"></span>配置</a>
+		<?php }?>
+		</td>
+		<td>
+		<a href="" onclick="return uninstall(this);" class="button">
+		<span class="downarrow icon"></span>卸载</a>
+		</td>
+	</tr>
+<?php }?>
+	<tr>
+	<td colspan="7">
+	安装新模型,请输入模板所在目录: <input type="text" name="txt_model_name" value="" class="txt">
+	<button type="submit" name="submit" class="button pill" value=安装 >
+	<span class="uparrow icon"></span>安装</button>
+	</td>
+	</tr>
+</table>
+</form>
    </div>
     <script>
         function set_listorder(model_id, value){

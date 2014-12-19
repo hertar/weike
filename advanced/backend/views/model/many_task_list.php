@@ -1,3 +1,6 @@
+<?php
+use yii\widgets\LinkPager;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -38,11 +41,15 @@
 <tbody>
                         <tr>
                             <th>任务编号</th>
-                            <td><input type="text" value="" name="w[task_id]" class="txt"/>支持模糊查询</td>
+                             <td><input type="text"  id='ida'  class="txt"/></td>
                             <th>任务标题</th>
-                            <td><input type="text" value="" name="w[task_title]" class="txt"/> 支持模糊查询</td>
-                           <th></th> <td><button class="pill" type="submit" value="搜索" name="sbt_search">
-                            		<span class="icon magnifier">&nbsp;</span>搜索</button></td>
+                            <td><input type="text"  id='title'  class="txt"/> 支持模糊查询</td>
+                             <th></th>
+                             <td>
+                             	<button class="pill" type="button" value="搜索" name="sbt_search" onclick="search_task()">
+                            		<span class="magnifier icon">&nbsp;</span>搜索</button></td>
+                        </td>
+                           
 </tr> 
                         <tr>
                         	 <th>请选择任务状态</th>
@@ -67,16 +74,16 @@
                            <option value="task_id"  selected="selected">默认排序</option>
                            <option value="start_time" >开始时间</option>
                       </select>
-                      <select name="ord[]" onchange="orderJump(this.value)">
-                            <option selected="selected"  value="desc">递减</option>
-                            <option  value="asc">递增</option>
-                      </select>
+                                <select name="ord[]" onchange="orderJump(this.value)">
+                                <option  value="asc"  <?php if($ord=='asc'){echo "selected";}?>>递增</option>
+                                <option  value="desc"  <?php if($ord=='desc'){echo "selected";}?>>递减</option>
+                                </select>
 </td>
                             <th>显示结果</th>
-                            <td><select name="page_size" onchange="pageJump(this.value)">
-<option value="10" selected="selected">每页显示10</option>
-<option value="20" >每页显示20</option>
-<option value="30" >每页显示30</option>
+                            <td><select name="page_size" onchange="pageJump(value)">
+ <option value="10" <?php if($pagesize==10){echo "selected";}?>>每页显示10条</option>
+     <option value="5" <?php if($pagesize==5){echo "selected"; }?>>每页显示5条</option>
+     <option value="3" <?php if($pagesize==3){echo "selected"; }?>>每页显示3条</option>
 </select>
                               	</td>
                         </tr>
@@ -108,180 +115,33 @@
                   
                     <th width="23%">操作</th>
                   </tr>
+                       <?php             foreach($list as $key=>$val)
+      {?>
                                     <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="68" class="checkbox">68</td>
+                 	<td class="td25"><input type="checkbox" name="ckb" class="checkbox" value="<?php echo $val['task_id']?>" class="checkbox"><?php echo $val['task_id']?></td>
                     <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=68" target="_blank">
-                    		屌丝一族逆袭歌词招募</a>
+                    	<a href="/public/index.php?do=task&task_id=70" target="_blank"><?php echo $val['task_title']?></a>
 </td>
-<td>￥1,000.00元</td>
-                    <td>墨客</td>
-    <td>失败</td>
-                  
+                   
+                    <td>￥<?php echo $val['task_cash']?>元</td>
+                    <td><?php echo $val['username']?></td>
+                    <?php if($val['task_status']==2){ ?>
+                       <td> 失败</td>
+                    <?php }else { ?>
+                      <td> 结束</td>
+                   <?php }?>
+ 
                     <td>
-                	
-    
-<a class="button dbl_target" href="index.php?do=model&model_id=2&view=edit&task_id=68&page=1"><span class="pen icon"></span>查看</a>
-<a class="button" href="index.php?do=model&model_id=2&view=list&ac=del&task_id=68&page=1"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
+                    	
+<a href="index.php?do=model&model_id=1&view=edit&task_id=70&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
+<a href="index.php?r=model/del_manytask&id=<?php echo $val['task_id'] ?>" class="button"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
 </td>
                   </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="66" class="checkbox">66</td>
-                    <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=66" target="_blank">
-                    		找人代画电路原理图和PCB版图，有现成SCH和PC</a>
-</td>
-<td>￥100.00元</td>
-                    <td>墨客</td>
-    <td>失败</td>
-                  
-                    <td>
-                	
-    
-<a class="button dbl_target" href="index.php?do=model&model_id=2&view=edit&task_id=66&page=1"><span class="pen icon"></span>查看</a>
-<a class="button" href="index.php?do=model&model_id=2&view=list&ac=del&task_id=66&page=1"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="64" class="checkbox">64</td>
-                    <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=64" target="_blank">
-                    		新房装修设计，二室二厅一卫</a>
-</td>
-<td>￥100.00元</td>
-                    <td>墨客</td>
-    <td>失败</td>
-                  
-                    <td>
-                	
-    
-<a class="button dbl_target" href="index.php?do=model&model_id=2&view=edit&task_id=64&page=1"><span class="pen icon"></span>查看</a>
-<a class="button" href="index.php?do=model&model_id=2&view=list&ac=del&task_id=64&page=1"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="60" class="checkbox">60</td>
-                    <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=60" target="_blank">
-                    		新疆美程在线国旅宣传软文征集</a>
-</td>
-<td>￥1,000.00元</td>
-                    <td>墨客</td>
-    <td>失败</td>
-                  
-                    <td>
-                	
-    
-<a class="button dbl_target" href="index.php?do=model&model_id=2&view=edit&task_id=60&page=1"><span class="pen icon"></span>查看</a>
-<a class="button" href="index.php?do=model&model_id=2&view=list&ac=del&task_id=60&page=1"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="58" class="checkbox">58</td>
-                    <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=58" target="_blank">
-                    		给我喜欢的女孩发生日祝福征集</a>
-</td>
-<td>￥1,000.00元</td>
-                    <td>墨客</td>
-    <td>失败</td>
-                  
-                    <td>
-                	
-    
-<a class="button dbl_target" href="index.php?do=model&model_id=2&view=edit&task_id=58&page=1"><span class="pen icon"></span>查看</a>
-<a class="button" href="index.php?do=model&model_id=2&view=list&ac=del&task_id=58&page=1"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="54" class="checkbox">54</td>
-                    <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=54" target="_blank">
-                    		ASP注册页面，用户重复ajax判断</a>
-</td>
-<td>￥300.00元</td>
-                    <td>墨客</td>
-    <td>失败</td>
-                  
-                    <td>
-                	
-    
-<a class="button dbl_target" href="index.php?do=model&model_id=2&view=edit&task_id=54&page=1"><span class="pen icon"></span>查看</a>
-<a class="button" href="index.php?do=model&model_id=2&view=list&ac=del&task_id=54&page=1"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="50" class="checkbox">50</td>
-                    <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=50" target="_blank">
-                    		五一促销活动海报展板设计</a>
-</td>
-<td>￥100.00元</td>
-                    <td>墨客</td>
-    <td>失败</td>
-                  
-                    <td>
-                	
-    
-<a class="button dbl_target" href="index.php?do=model&model_id=2&view=edit&task_id=50&page=1"><span class="pen icon"></span>查看</a>
-<a class="button" href="index.php?do=model&model_id=2&view=list&ac=del&task_id=50&page=1"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="48" class="checkbox">48</td>
-                    <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=48" target="_blank">
-                    		拉菲曼妮 法式家具LOGO设计</a>
-</td>
-<td>￥100.00元</td>
-                    <td>墨客</td>
-    <td>失败</td>
-                  
-                    <td>
-                	
-    
-<a class="button dbl_target" href="index.php?do=model&model_id=2&view=edit&task_id=48&page=1"><span class="pen icon"></span>查看</a>
-<a class="button" href="index.php?do=model&model_id=2&view=list&ac=del&task_id=48&page=1"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="44" class="checkbox">44</td>
-                    <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=44" target="_blank">
-                    		店内广告牌设计</a>
-</td>
-<td>￥100.00元</td>
-                    <td>墨客</td>
-    <td>失败</td>
-                  
-                    <td>
-                	
-    
-<a class="button dbl_target" href="index.php?do=model&model_id=2&view=edit&task_id=44&page=1"><span class="pen icon"></span>查看</a>
-<a class="button" href="index.php?do=model&model_id=2&view=list&ac=del&task_id=44&page=1"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="39" class="checkbox">39</td>
-                    <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=39" target="_blank">
-                    		求购位置服务平台软件（源代码)</a>
-</td>
-<td>￥100.00元</td>
-                    <td>墨客</td>
-    <td>失败</td>
-                  
-                    <td>
-                	
-    
-<a class="button dbl_target" href="index.php?do=model&model_id=2&view=edit&task_id=39&page=1"><span class="pen icon"></span>查看</a>
-<a class="button" href="index.php?do=model&model_id=2&view=list&ac=del&task_id=39&page=1"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
+      <?php }?> 
                                     
                   <tr>
                     <td colspan="7">
-                    <div class="page fl_right"><span> 1 / 2页 </span> <a class="selected">1</a><a href=javascript:; onclick=ajaxpage('ajax_dom','index.php?do=model&model_id=2&view=list&w[task_id]=&w[task_title]=&w[task_status]=&ord[0]=&ord[1]=&page=1&page_size=10&page=2','2','1')>2</a><a href=javascript:; onclick=ajaxpage('ajax_dom','index.php?do=model&model_id=2&view=list&w[task_id]=&w[task_title]=&w[task_status]=&ord[0]=&ord[1]=&page=1&page_size=10&page=2','2','1')>下一页>></a></div>
+                    <div class="page fl_right"> <?= LinkPager::widget(['pagination' => $pages]); ?></div>
                     
                     <div class="clearfix">
                   		<input type="checkbox" onclick="checkall();" id="checkbox" name="checkbox"/>
@@ -299,6 +159,13 @@
         </div>       
     </div>
 <!--主体结束-->
+<script type="text/javascript">
+function search_task(){
+    var id= document.getElementById("ida").value;
+    var title= document.getElementById("title").value;
+    location.href="index.php?r=model/many_task_list&search_id="+id+"&search_title="+title;
+}
+</script>
 </div>
 <script type="text/javascript"
 src="/public/resource/js/artdialog/artDialog.js"></script>
@@ -399,11 +266,22 @@ function batch_act(obj, frm) {
 d = art.dialog;
 var frm = frm;
 var c = $(obj).val();
-var conf = $(":checkbox[name='ckb[]']:checked").length;
+var conf = $(":checkbox[name='ckb']:checked").length;
 if (conf > 0) {
 d.confirm("确定" + c + '?', function() {
-$(".sbt_action").val(c);
-$("#" + frm).submit();
+var conf = $(":checkbox[name='ckb']:checked").length;
+var ida = document.getElementsByName("ckb");
+var idarr=new Array();
+		var flag=0;
+		for (var i=0; i<conf; i++)
+		{
+			if(ida[i].checked==true)
+			{
+				idarr[flag]=ida[i].value;
+				flag++;
+			}
+		}
+ location.href="index.php?r=model/del_manytasks&id="+idarr;
 });
 } else {
 d.alert("您没有选择任何操作项");
@@ -419,10 +297,9 @@ function statusJump(task_status){
 window.location.href = url+'&w[task_status]='+task_status;
 }
 function orderJump(value){
-var ord1 = $("#ord1").children("option:selected").val();//selected的值
-window.location.href= url+'&ord[0]='+ord1+'&ord[1]='+value;
+location.href="index.php?r=model/many_task_list&ord="+value;
 }
 function pageJump(value){
-window.location.href = url+'&page_size='+value;
+location.href="index.php?r=model/many_task_list&pagesize="+value;
 }
 </script>

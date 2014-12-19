@@ -1,3 +1,6 @@
+<?php
+use yii\widgets\LinkPager;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -38,12 +41,13 @@
 <tbody>
                         <tr>
                             <th>任务编号</th>
-                            <td><input type="text" value="" name="w[task_id]" class="txt"/></td>
+                            <td><input type="text"  id='ida'  class="txt"/></td>
                             <th>任务标题</th>
-                            <td><input type="text" value="" name="w[task_title]" class="txt"/>支持模糊查询</td>
-                             <th></th><td>
-                             	<button class="pill" type="submit" value=搜索 name="sbt_search">
-                            		<span class="icon magnifier">&nbsp;</span>搜索</button></td>
+                            <td><input type="text"  id='title'  class="txt"/> 支持模糊查询</td>
+                             <th></th>
+                             <td>
+                             	<button class="pill" type="button" value="搜索" name="sbt_search" onclick="search_task()">
+                            		<span class="magnifier icon">&nbsp;</span>搜索</button></td>
                              </td>
 </tr>
     
@@ -72,15 +76,15 @@
                                 <option value="start_time" >发布时间</option>
                                 </select>
                                 <select name="ord[]" onchange="orderJump(this.value)">
-                                <option selected="selected"  value="desc">递减</option>
-                                <option  value="asc">递增</option>
+                                <option  value="asc"  <?php if($ord=='asc'){echo "selected";}?>>递增</option>
+                                <option  value="desc"  <?php if($ord=='desc'){echo "selected";}?>>递减</option>
                                 </select>
 </td>
                             <th>显示结果</th>
                             <td><select name="page_size" onchange="pageJump(this.value)">
-<option value="10" selected="selected">每页显示10</option>
-<option value="20" >每页显示20</option>
-<option value="30" >每页显示30</option>
+ <option value="10" <?php if($pagesize==10){echo "selected";}?>>每页显示10条</option>
+     <option value="5" <?php if($pagesize==5){echo "selected"; }?>>每页显示5条</option>
+     <option value="3" <?php if($pagesize==3){echo "selected"; }?>>每页显示3条</option>
 </select>
                               	
                         </tr>
@@ -113,170 +117,33 @@
  <th width="10%">任务状态</th> 
                     <th width="17%">操作</th>
                   </tr>
+                      <?php             foreach($list as $key=>$val)
+      {?>
                                     <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="57" class="checkbox">57</td>
-                    <td class="td28"><a href="/public/index.php?do=task&task_id=57" target="_blank">
-                    	进驻商场&企业生活馆餐饮店的竞标</a>
+                 	<td class="td25"><input type="checkbox" name="ckb" class="checkbox" value="<?php echo $val['task_id']?>" class="checkbox"><?php echo $val['task_id']?></td>
+                    <td class="td28">
+                    	<a href="/public/index.php?do=task&task_id=70" target="_blank"><?php echo $val['task_title']?></a>
 </td>
-                     
-                    <td>￥100.00元</td>
-<td>丸美弹力</td>
-<td>结束</td> 
+                   
+                    <td>￥<?php echo $val['task_cash']?>元</td>
+                    <td><?php echo $val['username']?></td>
+                    <?php if($val['task_status']==2){ ?>
+                       <td> 失败</td>
+                    <?php }else { ?>
+                      <td> 结束</td>
+                   <?php }?>
+ 
                     <td>
-<!--
--->
-<a href="index.php?do=model&model_id=3&view=edit&task_id=57&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=model&model_id=3&view=list&ac=del&task_id=57&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
+                    	
+<a href="index.php?do=model&model_id=1&view=edit&task_id=70&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
+<a href="index.php?r=model/del_jijiantask&id=<?php echo $val['task_id'] ?>" class="button"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
 </td>
                   </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="52" class="checkbox">52</td>
-                    <td class="td28"><a href="/public/index.php?do=task&task_id=52" target="_blank">
-                    	铁路工程图书编辑项目长期合作</a>
-</td>
-                     
-                    <td>￥120.00元</td>
-<td>丸美弹力</td>
-<td>失败</td> 
-                    <td>
-<!--
--->
-<a href="index.php?do=model&model_id=3&view=edit&task_id=52&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=model&model_id=3&view=list&ac=del&task_id=52&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="46" class="checkbox">46</td>
-                    <td class="td28"><a href="/public/index.php?do=task&task_id=46" target="_blank">
-                    	轻松下载每个可得钱</a>
-</td>
-                     
-                    <td>￥90.00元</td>
-<td>丸美弹力</td>
-<td>结束</td> 
-                    <td>
-<!--
--->
-<a href="index.php?do=model&model_id=3&view=edit&task_id=46&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=model&model_id=3&view=list&ac=del&task_id=46&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="43" class="checkbox">43</td>
-                    <td class="td28"><a href="/public/index.php?do=task&task_id=43" target="_blank">
-                    	希望女友收到来自各地的祝福短信</a>
-</td>
-                     
-                    <td>￥300.00元</td>
-<td>丸美弹力</td>
-<td>结束</td> 
-                    <td>
-<!--
--->
-<a href="index.php?do=model&model_id=3&view=edit&task_id=43&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=model&model_id=3&view=list&ac=del&task_id=43&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="40" class="checkbox">40</td>
-                    <td class="td28"><a href="/public/index.php?do=task&task_id=40" target="_blank">
-                    	生日祝福短信的征集</a>
-</td>
-                     
-                    <td>￥200.00元</td>
-<td>丸美弹力</td>
-<td>失败</td> 
-                    <td>
-<!--
--->
-<a href="index.php?do=model&model_id=3&view=edit&task_id=40&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=model&model_id=3&view=list&ac=del&task_id=40&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="37" class="checkbox">37</td>
-                    <td class="td28"><a href="/public/index.php?do=task&task_id=37" target="_blank">
-                    	天涯论坛发帖</a>
-</td>
-                     
-                    <td>￥160.00元</td>
-<td>丸美弹力</td>
-<td>失败</td> 
-                    <td>
-<!--
--->
-<a href="index.php?do=model&model_id=3&view=edit&task_id=37&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=model&model_id=3&view=list&ac=del&task_id=37&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="35" class="checkbox">35</td>
-                    <td class="td28"><a href="/public/index.php?do=task&task_id=35" target="_blank">
-                    	淘宝网店推广</a>
-</td>
-                     
-                    <td>￥150.00元</td>
-<td>丸美弹力</td>
-<td>结束</td> 
-                    <td>
-<!--
--->
-<a href="index.php?do=model&model_id=3&view=edit&task_id=35&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=model&model_id=3&view=list&ac=del&task_id=35&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="34" class="checkbox">34</td>
-                    <td class="td28"><a href="/public/index.php?do=task&task_id=34" target="_blank">
-                    	淘宝网店推广 10元1稿 简单快捷</a>
-</td>
-                     
-                    <td>￥120.00元</td>
-<td>丸美弹力</td>
-<td>结束</td> 
-                    <td>
-<!--
--->
-<a href="index.php?do=model&model_id=3&view=edit&task_id=34&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=model&model_id=3&view=list&ac=del&task_id=34&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="28" class="checkbox">28</td>
-                    <td class="td28"><a href="/public/index.php?do=task&task_id=28" target="_blank">
-                    	彩票站宣传单设计</a>
-</td>
-                     
-                    <td>￥80.00元</td>
-<td>猪八戒</td>
-<td>结束</td> 
-                    <td>
-<!--
--->
-<a href="index.php?do=model&model_id=3&view=edit&task_id=28&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=model&model_id=3&view=list&ac=del&task_id=28&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="24" class="checkbox">24</td>
-                    <td class="td28"><a href="/public/index.php?do=task&task_id=24" target="_blank">
-                    	生日祝福短信的征集</a>
-<font color="red">[荐]</font></td>
-                     
-                    <td>￥80.00元</td>
-<td>猪八戒</td>
-<td>失败</td> 
-                    <td>
-<!--
--->
-<a href="index.php?do=model&model_id=3&view=edit&task_id=24&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=model&model_id=3&view=list&ac=del&task_id=24&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
+      <?php }?> 
                                     
                   <tr>
                     <td colspan="7">
-                    <div class="page fl_right"><span> 1 / 2页 </span> <a class="selected">1</a><a href=javascript:; onclick=ajaxpage('ajax_dom','index.php?do=model&model_id=3&view=list&w[task_id]=&w[task_title]=&w[task_status]=&ord[0]=&ord[1]=&page=1&page_size=10&page=2','2','1')>2</a><a href=javascript:; onclick=ajaxpage('ajax_dom','index.php?do=model&model_id=3&view=list&w[task_id]=&w[task_title]=&w[task_status]=&ord[0]=&ord[1]=&page=1&page_size=10&page=2','2','1')>下一页>></a></div>
+                    <div class="page fl_right"><?= LinkPager::widget(['pagination' => $pages]); ?></div>
                     
                     <div class="clearfix">
                   		<input type="checkbox" onclick="checkall();" id="checkbox" name="checkbox"/>
@@ -297,6 +164,13 @@
         </div>       
     </div>
 <!--主体结束-->
+<script type="text/javascript">
+function search_task(){
+    var id= document.getElementById("ida").value;
+    var title= document.getElementById("title").value;
+    location.href="index.php?r=model/jijian_task_list&search_id="+id+"&search_title="+title;
+}
+</script>
 </div>
 <script type="text/javascript"
 src="/public/resource/js/artdialog/artDialog.js"></script>
@@ -397,11 +271,22 @@ function batch_act(obj, frm) {
 d = art.dialog;
 var frm = frm;
 var c = $(obj).val();
-var conf = $(":checkbox[name='ckb[]']:checked").length;
+var conf = $(":checkbox[name='ckb']:checked").length;
 if (conf > 0) {
 d.confirm("确定要" + c + '?', function() {
-$(".sbt_action").val(c);
-$("#" + frm).submit();
+var conf = $(":checkbox[name='ckb']:checked").length;
+var ida = document.getElementsByName("ckb");
+var idarr=new Array();
+		var flag=0;
+		for (var i=0; i<conf; i++)
+		{
+			if(ida[i].checked==true)
+			{
+				idarr[flag]=ida[i].value;
+				flag++;
+			}
+		}
+ location.href="index.php?r=model/del_jijiantasks&id="+idarr;
 });
 } else {
 d.alert("您没有选择任何操作项");
@@ -417,10 +302,9 @@ function statusJump(task_status){
 window.location.href = url+'&w[task_status]='+task_status;
 }
 function orderJump(value){
-var ord1 = $("#ord1").children("option:selected").val();//selected的值
-window.location.href= url+'&ord[0]='+ord1+'&ord[1]='+value;
+location.href="index.php?r=model/jijian_task_list&ord="+value;
 }
 function pageJump(value){
-window.location.href = url+'&page_size='+value;
+location.href="index.php?r=model/jijian_task_list&pagesize="+value;
 }
 </script>

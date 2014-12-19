@@ -3,8 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>keke admin</title>
-
-
 <link href="/public/tpl/css/admin_management.css" rel="stylesheet" type="text/css" />
 <link href="/public/resource/css/buttons.css" rel="stylesheet" type="text/css" />
 <link title="style1" href="/public/tpl/skin/default/style.css" rel="stylesheet" type="text/css" />
@@ -29,97 +27,102 @@
         <div class="tabcon">
         	<div class="title"><h2>邮箱配置</h2></div>
             <div class="detail">
-    <form name="frm_config_pay" action="#" method="post">
- 
-        <table width="100%"  border="0" cellspacing="0" cellpadding="0" class="tab_m t_l">
-            <tr>
-                <th scope="row" width="160">
-                    邮箱服务：                </th>
-                <td>
-                    <label for="rdo_mail_server_cat_mail">
-                        <input id="rdo_mail_server_cat_mail" type="radio" name="mail_server_cat"value="mail"  />采用服务器内置mail服务                    </label>
-                    <label for="rdo_mail_server_cat_smtp">
-                        <input id="rdo_mail_server_cat_smtp" type="radio" name="mail_server_cat"checked="checked" value="smtp" />采用其它的smtp服务                    </label>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    启用加密连接(SSL)：                </th>
-                <td>
-                    <label for="rdo_mail_ssl_no">
-                        <input id="rdo_mail_ssl_no" type="radio" name="mail_ssl" value="2" id="rdo_mail_ssl_no">否                    </label>
-                    <label for="rdo_mail_ssl_yes">
-                        <input id="rdo_mail_ssl_yes" type="radio" name="mail_ssl"checked="checked" value="1"  id="rdo_mail_ssl_yes">是                    </label>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    发送邮件服务器：                </th>
-                <td>
-                    <input type="text" size="50" name="smtp_url" value="" limit="len:3-100" msg="3-100" msgArea="txt_reg_limit_msg" class="txt"/><span id="txt_reg_limit_msg"></span>
-                    (邮件服务器主机地址,如果本机发送则为localhost)
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    服务器端口：                </th>
-                <td>
-                    <input type="text" size="50" name="mail_server_port" value="25" limit="type:int" msg="端口数为整数" msgArea="txt_mail_server_port_msg" class="txt"/><span id="txt_mail_server_port_msg"></span>
-                    (默认端口为：25)
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    邮件发送账号：                </th>
-                <td>
-                    <input type="text" size="50" name="post_account" value="" limit="type:email" msg="回复地址格式不正确" msgArea="txt_post_account_msg" class="txt"/><span id="txt_post_account_msg"></span>
-                    (发送邮件所需账号，如果没有就空着)
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    账号密码：                </th>
-                <td>
-                    <input type="password" size="50" name="account_pwd" value="" limit="len:0-20" msg="" msgArea="txt_account_pwd_msg" class="txt"/><span id="txt_account_pwd_msg"></span>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    邮件回复地址：                </th>
-                <td>
-                    <input type="text" size="50" name="mail_replay" value="" limit="type:email" msg="回复地址格式不正确" msgArea="txt_mail_replay_msg" class="txt"/><span id="txt_mail_replay_msg"></span>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    邮箱编码：                </th>
-                <td>
-                    <label for="rdo_mail_charset_utf8">
-                        <input type="radio" id="rdo_mail_charset_utf8" name="mail_charset"                        checked="checked"                        value="utf-8" >国际化编码(utf-8)
-                    </label>
-                    <label for="rdo_mail_charset_gbk">
-                        <input type="radio" id="rdo_mail_charset_gbk" name="mail_charset"                        value="gbk" >简体中文                    </label>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    邮箱地址：                </th>
-                <td>
-                    <input type="text" size="50" id="txt_test_mail" name="txt_test_mail" class="txt"/>
-<button type="button" id="btn_send_test" class="button pill" >发送测试邮件 </button>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">&nbsp;
-                    					
-                </th>
-                <td>
-                	<button type="submit"  name="submit" class="positive pill primary button" ><span class="check icon"></span>提交</button>
+<form name="frm_config_pay" action="index.php?r=config/edit" method="post">
+<table width="100%"  border="0" cellspacing="0" cellpadding="0" class="tab_m t_l">
+	<tr>
+		<th scope="row" width="160">邮箱服务：</th>
+		<td>
+		<label for="rdo_mail_server_cat_mail">
+		<input id="rdo_mail_server_cat_mail" type="radio" name="mail_server_cat" value="mail"  <?php if($mail_server_cat=='mail'){echo 'checked';}?>/>
+		采用服务器内置mail服务</label>
+		<label for="rdo_mail_server_cat_smtp">
+		<input id="rdo_mail_server_cat_smtp" type="radio" name="mail_server_cat" value="smtp" <?php if($mail_server_cat=='smtp'){echo 'checked';}?>/>
+		采用其它的smtp服务</label>
+		</td>
+	</tr>
 
-                </td>
-            </tr>
-        </table>
-    </form>
+	<tr>
+		<th scope="row">启用加密连接(SSL)：</th>
+		<td>
+		<label for="rdo_mail_ssl_yes">
+		<input id="rdo_mail_ssl_yes" type="radio" name="mail_ssl"value="1"  id="rdo_mail_ssl_yes"<?php if($mail_ssl==1){echo 'checked';}?>>是</label>
+		<label for="rdo_mail_ssl_no">
+		<input id="rdo_mail_ssl_no" type="radio" name="mail_ssl" value="2" id="rdo_mail_ssl_no" <?php if($mail_ssl==2){echo 'checked';}?>>否</label>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">发送邮件服务器：</th>
+		<td>
+		<input type="text" size="50" name="smtp_url" value="<?php echo $smtp_url?>" limit="len:3-100" msg="3-100" msgArea="txt_reg_limit_msg" class="txt"/>
+		<span id="txt_reg_limit_msg"></span>
+		(邮件服务器主机地址,如果本机发送则为localhost)
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">服务器端口：</th>
+		<td>
+		<input type="text" size="50" name="mail_server_port" value="<?php echo $mail_server_port?>" limit="type:int" msg="端口数为整数" msgArea="txt_mail_server_port_msg" class="txt"/>
+		<span id="txt_mail_server_port_msg"></span>
+		(默认端口为：25)
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">邮件发送账号：</th>
+		<td>
+		<input type="text" size="50" name="post_account" value="<?php echo $post_account?>" limit="type:email" msg="回复地址格式不正确" msgArea="txt_post_account_msg" class="txt"/>
+		<span id="txt_post_account_msg"></span>
+		(发送邮件所需账号，可以为空)
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">账号密码：</th>
+		<td>
+		<input type="password" size="50" name="account_pwd" value="<?php echo $account_pwd?>" limit="len:0-20" msg="" msgArea="txt_account_pwd_msg" class="txt"/>
+		<span id="txt_account_pwd_msg"></span>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">邮件回复地址：</th>
+		<td>
+		<input type="text" size="50" name="mail_replay" value="<?php echo $mail_replay?>" limit="type:email" msg="回复地址格式不正确" msgArea="txt_mail_replay_msg" class="txt"/>
+		<span id="txt_mail_replay_msg"></span>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">邮箱编码：</th>
+		<td>
+		<label for="rdo_mail_charset_utf8">
+		<input type="radio" id="rdo_mail_charset_utf8" name="mail_charset" value="utf-8" <?php if($mail_charset=='utf-8'){echo 'checked';}?>>国际化编码(utf-8)</label>
+		<label for="rdo_mail_charset_gbk">
+		<input type="radio" id="rdo_mail_charset_gbk" name="mail_charset"  value="gbk" <?php if($mail_charset=='gbk'){echo 'checked';}?>>简体中文</label>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">邮箱地址：</th>
+		<td>
+		<input type="text" size="50" id="txt_test_mail" name="txt_test_mail" class="txt"/>
+		<button type="button" id="btn_send_test" class="button pill" >发送测试邮件 </button>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">&nbsp;
+		</th>
+		<td>
+		<button type="submit"  name="submit" value='mail' class="positive pill primary button" >
+		<span class="check icon"></span>提交</button>
+		</td>
+	</tr>
+
+</table>
+</form>
 </div>
 </div>
 </div>

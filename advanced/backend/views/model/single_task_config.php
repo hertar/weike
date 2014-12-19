@@ -1,3 +1,6 @@
+<?php
+use yii\widgets\LinkPager;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -28,20 +31,20 @@
  <div class="tabcon">
   <div class="title"><h2>基本配置</h2></div>
 <div class="detail">
- <form action="index.php?do=model&model_id=1&view=config&op=config" method="post">
+ <form action="index.php?r=model/add_single_task" method="post">
  	<input type="hidden" name="pk[model_id]" value="1">
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
    <th scope="row" width="200">模型名称：</th>
     <td>
-       <input type="text" class="txt" name="fds[model_name]" value="单人悬赏">
+       <input type="text" class="txt" name="fds[model_name]" value="<?php echo $list['model_name']?>">
 </td>
         </tr>
 <tr>
    <th scope="row" width="200">是否开启：</th>
      <td>
-        <label for="status_yes"><input type="radio" id="status_yes" name="fds[model_status]" checked value="1"> 是</label>
-<label for="status_no"><input type="radio" id="status_no" name="fds[model_status]"  value="0"> 否</label>
+        <label for="status_yes"><input type="radio" id="status_yes" name="fds[model_status]"value="1" <?php if($list['model_status']==1){echo "checked";}?>> 是</label>
+        <label for="status_no"><input type="radio" id="status_no" name="fds[model_status]"  value="0" <?php if($list['model_status']==0){echo "checked";}?>> 否</label>
 </td>
         </tr>
 <tr>
@@ -85,7 +88,7 @@
  <tr>
     <th scope="row" width="200">模型说明：</th>
       <td>
-       <textarea cols=110 rows=12 name="fds[model_desc]"  style="width:75%;" id="tar_content"  class="xheditor {urlBase:'http://127.0.0.1/weike/',tools:'simple',skin:'nostyle',admin:'/public/',html5Upload:false,upImgUrl:'/public/index.php?do=ajax&view=upload&file_type=att'}" cols="70">&lt;p&gt;&nbsp;&nbsp;&nbsp;&nbsp;&lt;strong&gt; 单人悬赏常用于发布一些时间短，需要创意型的任务，例如给宝宝起名，店铺起名，设计网站logo，贺卡设计，找人排队跑腿，写广告语，策划活动等等是的吧&lt;/strong&gt;&lt;/p&gt;</textarea>
+       <textarea cols=110 rows=12 name="fds[model_desc]"  style="width:75%;" id="tar_content"  class="xheditor {urlBase:'http://127.0.0.1/weike/',tools:'simple',skin:'nostyle',admin:'/public/',html5Upload:false,upImgUrl:'/public/index.php?do=ajax&view=upload&file_type=att'}" cols="70"><?php echo $list['model_desc']?></textarea>
   </td>
          </tr>
   <tr>
