@@ -8,6 +8,7 @@ use common\models\LoginForm;
 use yii\filters\VerbFilter;
 use app\models\BasicConfig;
 use app\models\Nav;
+use app\models\WkWitkeyModel;
 
 /**
  * Site controller
@@ -106,12 +107,32 @@ class ConfigController extends Controller
 
     //模型管理(任务模型)
     public function actionModel(){
-          return $this->renderPartial('model');
+		if(isset($_GET['id'])){
+			$id=intval($_GET['id']);
+			$info=WkWitkeyModel::findOne($id);
+			if($info['model_status']==1){
+				WkWitkeyModel::updateAll(['model_status'=>0],['model_id'=>$id]);
+			}else{
+				WkWitkeyModel::updateAll(['model_status'=>1],['model_id'=>$id]);
+			}
+		}
+		$res=WkWitkeyModel::find()->where(['model_type'=>'task'])->orderby('model_id')->all();
+		return $this->renderPartial('model',['info'=>$res]);
      }
 
      //模型管理(商业模型)
-     public function actionModel_shop(){       
-         return $this->renderPartial("model_shop");
+     public function actionModel_shop(){
+		 if(isset($_GET['id'])){
+			$id=intval($_GET['id']);
+			$info=WkWitkeyModel::findOne($id);
+			if($info['model_status']==1){
+				WkWitkeyModel::updateAll(['model_status'=>0],['model_id'=>$id]);
+			}else{
+				WkWitkeyModel::updateAll(['model_status'=>1],['model_id'=>$id]);
+			}
+		}
+		$res=WkWitkeyModel::find()->where(['model_type'=>'shop'])->orderby('model_id')->all();
+        return $this->renderPartial("model_shop",['info'=>$res]);
      }
 
      //会员整合
