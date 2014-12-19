@@ -19,81 +19,88 @@
     </div>
 <div class="box post">
 <div class="tabcon">
-        	<div class="title"><h2>导航添加</h2></div>
+        	<div class="title"><h2>导航<?php echo $tag;?></h2></div>
             <div class="detail">
-                <form name="frm_config_basic" id="frm_config_basic" action="" method="post" >    
-    <input type="hidden" id="nav_id" name="pk[nav_id]" value="">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                      <tr>
-                         <th scope="row" width="160">菜单标题：</th>
-                     	 <td>
-                        	<input type="text" name="fds[nav_title]" id="nav_title" value="" class="txt" style="width:260px;" limit="required:true;len:1-50" 
-                         msg="" msgArea="obj_name_msg" title="菜单的描述，如任务大厅" />
-                        <span id="obj_name_msg"></span>
- </td>
-  </tr>
-                      <tr>
-                         <th scope="row" width="160">菜单链接：</th>
-                     	 <td>
-                        	<div style="float:left; padding-top:10px">
-                        	<input type="text" name="fds[nav_url]" id="nav_url" value="" class="txt" style="width:260px;"   />
-                        	</div>
-                        	<div style="float:left;margin-left:20px; width:50%">
- 	<span>如果是站内链接格式:index.php?do=task,task为下面要填写的样式;<br>外站链接格式:http://www.baidu.com,下面样式为空即可！</span></br><font color="red">站内的可用链接、一经填写无法修改！</font>
- 	</div>
- </td>
-  </tr>
-  <tr>
-                         <th scope="row" width="160">菜单样式：</th>
-                     	 <td>
-                        	<input type="text"  name="fds[nav_style]" id="nav_style"  value="" class="txt" style="width:260px;"/>
- </td>
-  </tr>
-  <tr>
-                         <th scope="row" width="160">菜单排序.：</th>
-                     	 <td>
-                        	<input type="text" name="fds[listorder]" id="listorder" value="" class="txt" style="width:260px;"/>
- </td>
-  </tr>
-  <tr>
-                         <th scope="row" width="160">新窗口打开.：</th>
-                     	 <td>
-                     	 	<select name="fds[newwindow]" id='newwindow'>
-                     	 		<option  value='1'>是</option>
-                     	 		<option  selected="selected"  value='0'>否</option>
-                     	 	</select>
- </td>
-  </tr>
-  <tr>
-                         <th scope="row" width="160">显示模式：</th>
-                     	 <td>
-                        	<select name="fds[ishide]" id="ishide">
-                     	 		<option  selected="selected"  value='0'>显示</option>
-                     	 		<option  value='1'>隐藏</option>
-                     	 	</select>
- </td>
-  </tr>
-    <tr>
-                         <th scope="row" width="160">设为首页：</th>
-                     	 <td>
-                        	<select name="set_index">
-                     	 		<option  value='1'>是</option>
-                     	 		<option  selected="selected"  value='0'>否</option>
-                     	 	</select>
- </td>
-  </tr>
-                        <tr>
-                        <th scope="row">&nbsp;</th>
-                        <td>
-                            <div class="clearfix padt10">
-                                <button class="positive pill primary button" type="submit" name="sbt_edit" onclick="return checkForm(document.getElementById('frm_config_basic'),false)" value="提交" ><span class="pen icon"></span>提交</button>
-                                
-                            </div>
-                        </td>
-                      </tr>
-                    </table>
-                    
-                </form>
+<form name="frm_config_basic" id="frm_config_basic" action="index.php?r=config/<?php echo $act;?>" method="post" >
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<th scope="row" width="160">菜单标题：</th>
+		<td>
+		<input type="text" name="nav[<?php if(isset($info)){echo $info['nav_id'];}?>][nav_title]" id="nav_title" value="<?php if(isset($info)){echo $info['nav_title'];}?>" class="txt" style="width:260px;" limit="required:true;len:1-50" 
+		msg="" msgArea="obj_name_msg" title="菜单的描述，如任务大厅" />
+		<span id="obj_name_msg"></span>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row" width="160">菜单链接：</th>
+		<td>
+		<div style="float:left; padding-top:10px">
+		<input type="text" name="nav[<?php if(isset($info)){echo $info['nav_id'];}?>][nav_url]" id="nav_url" value="<?php if(isset($info)){echo $info['nav_url'];}?>" class="txt" style="width:260px;"   />
+		</div>
+		<div style="float:left;margin-left:20px; width:50%">
+		<span>如果是站内链接格式:index.php?do=task,task为下面要填写的样式;<br>外站链接格式:http://www.baidu.com,下面样式为空即可！</span></br>
+		<font color="red">站内的可用链接、一经填写无法修改！</font>
+		</div>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row" width="160">菜单样式：</th>
+		<td>
+		<input type="text"  name="nav[<?php if(isset($info)){echo $info['nav_id'];}?>][nav_style]" id="nav_style"  value="<?php if(isset($info)){echo $info['nav_style'];}?>" class="txt" style="width:260px;"/>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row" width="160">菜单排序.：</th>
+		<td>
+		<input type="text" name="nav[<?php if(isset($info)){echo $info['nav_id'];}?>][listorder]" id="listorder" value="<?php if(isset($info)){echo $info['listorder'];}?>" class="txt" style="width:260px;"/>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row" width="160">新窗口打开.：</th>
+		<td>
+		<select name="nav[<?php if(isset($info)){echo $info['nav_id'];}?>][newwindow]" id='newwindow'>
+		<option  value='1'<?php if(isset($info)&&$info['newwindow']==1){echo 'selected';}?>>是</option>
+		<option  value='0'<?php if(isset($info)&&$info['newwindow']==0){echo 'selected';}?>>否</option>
+		</select>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row" width="160">显示模式：</th>
+		<td>
+		<select name="nav[<?php if(isset($info)){echo $info['nav_id'];}?>][ishide]" id="ishide">
+		<option  value='0'<?php if(isset($info)&&$info['ishide']==0){echo 'selected';}?>>显示</option>
+		<option  value='1'<?php if(isset($info)&&$info['ishide']==1){echo 'selected';}?>>隐藏</option>
+		</select>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row" width="160">设为首页：</th>
+		<td>
+		<select name="set_index">
+		<option  value='1'>是</option>
+		<option  selected="selected"  value='0'>否</option>
+		</select>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">&nbsp;</th>
+		<td>
+		<div class="clearfix padt10">
+		<button class="positive pill primary button" type="submit" name="submit" onclick="return checkForm(document.getElementById('frm_config_basic'),false)" value="nav" >
+		<span class="pen icon"></span>提交</button>
+		</div>
+		</td>
+	</tr>
+
+</table>
+</form>
             </div>
         </div>
 </div>

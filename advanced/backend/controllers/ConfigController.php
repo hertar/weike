@@ -127,10 +127,36 @@ class ConfigController extends Controller
         return $this->renderPartial('nav',['info'=>$res]);
     }
 
-	//添加导航
+	//导航信息（添加/编辑）
 	public function actionNavinfo()
     {
-		return $this->renderPartial('Navinfo');
+		$data['tag']='添加';
+		$data['act']='navinsert';
+		if(isset($_GET['id']))
+		{
+			$id=intval($_GET['id']);
+			$data['tag']='编辑';
+			$data['act']='navedit';
+			$data['info']=Nav::findOne($id);
+			//echo '<pre>';print_r($res);
+		}
+		return $this->renderPartial('Navinfo',$data);
+	}
+
+	//添加导航
+	public function actionNavinsert()
+    {
+		//echo '<pre>';print_r($_POST);die;
+		$model = new Nav();
+		for($i=0;$i<count($_POST['nav']);$i++){
+			foreach($_POST['nav'][$i] as $k => $v){
+				$model->$k=$v;
+			}
+		}
+		if($model->insert())
+		{
+			echo "<script>location.href='index.php?r=config/".$_POST['submit']."'</script>";
+		}
 	}
 
 	//编辑导航信息
@@ -138,24 +164,28 @@ class ConfigController extends Controller
     {
 		//echo '<pre>';print_r($_POST);die;
 		$transaction =Yii::$app->db->beginTransaction();
-		try 
-		{
+		try{
 			$i=1;
-			foreach($_POST['nav'] as $key=>$val)
-			{
+			foreach($_POST['nav'] as $key=>$val){
 				Nav::updateAll($val,['nav_id'=>$key]);
-				if($i==count($_POST['nav']))
-				{
-					echo "<script>alert('更改生效');location.href='index.php?r=config/".$_POST['submit']."'</script>";
+				if($i==count($_POST['nav'])){
+					echo "<script>location.href='index.php?r=config/".$_POST['submit']."'</script>";
 				}
 				$i++;
 			}
 			$transaction->commit();
-		}
-		catch(Exception $e)
-		{
+		}catch(Exception $e){
 			$transaction->rollBack();
 			echo $e->getMessage();
+		}
+	}
+
+	//删除导航
+	public function actionNavdel()
+    {
+		if(Nav::findOne($_GET['id'])->delete()==1)
+		{
+			echo "<script>location.href='index.php?r=config/nav'</script>";
 		}
 	}
 

@@ -63,9 +63,9 @@
 		</td>
 
 		<td>
-		<a href="index.php?r=config/navinfo" class="button dbl_target">
+		<a href="index.php?r=config/navinfo&id=<?php echo $info[$i]['nav_id']?>" class="button dbl_target">
 		<span class="pen icon"></span>编辑</a>
-		<a href=""  onclick="return cdel(this);" class="button">
+		<a href="index.php?r=config/navdel&id=<?php echo $info[$i]['nav_id']?>"  onclick="return cdel(this);" class="button">
 		<span class="trash icon"></span>删除</a>
 		<a href="" class="button">
 		<span class="check icon"></span>设为首页</a>
@@ -137,7 +137,7 @@ In('form_and_validation', 'xheditor', 'mousewheel', 'table', 'calendar');
 <script type="text/javascript">
 function cdel(o, s) {
 d = art.dialog;
-var c = "你确认删除操作？";
+var c = "确认删除操作？";
 if (s) {
 c = s;
 }
