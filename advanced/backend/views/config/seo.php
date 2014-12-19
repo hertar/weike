@@ -3,8 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>keke admin</title>
-
-
 <link href="/public/tpl/css/admin_management.css" rel="stylesheet" type="text/css" />
 <link href="/public/resource/css/buttons.css" rel="stylesheet" type="text/css" />
 <link title="style1" href="/public/tpl/skin/default/style.css" rel="stylesheet" type="text/css" />
@@ -30,68 +28,72 @@
         <div class="tabcon">
         	<div class="title"><h2></h2></div>
             <div class="detail">
-                 <form name="frm_config_basic" id="frm_config_basic" action="index.php?do=config&view=basic&op=seo" method="post" accept-charset="utf-8" enctype='multipart/form-data'>
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                     <tr>
-               <th scope="row">
-            是否开启伪静态：                </th>
-                <td>
-                    <label for="rdo_is_rewrite_1">
-                        <input type="radio" id="rdo_is_rewrite_1" name="is_rewrite"  checked="checked"  value="0" />关闭                    </label>
-                    <label for="rdo_is_rewrite_2">
-                        <input type="radio" id="rdo_is_rewrite_2" name="is_rewrite"  value="1" />开启                    </label>
-                    <a href ="index.php?do=config&view=basic&op=seo&ac=get_url_rule">查看伪静态规则</a>
-                </td>
-            </tr>
+<form name="frm_config_basic" id="frm_config_basic" action="index.php?r=config/edit" method="post" accept-charset="utf-8" enctype='multipart/form-data'>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<th scope="row">是否开启伪静态：</th>
+		<td>
+		<label for="rdo_is_rewrite_1">
+		<input type="radio" id="rdo_is_rewrite_1" name="is_rewrite" value="0" <?php if($is_rewrite==0){echo 'checked';}?>/>关闭</label>
+		<label for="rdo_is_rewrite_2">
+		<input type="radio" id="rdo_is_rewrite_2" name="is_rewrite"  value="1" <?php if($is_rewrite==1){echo 'checked';}?>/>开启</label>
+		<a href ="index.php?r=config/seorule">查看伪静态规则</a>
+		</td>
+	</tr>
 
-<tr>
-               <th scope="row">
-            启用二级域名                </th>
-                <td>
-                    <label for="rdo_second_domain_1">
-                        <input type="radio" id="rdo_second_domain_1" name="second_domain"  checked="checked"  value="0" />关闭                    </label>
-                    <label for="rdo_second_domain_2">
-                        <input type="radio" id="rdo_second_domain_2" name="second_domain"  value="1" />开启                    </label>
-<span id="t_domain" style='display:none;'>
-<input type="text" size="20" name="top_domain" id="top_domain" value="t.com"
- class="txt"><b style="color:red">*</b>顶级域名不需要添加“http://”，也不要以“/”结尾，请与[站点配置]中保持一致，例如：t.com,不支持localhost              		</span>
-<div>(若需要支持二级域名，请先配置DNS，开启泛解析，将各域名指向同一IP)</div>
-   </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    网站标题：                </th>
-                <td>
-                    <input type="text" size="50" name="seo_title" value="" limit="required:true;len:3-100;general:false" msg="seo标题不能为空，长度3-100" msgArea="seo_title_msg" maxlength="100" class="txt"/><b style="color:red">*</b>
-                    <span id="seo_title_msg"></span>网页标题通常是搜索引擎关注的重点，本附加字设置将出现在标题中网站名称的后面，如果有多个关键字，建议用 "|"、","(不含引号) 等符号分隔                </td>
-            </tr>
-<tr>
-                <th scope="row">
-                    Meta Keywords：                </th>
-                <td>
-                    <input type="text" size="50" name="seo_keyword" value="客客出品专业威客系统" limit="required:true;len:3-500;general:false" msg="SEO 关键词为能为空，长度3-500" msgArea = "txt_seo_keywords_msg" class="txt"/>
-                    <span id="txt_seo_keywords_msg"></span>Keywords 项出现在页面头部的 Meta 标签中，用于记录本页面的关键字，多个关键字间请用半角逗号 "," 隔开                </td>
-            </tr>
-            <tr>
-                <th scope="row">
-                    Meta Description：                </th>
-                <td>
-                    <textarea cols="50" rows="8" name="seo_desc" limit="required:true;len:3-500;general:false" msg="SEO 描述不能为空，长度3-500" msgArea = "seo_description_msg" rows="3" class="textarea">客客出品专业威客系统</textarea>
-                    <span id="seo_description_msg"></span>Description 出现在页面头部的 Meta 标签中，用于记录本页面的概要与描述                </td>
-            	</tr>
-<th scope="row">&nbsp;</th>
-<td>
-<div class="clearfix padt10">
-                                <button class="positive pill primary button" type="submit" name='submit' value="提交"><span class="check icon"></span>提交</button>
-                                
-                </div>
-</td>
-                    
-                    </table>
-                    
-                      
-                    
-        </form>
+	<tr>
+		<th scope="row">启用二级域名</th>
+		<td>
+		<label for="rdo_second_domain_1">
+		<input type="radio" id="rdo_second_domain_1" name="second_domain" value="0"<?php if($second_domain==0){echo 'checked';}?>/>关闭</label>
+		<label for="rdo_second_domain_2">
+		<input type="radio" id="rdo_second_domain_2" name="second_domain"  value="1" <?php if($second_domain==1){echo 'checked';}?>/>开启 </label>
+		<span id="t_domain" style='display:none;'>
+		<input type="text" size="20" name="top_domain" id="top_domain" value="<?php echo $top_domain?>"
+		class="txt">
+		<b style="color:red">*</b>
+		顶级域名不需要添加“http://”，也不要以“/”结尾，请与[站点配置]中保持一致，例如：t.com,不支持localhost     </span>
+		<div>(若需要支持二级域名，请先配置DNS，开启泛解析，将各域名指向同一IP)</div>
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">网站标题：</th>
+		<td>
+		<input type="text" size="50" name="seo_title" value="<?php echo $seo_title?>" limit="required:true;len:3-100;general:false" msg="seo标题不能为空，长度3-100" msgArea="seo_title_msg" maxlength="100" class="txt"/><br>
+		<b style="color:red">*</b>
+		<span id="seo_title_msg"></span>
+		网页标题通常是搜索引擎关注的重点，本附加字设置将出现在标题中网站名称的后面，如果有多个关键字，建议用 "|"、","(不含引号) 等符号分隔
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">Meta Keywords：</th>
+		<td>
+		<input type="text" size="50" name="seo_keyword" value="<?php echo $seo_keyword?>" limit="required:true;len:3-500;general:false" msg="SEO 关键词为能为空，长度3-500" msgArea = "txt_seo_keywords_msg" class="txt"/>
+		<span id="txt_seo_keywords_msg"></span>
+		Keywords 项出现在页面头部的 Meta 标签中，用于记录本页面的关键字，多个关键字间请用半角逗号 "," 隔开
+		</td>
+	</tr>
+
+	<tr>
+		<th scope="row">Meta Description：</th>
+		<td>
+		<textarea cols="50" rows="8" name="seo_desc" limit="required:true;len:3-500;general:false" msg="SEO 描述不能为空，长度3-500" msgArea = "seo_description_msg" rows="3" class="textarea"><?php echo $seo_desc?></textarea>
+		<span id="seo_description_msg"></span>
+		Description 出现在页面头部的 Meta 标签中，用于记录本页面的概要与描述
+		</td>
+	</tr>
+
+	<th scope="row">&nbsp;</th>
+	<td>
+	<div class="clearfix padt10">
+	<button class="positive pill primary button" type="submit" name='submit' value="seo">
+	<span class="check icon"></span>提交</button>
+	</div>
+	</td>
+</table>
+</form>
             </div>
         </div>
         
