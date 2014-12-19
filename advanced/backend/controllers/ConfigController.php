@@ -106,17 +106,17 @@ class ConfigController extends Controller
 
     //模型管理(任务模型)
     public function actionModel(){
-                return $this->renderPartial('model');
+          return $this->renderPartial('model');
      }
-     //商业模型
-     public function actionModel_shop(){
-         
+
+     //模型管理(商业模型)
+     public function actionModel_shop(){       
          return $this->renderPartial("model_shop");
      }
 
      //会员整合
 	public function actionIntegration(){
-			return $this->renderPartial('integration');
+		return $this->renderPartial('integration');
 	}
 
 	//自定义导航
