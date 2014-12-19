@@ -30,9 +30,8 @@
         </td>
         <td class="pr">
         	<div>
-            <form action="index.php?do=login" method="post" id="admin_login">
-            <input type="hidden" name="token" id="token" value="ce9abd"/>
-            <input  type="hidden" name="allow_time" id="allow_num" value="5"/>
+            <form action="index.php?r=index/login_pro" method="post" id="admin_login">
+           
             <p>
              	&nbsp;<span id="try_info"></span>
  </p>
@@ -44,45 +43,43 @@
               <p class="loginform">
                 <input name="password" type="password" id="pwd_pwd" class="txt"   limit="required:true" msg="密码不能为空" title="请填写正确登录密码" msgArea="try_info"/>
               </p>
+              <!--
+              <p class="logintitle">验证码:</p>
+              <p class="loginform">
+                   <input name="yam" type="text" id="yam" class="txt"   limit="required:true"  msg="验证码不能为空" msgArea="try_info"/>
+                   
+           <a class="font14" href="#" onclick="document.getElementById('secode_img').src='index.php?r=index/captcha&count='+Math.random(); return false;">
+               <img id='secode_img' src="index.php?r=index/captcha">换一组</a>
+               
+              </p>
+              -->
               <p class="loginbtn">
-              	
-                <button  type="submit" id="logsubmit" name="login" onclick=" return check_login();"><span class="icon key">&nbsp;</span>提交</button>
+              	<!-- onclick=" return check_login();"-->
+                <button  type="submit" id="logsubmit" name="login"><span class="icon key">&nbsp;</span>提交</button>
                 <button id="re" type="reset" name="reset"><span class="icon reload">&nbsp;</span>重 置</button>	
               </p>
             </form>
           </div>
           </td>
+          
       </tr>
     </table>
   </div>
 </div>
 
 <script type="text/javascript">
+
 $(function(){
 $("#txt_username").focus();
 })
 function check_login(){
-var allow_num=$("#allow_num").val();
-
 var i = checkForm(document.getElementById("admin_login"));
 if(i){
-if(allow_num>0){
 var username=$("#txt_username").val();
 var password=$("#pwd_pwd").val();
-var token=$("#token").val();
-$.post("index.php?do=login&is_submit=1&tt="+new Date().getTime(),
-{user_name:username,pass_word:password,allow_num:allow_num,token:token},function(json){
-if(json.status==1){
-location.href="index.php";
-}else{
-$("#try_info").html(json.msg);
-return false;
-}
-},'json')
-}
+
  }
 return false;
-
 }
 </script>
 <script type="text/javascript" src="/public/resource/js/system/form_and_validation.js"></script>
