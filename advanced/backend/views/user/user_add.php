@@ -28,39 +28,44 @@
         <div class="tabcon">
         	<div class="title"><h2>添加用户资料</h2></div>
             <div class="detail">
-               <form action="index.php?do=user&view=add&edituid=" method="post" name="frm_add" id="frm_add">
+               <form action="index.php?r=user/user_add_pro" method="post" name="frm_add" id="frm_add">
                     <input type="hidden" value="" name="edituid">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tbody>
                       <tr>
                         <th scope="row" width="130">用户名：</th>
                         <td>
-                       <input type="text" class="txt" style=" width:260px;"  value="" name="fds[username]" id="txt_username" maxlength="50" title="请输入2-20的字符或者汉字的用户名" limit="required:true;len:2-20" msg="请输入2-20的字符或者汉字的用户名" ajax="/public/index.php?do=register&check_username=" msgArea="txt_username_msg" valid="1"/><b style="color:red"> *</b><span id="txt_username_msg"></span>
+                       <input type="text" class="txt" style=" width:260px;"  value="" name="username" id="txt_username" maxlength="50" title="请输入2-20的字符或者汉字的用户名" limit="required:true;len:2-20" msg="请输入2-20的字符或者汉字的用户名" ajax="index.php?r=user/user_checkname&name=" msgArea="txt_username_msg" valid="1"/><b style="color:red"> *</b><span id="txt_username_msg"></span>
 
   </td>
                       </tr>
                       <tr>
                         <th scope="row">密码：</th>
-                        <td> <input type="password" class="txt" style="width:260px;" name="fds[password]" id="password"limit="required:true;len:6-20" title="请输入密码..." msg="密码限定为6-20位" msgArea="pwd_pwd_msg"  class="input_t"/><b style="color:red">*</b><span id="pwd_pwd_msg"></span>
+                        <td> <input type="password" class="txt" style="width:260px;" name="password" id="password" limit="required:true;len:6-20" title="请输入密码..." msg="密码限定为6-20位" msgArea="pwd_pwd_msg"  class="input_t"/><b style="color:red">*</b><span id="pwd_pwd_msg"></span>
 </td>
 
                       </tr>
  
   <tr>
                        <th scope="row">邮箱：</th>
-                        <td> <input type="text" class="txt" style="width:260px;" name="fds[email]" id="email"limit="required:true;type:email" value="" msg="格式错误" title="请输入正确邮箱..." msgArea="txt_email_msg"/><b style="color:red"> *</b><span id="txt_email_msg"></span></td>
+                        <td> <input type="text" class="txt" style="width:260px;" name="email" id="email"limit="required:true;type:email" value="" msg="格式错误" title="请输入正确邮箱..." msgArea="txt_email_msg"/><b style="color:red"> *</b><span id="txt_email_msg"></span></td>
                       </tr>
       <tr>
- 						 <th scope="row">用户组：</th>
+ 	 <th scope="row">用户组：</th>
                         <td> 
 
-  <select name="fds[group_id]">
-  	 <option value="0" >普通用户</option>
-     	 <option value="3" >财务人员</option>
-     	 <option value="7" >客服</option>
-     	 <option value="2" >外围客服</option>
-     	 <option value="1" >管理员</option>
-     	 <option value="8" >编辑</option>
+  <select name="group_id">
+
+      <?php
+        foreach ($group as $key => $val) {
+     ?>
+             <option value="<?php echo $val['group_id']?>" ><?php echo $val['groupname']?></option>
+     <?php
+             }
+  ?>
+      
+  	
+     	
       </select><b style="color:red">*</b>
    
                       </td>
@@ -72,7 +77,7 @@
                         <td>
                             <div class="clearfix padt10">
                             	<input type="hidden" name="is_submit" value="1">
-                                <button class="positive primary pill button" type="submit" value="提交" onclick="return checkForm(document.getElementById('frm_add'));"><span class="check icon"></span>提交</button>
+                                <button class="positive primary pill button" type="submit" value="提交" ><span class="check icon"></span>提交</button>
                               
                             </div>
                         </td>
@@ -196,6 +201,22 @@ $("#" + frm).submit();
 d.alert("您没有选择任何操作项");
 }
 return false;
+}
+
+
+//判断用户名
+function checkname(){
+    var name=$("#txt_username").val();
+    
+    $.ajax({
+        url:"index.php?r=user/user_checkname",
+        type:"post",
+        data:{"name":name},
+        success:function(e){
+            alert(e);
+        }
+        
+    })
 }
 </script>
 </body>

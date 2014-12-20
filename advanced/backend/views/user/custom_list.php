@@ -120,30 +120,39 @@
                 <th>
                     删除                </th>
             </tr>
+            <?php
+                foreach ($row as $v) {
+                    
+                
+            ?>
                         <tr class="item">
             	<td>
                     <input type="checkbox" name="ckb[]" class="checkbox" value="1">
                 </td>
                 <td>
-                    1                </td>
+                    <?php echo $v['uid']?>           </td>
                 <td class="motif">
-                    <a href="javascript:void(0)">admin</a>
+                    <a href="javascript:void(0)"><?php echo $v['username']?></a>
                 </td>
                 <td>
-                    管理员                </td>
+                    <?php echo $v['gruopname']?>                </td>
                 <td>
-                    027-99999999                </td>
+                    <?php echo $v['fax']?>                </td>
                 <td>
-                    admin@admin.com                </td>
+                    <?php echo $v['email']?>                </td>
                 <td>
-                    654654                </td>
+                    <?php echo $v['qq']?>                </td>
                 <td>
 </td>
                 <td>
                     <a class="button" href="index.php?do=user&view=custom_list&op=del&delid=1&page=1" onclick="return cdel(this);">
                     	<span class="trash icon"></span>删除</a>
                 </td>
-            </tr>            <tr>
+            </tr> 
+            <?php
+                }
+            ?>
+            <tr>
                 <td colspan="9">
                     
                     <div class="clearfix">
