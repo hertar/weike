@@ -36,10 +36,22 @@ class IndexController extends Controller
         $username=$_POST['username'];
         $password=$_POST['password'];
       
-        $user=Member::find()
-				->where(['id' => '1'])
-				->all();
-		print_r($user);
+        $user=Member::find()->where(['username' => "$username"])->one();
+       
+        if($user){
+            //echo 12;
+            //print_r($user['password']);
+            if(md5($password)==$user['password']){
+                 $session=new \yii\web\Session();
+                 $session->set('username',$username);
+                 $session->set('uid',$user['uid']);
+                $this->redirect("index.php");
+            } else {
+               echo "<script>alert('用户名与密码不匹配');location.href='index.php?r=index/login'</script>" ;
+            }
+        }else{
+            echo "<script>alert('用户名与密码不匹配');location.href='index.php?r=index/login'</script>" ;
+        }
     }
     /*
        //验证码
