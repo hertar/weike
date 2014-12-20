@@ -133,7 +133,7 @@ use yii\widgets\LinkPager;
  
                     <td>
                     	
-<a href="index.php?do=model&model_id=1&view=edit&task_id=70&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
+<a href="index.php?r=model/up_manytask&id=<?php echo $val['task_id'] ?>"  class="button dbl_target"><span class="pen icon"></span>查看</a>
 <a href="index.php?r=model/del_manytask&id=<?php echo $val['task_id'] ?>" class="button"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
 </td>
                   </tr>

@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use yii\data\Pagination;
 use app\models\WkWitkeyTask;
 use app\models\WkWitkeyModel;
+use app\models\Control;
 use yii\db\ActiveRecord;
 
 /**
@@ -16,6 +17,7 @@ use yii\db\ActiveRecord;
  */
 class ModelController extends Controller
 {
+    public $enableCsrfValidation=false;
     /**
      * @inheritdoc
      */
@@ -67,6 +69,14 @@ class ModelController extends Controller
            $this->redirect("?r=model/single_task_list");
         }
     }
+    //编辑操作
+    public function actionUp_task(){
+       $task_id=$_GET['id'];
+        $list=WkWitkeyTask::findOne($task_id); 
+        return $this->renderPartial("single_task_up",[
+             'list' => $list,
+       ]);
+    }
     //批量删除
     public function actionDel_tasks(){
          $id=$_GET['id'];
@@ -87,11 +97,36 @@ class ModelController extends Controller
              'list' => $list,
        ]);
     }
+    //基本配置
+    public function actionAdd_single_task(){
+        $data=$_POST['fds'];
+        //print_r($data);
+        $data['indus_bid']=implode(',',$data['indus_bid']);
+        $count= WkWitkeyModel::updateAll($data,['model_id'=>1]);
+        if($count>0){
+            $this->redirect("?r=model/single_task_config");
+        }else{
+            $this->redirect("?r=model/single_task_config");
+        }
+    }
      //流程配置
-public function actionSingle_task_control(){
-    
-    return $this->renderPartial("single_task_control");
-}
+    public function actionSingle_task_control(){
+             $list=Control::findOne(1); 
+            return $this->renderPartial("single_task_control",[
+                 'list' => $list,
+           ]);
+    }
+     //流程配置
+    public function actionAdd_single_control(){
+        $data=$_POST['conf'];
+        //print_r($data);
+        $count= Control::updateAll($data,['model_id'=>1]);
+        if($count>0){
+            $this->redirect("?r=model/single_task_control");
+        }else{
+            $this->redirect("?r=model/single_task_control");
+        }
+    }
 //权限配置
 public function actionSingle_task_priv(){
     return $this->renderPartial("single_task_priv");
@@ -146,6 +181,14 @@ public function actionSingle_task_priv(){
            $this->redirect("?r=model/many_task_list");
         }
     }
+    //编辑操作
+    public function actionUp_manytask(){
+       $task_id=$_GET['id'];
+        $list=WkWitkeyTask::findOne($task_id); 
+        return $this->renderPartial("many_task_up",[
+             'list' => $list,
+       ]);
+    }
     //批量删除
     public function actionDel_manytasks(){
          $id=$_GET['id'];
@@ -159,11 +202,40 @@ public function actionSingle_task_priv(){
     
     //任务配置（基本配置）
       public function actionMany_task_config(){
-        return $this->renderPartial("many_task_config");
+          $list=WkWitkeyModel::findOne(2); 
+        return $this->renderPartial("many_task_config",[
+             'list' => $list,
+       ]);
+    }
+     //基本配置
+    public function actionAdd_many_task(){
+        $data=$_POST['fds'];
+        //print_r($data);
+        $data['indus_bid']=implode(',',$data['indus_bid']);
+        $count= WkWitkeyModel::updateAll($data,['model_id'=>2]);
+        if($count>0){
+            $this->redirect("?r=model/many_task_config");
+        }else{
+            $this->redirect("?r=model/many_task_config");
+        }
     }
      //流程配置
     public function actionMany_task_control(){
-         return $this->renderPartial("many_task_control");
+         $list=Control::findOne(2); 
+            return $this->renderPartial("many_task_control",[
+                 'list' => $list,
+           ]);
+    }
+    //流程配置
+    public function actionAdd_many_control(){
+        $data=$_POST['conf'];
+        print_r($data);
+        $count= Control::updateAll($data,['model_id'=>2]);
+        if($count>0){
+            $this->redirect("?r=model/many_task_control");
+        }else{
+            $this->redirect("?r=model/many_task_control");
+        }
     }
     //权限配置
     public function actionMany_task_priv(){
@@ -218,6 +290,14 @@ public function actionSingle_task_priv(){
            $this->redirect("?r=model/jijian_task_list");
         }
     }
+    //编辑操作
+    public function actionUp_jijiantask(){
+       $task_id=$_GET['id'];
+        $list=WkWitkeyTask::findOne($task_id); 
+        return $this->renderPartial("jijian_task_up",[
+             'list' => $list,
+       ]);
+    }
     //批量删除
     public function actionDel_jijiantasks(){
          $id=$_GET['id'];
@@ -229,18 +309,47 @@ public function actionSingle_task_priv(){
         }
     }
     //任务配置（基本配置）
-      public function actionJijian_task_config(){
-        return $this->renderPartial("jijian_task_config");
-    }
-     //流程配置
-    public function actionJijian_task_control(){
-         return $this->renderPartial("jijian_task_control");
-    }
+    
     //权限配置
     public function actionJijian_task_priv(){
         return $this->renderPartial("jijian_task_priv");
     }
-    
+     public function actionJijian_task_config(){
+          $list=WkWitkeyModel::findOne(3); 
+        return $this->renderPartial("jijian_task_config",[
+             'list' => $list,
+       ]);
+    }
+     //基本配置
+    public function actionAdd_jijian_task(){
+        $data=$_POST['fds'];
+        //print_r($data);
+        $data['indus_bid']=implode(',',$data['indus_bid']);
+        $count= WkWitkeyModel::updateAll($data,['model_id'=>3]);
+        if($count>0){
+            $this->redirect("?r=model/jijian_task_config");
+        }else{
+            $this->redirect("?r=model/jijian_task_config");
+        }
+    }
+     //流程配置
+    public function actionJijian_task_control(){
+         $list=Control::findOne(3); 
+            return $this->renderPartial("jijian_task_control",[
+                 'list' => $list,
+           ]);
+    }
+    //流程配置
+    public function actionAdd_jijian_control(){
+        $data=$_POST['conf'];
+        print_r($data);
+        $count= Control::updateAll($data,['model_id'=>3]);
+        if($count>0){
+            $this->redirect("?r=model/jijian_task_control");
+        }else{
+            $this->redirect("?r=model/jijian_task_control");
+        }
+    }
     //普通招标
     //任务管理
     public function actionNormal_task_list(){
@@ -298,10 +407,31 @@ public function actionSingle_task_priv(){
            $this->redirect("?r=model/normal_task_list");
         }
     }
-    
+    //编辑操作
+    public function actionUp_normaltask(){
+       $task_id=$_GET['id'];
+        $list=WkWitkeyTask::findOne($task_id); 
+        return $this->renderPartial("normal_task_up",[
+             'list' => $list,
+       ]);
+    }
     //任务配置（基本配置）
       public function actionNormal_task_config(){
-        return $this->renderPartial("normal_task_config");
+          $list=WkWitkeyModel::findOne(4); 
+        return $this->renderPartial("normal_task_config",[
+             'list' => $list,
+       ]);
+    }
+    public function actionAdd_normal_task(){
+        $data=$_POST['fds'];
+        //print_r($data);
+        $data['indus_bid']=implode(',',$data['indus_bid']);
+        $count= WkWitkeyModel::updateAll($data,['model_id'=>4]);
+        if($count>0){
+            $this->redirect("?r=model/normal_task_config");
+        }else{
+            $this->redirect("?r=model/normal_task_config");
+        }
     }
      //流程配置
     public function actionNormal_task_control(){
@@ -370,10 +500,31 @@ public function actionSingle_task_priv(){
            $this->redirect("?r=model/deposit_task_list");
         }
     }
-    
+     //编辑操作
+    public function actionUp_deposittask(){
+       $task_id=$_GET['id'];
+        $list=WkWitkeyTask::findOne($task_id); 
+        return $this->renderPartial("deposit_task_up",[
+             'list' => $list,
+       ]);
+    }
     //任务配置（基本配置）
       public function actionDeposit_task_config(){
-        return $this->renderPartial("deposit_task_config");
+           $list=WkWitkeyModel::findOne(5); 
+        return $this->renderPartial("deposit_task_config",[
+             'list' => $list,
+       ]);
+    }
+    public function actionAdd_deposit_task(){
+        $data=$_POST['fds'];
+        //print_r($data);
+        $data['indus_bid']=implode(',',$data['indus_bid']);
+        $count= WkWitkeyModel::updateAll($data,['model_id'=>5]);
+        if($count>0){
+            $this->redirect("?r=model/deposit_task_config");
+        }else{
+            $this->redirect("?r=model/deposit_task_config");
+        }
     }
      //流程配置
     public function actionDeposit_task_control(){
