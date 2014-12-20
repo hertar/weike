@@ -3,11 +3,11 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=192.168.1.154;dbname=wk',
+            'dsn' => 'mysql:host=192.168.1.153;dbname=wk',
             'username' => 'root',
             'password' => 'root',
             'charset' => 'utf8',
-			'tablePrefix'=>'wk_witkey_',
+            'tablePrefix'=>'wk_witkey_',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
