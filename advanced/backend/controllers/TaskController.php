@@ -40,12 +40,11 @@ class TaskController extends Controller
     public function actionSkill(){
 		$data['indus']=Industry::find()->all();
 		$data['skill']=Skill::find()->joinWith('join')->all();
-		echo '<pre>';
+		//echo '<pre>';
 		for($i=0;$i<count($data['skill']);$i++)
 		{
-			print_r($data['skill'][$i]);
+			//print_r($data['skill'][$i]);
 		}
-		die;
         return $this->renderPartial('skill',$data);
     }
 
