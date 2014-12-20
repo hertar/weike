@@ -101,7 +101,8 @@ $("#show_much").hide();
     <div class="user_box">
     	<div class="avatar">
         	<a href="#" title="admin"><img src='http://127.0.0.1/weike/data/avatar/default/man_small.jpg' uid='1' class='pic_small'></a> </div>
-        <div class="name">您好，创始人<b>admin</b></div>
+        <?php $session=new  yii\web\Session()?>
+        <div class="name">您好，创始人<b><?php  echo $session->get("username")?></b></div>
         <div class="link_bar">
         	<a href="javascript:;" class="lock" onclick="fresh();" title="刷新">刷新</a> 
          	<a href="javascript:;" class="lock" onclick="del_cache();" title="清除缓存">清除缓存</a> 

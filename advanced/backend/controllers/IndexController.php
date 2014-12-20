@@ -20,7 +20,13 @@ class IndexController extends Controller
 //主页
     public function actionIndex()
     {
-        return $this->renderPartial('index');
+         $session=new \yii\web\Session();
+         
+        if($session->get('username')){
+             return $this->renderPartial('index');
+        }else{
+                $this->redirect("index.php?r=index/login");
+        }
     }
 
     
