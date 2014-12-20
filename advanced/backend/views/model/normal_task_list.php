@@ -21,7 +21,7 @@ use yii\widgets\LinkPager;
 <div id="append_parent"></div> 
  
 <div class="page_title">	
-    	<h1>单人悬赏管理</h1>
+    	<h1>普通招标管理</h1>
          <div class="tool">
          	<a href="index.php?r=model/single_task_list" class="here">任务列表</a>
 <!--	<a href="index.php?do=model&model_id=1&view=config">任务配置</a>-->
@@ -139,7 +139,7 @@ use yii\widgets\LinkPager;
                     <td>
  <a href="index.php?do=model&model_id=5&view=list&id=42&ac=recommend&page=1&task_id=42" onclick="return crecomm(this,'',1);" class="button"><span class="cog icon"></span>荐</a>
  <a href="index.php?do=model&model_id=5&view=list&ac=unrecommend&task_id=29&page=1" onclick="return crecomm(this,'',2);" class="button"><span class="cog icon"></span>取消推荐</a>
-<a href="index.php?do=model&model_id=1&view=edit&task_id=70&page=1" class="button dbl_target"><span class="pen icon"></span>查看</a>
+<a href="index.php?r=model/up_normaltask&id=<?php echo $val['task_id'] ?>" class="button dbl_target"><span class="pen icon"></span>查看</a>
 <a href="index.php?r=model/del_normaltask&id=<?php echo $val['task_id'] ?>" class="button"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
 </td>
                   </tr>

@@ -1,3 +1,6 @@
+<?php
+use yii\widgets\LinkPager;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -17,7 +20,7 @@
 <div class="frame_content">
 <div id="append_parent"></div> 
 <div class="page_title">
-  <h1>多人悬赏任务配置</h1>
+  <h1>单人悬赏任务配置</h1>
     <div class="tool">
       <a href="index.php?r=model/many_task_config" class="here">基本配置</a>
       <a href="index.php?r=model/many_task_control">流程配置</a>
@@ -28,24 +31,27 @@
  <div class="tabcon">
   <div class="title"><h2>基本配置</h2></div>
 <div class="detail">
- <form action="index.php?do=model&model_id=2&view=config&op=config" method="post">
- 	<input type="hidden" name="pk[model_id]" value="2">
+ <form action="index.php?r=model/add_many_task" method="post">
+ 	<input type="hidden" name="pk[model_id]" value="1">
   <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
    <th scope="row" width="200">模型名称：</th>
     <td>
-       <input type="text" class="txt" name="fds[model_name]" value="多人悬赏">
+       <input type="text" class="txt" name="fds[model_name]" value="<?php echo $list['model_name']?>">
 </td>
         </tr>
 <tr>
    <th scope="row" width="200">是否开启：</th>
      <td>
-        <label for="status_yes"><input type="radio" id="status_yes" name="fds[model_status]" checked value="1"> 是</label>
-<label for="status_no"><input type="radio" id="status_no" name="fds[model_status]"  value="0"> 否</label>
+        <label for="status_yes"><input type="radio" id="status_yes" name="fds[model_status]"value="1" <?php if($list['model_status']==1){echo "checked";}?>> 是</label>
+        <label for="status_no"><input type="radio" id="status_no" name="fds[model_status]"  value="0" <?php if($list['model_status']==0){echo "checked";}?>> 否</label>
 </td>
         </tr>
 <tr>
-  <th scope="row" width="200">行业绑定：</th>
+ 
+        </tr>
+<tr>
+  <th scope="row" width="200">指定行业：</th>
     <td>              <select onchange="p_indus_add(this.value)" style="margin-bottom:5px;">
    <option value="">选择行业</option>
 <option value="441">品牌设计</option>
@@ -71,19 +77,19 @@
 <button onclick = "additems()" type="button" class="input_but">>></button><br>
 </div>
 <select name="fds[indus_bid][]" id="s_indus_select" multiple=multiple style="width:160px;float:left;height:200px;overflow-y:scroll;background:white;border:#ccc solid 1px;margin-left:20px;">
+<option id="p_indus_select_op_44" value="44" selected="selected">写文章</option>
 </select>
-<br class="clear">(行业绑定后的任务模型只能在选择该行业时候使用,可以多选.)</td>
+<br class="clear">(如果指定行业后,则任务的行业类型将是这里指定行业类型；如果不指定行业，则任务类型将是系统指定的所有行业类型.)</td>
          </tr>
 <!-- <tr>
     <th scope="row" width="200">模型简介：</th>
       <td>
-         <textarea cols=80 rows=8 name="fds[model_intro]">多人悬赏任务是按威客在该任务中获奖的排名来获取支付报酬的一种任务模式。</textarea><br>(限50字节)
-  </td>
+         <textarea cols=80 rows=8 name="fds[model_intro]">单人悬赏常用于发布一些时间短，需要创意型的任务，例如给宝宝起名，店铺起名，设计网站logo，贺卡设计</textarea><br>(限50字节)  </td>
          </tr>-->
  <tr>
-    <th scope="row" width="200">模型描述：</th>
+    <th scope="row" width="200">模型说明：</th>
       <td>
-        <textarea cols=110 rows=12 name="fds[model_desc]"  style="width:75%;" id="tar_content"  class="xheditor {urlBase:'http://127.0.0.1/weike/',tools:'simple',skin:'nostyle',admin:'/public/',html5Upload:false,upImgUrl:'/public/index.php?do=ajax&view=upload&file_type=att'}" cols="70">&lt;p&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 多人悬赏任务是指您在发布任务时，先将任务赏金全额托管到平台，再从交稿中选出满意的稿件任务。该任务获奖任务为雇主发布任务时设置的奖项总数目（一等奖，二等奖，三等奖的总和）,获奖者将会根据自己的奖项排名获取相应的赏金。&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;strong&gt;多人悬赏任务的一般流程是：&lt;/strong&gt;&lt;br /&gt;1、雇主发布任务会将对应的任务金额托管到网站平台；&lt;br /&gt;2、众多威客参与任务并提交方案，等待雇主选择方案；&lt;br /&gt;3、雇主会根据方案的优劣，设置相应的稿件奖项排名（如：一等奖，二等奖等）；&lt;br /&gt;4、雇主分配奖项后，如果选稿期结束该任务会进入公示期，在该时期威客可以用相应操作权限，一旦公示期结束，平台会给获奖的威客支付赏金（平台提成一定的比例），如果该任务还有多余的金额，平台会将多余的金额返还给雇主（平台提成一定的比例）。&lt;p&gt;&lt;/p&gt;</textarea>
+       <textarea cols=110 rows=12 name="fds[model_desc]"  style="width:75%;" id="tar_content"  class="xheditor {urlBase:'http://127.0.0.1/weike/',tools:'simple',skin:'nostyle',admin:'/public/',html5Upload:false,upImgUrl:'/public/index.php?do=ajax&view=upload&file_type=att'}" cols="70"><?php echo $list['model_desc']?></textarea>
   </td>
          </tr>
   <tr>
@@ -91,6 +97,7 @@
     <td>
        <div class="clearfix padt10">
          <button type="submit" name="sbt_edit" class="positive primary  button" value="1"><span class="check icon"></span>提交</button>
+         
                </div>
              </td>
          </tr>
@@ -124,7 +131,7 @@ $("#txt_task_min_cash_1").val($(this).val());
             $("#add_cash_rul").click(function(){
                 var i = parseInt($("#add_new_rul li:last-child span").html());
                 k = eval(i + 1);
-                var rul_option = '<li><span id="span_' + k + '"></span> <input type="text" class="txt" size="10" name="txt_task_min_cash_' + k + '" limit="required:true;type:float" msg="任务最小金额不正确"   class="input_t"/>元以上&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;持续<input type="text" class="txt" size="10" limit="require:true;type:int" msg="天数不能为空! 天数的长度1-2"  name="txt_task_min_day_'+k+'" class="input_t"> 天  </li>';
+                var rul_option = '<li><span id="span_' + k + '"></span> <input type="text" class="txt" size="10" name="txt_task_min_cash_' + k + '" limit="required:true;type:float" msg="任务最小金额不正确，长度2-5"   class="input_t"/>元以上&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" class="txt" size="10" limit="require:true;type:int" msg="天数不能为空! 天数的长度1-2"  name="txt_task_min_day_'+k+'" class="input_t"> 天  </li>';
                 $("#add_new_rul").append(rul_option);
                 var lastinput = $("#add_new_rul li:last-child input");
                 $("#add_new_rul li:last-child #span_" + k).html(k);
@@ -139,7 +146,7 @@ if(i!=1)
 }
 else
 {
-alert("第一条规则不能被删除！");
+alert("第一条规则不能被删除!");
 }
 
             })
@@ -149,7 +156,7 @@ alert("第一条规则不能被删除！");
                 var i = parseInt($("#new_adjourn_rul li:last-child input").eq(0).val());
                 
 k = eval(i + 1);
-var rul_option ='<li>第<input type="text" class="txt" size="10" name="txt_defer_times_'+k+'" value="'+k+'" readonly="true" class="input_t"/>次不低于悬赏总金额的<input type="text" size="10" class="txt"  limit="type:float;required:true" msg="百分比不能为空！" name="txt_defer_cash_scale_'+k+'" class="input_t">%</li>'; 
+var rul_option ='<li>第<input type="text" class="txt" size="10" name="txt_defer_times_'+k+'" value="'+k+'" readonly="true" class="input_t"/>次 不低于悬赏总金额的<input type="text" size="10" class="txt"  limit="type:float;required:true" msg="百分比不能为空！" name="txt_defer_cash_scale_'+k+'" class="input_t">%</li>'; 
                 $("#new_adjourn_rul").append(rul_option);
                 var lastinput = $("#new_adjourn_rul li:last-child input");
 $("#adjourn_rul_count").val(k);
@@ -164,7 +171,7 @@ $("#adjourn_rul_count").val(i-1);
 }
 else
 {
-alert("第一条规则不能被删除！");
+alert("第一条规则不能被删除!");
 }
             })
             
@@ -208,7 +215,7 @@ if(!$('#s_indus_select_op_145').val()){
 mod +="<option id=\"p_indus_select_op_145\" value=\"145\">按钮图标</option>";
 }
 if(!$('#s_indus_select_op_348').val()){
-mod +="<option id=\"p_indus_select_op_348\" value=\"348\">logo设计</option>";
+mod +="<option id=\"p_indus_select_op_348\" value=\"348\">xilogo设计</option>";
 }
 if(!$('#s_indus_select_op_349').val()){
 mod +="<option id=\"p_indus_select_op_349\" value=\"349\">vi设计</option>";

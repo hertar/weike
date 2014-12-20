@@ -77,6 +77,7 @@ use yii\widgets\LinkPager;
 <button onclick = "additems()" type="button" class="input_but">>></button><br>
 </div>
 <select name="fds[indus_bid][]" id="s_indus_select" multiple=multiple style="width:160px;float:left;height:200px;overflow-y:scroll;background:white;border:#ccc solid 1px;margin-left:20px;">
+<option id="p_indus_select_op_44" value="44" selected="selected">写文章</option>
 </select>
 <br class="clear">(如果指定行业后,则任务的行业类型将是这里指定行业类型；如果不指定行业，则任务类型将是系统指定的所有行业类型.)</td>
          </tr>
@@ -214,7 +215,7 @@ if(!$('#s_indus_select_op_145').val()){
 mod +="<option id=\"p_indus_select_op_145\" value=\"145\">按钮图标</option>";
 }
 if(!$('#s_indus_select_op_348').val()){
-mod +="<option id=\"p_indus_select_op_348\" value=\"348\">logo设计</option>";
+mod +="<option id=\"p_indus_select_op_348\" value=\"348\">xilogo设计</option>";
 }
 if(!$('#s_indus_select_op_349').val()){
 mod +="<option id=\"p_indus_select_op_349\" value=\"349\">vi设计</option>";
