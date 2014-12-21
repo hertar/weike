@@ -71,7 +71,7 @@
 <th>用户状态</th>
 <td>
 <select name="slt_static" style="width:60px;">
-      		<option value="0" selected="selected"> 所有的 </option>
+<option value="0" selected="selected"> 所有的 </option>
 <option value="1" > 普通 </option>
 <option value="2" > 禁用 </option>
 <option value="3" > 待激活 </option>
@@ -109,193 +109,32 @@
          </tr>
  </thead>
  <tbody> 
+     <?php
+        foreach ($row as $v) {
+           
+     ?>
         <tr class="item">
-        	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="10"></td>
-            <td class="td25">10</td>
-            <td class="td25 wraphide"><a href="javascript:void(0)" >晓茜</a></td>
-            <td class="wraphide">普通</td>
+            <td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="10"></td>
+            <td class="td25"><?php echo $v['uid']?></td>
+            <td class="td25 wraphide"><a href="javascript:void(0)" ><?php echo $v['username']?></a></td>
+            <td class="wraphide"><?php echo $v['groupname']?></td>
 <td class="wraphide">普通</td>
-<td>2013-04-09</td>
-            <td><div class="ws_break" style="width:70%;">192.168.1.5</div></td>
-            <td><div class="ws_break" style="width:70%;">0.000</div></td>
-<td><div class="ws_break" style="width:70%;">￥100,000,000.00元</div></td>
+<td><?php echo $v['reg_time']?></td>
+            <td><div class="ws_break" style="width:70%;"><?php echo $v['reg_ip']?></div></td>
+            <td><div class="ws_break" style="width:70%;"><?php echo $v['credit']?></div></td>
+<td><div class="ws_break" style="width:70%;">￥<?php echo $v['balance']?>元</div></td>
  
 <td>
 <a class="button dbl_target" href="index.php?do=user&view=add&edituid=10&page=1"><span class="pen icon"></span>编辑</a>
 
 <a class="button" href="index.php?do=user&view=custom_add&op=add&edituid=10&page=1"><span class="cog icon"></span>权限设置</a>
- 							<a class="button" href="index.php?do=user&view=list&op=disable&edituid=10&page=1"><span class="lock icon"></span>禁用</a> 
- 							<a class="button" href="index.php?do=user&view=list&op=del&edituid=10" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
+ <a class="button" href="index.php?do=user&view=list&op=disable&edituid=10&page=1"><span class="lock icon"></span>禁用</a> 
+ <a class="button" href="index.php?do=user&view=list&op=del&edituid=10" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
 </td>
- 			        </tr>
-        <tr class="item">
-        	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="9"></td>
-            <td class="td25">9</td>
-            <td class="td25 wraphide"><a href="javascript:void(0)" >墨客</a></td>
-            <td class="wraphide">普通</td>
-<td class="wraphide">普通</td>
-<td>2013-04-09</td>
-            <td><div class="ws_break" style="width:70%;">192.168.1.95</div></td>
-            <td><div class="ws_break" style="width:70%;">0.000</div></td>
-<td><div class="ws_break" style="width:70%;">￥99,999,559.00元</div></td>
- 
-<td>
-<a class="button dbl_target" href="index.php?do=user&view=add&edituid=9&page=1"><span class="pen icon"></span>编辑</a>
-
-<a class="button" href="index.php?do=user&view=custom_add&op=add&edituid=9&page=1"><span class="cog icon"></span>权限设置</a>
- 							<a class="button" href="index.php?do=user&view=list&op=disable&edituid=9&page=1"><span class="lock icon"></span>禁用</a> 
- 							<a class="button" href="index.php?do=user&view=list&op=del&edituid=9" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
- 			        </tr>
-        <tr class="item">
-        	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="8"></td>
-            <td class="td25">8</td>
-            <td class="td25 wraphide"><a href="javascript:void(0)" >红客</a></td>
-            <td class="wraphide">普通</td>
-<td class="wraphide">普通</td>
-<td>2013-04-09</td>
-            <td><div class="ws_break" style="width:70%;">192.168.1.70</div></td>
-            <td><div class="ws_break" style="width:70%;">0.000</div></td>
-<td><div class="ws_break" style="width:70%;">￥99,999,900.00元</div></td>
- 
-<td>
-<a class="button dbl_target" href="index.php?do=user&view=add&edituid=8&page=1"><span class="pen icon"></span>编辑</a>
-
-<a class="button" href="index.php?do=user&view=custom_add&op=add&edituid=8&page=1"><span class="cog icon"></span>权限设置</a>
- 							<a class="button" href="index.php?do=user&view=list&op=disable&edituid=8&page=1"><span class="lock icon"></span>禁用</a> 
- 							<a class="button" href="index.php?do=user&view=list&op=del&edituid=8" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
- 			        </tr>
-        <tr class="item">
-        	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="7"></td>
-            <td class="td25">7</td>
-            <td class="td25 wraphide"><a href="javascript:void(0)" >hahapa</a></td>
-            <td class="wraphide">普通</td>
-<td class="wraphide">普通</td>
-<td>2013-04-09</td>
-            <td><div class="ws_break" style="width:70%;">192.168.1.196</div></td>
-            <td><div class="ws_break" style="width:70%;">0.000</div></td>
-<td><div class="ws_break" style="width:70%;">￥99,998,620.00元</div></td>
- 
-<td>
-<a class="button dbl_target" href="index.php?do=user&view=add&edituid=7&page=1"><span class="pen icon"></span>编辑</a>
-
-<a class="button" href="index.php?do=user&view=custom_add&op=add&edituid=7&page=1"><span class="cog icon"></span>权限设置</a>
- 							<a class="button" href="index.php?do=user&view=list&op=disable&edituid=7&page=1"><span class="lock icon"></span>禁用</a> 
- 							<a class="button" href="index.php?do=user&view=list&op=del&edituid=7" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
- 			        </tr>
-        <tr class="item">
-        	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="6"></td>
-            <td class="td25">6</td>
-            <td class="td25 wraphide"><a href="javascript:void(0)" >丸美弹力</a></td>
-            <td class="wraphide">普通</td>
-<td class="wraphide">普通</td>
-<td>2013-04-09</td>
-            <td><div class="ws_break" style="width:70%;">192.168.1.113</div></td>
-            <td><div class="ws_break" style="width:70%;">0.000</div></td>
-<td><div class="ws_break" style="width:70%;">￥99,997,092.00元</div></td>
- 
-<td>
-<a class="button dbl_target" href="index.php?do=user&view=add&edituid=6&page=1"><span class="pen icon"></span>编辑</a>
-
-<a class="button" href="index.php?do=user&view=custom_add&op=add&edituid=6&page=1"><span class="cog icon"></span>权限设置</a>
- 							<a class="button" href="index.php?do=user&view=list&op=disable&edituid=6&page=1"><span class="lock icon"></span>禁用</a> 
- 							<a class="button" href="index.php?do=user&view=list&op=del&edituid=6" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
- 			        </tr>
-        <tr class="item">
-        	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="5"></td>
-            <td class="td25">5</td>
-            <td class="td25 wraphide"><a href="javascript:void(0)" >mxc123</a></td>
-            <td class="wraphide">普通</td>
-<td class="wraphide">普通</td>
-<td>2013-04-09</td>
-            <td><div class="ws_break" style="width:70%;">192.168.1.109</div></td>
-            <td><div class="ws_break" style="width:70%;">0.000</div></td>
-<td><div class="ws_break" style="width:70%;">￥99,996,080.00元</div></td>
- 
-<td>
-<a class="button dbl_target" href="index.php?do=user&view=add&edituid=5&page=1"><span class="pen icon"></span>编辑</a>
-
-<a class="button" href="index.php?do=user&view=custom_add&op=add&edituid=5&page=1"><span class="cog icon"></span>权限设置</a>
- 							<a class="button" href="index.php?do=user&view=list&op=disable&edituid=5&page=1"><span class="lock icon"></span>禁用</a> 
- 							<a class="button" href="index.php?do=user&view=list&op=del&edituid=5" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
- 			        </tr>
-        <tr class="item">
-        	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="4"></td>
-            <td class="td25">4</td>
-            <td class="td25 wraphide"><a href="javascript:void(0)" >shangk</a></td>
-            <td class="wraphide">普通</td>
-<td class="wraphide">普通</td>
-<td>2013-04-09</td>
-            <td><div class="ws_break" style="width:70%;">192.168.1.111</div></td>
-            <td><div class="ws_break" style="width:70%;">0.000</div></td>
-<td><div class="ws_break" style="width:70%;">￥100,000,000.00元</div></td>
- 
-<td>
-<a class="button dbl_target" href="index.php?do=user&view=add&edituid=4&page=1"><span class="pen icon"></span>编辑</a>
-
-<a class="button" href="index.php?do=user&view=custom_add&op=add&edituid=4&page=1"><span class="cog icon"></span>权限设置</a>
- 							<a class="button" href="index.php?do=user&view=list&op=disable&edituid=4&page=1"><span class="lock icon"></span>禁用</a> 
- 							<a class="button" href="index.php?do=user&view=list&op=del&edituid=4" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
- 			        </tr>
-        <tr class="item">
-        	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="3"></td>
-            <td class="td25">3</td>
-            <td class="td25 wraphide"><a href="javascript:void(0)" >樱桃小丸子</a></td>
-            <td class="wraphide">普通</td>
-<td class="wraphide">普通</td>
-<td>2013-04-09</td>
-            <td><div class="ws_break" style="width:70%;">192.168.1.108</div></td>
-            <td><div class="ws_break" style="width:70%;">0.000</div></td>
-<td><div class="ws_break" style="width:70%;">￥99,998,932.00元</div></td>
- 
-<td>
-<a class="button dbl_target" href="index.php?do=user&view=add&edituid=3&page=1"><span class="pen icon"></span>编辑</a>
-
-<a class="button" href="index.php?do=user&view=custom_add&op=add&edituid=3&page=1"><span class="cog icon"></span>权限设置</a>
- 							<a class="button" href="index.php?do=user&view=list&op=disable&edituid=3&page=1"><span class="lock icon"></span>禁用</a> 
- 							<a class="button" href="index.php?do=user&view=list&op=del&edituid=3" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
- 			        </tr>
-        <tr class="item">
-        	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="2"></td>
-            <td class="td25">2</td>
-            <td class="td25 wraphide"><a href="javascript:void(0)" >猪八戒</a></td>
-            <td class="wraphide">普通</td>
-<td class="wraphide">普通</td>
-<td>2013-04-09</td>
-            <td><div class="ws_break" style="width:70%;">192.168.1.112</div></td>
-            <td><div class="ws_break" style="width:70%;">0.000</div></td>
-<td><div class="ws_break" style="width:70%;">￥11,753.00元</div></td>
- 
-<td>
-<a class="button dbl_target" href="index.php?do=user&view=add&edituid=2&page=1"><span class="pen icon"></span>编辑</a>
-
-<a class="button" href="index.php?do=user&view=custom_add&op=add&edituid=2&page=1"><span class="cog icon"></span>权限设置</a>
- 							<a class="button" href="index.php?do=user&view=list&op=disable&edituid=2&page=1"><span class="lock icon"></span>禁用</a> 
- 							<a class="button" href="index.php?do=user&view=list&op=del&edituid=2" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
-</td>
- 			        </tr>
-        <tr class="item">
-        	<td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="1"></td>
-            <td class="td25">1</td>
-            <td class="td25 wraphide"><a href="javascript:void(0)" >admin</a></td>
-            <td class="wraphide"> 管理员 </td>
-<td class="wraphide">普通</td>
-<td>2011-05-25</td>
-            <td><div class="ws_break" style="width:70%;">127.0.0.1</div></td>
-            <td><div class="ws_break" style="width:70%;">77529.188</div></td>
-<td><div class="ws_break" style="width:70%;">￥405,405.06元</div></td>
- 
-<td>
-<a class="button dbl_target" href="index.php?do=user&view=add&edituid=1&page=1"><span class="pen icon"></span>编辑</a>
-
-</td>
- 			        </tr>
+ </tr>
+     <?php
+        }
+     ?>
  </tbody>
  <tfoot>
           <tr>
