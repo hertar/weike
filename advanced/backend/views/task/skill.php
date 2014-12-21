@@ -1,3 +1,6 @@
+<?php 
+use app\models\Industry;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -27,19 +30,17 @@
     	<div class="title"><h2>搜索</h2></div>
         <div class="detail" id="detail">
            
-<form action="" method="get">
-<input type="hidden" name="do" value="task">
-<input type="hidden" name="view" value="skill">
-<input type="hidden" name="type" value="">
-<input type="hidden" name="page" value="1">
+<form action="index.php?r=task/skill&c=" method="post">
 <table cellspacing="0" cellpadding="0">
 <tbody>
 	<tr>
 		<th>所属行业</th>
 		<td>
-		<select class="ps vm" name="w[indus_id]" id="catid">
+		<select class="ps vm" name="indus_id" id="catid">
+		<option value=''>请选择</option>
 		<?php for($i=0;$i<count($indus);$i++){?>
-		<option value='<?php echo $indus[$i]['indus_id']?>'>
+		<option value='<?php echo $indus[$i]['indus_id']?>' 
+		<?php if(isset($condition)){if($indus[$i]['indus_id']==$condition['indus_id']){echo 'selected';}}?>>
 		<?php
 			if($indus[$i]['indus_pid']!=0){echo '&nbsp;&nbsp;|-';}
 			echo $indus[$i]['indus_name'];
@@ -48,10 +49,8 @@
 		<?php }?>
 		</select>
 		</td>
-
 		<th>技能名称*</th>
-		<td><input type="text" value="" name="w[skill_name]" class="txt"/>*支持模糊查询</td>
-
+		<td><input type="text" value="<?php if(isset($condition)){ echo $condition['skill_name'];}?>" name="skill_name" class="txt"/>*支持模糊查询</td>
 		<th></th>
 		<td></td>
 	</tr>
@@ -59,22 +58,29 @@
 	<tr>
 	<th>结果排序</th>
 	<td>
-	<select name="ord[]">
-	<option value="skill_id"  selected="selected">默认排序</option>
-	<option value="on_time" >添加时间</option>
+	<select name="order">
+	<option value="skill_id" <?php if(isset($condition)){if($condition['order']=="skill_id"){echo 'selected';}}?>>
+	默认排序</option>
+	<option value="on_time" <?php if(isset($condition)){if($condition['order']=="on_time"){echo 'selected';}}?>>
+	添加时间</option>
 	</select>
-	<select name="ord[]">
-	<option selected="selected"  value="desc">递减</option>
-	<option  value="asc">递增</option>
+	<select name="desc">
+	<option  value="asc"<?php if(isset($condition)){if($condition['desc']=="asc"){echo 'selected';}}?>>
+	递增</option>
+	<option  value="desc"<?php if(isset($condition)){if($condition['desc']=="desc"){echo 'selected';}}?>>
+	递减</option>
 	</select>
 	</td>
 	<th>显示结果</th>
 	<td><select name="page_size">
-	<option value="10" selected="selected">每页显示10</option>
-	<option value="20" >每页显示20</option>
-	<option value="30" >每页显示30</option>
+	<option value="10" <?php if(isset($condition)){if($condition['page_size']=="10"){echo 'selected';}}?>>
+	每页显示10</option>
+	<option value="20" <?php if(isset($condition)){if($condition['page_size']=="20"){echo 'selected';}}?>>
+	每页显示20</option>
+	<option value="30" <?php if(isset($condition)){if($condition['page_size']=="30"){echo 'selected';}}?>>
+	每页显示30</option>
 	</select>
-	<button class="pill" type="submit" value=搜索 name="sbt_search">
+	<button class="pill" type="submit" value="skill" name="submit">
 	<span class="icon magnifier">&nbsp;</span>搜索</button></td>
 	</tr>
 
@@ -89,7 +95,7 @@
 <div class="box list">
     	<div class="title"><h2>技能列表</h2></div>
         <div class="detail">
-<form method="post" id="skill_op" action="">
+<form method="post" id="skill_op" action="index.php?r=task/skilldel">
 <table cellspacing="0" cellpadding="0">
 <tbody>
 	<tr>
@@ -105,10 +111,16 @@
 <td class="td25">
 <input type="checkbox" class="checkbox" name="ckb[]" value="<?php echo $skill[$i]['skill_id']?>">
 </td>
-<td class="td28"><?php echo $skill[$i]['indus_id']?></td>
+<td class="td28">
+<?php
+	$res=Industry::findOne($skill[$i]['indus_id']);
+	echo $res['indus_name'];
+?>
+</td>
 <td><?php echo $skill[$i]['skill_name']?></td>
 <td><?php echo $skill[$i]['listorder']?></td>
-<td><?php echo $skill[$i]['on_time']?></td>
+<td><?php echo date('Y-m-d',$skill[$i]['on_time']);?>
+</td>
 <td>
 <a href="index.php?r=task/skill_edit&id=<?php echo $skill[$i]['skill_id']?>" class="button dbl_target">
 <span class="pen icon"></span>编辑</a>
@@ -121,23 +133,25 @@
 <div class="clearfix">
 <label for="checkbox">全选</label>
 <input type="hidden" name="sbt_action" class="sbt_action"/>
-<button name="sbt_action" type="submit" value=批量删除 onclick="return batch_act(this,'skill_op');" class="pill negative" ><span class="icon trash"></span>批量删除</button>
+<button name="sbt_action" type="submit" onclick="return batch_act(this,'skill_op');" class="pill negative">
+<span class="icon trash"></span>批量删除</button>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
-<div class="page"><a class="selected">1</a><a href="index.php?do=task&view=skill&w[indus_pid]=&w[skill_name]=
-&page_size=&page=
-&=&page=2">2</a> <a href="index.php?do=task&view=skill&w[indus_pid]=&w[skill_name]=
-&page_size=&page=
-&=&page=3">3</a> <a href="index.php?do=task&view=skill&w[indus_pid]=&w[skill_name]=
-&page_size=&page=
-&=&page=4">4</a> <a href="index.php?do=task&view=skill&w[indus_pid]=&w[skill_name]=
-&page_size=&page=
-&=&page=5">5</a> <a href="index.php?do=task&view=skill&w[indus_pid]=&w[skill_name]=
-&page_size=&page=
-&=&page=2">下一页>></a><span class="fl_l"> 1 / 5页</span> </div>
+<div class="page">
+<?php echo $page;?>
+<!--
+<a class="selected">1</a>
+<a href="">2</a>
+<a href="">3</a>
+<a href="">4</a>
+<a href="">5</a>
+<a href="">下一页>></a>
+<span class="fl_l"> 1 / 5页</span>
+-->
+</div>
 </form>
         </div>
         
@@ -177,7 +191,7 @@ In('form_and_validation', 'xheditor', 'mousewheel', 'table', 'calendar');
 <script type="text/javascript">
 function cdel(o, s) {
 d = art.dialog;
-var c = "你确认删除操作？";
+var c = "确认删除操作？";
 if (s) {
 c = s;
 }
@@ -232,7 +246,7 @@ return false;
 function pdel(frm) {
 d = art.dialog;
 var frm = frm;
-var c = "你确认删除操作？";
+var c = "确认删除操作？";
 d.confirm(c, function() {
 $("#" + frm).submit();
 });
@@ -244,10 +258,10 @@ var frm = frm;
 var c = $(obj).val();
 var conf = $(":checkbox[name='ckb[]']:checked").length;
 if (conf > 0) {
-d.confirm("确定" + c + '?', function() {
-$(".sbt_action").val(c);
-$("#" + frm).submit();
-});
+	d.confirm("确定" + c + '?', function() {
+		$(".sbt_action").val(c);
+		$("#" + frm).submit();
+	});
 } else {
 d.alert("您没有选择任何操作项");
 }
