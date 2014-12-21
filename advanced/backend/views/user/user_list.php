@@ -31,18 +31,15 @@
     	<div class="title"><h2>搜索</h2></div>
         <div class="detail" id="detail">
 <form action="#" method="post">
-        	<input type="hidden" name="do"   value="user">
-<input type="hidden" name="view" value="list">
-<input type="hidden" name="type" value="">
-<input type="hidden" name="page" value="1">
+
 <table cellspacing="0" cellpadding="0">
  <tbody>
- 	<tr>
- 		<th>用户ID</th>
-<td><input type="text" class="txt" name="space[uid]" value="" onkeyup="clearstr(this);"></td>
+<tr>
+<th>用户ID</th>
+<td><input type="text" class="txt" name="space_uid" value="" ></td>
 <th>用户名</th>
-<td><input type="text" class="txt" name='space[username]' value="" onkeyup="clearspecial(this);"></td>
- 	</tr>
+<td><input type="text" class="txt" name='space_username' value="" /></td>
+</tr>
 
 <tr>
 <th>显示条数</th>
@@ -110,6 +107,7 @@
  </thead>
  <tbody> 
      <?php
+        if($row){
         foreach ($row as $v) {
            
      ?>
@@ -119,21 +117,21 @@
             <td class="td25 wraphide"><a href="javascript:void(0)" ><?php echo $v['username']?></a></td>
             <td class="wraphide"><?php echo $v['groupname']?></td>
 <td class="wraphide">普通</td>
-<td><?php echo $v['reg_time']?></td>
+<td><?php echo $v['date']?></td>
             <td><div class="ws_break" style="width:70%;"><?php echo $v['reg_ip']?></div></td>
             <td><div class="ws_break" style="width:70%;"><?php echo $v['credit']?></div></td>
 <td><div class="ws_break" style="width:70%;">￥<?php echo $v['balance']?>元</div></td>
  
 <td>
-<a class="button dbl_target" href="index.php?do=user&view=add&edituid=10&page=1"><span class="pen icon"></span>编辑</a>
+    <a class="button dbl_target" href="index.php?r=user/user_update&id=<?php echo $v['uid']?>"><span class="pen icon"></span>编辑</a>
 
 <a class="button" href="index.php?do=user&view=custom_add&op=add&edituid=10&page=1"><span class="cog icon"></span>权限设置</a>
  <a class="button" href="index.php?do=user&view=list&op=disable&edituid=10&page=1"><span class="lock icon"></span>禁用</a> 
- <a class="button" href="index.php?do=user&view=list&op=del&edituid=10" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
+ <a class="button" href="index.php?r=user/user_del&id=<?php echo $v['uid']?>" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
 </td>
  </tr>
      <?php
-        }
+        }}
      ?>
  </tbody>
  <tfoot>
@@ -148,7 +146,7 @@
 <button type="submit" name="sbt_action" value="批量启用" class="pill positive" onclick="return batch_act(this,'frm_user_search');" ><span class="unlock icon"></span>批量启用</button>
 <button type="submit" name="sbt_action" value="批量删除" class="pill negative" onclick="return batch_act(this,'frm_user_search');" ><span class="icon trash"></span>批量删除</button>
  
-<button type="button" name="sbt_add"    value="添加新用户" class="positive primary pill button" onclick="document.location.href='index.php?do=user&view=add'"><span class="check icon"></span>添加新用户</button>
+<button type="button" name="sbt_add"    value="添加新用户" class="positive primary pill button" onclick="document.location.href='index.php?r=user/user_add' "><span class="check icon"></span>添加新用户</button>
  
     </div>
 
