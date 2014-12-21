@@ -108,7 +108,7 @@ class UserController extends Controller
     //删除
     public function actionUser_del(){
         $s=\app\models\Space::findOne($_GET['id'])->delete(); 
-        $m\app\models\Member::findone($_GTE['id'])->delete();
+        $m=\app\models\Member::findone($_GTE['id'])->delete();
         if($s&&$m){
               $this->redirect("index.php?r=user/user_list");
         }
