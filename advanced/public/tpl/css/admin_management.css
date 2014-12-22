@@ -51,7 +51,7 @@ a:active{color:#cef;}
 .hide_nav{ display:none; position:absolute;  z-index:6; top:37px; right:0; border:1px solid #ccc; border-top:none;  width:90px; padding-bottom:10px; text-align:center; font-size:14px; }
 input{ font-size:12px; margin-right:5px; vertical-align:middle;-o-transition: all 0.1s ease-out;-moz-transition:all 0.1s ease-out 0s;-webkit-transition:all 0.1s ease-out 0s;}
 input:focus{ border-color:#69c; box-shadow:0 0 5px rgba(102, 153, 204,.5);}
-.txt {border: 1px solid #ccc; padding:5px; font-size:12px; background:#fff url(../img/input_bg.jpg) repeat-x;font-family: Verdana, Arial, Helvetica, sans-serif;color:#333;border-radius:3px;}
+.txt {border: 1px solid #ccc; padding:0px; font-size:12px; background:#fff url(../img/input_bg.jpg) repeat-x;font-family: Verdana, Arial, Helvetica, sans-serif;color:#333;border-radius:3px;}
 select{ padding:4px; font-size:12px;color:#333; background:#fff; border:1px solid #ccc;border-radius:5px; box-shadow:inset 0 0 5px rgba(0,0,0,.2); }
 label{ padding:0 0 0 3px; }
 	label.selected{color:#69c; font-weight:bold;}
@@ -78,7 +78,7 @@ h1,h2,h3,h4,h5,h6{ font-size:14px;}
 
 /*model*/
 .box{ margin-bottom:10px;}
-.title{ line-height:25px; background:#eee; border-top:1px solid #efefef; font-size:14px; padding:0 10px;color:#333}
+.title{ line-height:25px; background:#eee; border-top:1px solid #efefef; font-size:14px; padding:5px 10px;color:#333}
 .title h2{border-top:1px solid #efefef; cursor:pointer;}
 .detail{background-color: transparent;background-color: rgba(255, 255, 255, 0.6); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF,endColorstr=#99FFFFFF); zoom: 1}
 /*.search .detail{display:none}*/
