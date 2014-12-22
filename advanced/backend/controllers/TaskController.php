@@ -22,18 +22,175 @@ class TaskController extends Controller
     //行业管理(行业列表)
     public function actionIndustry()
     {
-        return $this->renderPartial('industry');
+		$where='';
+		if(isset($_POST['submit'])){
+			//echo '<pre>';print_r($_POST);die;
+		$where=" where indus_name like '%".$_POST['indus_name']."%' order by ".$_POST['order']." ".$_POST['desc'];
+			$data['condition']=$_POST;
+		}
+		$connection = Yii::$app->db;
+		$sql = "SELECT * FROM wk_witkey_industry".$where;
+		$command = $connection->createCommand($sql);
+		$res= $command->queryAll();
+		for($i=0;$i<count($res);$i++){
+			if($res[$i]['indus_pid']==0){
+				$sort[]=$res[$i];
+				for($j=0;$j<count($res);$j++){
+					if($res[$i]['indus_id']==$res[$j]['indus_pid']){
+						$sort[]=$res[$j];
+					}
+				}
+			}
+		}
+		$data['info']=$sort;
+		//print_r($result);
+        return $this->renderPartial('industry',$data);
     }
 
-    //行业添加
+	// 添加/编辑		行业信息
+    public function actionEdit(){
+        //echo '<pre>';print_r($_POST);die;
+		$flag=0;
+		$transaction =Yii::$app->db->beginTransaction();
+		try 
+		{
+			$i=1;
+			foreach($_POST['name'] as $key=>$val)
+			{
+				Industry::updateAll(['indus_name'=>$val],['indus_id'=>$key]);
+				if($i==count($_POST['name']))
+				{
+					if(isset($_POST['addtr']))
+					{
+						$flag=1;
+					}
+					else
+					{
+						echo "<script>location.href='index.php?r=task/".$_POST['submit']."'</script>";
+					}
+				}
+				$i++;
+			}
+			if(isset($_POST['addtr']))
+			{
+				$i=1;
+				$model = new Industry();
+				foreach($_POST['addtr'] as $key=>$val)
+				{
+					$model->indus_pid=$key;
+					$model->indus_name=$val;
+					$model->on_time=time();
+					$model->insert();
+					if($i==count($_POST['addtr'])&&$flag=1)
+					{
+						echo "<script>location.href='index.php?r=task/".$_POST['submit']."'</script>";
+					}
+					$i++;
+				}
+			}
+			$transaction->commit();
+		}
+		catch(Exception $e)
+		{
+			$transaction->rollBack();
+			echo $e->getMessage();
+		}
+    }
+
+    //行业信息（添加/编辑）
     public function actionIndustry_edit(){
-        return $this->renderPartial("industry_edit");
+		$data['indus']=Industry::find()->where('indus_pid=0')->all();
+		$data['tag']='添加';
+		$data['act']='act';
+		if(isset($_GET['id']))
+		{
+			$id=intval($_GET['id']);
+			$data['tag']='编辑';
+			$data['act']='act';
+			$data['info']=Industry::findOne($id);
+			//echo '<pre>';print_r($data['info']);die;
+		}
+        return $this->renderPartial("industry_edit",$data);
+    }
+
+	//操作行业信息
+    public function actionAct(){
+		//echo '<pre>';print_r($_POST);die;
+		if($_POST['id']==0){
+			$model = new Industry();
+		}else{
+			$model =Industry::findone($_POST['id']);
+		}
+		$model->indus_pid=$_POST['indus_pid'];
+		$model->indus_name=$_POST['indus_name'];
+		$model->listorder=$_POST['listorder'];
+		$model->is_recommend=isset($_POST['is_recommend'])?$_POST['is_recommend']:0;
+		$model->on_time=time();
+		if($model->save())
+		{
+			echo "<script>location.href='index.php?r=task/".$_POST['submit']."'</script>";
+		}
+	}
+
+	//删除行业
+    public function actionDel(){
+        $id=intval($_GET['id']);
+		$info=Industry::findOne($id);
+		if($info['indus_pid']==0){
+			$res=Industry::find()->where('indus_pid='.$info['indus_id'])->all();
+		}else{
+			$res['key']='son';
+		}
+		if(count($res)==0||count($res)==1)
+		{
+			if(Industry::deleteAll("indus_id in ($id)"))
+			{
+				echo "<script>location.href='index.php?r=task/industry'</script>";
+			}
+		}
+		else
+		{
+			echo "<script>alert('该分类下含有子类，删除失败！');location.href='index.php?r=task/industry'</script>";
+		}
     }
     
     //行业合并
     public function actionUnion_industry(){
-        
-        return $this->renderPartial("union_industry");
+		$data['res']=Industry::find()->where('indus_pid=0')->all();
+        return $this->renderPartial("union_industry",$data);
+    }
+
+	//合并行业
+    public function actionUnion(){
+        //echo '<pre>';print_r($_POST);die;
+		if($_POST['delid']==0||$_POST['setid']==0)
+		{
+			echo "<script>location.href='index.php?r=task/industry'</script>";
+		}
+		$res=Industry::find()->where('indus_pid='.$_POST['delid'])->all();
+		for($i=0;$i<count($res);$i++)
+		{
+			$id[]=$res[$i]['indus_id'];
+		}
+		//echo '<pre>';print_r($id);die;
+		$transaction =Yii::$app->db->beginTransaction();
+		try 
+		{
+			for($i=0;$i<count($id);$i++)
+			{
+				Industry::updateAll(['indus_pid'=>$_POST['setid']],['indus_id'=>$id[$i]]);
+			}
+			if(Industry::deleteAll("indus_id in (".$_POST['delid'].")"))
+			{
+				echo "<script>location.href='index.php?r=task/industry'</script>";
+			}
+			$transaction->commit();
+		}
+		catch(Exception $e)
+		{
+			$transaction->rollBack();
+			echo $e->getMessage();
+		}
     }
 
     //技能管理

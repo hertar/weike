@@ -26,7 +26,7 @@
 <div class="box post">
 <div class="title"><h2>添加案例</h2></div>
             <div class="detail">
-            	 <form action="index.php?do=case&view=add" method="post" id="frm" name="frm" enctype="multipart/form-data">
+            	 <form action="index.php?r=article/case_add_pro" method="post" id="frm" name="frm" enctype="multipart/form-data">
             	 	<input type="hidden" name="hdn_case_id" value="">
 <input type="hidden" id="obj_id" name="fds[obj_id]">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">

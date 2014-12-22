@@ -21,47 +21,115 @@
  <div class="page_title">
     	<h1>文章管理</h1>
         <div class="tool">
-            <a href="index.php?r=article/help_list" >帮助列表</a>
-            <a href="index.php?r=article/help_edit" class="here" >帮助添加</a>
+            <a href="index.php?r=article/art_list" >文章列表</a>
+            <a href="index.php?r=article/art_edit" class="here" >文章添加</a>
     	</div>
 </div>
 <!--页头结束-->    
 
 <div class="box post">
     <div class="tabcon">
-        	<div class="title"><h2>添加帮助</h2></div>       	
+        	<div class="title"><h2>编辑文章</h2></div>       	
             <div class="detail">
-                <form method="post" action="index.php?r=article/help_add_pro" id="frm_art_edit" enctype="multipart/form-data">
-                <input type="hidden" name="pk[art_id]" value="200" id='art_id'>
-                <input type="hidden" name="type" value="help">
+                <form method="post" action="index.php?r=article/art_update_pro" id="frm_art_edit" enctype="multipart/form-data">
+                <input type="hidden" name="pk[art_id]" value="201" id='art_id'>
+                <input type="hidden" name="type" value="art">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     
                       <tr>
-                        <th  scope="row" width="130">帮助标题：</th>
-                        <td>
-                        <input type="text" name="fields[art_title]" id="txt_art_title"  value="" maxlength="100"  class="txt" style=" width:260px;"
+                        <th scope="row" width="130">文章标题：</th>
+                        <td><input type="hidden" name="aa" value="<?php echo $arr['art_id']; ?>" id='art_id'>
+                        <input type="text" name="fields[art_title]" id="txt_art_title" 
+                               value="<?php echo $arr['art_title'] ?>" maxlength="100"  class="txt" style=" width:260px;"
                         limit="required:true;len:3-100;general:false" 
-                        msg="帮助标题输入有误，长度在3-100个字符串之间" 
+                        msg="文章标题输入有误，长度在3-100个字符串之间" 
                         msgArea="art_title_msg" 
-                        title='请输入帮助的标题' />
+                        title='请输入文章的标题' />
                         <span id="art_title_msg"></span>
                         </td>
                       </tr>
                                             <tr>
-                        <th scope="row">帮助分类：</th>
+                        <th scope="row">文章分类：</th>
                         <td> 
                          <select name="fields[art_cat_id]" id="slt_cat_id" style=" width:270px;"
                          			 limit = "required:true;type:int" 
-                                     msg = '请选择帮助分类' 
-                                     title='你准备选择哪类的帮助？' 
+                                     msg = '请选择文章分类' 
+                                     title='你准备选择哪类的文章？' 
                                      msgArea="msg_cat_id">
-                                        <?php foreach($arr as $key =>$val){?>
-                                    <option value="<?php echo $val['art_cat_id'];?>"><?php echo $val['tmp'];?><?php echo $val['cat_name'];?></option>
-                                    <?php } ?>   
-           
+                        <option value=1>客客资讯</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=358>&nbsp;&nbsp;&nbsp; |-新闻列表</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=363>&nbsp;&nbsp;&nbsp;&nbsp; |--2222</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=203>&nbsp;&nbsp;&nbsp; |-安全交易</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=361>&nbsp;&nbsp;&nbsp;&nbsp; |--ffffff</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=359>&nbsp;&nbsp;&nbsp;&nbsp; |--111111111</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=365>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |---rrrrrr</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=202>&nbsp;&nbsp;&nbsp; |-关于我们</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=17>&nbsp;&nbsp;&nbsp; |-网站公告</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=360>&nbsp;&nbsp;&nbsp;&nbsp; |--你好吗</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=7>&nbsp;&nbsp;&nbsp; |-媒体报导</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=5>&nbsp;&nbsp;&nbsp; |-行业动态</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=4>&nbsp;&nbsp;&nbsp; |-政策法规</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        <option value=2>&nbsp;&nbsp;&nbsp; |-联系我们</option><!--	<optgroup >
+</optgroup>
+
+-->
+
+                        
                      </select>
                      <span id="msg_cat_id"></span>
- <span>请勿选择父级分类，添加在父级分类下的帮助会无法在帮助中心展示</span> 
+  
                 	</td>
 
                       </tr>
@@ -71,12 +139,12 @@
                         <td>
                          <input type="text"  class="txt" style=" width:260px;"
   id="txt_listorder" name="fields[listorder]"
-   value="0"
+   value="0"value="<?php echo $arr['listorder'] ?>"
     maxlength="5" 
 limit = "required:true;type:int" 
                                 onkeyup="clearstr(this)"
-                                msg = '请输入帮助排序' 
-                                title='帮助排序' 
+                                msg = '请输入文章排序' 
+                                title='文章排序' 
                                 msgArea="slt_txt_listorder"/><span id="slt_txt_listorder"></span>
                         </td>
                       </tr>
@@ -85,7 +153,8 @@ limit = "required:true;type:int"
                         <th scope="row">作者：</th>
                         <td> <input type="text" class="txt" style=" width:260px;"
  name="fields[username]" id="txt_username" 
- value=""
+  value="<?php echo $arr['username'] ?>"
+ 
                         			 limit = "required:false" 
                                      msg = '请填写作者名称' 
                                      title='填写文章作者的名称？' 
@@ -98,10 +167,10 @@ limit = "required:true;type:int"
                         <td><input type="text" class="txt" style=" width:260px;" 
 name="fields[art_source]" 
 id="art_source"
-value=""
+value="<?php echo $arr['art_source'] ?>"
                         			 limit = "required:false" 
                                      msg = '请填写来源' 
-                                     title='帮助的来源是？' 
+                                     title='文章的来源是？' 
                                      msgArea="msg_art_source"/><span id="msg_art_source"></span>
                        </td>
                       </tr>
@@ -110,20 +179,45 @@ value=""
                         <th scope="row">是否推荐：</th>
                         <td>
                           <p>
-                              <label for="cbk"><input type="checkbox" name="fields[is_recommend]" id="cbk" value="1"   />&nbsp;是</label> <br />
+                              <label for="cbk"><input type="checkbox"
+                                                          <?php
+                               if($arr['is_show']==1){
+                                   echo "checked";
+                               }
+                               ?> 
+                                                      name="fields[is_recommend]" id="cbk" value="1"   />&nbsp;是</label> <br />
                           </p>
                         </td>
                       </tr>
                       
   
   
- 		  
+                       <tr>
+                        <th scope="row">卦面图片:</th>
+                        <td id="t_pic" class=" p_relative"> 
+                        	<!--<input type="file" name="art_pic"  id="art_pic" size="50" onchange="isExtName(this,1)" ext=".jpg,.png,.gif,.jpeg,.bmp">-->
+
+<input type="file" id="art_pic" class="file" name="art_pic"  size="50" ext=".jpg,.png,.gif,.jpeg,.bmp" >
+<input type="button" id="btn_updata" onclick="pic_upload('art_pic');" value="上传">
+<input type="hidden" id="fid" value=""/>
+                        	<input type="hidden" name="fields[art_pic]"  value="" id="hdn_art_pic">
+
+<span id="file_span"> 
+</span>
+
+                            <div class="padt10 direct">
+                            <p>允许上传.jpg,.png,.gif,.jpeg,.bmp格式，文件大小不超过1M</p>
+                            </div>
+                        </td>
+                      </tr> 
+  		  
  <script>
 //图片上传	  	
 function pic_upload(id){
 var o  = document.getElementById(id);
+
 if(!isExtName(o)){
-art.dialog.alert("");
+art.dialog.alert("1");
 return false;
 }else{
 var art_id = '';
@@ -171,24 +265,30 @@ if(json.status==1){
   
   
                       <tr>
-                        <th scope="row">帮助内容：</th>
+                        <th scope="row">文章内容：</th>
                         <td>
-                         <textarea rows="30" name="fields[content]" style="width:75%;" id="tar_content"  class="xheditor {urlBase:'http://127.0.0.1/weike/',tools:'simple',admin:'/public/',html5Upload:false,emotMark:false,upImgUrl:'/public/index.php?do=ajax&view=upload&file_type=att'}" cols="70"></textarea>
+                         <textarea rows="30" name="fields[content]" style="width:75%;" id="tar_content"  class="xheditor {urlBase:'http://127.0.0.1/weike/',tools:'simple',admin:'/public/',html5Upload:false,emotMark:false,upImgUrl:'/public/index.php?do=ajax&view=upload&file_type=att'}" cols="70">
+<?php echo $arr['content']?>  
+                         </textarea>
 </td>
  </tr>
                      <tr>
                         <th scope="row">SEO标题：</th>
-                        <td><textarea cols="70" rows="2"  name="fields[seo_title]" value=""></textarea></td>
+                        <td><textarea cols="70" rows="2"  name="fields[seo_title]" value="">
+                                <?php echo $arr['seo_title']?>
+                            </textarea></td>
                      </tr>
                      
                      <tr>
                         <th scope="row">SEO关键字：</th>
-                        <td><textarea cols="70" rows="2"  name="fields[seo_keyword]" value=""></textarea></td>
+                        <td><textarea cols="70" rows="2"  name="fields[seo_keyword]" value=""><?php echo $arr['seo_keyword']?></textarea></td>
                      </tr>
                      
                       <tr>
                         <th scope="row">SEO描述：</th>
-                        <td><textarea cols="70" rows="3" name="fields[seo_desc]" value=""></textarea></td>
+                        <td><textarea cols="70" rows="3" name="fields[seo_desc]" value="">
+<?php echo $arr['seo_desc']?>
+                            </textarea></td>
                      </tr>
                       
                      
@@ -260,7 +360,7 @@ In.add('mousewheel', {
 path : "/public/tpl/js/jquery.mousewheel.min.js",
 type : 'js'
 });
-//In.add('styleswitch',{path:"tpl/js/styleswitch.js",type:'js'});
+//In.add('styleswitch',{path:"/public/tpl/js/styleswitch.js",type:'js'});
 In.add('table', {
 path : "/public/tpl/js/table.js",
 type : 'js'

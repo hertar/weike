@@ -1,10 +1,12 @@
+<?php
+use yii\widgets\LinkPager;
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>keke admin</title>
-
-
 <link href="/public/tpl/css/admin_management.css" rel="stylesheet" type="text/css" />
 <link href="/public/resource/css/buttons.css" rel="stylesheet" type="text/css" />
 <link title="style1" href="/public/tpl/skin/default/style.css" rel="stylesheet" type="text/css" />
@@ -32,14 +34,12 @@
     	<div class="title"><h2>搜索</h2></div>
         <div class="detail" id="detail">
            
-    <form action="#" method="get" name="s" id="sl">
-            	<input type="hidden" name="do" value="article">
-<input type="hidden" name="view" value="list">
-<input type="hidden" name="type" value="art">
-<input type="hidden" name="page" value="1">
- 
- 
-                <table cellspacing="0" cellpadding="0">
+    <form action="index.php?r=article/art_seartch" method="post" name="s" id="sl">
+        <input type="hidden" name="do" value="article">
+        <input type="hidden" name="view" value="list">
+        <input type="hidden" name="type" value="art">
+        <input type="hidden" name="page" value="1">
+        <table cellspacing="0" cellpadding="0">
 <tbody>
                         <tr>
                             <th>作者</th>
@@ -55,16 +55,18 @@
                             <th>栏目</th>
                             <td>
                             	<select class="ps vm" name="w[art_cat_id]" id="catid">
-                            	<option value=1>客客资讯</option><option value=358>&nbsp;&nbsp;&nbsp; |-新闻列表</option><option value=363>&nbsp;&nbsp;&nbsp;&nbsp; |--2222</option><option value=203>&nbsp;&nbsp;&nbsp; |-安全交易</option><option value=361>&nbsp;&nbsp;&nbsp;&nbsp; |--ffffff</option><option value=359>&nbsp;&nbsp;&nbsp;&nbsp; |--111111111</option><option value=365>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |---rrrrrr</option><option value=202>&nbsp;&nbsp;&nbsp; |-关于我们</option><option value=17>&nbsp;&nbsp;&nbsp; |-网站公告</option><option value=360>&nbsp;&nbsp;&nbsp;&nbsp; |--你好吗</option><option value=7>&nbsp;&nbsp;&nbsp; |-媒体报导</option><option value=5>&nbsp;&nbsp;&nbsp; |-行业动态</option><option value=4>&nbsp;&nbsp;&nbsp; |-政策法规</option><option value=2>&nbsp;&nbsp;&nbsp; |-联系我们</option>
+                                    <?php foreach($arr as $key=>$val){?>
+                                    <option value=<?php echo $val['art_cat_id']?>><?php echo $val['tmp'];?> |<?php echo $val['cat_name'];?></option>    
+                                    <?php } ?>
 </select>
 </td>
 <th>排序</th>
 <td>
-                                <select name="ord[]">
+                                <select name="paixu">
                                 	<option value="art_id"  selected="selected">默认排序</option>
                                 	<option value="pub_time" >发布时间</option>
                                 </select>
-                                <select name="ord[]">
+                                <select name="zengjian">
                                		 <option selected="selected"  value="desc">递减</option>
                                 	<option  value="asc">递增</option>
                                 </select>
@@ -109,187 +111,33 @@
                     <th width="25%">操作</th>
                   </tr>
   </thead>
-                  <tbody>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="250" class="checkbox">250</td>
+                 <tbody>
+  <?php foreach($model as $key=>$val){?>
+                      <tr class="item" id="<?php echo $val['art_id'];?>">
+                  	<td><input type="checkbox" name="ckb" value="<?php echo $val['art_id']?>" 
+                                   class="checkbox"><?php echo $val['art_id']?></td>
                     <td class="td28 wraphide">
-                    	新闻列表</td>
+                    	关于我们</td>
                     <td>
-                    	<a href="index.php?do=article&view=edit&art_id=250&type=art&page=1" >
-中金香港直销Facebook股权：初定100万股门槛</a>
+                    	<a href="index.php?do=article&view=edit&art_id=308&type=bulletin&page=1" >
+                            <?php echo $val['art_title']?>
+</a>
 </td>
-                    <td class="wraphide">7</td>
-                    <td class="wraphide">匿名</td>
-                    <td class="ws_break">2012-02-17</td>
+                    <td class="wraphide">6</td>
+                    <td class="wraphide"><?php echo $val['username'];?></td>
+                    <td class="ws_break"><?php echo date('Y-m-d H:m:s',time($val['pub_time']));?></td>
                     <td>
                     	 
-<a href="/public/index.php?do=article&view=article_info&art_id=250&page=1" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=250&type=art&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&art_id=250&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
+<a href="/public/index.php?do=single&art_id=308" target="_blank" class="button">
+    <span class="book icon"></span>浏览</a> 
+<a href="index.php?r=article/art_update&id=<?php echo $val['art_id'];?>" class="button dbl_target">
+    <span class="pen icon"></span>编辑</a>
+<a   onclick="return cdel(<?php echo $val['art_id']?>);" class="button">
+    <span class="trash icon">
+    </span>删除</a>
 </td>
                   </tr>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="249" class="checkbox">249</td>
-                    <td class="td28 wraphide">
-                    	行业动态</td>
-                    <td>
-                    	<a href="index.php?do=article&view=edit&art_id=249&type=art&page=1" >
-依法诚信纳税共建和谐社会</a>
-</td>
-                    <td class="wraphide">3</td>
-                    <td class="wraphide">匿名</td>
-                    <td class="ws_break">2012-02-17</td>
-                    <td>
-                    	 
-<a href="/public/index.php?do=article&view=article_info&art_id=249&page=1" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=249&type=art&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&art_id=249&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="248" class="checkbox">248</td>
-                    <td class="td28 wraphide">
-                    	政策法规</td>
-                    <td>
-                    	<a href="index.php?do=article&view=edit&art_id=248&type=art&page=1" >
-诚信体系之诚信保障</a>
-</td>
-                    <td class="wraphide">5</td>
-                    <td class="wraphide">匿名</td>
-                    <td class="ws_break">2012-02-17</td>
-                    <td>
-                    	 
-<a href="/public/index.php?do=article&view=article_info&art_id=248&page=1" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=248&type=art&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&art_id=248&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="247" class="checkbox">247</td>
-                    <td class="td28 wraphide">
-                    	媒体报导</td>
-                    <td>
-                    	<a href="index.php?do=article&view=edit&art_id=247&type=art&page=1" >
-拥有梦想的快乐威客</a>
-</td>
-                    <td class="wraphide">2</td>
-                    <td class="wraphide">匿名</td>
-                    <td class="ws_break">2012-02-17</td>
-                    <td>
-                    	 
-<a href="/public/index.php?do=article&view=article_info&art_id=247&page=1" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=247&type=art&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&art_id=247&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="246" class="checkbox">246</td>
-                    <td class="td28 wraphide">
-                    	行业动态</td>
-                    <td>
-                    	<a href="index.php?do=article&view=edit&art_id=246&type=art&page=1" >
-威客营销的成功之路及潜在危机分析</a>
-</td>
-                    <td class="wraphide">2</td>
-                    <td class="wraphide">匿名</td>
-                    <td class="ws_break">2012-02-17</td>
-                    <td>
-                    	 
-<a href="/public/index.php?do=article&view=article_info&art_id=246&page=1" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=246&type=art&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&art_id=246&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="244" class="checkbox">244</td>
-                    <td class="td28 wraphide">
-                    	网站公告</td>
-                    <td>
-                    	<a href="index.php?do=article&view=edit&art_id=244&type=art&page=1" >
-什么是威客？</a>
-</td>
-                    <td class="wraphide">3</td>
-                    <td class="wraphide">匿名</td>
-                    <td class="ws_break">2012-02-17</td>
-                    <td>
-                    	 
-<a href="/public/index.php?do=article&view=article_info&art_id=244&page=1" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=244&type=art&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&art_id=244&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="243" class="checkbox">243</td>
-                    <td class="td28 wraphide">
-                    	网站公告</td>
-                    <td>
-                    	<a href="index.php?do=article&view=edit&art_id=243&type=art&page=1" >
-威客必看：发帖任务参与须知</a>
-</td>
-                    <td class="wraphide">3</td>
-                    <td class="wraphide">匿名</td>
-                    <td class="ws_break">2012-02-17</td>
-                    <td>
-                    	 
-<a href="/public/index.php?do=article&view=article_info&art_id=243&page=1" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=243&type=art&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&art_id=243&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="242" class="checkbox">242</td>
-                    <td class="td28 wraphide">
-                    	安全交易</td>
-                    <td>
-                    	<a href="index.php?do=article&view=edit&art_id=242&type=art&page=1" >
-支付方式</a>
-</td>
-                    <td class="wraphide">4</td>
-                    <td class="wraphide">匿名</td>
-                    <td class="ws_break">2012-02-17</td>
-                    <td>
-                    	 
-<a href="/public/index.php?do=article&view=article_info&art_id=242&page=1" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=242&type=art&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&art_id=242&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="241" class="checkbox">241</td>
-                    <td class="td28 wraphide">
-                    	政策法规</td>
-                    <td>
-                    	<a href="index.php?do=article&view=edit&art_id=241&type=art&page=1" >
-免责声明</a>
-</td>
-                    <td class="wraphide">0</td>
-                    <td class="wraphide">匿名</td>
-                    <td class="ws_break">2012-02-17</td>
-                    <td>
-                    	 
-<a href="/public/index.php?do=article&view=article_info&art_id=241&page=1" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=241&type=art&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&art_id=241&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="240" class="checkbox">240</td>
-                    <td class="td28 wraphide">
-                    	联系我们</td>
-                    <td>
-                    	<a href="index.php?do=article&view=edit&art_id=240&type=art&page=1" >
-联系方式</a>
-</td>
-                    <td class="wraphide">4</td>
-                    <td class="wraphide">匿名</td>
-                    <td class="ws_break">2013-04-03</td>
-                    <td>
-                    	 
-<a href="/public/index.php?do=article&view=article_info&art_id=240&page=1" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=240&type=art&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&art_id=240&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
+  <?php } ?>
                                     </tbody>
   <tfoot>
                   <tr>
@@ -304,7 +152,9 @@
                   </tr>
                 </tfoot>
               </table>
-  <div class="page"><span> 1 / 3页 </span> <a class="selected">1</a><a href=javascript:; onclick=ajaxpage('ajax_dom','index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&page=2','2','1')>2</a><a href=javascript:; onclick=ajaxpage('ajax_dom','index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&page=3','3','1')>3</a><a href=javascript:; onclick=ajaxpage('ajax_dom','index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=art&ord[0]=&ord[1]=&page=2','2','1')>下一页>></a></div>
+  <div class="page">
+       <?= LinkPager::widget(['pagination' => $pages]); ?>
+  </div>
   </div>
         	</form>
         </div>       
@@ -374,7 +224,19 @@ if (s) {
 c = s;
 }
 d.confirm(c, function() {
-window.location.href = o.href;
+$.ajax({
+   type: "GET",
+   url: "index.php?r=article/art_del",
+    data: "art_id="+o,
+   success: function(msg){
+    if(msg==1){
+        $("#"+o).remove();
+    }else{
+        alert("删除失败");
+    }
+   }
+   
+}); 
 });
 return false;
 }
@@ -434,11 +296,38 @@ function batch_act(obj, frm) {
 d = art.dialog;
 var frm = frm;
 var c = $(obj).val();
-var conf = $(":checkbox[name='ckb[]']:checked").length;
+var conf = $(":checkbox[name='ckb']:checked").length;
 if (conf > 0) {
 d.confirm("确定" + c + '?', function() {
-$(".sbt_action").val(c);
-$("#" + frm).submit();
+var ida = document.getElementsByName("ckb");
+var idarr=new Array();
+var idaa=new Array();
+var flag=0;
+ for(var i=0;i<conf;i++){
+if(ida[i].checked==true){
+    idarr[flag]=ida[i].value;
+     idaa[flag]=ida[i].value;
+    flag++;
+    }
+}
+
+         $.ajax({
+   type: "GET",
+   url: "index.php?r=article/art_delall",
+    data: "id="+idarr,
+   success: function(msg){
+    if(msg==1){
+      for(var i=0;i<idarr.length;i++){
+          $("#"+idarr[i]).remove();
+      } 
+    }else{
+        alert("删除成功");
+    }
+   }
+   
+}); 
+//$(".sbt_action").val(c);
+//$("#" + frm).submit();
 });
 } else {
 d.alert("您没有选择任何操作项");

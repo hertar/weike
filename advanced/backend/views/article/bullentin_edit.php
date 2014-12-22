@@ -31,7 +31,7 @@
     <div class="tabcon">
         	<div class="title"><h2>添加网站公告</h2></div>       	
             <div class="detail">
-                <form method="post" action="index.php?do=article&view=edit" id="frm_art_edit" enctype="multipart/form-data">
+                <form method="post" action="index.php?r=article/bullentin_edit_pro" id="frm_art_edit" enctype="multipart/form-data">
                 <input type="hidden" name="pk[art_id]" value="" id='art_id'>
                 <input type="hidden" name="type" value="bulletin">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">

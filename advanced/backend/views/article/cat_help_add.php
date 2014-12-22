@@ -31,8 +31,8 @@
     <div class="tabcon">
         	<div class="title"><h2>添加文章分类</h2></div>
             <div class="detail">
-                     <form method="post" action="index.php?r=article/cat_add_pro" id="frm_cat_edit" >
-                <input type="hidden" name="do" value="article">
+                     <form method="post" action="index.php?r=article/cat_helpadd_pro" id="frm_cat_edit" >
+                <input type="hidden" name="do" value="help">
                 <input type="hidden" name="view" value="cat_edit">
                 <input type="hidden" name="hdn_art_cat_id" value="">
                 <input type="hidden" name="type" value="art">
@@ -45,10 +45,9 @@
                                      msg = '请选择父分类' 
                                      title='你准备哪类的父分类呢？' 
                                      msgArea="msg_cat_id">
-                            <?php foreach ($arr as $key=>$val){?>
-                            <option value=<?php echo $val['art_cat_id']?>><?php echo $val['tmp']?><?php echo $val['cat_name']?></option>  
-                            <?php } ?>
-                        </select>
+                                           <?php foreach($arr as $key =>$val){?>
+                                    <option value="<?php echo $val['art_cat_id'];?>"><?php echo $val['tmp'];?><?php echo $val['cat_name'];?></option>
+                                    <?php } ?>    </select>
                         <span id="msg_cat_id"></span>
                         </td>
                       </tr>

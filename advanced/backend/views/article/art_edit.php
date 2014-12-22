@@ -31,8 +31,8 @@
     <div class="tabcon">
         	<div class="title"><h2>添加文章</h2></div>       	
             <div class="detail">
-                <form method="post" action="index.php?do=article&view=edit" id="frm_art_edit" enctype="multipart/form-data">
-                <input type="hidden" name="pk[art_id]" value="" id='art_id'>
+                <form method="post" action="index.php?r=article/art_add_pro" id="frm_art_edit" enctype="multipart/form-data">
+                <input type="hidden" name="pk[art_id]" value="201" id='art_id'>
                 <input type="hidden" name="type" value="art">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     
@@ -55,77 +55,11 @@
                                      msg = '请选择文章分类' 
                                      title='你准备选择哪类的文章？' 
                                      msgArea="msg_cat_id">
-                        <option value=1>客客资讯</option><!--	<optgroup >
+                               <?php foreach ($arr as $key=>$val){?>
+                        <option value=<?php echo $val['art_cat_id'];?>><?php echo $val['tmp'];?><?php echo $val['cat_name'];?></option><!--	<optgroup >
 </optgroup>
-
--->
-
-                        <option value=358>&nbsp;&nbsp;&nbsp; |-新闻列表</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=363>&nbsp;&nbsp;&nbsp;&nbsp; |--2222</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=203>&nbsp;&nbsp;&nbsp; |-安全交易</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=361>&nbsp;&nbsp;&nbsp;&nbsp; |--ffffff</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=359>&nbsp;&nbsp;&nbsp;&nbsp; |--111111111</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=365>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |---rrrrrr</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=202>&nbsp;&nbsp;&nbsp; |-关于我们</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=17>&nbsp;&nbsp;&nbsp; |-网站公告</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=360>&nbsp;&nbsp;&nbsp;&nbsp; |--你好吗</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=7>&nbsp;&nbsp;&nbsp; |-媒体报导</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=5>&nbsp;&nbsp;&nbsp; |-行业动态</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=4>&nbsp;&nbsp;&nbsp; |-政策法规</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=2>&nbsp;&nbsp;&nbsp; |-联系我们</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        
+--> 
+                               <?php } ?>
                      </select>
                      <span id="msg_cat_id"></span>
   
@@ -207,8 +141,9 @@ value=""
 //图片上传	  	
 function pic_upload(id){
 var o  = document.getElementById(id);
+
 if(!isExtName(o)){
-art.dialog.alert("");
+art.dialog.alert("1");
 return false;
 }else{
 var art_id = '';
