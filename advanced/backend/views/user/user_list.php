@@ -54,13 +54,49 @@
 <td>
 
 
-<select name="ord[]">
+                      <select name="ord" id="ords" onchange="sort()">
+                          <?php
+                            if($ords){
+                                if($ords=="uid"){
+                            
+                          ?>
                            <option value="uid"  selected="selected">默认排序</option>
                            <option value="reg_time" >时间</option>
+                           <?php
+                                }else{
+                           ?>   
+                            <option value="uid"  >默认排序</option>
+                            <option value="reg_time" selected="selected">时间</option>
+                           <?php
+                            }}else{
+                           ?>
+                            <option value="uid"  selected="selected">默认排序</option>
+                            <option value="reg_time" >时间</option>
+                            <?php
+                            }
+                            ?>
                       </select>
-                      <select name="ord[]">
+                      <select name="orda" id="orda" onchange="sort()">
+                          <?php
+                            if($orda){
+                                if($orda=="desc"){
+                            
+                          ?>
                             <option selected="selected"  value="desc">递减</option>
                             <option  value="asc">递增</option>
+                            <?php
+                                }else{
+                            ?>
+                            <option  value="desc">递减</option>
+                            <option  value="asc" selected="selected">递增</option>
+                            <?php
+                            }}else{
+                            ?>
+                            <option  value="desc">递减</option>
+                            <option  value="asc" selected="selected" >递增</option>
+                            <?php 
+                            }
+                            ?>
                       </select>
 </td>
 </tr>
@@ -86,13 +122,13 @@
     <div class="box list">
     	<div class="title"><h2>用户列表</h2></div>
         <div class="detail">
-<form method="post" action="#" id="frm_user_search">
+
 <div id="ajax_dom">
 <input type="hidden" name="page" value="1" />
   		<table cellpadding="0" cellspacing="0">
   		<thead>
           <tr>
-          	<th width="15"><input type="checkbox" id="checkbox" onclick="checkall()"></th>
+        <th width="15"><input type="checkbox" id="checkbox" onclick="checkall()"></th>
             <th width="20" >UID</th>
             <th style="width:40px;">用户名</th>
 <th width="45"  class="wraphide">用户组</th>
@@ -111,8 +147,8 @@
         foreach ($row as $v) {
            
      ?>
-        <tr class="item">
-            <td class="td25"><input type="checkbox" name="ckb[]" class="checkbox" value="10"></td>
+        <tr class="item" id="tr<?php echo $v['uid']?>">
+            <td class="td25"><input type="checkbox" name="check" class="checkbox" value="<?php echo $v['uid']?>"></td>
             <td class="td25"><?php echo $v['uid']?></td>
             <td class="td25 wraphide"><a href="javascript:void(0)" ><?php echo $v['username']?></a></td>
             <td class="wraphide"><?php echo $v['groupname']?></td>
@@ -144,7 +180,7 @@
 <input type="hidden" name="sbt_action" class="sbt_action" />
 <button type="submit" name="sbt_action" value="批量禁用" class="pill negative" onclick="return batch_act(this,'frm_user_search');" ><span class="lock icon"></span>批量禁用</button>
 <button type="submit" name="sbt_action" value="批量启用" class="pill positive" onclick="return batch_act(this,'frm_user_search');" ><span class="unlock icon"></span>批量启用</button>
-<button type="submit" name="sbt_action" value="批量删除" class="pill negative" onclick="return batch_act(this,'frm_user_search');" ><span class="icon trash"></span>批量删除</button>
+<button type="submit" name="sbt_action" value="批量删除" class="pill negative" onclick="return del_all();" ><span class="icon trash"></span>批量删除</button>
  
 <button type="button" name="sbt_add"    value="添加新用户" class="positive primary pill button" onclick="document.location.href='index.php?r=user/user_add' "><span class="check icon"></span>添加新用户</button>
  
@@ -154,10 +190,14 @@
  </tr>
  </tfoot>
         </table>
-<div class="page"></div>
+<?php
+use yii\widgets\LinkPager;
+?>
+
+<div class="page"><?= LinkPager::widget(['pagination' => $pages]) ?></div>
 </div>
-</form>
-        </div>
+
+</div>
 </div>
 
 </div>
@@ -271,6 +311,58 @@ d.alert("您没有选择任何操作项");
 }
 return false;
 }
+
+
+
+//批量删除
+function del_all(){
+var check=document.getElementsByName("check");
+var idarr=new Array();
+var flag=0;
+for (var i=0; i<check.length; i++)
+{
+        if(check[i].checked==true)
+        {
+                idarr[flag]=check[i].value;
+                flag++;
+        }
+}
+if(flag==0)
+{
+        alert("操作受限！请选择一条进行删除");
+        return false;
+}
+if(confirm("确认删除？"))
+{
+        //alert(idarr)
+        $.ajax({
+            url:"index.php?r=user/user_del_all",
+            type:"get",
+            data:{"id":idarr},
+            success:function(e){
+	alert(e);
+                if(e=="ok"){
+                   for (var i=0; i<check.length; i++)
+                    {
+                            if(check[i].checked==true)
+                            {
+                                    $("#tr"+check[i].value).remove();                          
+                            }
+                    }
+                }
+            }
+        })
+}
+}
+
+//排序
+function sort(){
+    ords=$("#ords").val();
+    orda=$("#orda").val();
+    //alert(ords);
+    location.href="index.php?r=user/user_list&ords="+ords+"&orda="+orda;
+    }
+
 </script>
 </body>
 </html>

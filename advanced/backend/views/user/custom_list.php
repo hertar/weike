@@ -28,10 +28,8 @@
         <h2>搜索</h2>
     </div>
     <div class="detail" id="detail">
-        <form action="index.php?do=user&view=custom_list" method="post" >
-            <input type="hidden" name="do" value="user">
-<input type="hidden" name="view" value="custom_list">
-<input type="hidden" name="page" value="1">
+        <form action="#" method="post" >
+           
             <table cellspacing="0" cellpadding="0">
                 <tbody>
                     <tr>
@@ -39,12 +37,12 @@
                             用户 ID
                         </th>
                         <td>
-                            <input type="text" value="" name="w[uid]" class="txt" onkeyup="clearstr(this);"/>
+                            <input type="text" value="" name="space_uid" class="txt" onkeyup="clearstr(this);"/>
                         </td>
                         <th>
                             用户名                        </th>
                         <td>
-                            <input type="text" name='w[username]' value="" onkeyup="clearspecial(this);" class="txt"/>&nbsp;&nbsp;支持模糊查询                        </td>
+                            <input type="text" name='space_username' value="" onkeyup="clearspecial(this);" class="txt"/>&nbsp;&nbsp;                      </td>
                         <th>
                             &nbsp;
                         </th>
@@ -125,9 +123,9 @@
                     
                 
             ?>
-                        <tr class="item">
+                        <tr class="item" id="tr<?php echo $v['uid']?>">
             	<td>
-                    <input type="checkbox" name="ckb[]" class="checkbox" value="1">
+                    <input type="checkbox" name="cheack" class="checkbox" value="<?php echo $v['uid']?>">
                 </td>
                 <td>
                     <?php echo $v['uid']?>           </td>
@@ -135,9 +133,9 @@
                     <a href="javascript:void(0)"><?php echo $v['username']?></a>
                 </td>
                 <td>
-                    <?php echo $v['gruopname']?>                </td>
+                    <?php echo $v['groupname']?>                </td>
                 <td>
-                    <?php echo $v['fax']?>                </td>
+                    <?php echo $v['phone']?>                </td>
                 <td>
                     <?php echo $v['email']?>                </td>
                 <td>
@@ -145,7 +143,7 @@
                 <td>
 </td>
                 <td>
-                    <a class="button" href="index.php?do=user&view=custom_list&op=del&delid=1&page=1" onclick="return cdel(this);">
+                    <a class="button" href="index.php?r=user/custom_del&id=<?php echo $v['uid']?>" onclick="return cdel(this);">
                     	<span class="trash icon"></span>删除</a>
                 </td>
             </tr> 
@@ -159,9 +157,9 @@
                     
                     <label for="checkbox">全选</label>
 <input type="hidden" name="sbt_action" class="sbt_action">
-                    <button name="sbt_action" type="submit" value="批量删除" onclick="return batch_act(this,'frm_list');" class="pill negative">
+                    <button name="sbt_action" type="submit" value="批量删除" onclick="return del_all();" class="pill negative">
                         <span class="icon trash"></span>批量删除                    </button>
-                    <a name="sbt_action" value="设置用户组 " class="positive pill button" href="index.php?do=user&view=custom_add">
+ <a name="sbt_action" value="设置用户组 " class="positive pill button" href="index.php?r=user/custom_add">
 <span class="plus icon"></span>设置用户组                    </a>
                 </div>
                 </td>
@@ -298,6 +296,49 @@ $("#" + frm).submit();
 d.alert("您没有选择任何操作项");
 }
 return false;
+}
+
+//批量删除
+function del_all(){
+var check=document.getElementsByName("check");
+var idarr=new Array();
+var flag=0;
+for (var i=0; i<check.length; i++)
+{
+        if(check[i].checked==true)
+        {
+                idarr[flag]=check[i].value;
+                flag++;
+        }
+}
+if(flag==0)
+{
+        alert("操作受限！请选择一条进行删除");
+        return false;
+}
+if(confirm("确认删除？"))
+{
+        //alert(idarr)
+        $.ajax({
+            url:"index.php?r=user/custom_del_all",
+            type:"get",
+            data:{"id":idarr},
+            success:function(e){
+	alert(e);
+                if(e=="ok"){
+                   for (var i=0; i<check.length; i++)
+                    {
+                            if(check[i].checked==true)
+                            {
+                                    $("#tr"+check[i].value).remove();                          
+                            }
+                    }
+                }
+            }
+        })
+        
+        
+}
 }
 </script>
 </body>

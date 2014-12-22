@@ -6,6 +6,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
+use yii\data\Pagination; 
 
 /**
  * Site controller
@@ -19,14 +20,24 @@ class UserController extends Controller
 //用户管理
     //用户列表
     public function actionUser_list(){
-        //print_r($_POST);
+        $this->layout='@app/views/layouts/publics.php';
+
+        //print_r($_GET);
+        @$ords=$_GET['ords'];
+        @$orda=$_GET['orda'];
         if(empty($_POST)){
         $model=new \yii\db\Query();
-        $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])->orderBy("uid desc")->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id")->all();
+        $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
+                                ->orderBy("$ords $orda")
+                                ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id")
+                                ->all();
         foreach($rows as $key=>$v){
              $rows[$key]['date']=date('Y-m-d',$v['reg_time']);
         }      
-        $data['row']=$rows;
+       
+        @$data['ords']=$ords;
+        @$data['orda']=$orda;
+        
         }else{
         @$uid=$_POST['space_uid'];
         @$user_name=$_POST['space_username'];
@@ -34,7 +45,7 @@ class UserController extends Controller
         $model=new \yii\db\Query();
         if($uid&&$user_name==""){
             $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
-                                    ->orderBy("uid desc")
+                                    ->orderBy("$ords $orda")
                                     ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_space.uid=$uid")                       
                                     ->all();
             if(!$rows){
@@ -43,7 +54,7 @@ class UserController extends Controller
         }
         if($uid==""&&$user_name){
             $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
-                                    ->orderBy("uid desc")
+                                    ->orderBy("$ords $orda")
                                     ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_space.username='".$user_name."'")  
                                     ->all();
             if(!$rows){
@@ -53,7 +64,7 @@ class UserController extends Controller
         }
         if($uid&&$user_name){
             $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
-                                    ->orderBy("uid desc")
+                                    ->orderBy("$ords $orda")
                                     ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_space.uid=$uid and wk_witkey_space.username='".$user_name."'")  
                                     ->all();
             if(!$rows){
@@ -65,11 +76,20 @@ class UserController extends Controller
         
             foreach($rows as $key=>$v){
                     $rows[$key]['date']=date('Y-m-d',$v['reg_time']);
-               }    
-                 $data['row']=$rows;
+               } 
+                 @$data['ords']=$ords;
+                 @$data['orda']=$orda;                  
         }
+        
      
-        return $this->renderPartial("user_list",$data);
+        $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>5]);
+        $rows=$model->offset($pages->offset)->limit($pages->limit)->all();
+        
+        //print_r($rows);die;
+        $data['pages']=$pages;
+        $data['row']=$rows;
+     
+        return $this->render("user_list",$data);
         
          
     }
@@ -89,9 +109,9 @@ class UserController extends Controller
         
         return $this->renderPartial("user_update",$data);    
     }
-
+//修改
     public function actionUser_update_pro(){
-        print_r($_POST);
+        //print_r($_POST);
         $user = \app\models\Space::findone($_POST['huid']);
         //print_r($user);die;
         $user->email = $_POST['email'];
@@ -107,10 +127,30 @@ class UserController extends Controller
     }
     //删除
     public function actionUser_del(){
-        $s=\app\models\Space::findOne($_GET['id'])->delete(); 
-        $m=\app\models\Member::findone($_GTE['id'])->delete();
-        if($s&&$m){
+
+        $space=\app\models\Space::findOne($_GET['id'])->delete(); 
+        $member=\app\models\Member::findOne($_GET['id'])->delete();
+        
+        if($space&&$member){
               $this->redirect("index.php?r=user/user_list");
+        }
+    }
+    //批量删除
+    public function actionUser_del_all(){
+        
+         $id=$_GET['id'];
+         //print_r($id);die;
+         $ids=implode(",", $id);
+         //print_r($ids);die;
+         $count = \app\models\Space::deleteAll("uid in ($ids)");
+        // print_r($count);die;
+         $mem=  \app\models\Member::deleteAll("uid in ($ids)");
+         if($count>0&&$mem>0){
+             echo "ok";
+          //$this->redirect("?r=model/single_task_list");
+        }else{
+            echo "no";
+           //$this->redirect("?r=model/single_task_list");
         }
     }
 
@@ -174,16 +214,133 @@ class UserController extends Controller
      
      //用户组
      public function actionCustom_list(){
+       if(empty($_POST)){
         $model=new \yii\db\Query();
-        $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])->orderBy("uid desc")->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id")->all();
-
+        $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])->orderBy("uid desc")->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_member_group.group_id=1")->all();
+        foreach($rows as $key=>$v){
+             $rows[$key]['date']=date('Y-m-d',$v['reg_time']);
+        }      
         $data['row']=$rows;
+        }else{
+        @$uid=$_POST['space_uid'];
+        @$user_name=$_POST['space_username'];
+        
+        $model=new \yii\db\Query();
+        if($uid&&$user_name==""){
+            $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
+                                    ->orderBy("uid desc")
+                                    ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_member_group.group_id=1 and wk_witkey_space.uid=$uid")                       
+                                    ->all();
+            if(!$rows){
+                 return $this->renderPartial("user_list");
+            }
+        }
+        if($uid==""&&$user_name){
+            $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
+                                    ->orderBy("uid desc")
+                                    ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_member_group.group_id=1 and wk_witkey_space.username='".$user_name."'")  
+                                    ->all();
+            if(!$rows){
+                 return $this->renderPartial("user_list");
+            }
+            
+        }
+        if($uid&&$user_name){
+            $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
+                                    ->orderBy("uid desc")
+                                    ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_member_group.group_id=1 and wk_witkey_space.uid=$uid and wk_witkey_space.username='".$user_name."'")  
+                                    ->all();
+            if(!$rows){
+                 return $this->renderPartial("user_list");
+            }
+        }
+      
+        //print_r($rows);die;
+        
+            foreach($rows as $key=>$v){
+                    $rows[$key]['date']=date('Y-m-d',$v['reg_time']);
+               }    
+                 $data['row']=$rows;
+        }
+          
          return $this->renderPartial("custom_list",$data);
      }
+     
+     //删除
+    public function actionCustom_del(){
+
+        $space=\app\models\Space::findOne($_GET['id'])->delete(); 
+        $member=\app\models\Member::findOne($_GET['id'])->delete();
+        
+        if($space&&$member){
+              $this->redirect("index.php?r=user/custom_list");
+        }
+    }
+    //批量删除
+    public function actionCustom_del_all(){
+        
+         $id=$_GET['id'];
+         //print_r($id);die;
+         $ids=implode(",", $id);
+         //print_r($ids);die;
+         $count = \app\models\Space::deleteAll("uid in ($ids)");
+        // print_r($count);die;
+         $mem=  \app\models\Member::deleteAll("uid in ($ids)");
+         if($count>0&&$mem>0){
+             echo "ok";
+          //$this->redirect("?r=model/single_task_list");
+        }else{
+            echo "no";
+           //$this->redirect("?r=model/single_task_list");
+        }
+    }
+
+     
    //添加用户组
    public function actionCustom_add(){
-       return $this->renderPartial("custom_add");
+       $group = (new \yii\db\Query())
+                ->select('group_id, groupname')
+                ->from('wk_witkey_member_group')
+                ->all();
+        //print_r($group);
+        $data['group']=$group;
+       return $this->renderPartial("custom_add",$data);
    }
+   
+   //获取用户信息
+   public function actionGet_user_info(){
+       //print_r($_POST);
+       $id=$_GET['guid'];
+       $model=new \yii\db\Query();
+        $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])->orderBy("uid desc")->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_space.uid=$id")->all();
+        foreach($rows as $key=>$v){
+             $rows[$key]['date']=date('Y-m-d',$v['reg_time']);
+        }      
+        //print_r($rows);die;
+        $result=json_encode($rows);
+       return $result;
+   }
+   
+   //添加用户组
+   public function actionCustom_add_pro(){
+       print_R($_POST);
+        $user = \app\models\Space::findone($_POST['uid']);
+        $model=  \app\models\Member::findOne($_POST['uid']);
+        //print_r($model);die;
+        $user->email = $_POST['email'];
+        $user->username=$_POST['username'];
+        $user->phone= $_POST['phone'];
+        $user->group_id=$_POST['group_id'];
+        $user->qq=$_POST["qq"];
+        
+        $model->email = $_POST['email'];
+        $model->username=$_POST['username'];   
+        if($user->save()&&$model->save()) {
+            $this->redirect("index.php?r=user/custom_list");
+        }
+   }
+
+
 //系统组管理
     public function actionGroup_list(){
         return $this->renderPartial("group_list");

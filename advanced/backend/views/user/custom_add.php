@@ -28,14 +28,14 @@
         <h2>设置用户组</h2>
     </div>
     <div class="detail">
-        <form action="index.php?do=user&op=add&view=custom_add&edituid=0" method="post" >
+        <form action="index.php?r=user/custom_add_pro" method="post" >
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
            <tr>
                  <th scope="row" width="70">
                     <span class="bg1 t_r">用户ID：</span>
                  </th>
                  <td>
-                 	<input type="text" name="fds[uid]" value="0"  id="uid"  style="width:260px;" class="txt"><b style="color:red"> *</b>
+    <input type="text" name="uid" value="0"  id="uid"  style="width:260px;" class="txt"><b style="color:red"> *</b>
    <button type="button" onclick="get_info()">查询</button>	
  </td>
              </tr>
@@ -43,7 +43,7 @@
                 <th  scope="row" width="70">
                     用户名：                </th>
                 <td>
-                    <input type="text" name="fds[username]" id="username" value="" style="width:260px;" class="txt"><b style="color:red"> *</b>
+                    <input type="text" name="username" id="username" value="" style="width:260px;" class="txt"><b style="color:red"> *</b>
                 </td>
             </tr>
 
@@ -51,14 +51,14 @@
                 <th  scope="row">
                     联系电话：                </th>
                 <td>
-                    <input type="text" name="fds[phone]"  id="phone" style="width:260px;"  value="" class="txt" limit="type:tel" msg="格式错误" title="请填写正确的电话，不填可留空" msgArea="txt_phone_msg"><span id="txt_phone_msg"></span>
+                    <input type="text" name="phone"  id="phone" style="width:260px;"  value="" class="txt" limit="type:tel" msg="格式错误" title="请填写正确的电话，不填可留空" msgArea="txt_phone_msg"><span id="txt_phone_msg"></span>
                 </td>
             </tr>
 <tr>
                 <th  scope="row">
                     E-mail：                </th>
                 <td>
-                	<input type="text" class="txt" style="width:260px;" name="fds[email]" id="email"limit="type:email" value="" msg="格式错误" title="请填写正确的email，不填可留空" msgArea="txt_email_msg" /><span id="txt_email_msg"></span>
+                	<input type="text" class="txt" style="width:260px;" name="email" id="email"limit="type:email" value="" msg="格式错误" title="请填写正确的email，不填可留空" msgArea="txt_email_msg" /><span id="txt_email_msg"></span>
                     
                 </td>
             </tr>
@@ -66,20 +66,22 @@
                 <th  scope="row">
                    QQ：                </th>
                 <td>
-<input type="text" name="fds[qq]" id="qq" style="width:260px;" value="" class="txt">
+<input type="text" name="qq" id="qq" style="width:260px;" value="" class="txt">
                 </td>
             </tr>
     <tr>
                 <th  scope="row">
                    用户组：                </th>
                 <td>
-                     <select name="fds[group_id]" id="group_id">
-  	 <option value="0" >普通用户组</option>
-     	 <option value="3" >财务人员</option>
-     	 <option value="7" >客服</option>
-     	 <option value="2" >外围客服</option>
-     	 <option value="1" >管理员</option>
-     	 <option value="8" >编辑</option>
+                     <select name="group_id" id="group_id">
+                         <?php
+                            foreach ($group as $v) {
+                            
+                         ?>
+                         <option value="<?php echo $v['group_id']?>" ><?php echo $v['groupname']?></option>
+     	 <?php
+                            }
+                    ?>
       </select><b style="color:red">*</b>
                 </td>
             </tr>
@@ -104,21 +106,21 @@
 </div>
 <script type="text/javascript">
  function get_info(){
- 	uid  = document.getElementById("uid").value;
+ uid  = document.getElementById("uid").value;
+ //alert(uid);
 if(uid){
-$.post("index.php?do=user&view=custom_add&ac=get_user_info&guid="+uid,function(json){
-$("#username").val(json.data.username);
-$("#phone").val(json.data.phone);
-$("#email").val(json.data.email);
-$("#qq").val(json.data.qq);
-$("#group_id").val(json.data.group_id);
+$.post("index.php?r=user/get_user_info&guid="+uid,function(json){
+   //alert(json[0].username)
+
+$("#username").val(json[0].username);
+$("#phone").val(json[0].phone);
+$("#email").val(json[0].email);
+$("#qq").val(json[0].qq);
+$("#group_id").val(json[0].group_id);
 },'json');
 }
 
- }
-
-    		 
-    	
+ }  	
 </script>
 </div>
 <script type="text/javascript"
