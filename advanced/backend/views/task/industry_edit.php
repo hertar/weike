@@ -3,8 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>keke admin</title>
-
-
 <link href="/public/tpl/css/admin_management.css" rel="stylesheet" type="text/css" />
 <link href="/public/resource/css/buttons.css" rel="stylesheet" type="text/css" />
 <link title="style1" href="/public/tpl/skin/default/style.css" rel="stylesheet" type="text/css" />
@@ -20,74 +18,66 @@
     	<h1>行业管理</h1>
         <div class="tool">
             <a href="index.php?r=task/industry">行业列表</a>
-            <a href="index.php?r=task/industry_edit" class="here">行业添加</a> 
+            <a href="index.php?r=task/industry_edit" class="here"><?php echo $tag;?>行业</a> 
         </div>
 </div>
 
 <div class="box post">
     <div class="tabcon">
-        	<div class="title"><h2>添加行业</h2></div>       	
+        	<div class="title"><h2><?php echo $tag;?>行业</h2></div>       	
             <div class="detail">
-                <form method="post" action="index.php?do=task&view=industry_edit" id="frm_indus_edit" enctype="multipart/form-data">
-                <input type="hidden" name="pk[indus_id]" value="">              
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                      <tr>
-                        <th scope="row" width="130">父行业：</th>
-                        <td> 
-<select name="fs[indus_pid]"id="slt_indus_id" style=" width:270px;"
-                         			 limit = "required:true;type:int" 
-                                     msg =请选择行业分类 
-                                     title=你准备哪类的行业呢？                                     msgArea="msg_indus_id">
-                      <option value="0">置顶</option>
-                                                  <option value=441>品牌设计</option>                                                  <option value=2>网站开发</option>                                                  <option value=201>创意祝福</option>                                                  <option value=249>网游服务</option>                                                  <option value=3>文案写作</option>                                                  <option value=335>建筑/装修</option>                                                  <option value=211>头脑风暴</option>                                                  <option value=350>照片美化/编辑</option>                                                  <option value=234>法律服务</option>                                                  <option value=160>起名取名</option>                                                  <option value=357>影视/配音/歌词</option>                                                  <option value=192>生活服务</option>                                                  <option value=218>移动应用</option>                                                  <option value=240>招聘找人</option>                                                  <option value=121>软件开发</option>                                            	</select>
- <span id="msg_indus_id" style="color:red;"></span> 
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">行业名称：</th>
-                        <td><input type="text" maxlength="100"  class="txt" style=" width:260px;"
-name="fs[indus_name]" 
-value=""
-                        			 limit = "required:false" 
-                                     msg =请填写行业名称! 
-                                     title=请填写行业名称! 
-                                     msgArea="msg_indus_name"/><span id="msg_indus_name"></span>
-                       </td>
-                      </tr>
-  <tr>
-                        <th scope="row">结果排序：</th>
-                        <td>
-                        	<input type="text"  class="txt" id="txt_listorder" name="fs[listorder]"
-   		value="0"
-    	maxlength="5" 
-limit = "required:true;type:int" 
-                                onkeyup="clearstr(this)"
-                                msg =请填写行业排序!                                title=请填写行业排序! 
-                                msgArea="slt_txt_listorder"/><span id="slt_txt_listorder"></span>   
-                        </td>
-                      </tr>
-  <tr>
-                        <th scope="row">是否推荐：</th>
-                        <td>
-                          <p>
-                              <label><input type="checkbox" name="fs[is_recommend]" value="1"  />&nbsp;是</label> <br />
-                          </p>
-                        </td>
-                      </tr>
- 
+<form method="post" action="index.php?r=task/<?php echo $act;?>" id="frm_indus_edit" enctype="multipart/form-data">
+<input type="hidden" name="id" value="<?php if(isset($info)){echo $info['indus_id'];}else{echo 0;}?>">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	<th scope="row" width="130">父行业：</th>
+	<td> 
+	<select name="indus_pid" id="slt_indus_id" style=" width:270px;" limit = "required:true;type:int" msg =请选择行业分类 title=你准备哪类的行业呢？msgArea="msg_indus_id">
+	<option value="0">置顶</option>
+	<?php for($i=0;$i<count($indus);$i++){?>
+	<option value="<?php echo $indus[$i]['indus_id']?>" 
+	<?php if(isset($info)&&$info['indus_pid']==$indus[$i]['indus_id']){echo 'selected';}?>>
+	<?php echo $indus[$i]['indus_name']?></option>
+	<?php }?>
+	</select>
+	<span id="msg_indus_id" style="color:red;"></span> 
+	</td>
+	</tr>
 
- 
-<tr>
- 
-<th scope="row">&nbsp;</th>
-<td>
-<button name="sbt_edit" value="1" onclick="return checkForm(document.getElementById('frm_indus_edit'),false)" class="positive primary pill button" type="submit">
-<span class="check icon"></span>提交</button>
+	<tr>
+	<th scope="row">行业名称：</th>
+	<td><input type="text" maxlength="100"  class="txt" style=" width:260px;" name="indus_name" value="<?php if(isset($info)){echo $info['indus_name'];}?>" limit = "required:false" msg =请填写行业名称! title=请填写行业名称! msgArea="msg_indus_name"/>
+	<span id="msg_indus_name"></span>
+	</td>
+	</tr>
 
-</td>
-</tr>
-                    </table>
-                </form>
+	<tr>
+	<th scope="row">结果排序：</th>
+	<td>
+	<input type="text"  class="txt" id="txt_listorder" name="listorder" value="<?php if(isset($info)){echo $info['listorder'];}?>" maxlength="5" limit = "required:true;type:int" onkeyup="clearstr(this)" msg =请填写行业排序! stitle=请填写行业排序! msgArea="slt_txt_listorder"/><span id="slt_txt_listorder"></span>   
+	</td>
+	</tr>
+
+	<tr>
+	<th scope="row">是否推荐：</th>
+	<td>
+	<p>
+	<label>
+	<input type="checkbox" name="is_recommend" value="1"  
+	<?php if(isset($info)&&$info['is_recommend']==1){echo 'checked';}?>/>&nbsp;是</label> <br />
+	</p>
+	</td>
+	</tr>
+
+	<tr>
+	<th scope="row">&nbsp;</th>
+	<td>
+	<button name="submit" value="industry" onclick="return checkForm(document.getElementById('frm_indus_edit'),false)" class="positive primary pill button" type="submit">
+	<span class="check icon"></span>提交</button>
+	</td>
+	</tr>
+</table>
+</form>
               </div>
        </div>           
 </div>
