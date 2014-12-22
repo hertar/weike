@@ -39,11 +39,15 @@
 <th>更新时间</th>
 <th>操作</th>
           </tr>
-  
+  <?php
+    foreach ($row as $val) {
+        
+    
+  ?>
         <tr class="item">
-            <td>3</td>
-            <td class="motif">财务人员</td>
-            <td>2012-10-12 10:29:20</td>
+            <td><?php echo $val['group_id']?></td>
+            <td class="motif"><?php echo $val['groupname']?></td>
+            <td><?php echo date("Y-m-d H:i:s",$val["on_time"])?></td>
 <td>
  
 <a href="index.php?do=user&view=group_add&op=add&editgid=3&page=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
@@ -51,57 +55,18 @@
  
 </td>
           </tr>
-         <tr class="item">
-            <td>7</td>
-            <td class="motif">客服</td>
-            <td>2012-10-15 09:48:01</td>
-<td>
- 
-<a href="index.php?do=user&view=group_add&op=add&editgid=7&page=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=user&view=group_list&op=del&editgid=7&page=" onclick="return cdel(this);"class="button"><span class="trash icon"></span>删除</a>
- 
-</td>
-          </tr>
-         <tr class="item">
-            <td>2</td>
-            <td class="motif">外围客服</td>
-            <td>2012-11-16 11:36:16</td>
-<td>
- 
-<a href="index.php?do=user&view=group_add&op=add&editgid=2&page=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=user&view=group_list&op=del&editgid=2&page=" onclick="return cdel(this);"class="button"><span class="trash icon"></span>删除</a>
- 
-</td>
-          </tr>
-         <tr class="item">
-            <td>1</td>
-            <td class="motif">管理员</td>
-            <td>2012-10-11 17:21:44</td>
-<td>
- 
-<a href="index.php?do=user&view=group_add&op=add&editgid=1&page=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=user&view=group_list&op=del&editgid=1&page=" onclick="return cdel(this);"class="button"><span class="trash icon"></span>删除</a>
- 
-</td>
-          </tr>
-         <tr class="item">
-            <td>8</td>
-            <td class="motif">编辑</td>
-            <td>2013-03-23 09:57:58</td>
-<td>
- 
-<a href="index.php?do=user&view=group_add&op=add&editgid=8&page=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=user&view=group_list&op=del&editgid=8&page=" onclick="return cdel(this);"class="button"><span class="trash icon"></span>删除</a>
- 
-</td>
-          </tr>
+        
+       <?php
+    }
+       ?>
+        
   
           <tr>
           	<td colspan="4">
           	
             <div class="clearfix">
  
-            	<button type="button" name="sbt_add" value="添加用户组" class="positive pill button" onclick="document.location.href='index.php?do=user&view=group_add&op=add'"/><span class="check icon"></span>添加用户组</button>
+            	<button type="button" name="sbt_add" value="添加用户组" class="positive pill button" onclick="document.location.href='index.php?r=user/group_add'"/><span class="check icon"></span>添加用户组</button>
  
 </div>
 </td>

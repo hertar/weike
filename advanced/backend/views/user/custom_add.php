@@ -35,7 +35,10 @@
                     <span class="bg1 t_r">用户ID：</span>
                  </th>
                  <td>
-    <input type="text" name="uid" value="0"  id="uid"  style="width:260px;" class="txt"><b style="color:red"> *</b>
+                     
+    <input type="text" name="uid" value="<?php echo $row[0]['uid']?>"  id="uid"  style="width:260px;" class="txt">
+       
+        <b style="color:red"> *</b>
    <button type="button" onclick="get_info()">查询</button>	
  </td>
              </tr>
@@ -43,7 +46,8 @@
                 <th  scope="row" width="70">
                     用户名：                </th>
                 <td>
-                    <input type="text" name="username" id="username" value="" style="width:260px;" class="txt"><b style="color:red"> *</b>
+                    
+                    <input type="text" name="username" id="username" value="<?php echo $row[0]['username']?>" style="width:260px;" class="txt"><b style="color:red"> *</b>
                 </td>
             </tr>
 
@@ -51,14 +55,14 @@
                 <th  scope="row">
                     联系电话：                </th>
                 <td>
-                    <input type="text" name="phone"  id="phone" style="width:260px;"  value="" class="txt" limit="type:tel" msg="格式错误" title="请填写正确的电话，不填可留空" msgArea="txt_phone_msg"><span id="txt_phone_msg"></span>
+                    <input type="text" name="phone"  id="phone" style="width:260px;"  value="<?php echo $roe[0]['phone']?>" class="txt" limit="type:tel" msg="格式错误" title="请填写正确的电话，不填可留空" msgArea="txt_phone_msg"><span id="txt_phone_msg"></span>
                 </td>
             </tr>
 <tr>
                 <th  scope="row">
                     E-mail：                </th>
                 <td>
-                	<input type="text" class="txt" style="width:260px;" name="email" id="email"limit="type:email" value="" msg="格式错误" title="请填写正确的email，不填可留空" msgArea="txt_email_msg" /><span id="txt_email_msg"></span>
+                	<input type="text" class="txt" style="width:260px;" name="email" id="email"limit="type:email" value="<?php echo $row[0]['email']?>" msg="格式错误" title="请填写正确的email，不填可留空" msgArea="txt_email_msg" /><span id="txt_email_msg"></span>
                     
                 </td>
             </tr>
@@ -66,7 +70,7 @@
                 <th  scope="row">
                    QQ：                </th>
                 <td>
-<input type="text" name="qq" id="qq" style="width:260px;" value="" class="txt">
+<input type="text" name="qq" id="qq" style="width:260px;" value="<?php echo $row[0]['qq']?>" class="txt">
                 </td>
             </tr>
     <tr>
@@ -76,12 +80,16 @@
                      <select name="group_id" id="group_id">
                          <?php
                             foreach ($group as $v) {
-                            
+                                if($row[0]['group_id']==$v['group_id']){
                          ?>
-                         <option value="<?php echo $v['group_id']?>" ><?php echo $v['groupname']?></option>
+                         <option value="<?php echo $v['group_id']?>"  selected><?php echo $v['groupname']?></option>
      	 <?php
-                            }
+                            }else{
                     ?>
+                            <option value="<?php echo $v['group_id']?>" ><?php echo $v['groupname']?></option>
+                            <?php
+                            }}  
+                            ?>
       </select><b style="color:red">*</b>
                 </td>
             </tr>

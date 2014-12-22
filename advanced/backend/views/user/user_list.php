@@ -185,7 +185,7 @@
 <td>
     <a class="button dbl_target" href="index.php?r=user/user_update&id=<?php echo $v['uid']?>"><span class="pen icon"></span>编辑</a>
 
-<a class="button" href="index.php?do=user&view=custom_add&op=add&edituid=10&page=1"><span class="cog icon"></span>权限设置</a>
+    <a class="button" href="index.php?r=user/custom_add&guid=<?php echo $v['uid']?>"><span class="cog icon"></span>权限设置</a>
  <a class="button" href="index.php?do=user&view=list&op=disable&edituid=10&page=1"><span class="lock icon"></span>禁用</a> 
  <a class="button" href="index.php?r=user/user_del&id=<?php echo $v['uid']?>" onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
 </td>
