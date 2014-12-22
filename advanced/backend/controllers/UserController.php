@@ -298,26 +298,30 @@ class UserController extends Controller
                 ->all();
         //print_r($group);
         $data['group']=$group;
+        if($_GET['guid']){
+        $id=$_GET['guid'];
+        $model=new \yii\db\Query();
+        $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])->orderBy("uid desc")->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_space.uid=$id")->all();
+        
+        $data['row']=$rows;
+        }
        return $this->renderPartial("custom_add",$data);
    }
    
    //获取用户信息
    public function actionGet_user_info(){
        //print_r($_POST);
-       $id=$_GET['guid'];
-       $model=new \yii\db\Query();
+        $id=$_GET['guid'];
+        $model=new \yii\db\Query();
         $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])->orderBy("uid desc")->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_space.uid=$id")->all();
-        foreach($rows as $key=>$v){
-             $rows[$key]['date']=date('Y-m-d',$v['reg_time']);
-        }      
-        //print_r($rows);die;
+
         $result=json_encode($rows);
-       return $result;
+        return $result;
    }
    
    //添加用户组
    public function actionCustom_add_pro(){
-       print_R($_POST);
+       //print_R($_POST);
         $user = \app\models\Space::findone($_POST['uid']);
         $model=  \app\models\Member::findOne($_POST['uid']);
         //print_r($model);die;
@@ -337,7 +341,10 @@ class UserController extends Controller
 
 //系统组管理
     public function actionGroup_list(){
-        return $this->renderPartial("group_list");
+        $row=  \app\models\MemberGroup::find()->all();
+       // print_r($row);
+        $data['row']=$row;
+        return $this->renderPartial("group_list",$data);
     }
     //系统组添加
     public function actionGroup_add(){
