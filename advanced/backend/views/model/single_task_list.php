@@ -112,7 +112,8 @@ use yii\widgets\LinkPager;
                <table cellpadding="0" cellspacing="0">
                 <tbody>
                   <tr>
-                    <th width="8%">ID</th>
+                    <th width="2%"> </th>
+                    <th width="6%">ID</th>
                     <th width="27%">任务标题</th>
                     
                     <th width="15%">任务金额</th>
@@ -123,7 +124,7 @@ use yii\widgets\LinkPager;
         <?php             foreach($list as $key=>$val)
       {?>
                                     <tr class="item">
-                 	<td class="td25"><input type="checkbox" name="ckb" class="checkbox" value="<?php echo $val['task_id']?>" class="checkbox"><?php echo $val['task_id']?></td>
+                 	<td class="td25"><input type="checkbox" name="ckb" class="checkbox" value="<?php echo $val['task_id']?>" class="checkbox"></td><td><?php echo $val['task_id']?></td>
                     <td class="td28">
                     	<a href="/public/index.php?do=task&task_id=70" target="_blank"><?php echo $val['task_title']?></a>
 </td>

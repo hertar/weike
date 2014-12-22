@@ -22,7 +22,7 @@ class StoreController extends Controller
     //店铺管理
     //店铺列表
     public function actionStore_list(){
-
+        $this->layout='@app/views/layouts/publics.php';
         if(!empty($_GET['search_id'])||!empty($_GET['search_title'])){
        $ord='asc';
        $id=$_GET['search_id'];
@@ -50,7 +50,7 @@ class StoreController extends Controller
        $total=$data->count();
        $pages = new Pagination(['totalCount' =>$total, 'pageSize' =>$page_size ]);
        $list = $data->offset($pages->offset)->limit($pages->limit)->all();
-       return $this->renderPartial('store_list',[
+       return $this->render('store_list',[
              'list' => $list,
              'pages' => $pages,
              'pagesize'=>$page_size,

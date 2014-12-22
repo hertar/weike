@@ -25,6 +25,7 @@ class ModelController extends Controller
     
     //任务列表
     public function actionSingle_task_list(){
+        $this->layout='@app/views/layouts/publics.php';
         if(!empty($_GET['search_id'])||!empty($_GET['search_title'])){
        $ord='asc';
        $id=$_GET['search_id'];
@@ -52,7 +53,7 @@ class ModelController extends Controller
        $total=$data->count();
        $pages = new Pagination(['totalCount' =>$total, 'pageSize' =>$page_size ]);
        $list = $data->offset($pages->offset)->limit($pages->limit)->all();
-       return $this->renderPartial('single_task_list',[
+       return $this->render('single_task_list',[
              'list' => $list,
              'pages' => $pages,
              'pagesize'=>$page_size,
@@ -137,6 +138,7 @@ public function actionSingle_task_priv(){
  */
 //任务管理
     public function actionMany_task_list(){
+        $this->layout='@app/views/layouts/publics.php';
        if(!empty($_GET['search_id'])||!empty($_GET['search_title'])){
        $ord='asc';
        $id=$_GET['search_id'];
@@ -164,7 +166,7 @@ public function actionSingle_task_priv(){
        $total=$data->count();
        $pages = new Pagination(['totalCount' =>$total, 'pageSize' => $page_size]);
        $list = $data->offset($pages->offset)->limit($pages->limit)->all();
-       return $this->renderPartial('many_task_list',[
+       return $this->render('many_task_list',[
              'list' => $list,
              'pages' => $pages,
              'pagesize'=>$page_size,
@@ -246,6 +248,7 @@ public function actionSingle_task_priv(){
  */
 //任务管理
     public function actionJijian_task_list(){
+        $this->layout='@app/views/layouts/publics.php';
         if(!empty($_GET['search_id'])||!empty($_GET['search_title'])){
        $ord='asc';
        $id=$_GET['search_id'];
@@ -273,7 +276,7 @@ public function actionSingle_task_priv(){
        $total=$data->count();
        $pages = new Pagination(['totalCount' =>$total, 'pageSize' => $page_size]);
        $list = $data->offset($pages->offset)->limit($pages->limit)->all();
-       return $this->renderPartial('jijian_task_list',[
+       return $this->render('jijian_task_list',[
              'list' => $list,
              'pages' => $pages,
              'pagesize'=>$page_size,
@@ -353,6 +356,7 @@ public function actionSingle_task_priv(){
     //普通招标
     //任务管理
     public function actionNormal_task_list(){
+        $this->layout='@app/views/layouts/publics.php';
        if(!empty($_GET['search_id'])||!empty($_GET['search_title'])){
        $ord='asc';
        $id=$_GET['search_id'];
@@ -380,7 +384,7 @@ public function actionSingle_task_priv(){
        $total=$data->count();
        $pages = new Pagination(['totalCount' =>$total, 'pageSize' =>$page_size ]);
        $list = $data->offset($pages->offset)->limit($pages->limit)->all();
-       return $this->renderPartial('normal_task_list',[
+       return $this->render('normal_task_list',[
              'list' => $list,
              'pages' => $pages,
              'pagesize'=>$page_size,
@@ -446,6 +450,7 @@ public function actionSingle_task_priv(){
     */
         //任务管理
     public function actionDeposit_task_list(){
+        $this->layout='@app/views/layouts/publics.php';
         if(!empty($_GET['search_id'])||!empty($_GET['search_title'])){
        $ord='asc';
        $id=$_GET['search_id'];
@@ -473,7 +478,7 @@ public function actionSingle_task_priv(){
        $total=$data->count();
        $pages = new Pagination(['totalCount' =>$total, 'pageSize' =>$page_size ]);
        $list = $data->offset($pages->offset)->limit($pages->limit)->all();
-       return $this->renderPartial('deposit_task_list',[
+       return $this->render('deposit_task_list',[
              'list' => $list,
              'pages' => $pages,
              'pagesize'=>$page_size,
