@@ -31,7 +31,7 @@
     <div class="tabcon">
         	<div class="title"><h2>添加用户组</h2></div>       	
             <div class="detail">
-<form action="index.php?do=user&view=group_add&op=add&type=group&editgid=" method="post">
+<form action="index.php?r=user/group_add_pro" method="post">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
    <input type="hidden" name="is_submit" value="1"/>
    <tr>

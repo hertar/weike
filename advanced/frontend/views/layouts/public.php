@@ -105,40 +105,37 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 
 
     <!--头部 start-->
-    <header class="header" id="pageTop">
+<header id="pageTop" class="header">
         <div class="container_24 clearfix">
         	<!--logo start-->
             <hgroup class="grid_7 logo">
              	 <h1><a href="index.php">
-             	 	<img src="/public/tpl/default/theme/blue/img/style/logo.png"
- title="客客出品专业威客系统" alt="客客出品专业威客系统"></a></h1>
+             	 	<img alt="客客出品专业威客系统" src="tpl/default/theme/blue/img/style/logo.png" original-title="客客出品专业威客系统"></a></h1>
             </hgroup>
             <!--logo end-->
             
-            <div id="search" class="grid_12 m_h">
+            <div class="grid_12 m_h" id="search">
             	
             	
             	<!--主搜索 start-->
                 <div class="search clearfix po_re">
                     <!--搜索框和选项 start-->
-                    <form action="" method="post" id="frm_search" class="clearfix fl_l">
+                    <form class="clearfix fl_l" id="frm_search" method="post" action="">
                     <div class="search_box">
                         <div class="fl_l search_selcecter">
-                        	<div id="search_select" class="search_options">
-                        	                           		 <a href="javascript:void(0);" class="selected" rel="task_list"><span>任务</span>▼</a>
-                               		 <a href="javascript:void(0);" class="hidden"   rel="task_list">任务</a>
-                           	 	<a href="javascript:void(0);" class="hidden"   rel="shop_list">商品</a>
+                        	<div class="search_options" id="search_select">
+                        	                           		 <a rel="task_list" class="selected" href="javascript:void(0);"><span>任务</span>▼</a>
+                               		 <a rel="task_list" class="hidden" href="javascript:void(0);">任务</a>
+                           	 	<a rel="shop_list" class="hidden" href="javascript:void(0);">商品</a>
                              </div>
                         </div>
-<input type="text" name="search_key" onkeydown="search_keydown(event);" id="search_key" class="fl_l search_input txt_input togg c999"
- value="输入任务/商品" 
-   x-webkit-speech x-webkit-grammar="bUIltin:search" lang="zh-CN">
+<input type="text" lang="zh-CN" x-webkit-grammar="bUIltin:search" x-webkit-speech="" value="输入任务/商品" class="fl_l search_input txt_input togg c999" id="search_key" onkeydown="search_keydown(event);" name="search_key" original-title="">
                     </div>
 </form>
                     <!--搜索框和选项 end-->
                     <!--搜索提交 start-->
                     <div class="fl_l header_btn">
-                    	<button class="search_btn" id="search_btn" type="button" onclick="topSearch();"><span class="icon magnifier"></span>搜索</button>
+                    	<button onclick="topSearch();" type="button" id="search_btn" class="search_btn"><span class="icon magnifier"></span>搜索</button>
                     </div>
                     <!--搜索提交 end-->
                 </div>
@@ -152,8 +149,8 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
             	<!--用户登录注册 start-->
             	<div class="user_box clearfix grid_5">
                 	<!--注册登录按钮 start-->
-                  	<ul id="login_sub" class="user_login hidden">
-                        <li><a href="index.php?do=register" class="m_h">免费注册</a></li>
+                  	<ul class="user_login " id="login_sub">
+                        <li><a class="m_h" href="index.php?do=register">免费注册</a></li>
                         <li><a href="index.php?do=login">登录</a></li>
                     </ul>
                     <!--注册登录按钮 end--> 
@@ -163,30 +160,30 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 
 
                     <!--登录成功 start-->
-                    <div id="logined" class="">
+                    <div class="hidden" id="logined">
                     	<!--用户登录后内容 start-->
                         <ul class="user_logined clearfix">
                             <li id="avatar">
-                            	<a href="index.php?do=user" title="admin" rel="user_menu">
-                            		<img src='http://127.0.0.1/weike/data/avatar/default/man_small.jpg' uid='1' class='pic_small'>                                    <span class="user_named m_h">admin</span>
+                            	<a rel="user_menu" title="" href="index.php?do=user">
+                            		<img class="pic_small" uid="" src="/public/data/avatar/default/man_small.jpg" original-title="">                                    <span class="user_named m_h"></span>
                             	</a>
 <!--用户登录后导航菜单 start-->
-                    <div id="user_menu" class="user_nav_pop grid_5 alpha omega hidden m_h">
+                    <div class="user_nav_pop grid_5 alpha omega hidden m_h" id="user_menu">
                         <ul class="nav_list clearfix">
-                                    	<li class="clearfix"><a href="index.php?do=user&view=finance&op=detail" title="金钱 | 元宝" id="money"> <div class="icon16 cur-yen reverse"></div>￥405,405.06元| ￥77,529.19元</a></li>
-                                        <li class="clearfix"><a href="index.php?do=release" title="发布任务" class="selected" ><div class="icon16 doc-new reverse"></div>发布任务</a></li>
-<li class="clearfix"><a href="index.php?do=shop_release" title="发布商品" class="selected"><div class="icon16 doc-new reverse"></div>发布商品</a></li>
-<li class="clearfix " id="manage_center"><a href="control/admin/index.php" title="管理中心" ><div class="icon16 key reverse"></div>管理中心</a></li>
-<li class="clearfix"><a href="index.php?do=user&view=index" title="用户中心"><div class="icon16 cog reverse"></div>用户中心</a></li>
-<li class="clearfix"><a href="http://127.0.0.1/weike/index.php?do=space&member_id=1" title="我的店铺" id="space"><div class="icon16 compass reverse"></div>我的店铺</a></li>
+                                    	<li class="clearfix"><a id="money" title="金钱 | 元宝" href="index.php?do=user&amp;view=finance&amp;op=detail"> <div class="icon16 cur-yen reverse"></div>￥0.00元| ￥0.00元</a></li>
+                                        <li class="clearfix"><a class="selected" title="发布任务" href="index.php?do=release"><div class="icon16 doc-new reverse"></div>发布任务</a></li>
+<li class="clearfix"><a class="selected" title="发布商品" href="index.php?do=shop_release"><div class="icon16 doc-new reverse"></div>发布商品</a></li>
+<li id="manage_center" class="clearfix hidden"><a title="管理中心" href="control/admin/index.php"><div class="icon16 key reverse"></div>管理中心</a></li>
+<li class="clearfix"><a title="用户中心" href="index.php?do=user&amp;view=index"><div class="icon16 cog reverse"></div>用户中心</a></li>
+<li class="clearfix"><a id="space" title="我的店铺" href="http://127.0.0.1/weike/index.php?do=space&amp;member_id="><div class="icon16 compass reverse"></div>我的店铺</a></li>
 <!--<li class="clearfix"><a href="index.php?do=user&view=message" title="站内信"><div class="icon16 mail reverse"></div>站内信</a></li>-->
-<li class="clearfix"><a onclick="showWindow('out','index.php?do=logout');return false;" title="退出" href="index.php?do=logout">退出</a></li>
+<li class="clearfix"><a href="index.php?do=logout" title="退出" onclick="showWindow('out','index.php?do=logout');return false;">退出</a></li>
                          </ul>
                     </div>
                     <!--用户登录后导航菜单 end-->
 </li>
                             <li class="line m_h"></li>
-                            <li class="logout m_h"><a title="站内信" href="index.php?do=user&view=message">站内信</a></li>
+                            <li class="logout m_h"><a href="index.php?do=user&amp;view=message" title="站内信">站内信</a></li>
                             <li class="clear"></li>
                         </ul>
                         <!--用户登录后内容 end-->
@@ -202,8 +199,8 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
       
             <!--移动端菜单-->
 <div class="m_ctrl">
-<a class="icon32 zoom reverse" href="#" rel="search"></a>
-            <a class="icon32 align-just reverse" href="#" rel="nav"></a>
+<a rel="search" href="#" class="icon32 zoom reverse"></a>
+            <a rel="nav" href="#" class="icon32 align-just reverse"></a>
 </div>
             <!--移动端菜单 end-->
 

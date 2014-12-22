@@ -10698,3 +10698,1587 @@ $_SERVER = [
     'REQUEST_TIME' => 1419239678
 >>>>>>> c976ee762574ca0336784fb253423da5a00b1b02
 ]
+2014-12-22 10:44:23 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'implode(): Invalid arguments passed' in F:\weike\advanced\backend\controllers\UserController.php:360
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'implode(): Inva...', 'F:\\weike\\advanc...', 360, Array)
+#1 F:\weike\advanced\backend\controllers\UserController.php(360): implode(',', '152')
+#2 [internal function]: backend\controllers\UserController->actionGroup_add_pro()
+#3 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('group_add_pro', Array)
+#6 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('user/group_add_...', Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2014-12-22 10:44:23 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/group_add_pro'
+]
+
+$_POST = [
+    'is_submit' => '1'
+    'txt_groupname' => '呵呵'
+    'chb_resource' => [
+        0 => '152'
+        1 => '4'
+        2 => '3'
+        3 => '76'
+        4 => '5'
+        5 => '155'
+    ]
+    'sbt_edit' => '添加用户组'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJf2B8CoAZoAAB8I1vIAAACa'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=user/group_add'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '230'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55866'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user/group_add_pro'
+    'REQUEST_URI' => '/backend/web/index.php?r=user/group_add_pro'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419245063.087
+    'REQUEST_TIME' => 1419245063
+]
+2014-12-22 10:46:10 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Maximum execution time of 30 seconds exceeded' in F:\weike\advanced\backend\controllers\UserController.php:362
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-22 10:45:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/group_add_pro'
+]
+
+$_POST = [
+    'is_submit' => '1'
+    'txt_groupname' => '呵呵'
+    'chb_resource' => [
+        0 => '152'
+        1 => '4'
+        2 => '3'
+        3 => '76'
+        4 => '5'
+        5 => '155'
+    ]
+    'sbt_edit' => '添加用户组'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJf2VMCoAZoAAB8I1vcAAACT'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=user/group_add'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '230'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56035'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user/group_add_pro'
+    'REQUEST_URI' => '/backend/web/index.php?r=user/group_add_pro'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419245140.242
+    'REQUEST_TIME' => 1419245140
+]
+2014-12-22 10:47:11 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Maximum execution time of 30 seconds exceeded' in F:\weike\advanced\backend\controllers\UserController.php:362
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-22 10:46:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/group_add_pro'
+]
+
+$_POST = [
+    'is_submit' => '1'
+    'txt_groupname' => 'haha'
+    'chb_resource' => [
+        0 => '152'
+        1 => '4'
+        2 => '3'
+        3 => '76'
+    ]
+    'sbt_edit' => '添加用户组'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4ag651unq0q94ofudn098m8q7'
+    '_csrf' => 'ead8b65c6a6629cf8e39b9e7528b4fe401a20d30cfc22ceb73ed278ebf26446cs:32:\"DCqXbRnfRjw_EG7aemzrs7EICjDZ9LWD\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJf2kMCoAZoAAB8I1voAAACT'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '172'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=user/group_add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4ag651unq0q94ofudn098m8q7; _csrf=ead8b65c6a6629cf8e39b9e7528b4fe401a20d30cfc22ceb73ed278ebf26446cs%3A32%3A%22DCqXbRnfRjw_EG7aemzrs7EICjDZ9LWD%22%3B'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56222'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user/group_add_pro'
+    'REQUEST_URI' => '/backend/web/index.php?r=user/group_add_pro'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419245200.924
+    'REQUEST_TIME' => 1419245200
+]
+2014-12-22 10:48:37 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'implode(): Invalid arguments passed' in F:\weike\advanced\backend\controllers\UserController.php:361
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'implode(): Inva...', 'F:\\weike\\advanc...', 361, Array)
+#1 F:\weike\advanced\backend\controllers\UserController.php(361): implode(',', 0)
+#2 [internal function]: backend\controllers\UserController->actionGroup_add_pro()
+#3 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('group_add_pro', Array)
+#6 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('user/group_add_...', Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2014-12-22 10:48:37 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/group_add_pro'
+]
+
+$_POST = [
+    'is_submit' => '1'
+    'txt_groupname' => '123'
+    'chb_resource' => [
+        0 => '152'
+        1 => '4'
+        2 => '3'
+        3 => '76'
+        4 => '5'
+        5 => '155'
+    ]
+    'sbt_edit' => '添加用户组'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4ag651unq0q94ofudn098m8q7'
+    '_csrf' => 'ead8b65c6a6629cf8e39b9e7528b4fe401a20d30cfc22ceb73ed278ebf26446cs:32:\"DCqXbRnfRjw_EG7aemzrs7EICjDZ9LWD\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJf3BcCoAZoAAB8I1yUAAACa'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '215'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=user/group_add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4ag651unq0q94ofudn098m8q7; _csrf=ead8b65c6a6629cf8e39b9e7528b4fe401a20d30cfc22ceb73ed278ebf26446cs%3A32%3A%22DCqXbRnfRjw_EG7aemzrs7EICjDZ9LWD%22%3B'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56510'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user/group_add_pro'
+    'REQUEST_URI' => '/backend/web/index.php?r=user/group_add_pro'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419245317.455
+    'REQUEST_TIME' => 1419245317
+]
+2014-12-22 10:49:04 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'implode(): Invalid arguments passed' in F:\weike\advanced\backend\controllers\UserController.php:361
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'implode(): Inva...', 'F:\\weike\\advanc...', 361, Array)
+#1 F:\weike\advanced\backend\controllers\UserController.php(361): implode(',', 0)
+#2 [internal function]: backend\controllers\UserController->actionGroup_add_pro()
+#3 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('group_add_pro', Array)
+#6 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('user/group_add_...', Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2014-12-22 10:49:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/group_add_pro'
+]
+
+$_POST = [
+    'is_submit' => '1'
+    'txt_groupname' => '123'
+    'chb_resource' => [
+        0 => '152'
+        1 => '4'
+        2 => '3'
+        3 => '76'
+        4 => '5'
+        5 => '155'
+    ]
+    'sbt_edit' => '添加用户组'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4ag651unq0q94ofudn098m8q7'
+    '_csrf' => 'ead8b65c6a6629cf8e39b9e7528b4fe401a20d30cfc22ceb73ed278ebf26446cs:32:\"DCqXbRnfRjw_EG7aemzrs7EICjDZ9LWD\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJf3IMCoAZoAAB8I1ygAAACa'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '215'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=user/group_add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4ag651unq0q94ofudn098m8q7; _csrf=ead8b65c6a6629cf8e39b9e7528b4fe401a20d30cfc22ceb73ed278ebf26446cs%3A32%3A%22DCqXbRnfRjw_EG7aemzrs7EICjDZ9LWD%22%3B'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56568'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user/group_add_pro'
+    'REQUEST_URI' => '/backend/web/index.php?r=user/group_add_pro'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419245344.001
+    'REQUEST_TIME' => 1419245344
+]
+2014-12-22 10:49:51 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Maximum execution time of 30 seconds exceeded' in F:\weike\advanced\backend\controllers\UserController.php:362
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-22 10:49:20 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/group_add_pro'
+]
+
+$_POST = [
+    'is_submit' => '1'
+    'txt_groupname' => '1212'
+    'chb_resource' => [
+        0 => '152'
+        1 => '4'
+        2 => '3'
+        3 => '76'
+        4 => '5'
+        5 => '155'
+    ]
+    'sbt_edit' => '添加用户组'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4ag651unq0q94ofudn098m8q7'
+    '_csrf' => 'ead8b65c6a6629cf8e39b9e7528b4fe401a20d30cfc22ceb73ed278ebf26446cs:32:\"DCqXbRnfRjw_EG7aemzrs7EICjDZ9LWD\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJf3MMCoAZoAAB8I1ysAAACa'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '216'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=user/group_add'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4ag651unq0q94ofudn098m8q7; _csrf=ead8b65c6a6629cf8e39b9e7528b4fe401a20d30cfc22ceb73ed278ebf26446cs%3A32%3A%22DCqXbRnfRjw_EG7aemzrs7EICjDZ9LWD%22%3B'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56604'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user/group_add_pro'
+    'REQUEST_URI' => '/backend/web/index.php?r=user/group_add_pro'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419245360.57
+    'REQUEST_TIME' => 1419245360
+]
+2014-12-22 11:11:50 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '}'' in F:\weike\advanced\backend\controllers\UserController.php:212
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-22 11:11:50 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/user_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJf8dsCoAZoAAB8I18cAAACb'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '59899'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user/user_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=user/user_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419246710.461
+    'REQUEST_TIME' => 1419246710
+]
+2014-12-22 11:17:17 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\MemberGroup::balance' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('balance')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(905): yii\db\BaseActiveRecord->__get('balance')
+#2 F:\weike\advanced\backend\controllers\UserController.php(213): yii\base\Model->offsetGet('balance')
+#3 [internal function]: backend\controllers\UserController->actionCharge_add()
+#4 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('charge_add', Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('user/charge_add', Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#10 {main}
+2014-12-22 11:17:17 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/charge_add'
+]
+
+$_POST = [
+    'user' => '3'
+    'cash_type' => '1'
+    'cash' => '1'
+    'charge_reason' => 'dddd'
+    'is_submit' => '1'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'n4ag651unq0q94ofudn098m8q7'
+    '_csrf' => 'ead8b65c6a6629cf8e39b9e7528b4fe401a20d30cfc22ceb73ed278ebf26446cs:32:\"DCqXbRnfRjw_EG7aemzrs7EICjDZ9LWD\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJf9vMCoAZoAAB8I19QAAACb'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '56'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=user/charge'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=n4ag651unq0q94ofudn098m8q7; _csrf=ead8b65c6a6629cf8e39b9e7528b4fe401a20d30cfc22ceb73ed278ebf26446cs%3A32%3A%22DCqXbRnfRjw_EG7aemzrs7EICjDZ9LWD%22%3B'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '60679'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user/charge_add'
+    'REQUEST_URI' => '/backend/web/index.php?r=user/charge_add'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419247036.991
+    'REQUEST_TIME' => 1419247036
+]
+2014-12-22 11:44:44 [127.0.0.1][-][-][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Unable to verify your data submission.' in F:\weike\advanced\vendor\yiisoft\yii2\web\Controller.php:110
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('qing', Array)
+#2 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('tool/qing', Array)
+#3 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#5 {main}
+2014-12-22 11:44:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'tool/qing'
+]
+
+$_POST = [
+    'do' => 'tool'
+    'view' => 'cache'
+    'ckb_tpl_cache' => '1'
+    'ckb_obj_cache' => '1'
+    'sbt_edit' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgELMCoAZoAAB8I2KUAAACZ'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=tool/cache'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '60'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '64877'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=tool/qing'
+    'REQUEST_URI' => '/backend/web/index.php?r=tool/qing'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419248684.6
+    'REQUEST_TIME' => 1419248684
+]
+2014-12-22 11:45:19 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined method Yii::app()' in F:\weike\advanced\backend\controllers\ToolController.php:26
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-22 11:45:19 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'tool/qing'
+]
+
+$_POST = [
+    'do' => 'tool'
+    'view' => 'cache'
+    'ckb_tpl_cache' => '1'
+    'ckb_obj_cache' => '1'
+    'sbt_edit' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgET8CoAZoAAB8I2KsAAACZ'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=tool/cache'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '60'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '64956'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=tool/qing'
+    'REQUEST_URI' => '/backend/web/index.php?r=tool/qing'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419248719.3
+    'REQUEST_TIME' => 1419248719
+]
+2014-12-22 11:45:56 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined method Yii::app()' in F:\weike\advanced\backend\controllers\ToolController.php:26
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-22 11:45:56 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'tool/qing'
+]
+
+$_POST = [
+    'do' => 'tool'
+    'view' => 'cache'
+    'ckb_tpl_cache' => '1'
+    'ckb_obj_cache' => '1'
+    'sbt_edit' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgEdMCoAZoAAB8I2K4AAACT'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=tool/cache'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '60'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '65048'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=tool/qing'
+    'REQUEST_URI' => '/backend/web/index.php?r=tool/qing'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419248756.675
+    'REQUEST_TIME' => 1419248756
+]
+2014-12-22 11:48:45 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\models\WkWitkeyArticleCategory::tmp' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(267): yii\base\Component->__set('tmp', '&nbsp;&nbsp;&nb...')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(917): yii\db\BaseActiveRecord->__set('tmp', '&nbsp;&nbsp;&nb...')
+#2 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(72): yii\base\Model->offsetSet('tmp', '&nbsp;&nbsp;&nb...')
+#3 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(61): app\models\WkWitkeyArticleCategory->tree(Array, 0, '')
+#4 F:\weike\advanced\backend\controllers\ArticleController.php(302): app\models\WkWitkeyArticleCategory->getAllCate(NULL, 0, ' ')
+#5 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#9 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2014-12-22 11:48:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgFHMCoAZoAAB8I2M0AAACT'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '65439'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419248924.775
+    'REQUEST_TIME' => 1419248924
+]
+2014-12-22 11:48:46 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\models\WkWitkeyArticleCategory::tmp' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(267): yii\base\Component->__set('tmp', '&nbsp;&nbsp;&nb...')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(917): yii\db\BaseActiveRecord->__set('tmp', '&nbsp;&nbsp;&nb...')
+#2 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(72): yii\base\Model->offsetSet('tmp', '&nbsp;&nbsp;&nb...')
+#3 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(61): app\models\WkWitkeyArticleCategory->tree(Array, 0, '')
+#4 F:\weike\advanced\backend\controllers\ArticleController.php(452): app\models\WkWitkeyArticleCategory->getAllCate(NULL, 0, ' ')
+#5 [internal function]: backend\controllers\ArticleController->actionCat_list()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('cat_list', Array)
+#9 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/cat_lis...', Array)
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2014-12-22 11:48:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/cat_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgFHcCoAZoAAB8I2NAAAACT'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '65494'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/cat_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/cat_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419248925.926
+    'REQUEST_TIME' => 1419248925
+]
+2014-12-22 11:48:47 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\models\WkWitkeyArticleCategory::tmp' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(267): yii\base\Component->__set('tmp', '&nbsp;&nbsp;&nb...')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(917): yii\db\BaseActiveRecord->__set('tmp', '&nbsp;&nbsp;&nb...')
+#2 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(72): yii\base\Model->offsetSet('tmp', '&nbsp;&nbsp;&nb...')
+#3 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(61): app\models\WkWitkeyArticleCategory->tree(Array, 0, '')
+#4 F:\weike\advanced\backend\controllers\ArticleController.php(302): app\models\WkWitkeyArticleCategory->getAllCate(NULL, 0, ' ')
+#5 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#9 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2014-12-22 11:48:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgFH8CoAZoAAB8I2NMAAACZ'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '65495'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419248927.028
+    'REQUEST_TIME' => 1419248927
+]
+2014-12-22 11:49:26 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\models\WkWitkeyArticleCategory::tmp' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(267): yii\base\Component->__set('tmp', '&nbsp;&nbsp;&nb...')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(917): yii\db\BaseActiveRecord->__set('tmp', '&nbsp;&nbsp;&nb...')
+#2 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(72): yii\base\Model->offsetSet('tmp', '&nbsp;&nbsp;&nb...')
+#3 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(61): app\models\WkWitkeyArticleCategory->tree(Array, 0, '')
+#4 F:\weike\advanced\backend\controllers\ArticleController.php(452): app\models\WkWitkeyArticleCategory->getAllCate(NULL, 0, ' ')
+#5 [internal function]: backend\controllers\ArticleController->actionCat_list()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('cat_list', Array)
+#9 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/cat_lis...', Array)
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2014-12-22 11:49:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/cat_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgFRsCoAZoAAB8I2NYAAACT'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49224'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/cat_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/cat_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419248966.458
+    'REQUEST_TIME' => 1419248966
+]
+2014-12-22 11:49:27 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\models\WkWitkeyArticleCategory::tmp' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(267): yii\base\Component->__set('tmp', '&nbsp;&nbsp;&nb...')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(917): yii\db\BaseActiveRecord->__set('tmp', '&nbsp;&nbsp;&nb...')
+#2 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(72): yii\base\Model->offsetSet('tmp', '&nbsp;&nbsp;&nb...')
+#3 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(61): app\models\WkWitkeyArticleCategory->tree(Array, 0, '')
+#4 F:\weike\advanced\backend\controllers\ArticleController.php(302): app\models\WkWitkeyArticleCategory->getAllCate(NULL, 0, ' ')
+#5 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#9 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2014-12-22 11:49:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgFR8CoAZoAAB8I2NkAAACT'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49228'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419248967.491
+    'REQUEST_TIME' => 1419248967
+]
+2014-12-22 11:50:08 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\models\WkWitkeyArticleCategory::tmp' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(267): yii\base\Component->__set('tmp', '&nbsp;&nbsp;&nb...')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(917): yii\db\BaseActiveRecord->__set('tmp', '&nbsp;&nbsp;&nb...')
+#2 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(72): yii\base\Model->offsetSet('tmp', '&nbsp;&nbsp;&nb...')
+#3 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(61): app\models\WkWitkeyArticleCategory->tree(Array, 0, '')
+#4 F:\weike\advanced\backend\controllers\ArticleController.php(302): app\models\WkWitkeyArticleCategory->getAllCate(NULL, 0, ' ')
+#5 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#9 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2014-12-22 11:50:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgFcMCoAZoAAB8I2NwAAACZ'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49317'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249008.18
+    'REQUEST_TIME' => 1419249008
+]
+2014-12-22 11:50:09 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\models\WkWitkeyArticleCategory::tmp' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(267): yii\base\Component->__set('tmp', '&nbsp;&nbsp;&nb...')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(917): yii\db\BaseActiveRecord->__set('tmp', '&nbsp;&nbsp;&nb...')
+#2 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(72): yii\base\Model->offsetSet('tmp', '&nbsp;&nbsp;&nb...')
+#3 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(61): app\models\WkWitkeyArticleCategory->tree(Array, 0, '')
+#4 F:\weike\advanced\backend\controllers\ArticleController.php(302): app\models\WkWitkeyArticleCategory->getAllCate(NULL, 0, ' ')
+#5 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#9 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2014-12-22 11:50:09 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgFccCoAZoAAB8I2N8AAACZ'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49319'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249009.412
+    'REQUEST_TIME' => 1419249009
+]
+2014-12-22 11:50:15 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\models\WkWitkeyArticleCategory::tmp' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(267): yii\base\Component->__set('tmp', '&nbsp;&nbsp;&nb...')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(917): yii\db\BaseActiveRecord->__set('tmp', '&nbsp;&nbsp;&nb...')
+#2 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(72): yii\base\Model->offsetSet('tmp', '&nbsp;&nbsp;&nb...')
+#3 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(61): app\models\WkWitkeyArticleCategory->tree(Array, 0, '')
+#4 F:\weike\advanced\backend\controllers\ArticleController.php(302): app\models\WkWitkeyArticleCategory->getAllCate(NULL, 0, ' ')
+#5 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#9 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2014-12-22 11:50:15 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgFd8CoAZoAAB8I2P4AAACT'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49320'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249015.858
+    'REQUEST_TIME' => 1419249015
+]
+2014-12-22 11:50:25 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\models\WkWitkeyArticleCategory::tmp' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(267): yii\base\Component->__set('tmp', '&nbsp;&nbsp;&nb...')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(917): yii\db\BaseActiveRecord->__set('tmp', '&nbsp;&nbsp;&nb...')
+#2 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(72): yii\base\Model->offsetSet('tmp', '&nbsp;&nbsp;&nb...')
+#3 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(61): app\models\WkWitkeyArticleCategory->tree(Array, 0, '')
+#4 F:\weike\advanced\backend\controllers\ArticleController.php(452): app\models\WkWitkeyArticleCategory->getAllCate(NULL, 0, ' ')
+#5 [internal function]: backend\controllers\ArticleController->actionCat_list()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('cat_list', Array)
+#9 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/cat_lis...', Array)
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2014-12-22 11:50:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/cat_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgFgcCoAZoAAB8I2QEAAACa'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49367'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/cat_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/cat_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249025.004
+    'REQUEST_TIME' => 1419249025
+]
+2014-12-22 11:50:26 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\models\WkWitkeyArticleCategory::tmp' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(267): yii\base\Component->__set('tmp', '&nbsp;&nbsp;&nb...')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(917): yii\db\BaseActiveRecord->__set('tmp', '&nbsp;&nbsp;&nb...')
+#2 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(72): yii\base\Model->offsetSet('tmp', '&nbsp;&nbsp;&nb...')
+#3 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(61): app\models\WkWitkeyArticleCategory->tree(Array, 0, '')
+#4 F:\weike\advanced\backend\controllers\ArticleController.php(302): app\models\WkWitkeyArticleCategory->getAllCate(NULL, 0, ' ')
+#5 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#9 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2014-12-22 11:50:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgFgsCoAZoAAB8I2QQAAACa'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49371'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249026.561
+    'REQUEST_TIME' => 1419249026
+]
+2014-12-22 11:50:27 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: app\models\WkWitkeyArticleCategory::tmp' in F:\weike\advanced\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 F:\weike\advanced\vendor\yiisoft\yii2\db\BaseActiveRecord.php(267): yii\base\Component->__set('tmp', '&nbsp;&nbsp;&nb...')
+#1 F:\weike\advanced\vendor\yiisoft\yii2\base\Model.php(917): yii\db\BaseActiveRecord->__set('tmp', '&nbsp;&nbsp;&nb...')
+#2 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(72): yii\base\Model->offsetSet('tmp', '&nbsp;&nbsp;&nb...')
+#3 F:\weike\advanced\backend\models\WkWitkeyArticleCategory.php(61): app\models\WkWitkeyArticleCategory->tree(Array, 0, '')
+#4 F:\weike\advanced\backend\controllers\ArticleController.php(452): app\models\WkWitkeyArticleCategory->getAllCate(NULL, 0, ' ')
+#5 [internal function]: backend\controllers\ArticleController->actionCat_list()
+#6 F:\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 F:\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 F:\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('cat_list', Array)
+#9 F:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/cat_lis...', Array)
+#10 F:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 F:\weike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+2014-12-22 11:50:27 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/cat_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'si144gq438rld6vvn6c6882o66'
+    '_csrf' => '4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s:32:\"9aD42QjyVBILnSRPK7g0vOggixP1a92s\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VJgFg8CoAZoAAB8I2QcAAACZ'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=si144gq438rld6vvn6c6882o66; _csrf=4fe37771f562ed2f2ed3c9c57970134c3c86a6628961932cb2c6e379fcd75538s%3A32%3A%229aD42QjyVBILnSRPK7g0vOggixP1a92s%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;c:\\Program Files (x86)\\Intel\\iCLS Client\\;c:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;c:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\bin;F:\\Java\\jdk1.8.0_25\\\\jre\\bin;F:\\Git\\cmd;F:\\TortoiseGit\\bin;F:\\xampps\\php;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'F:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'F:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49372'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/cat_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/cat_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249027.739
+    'REQUEST_TIME' => 1419249027
+]

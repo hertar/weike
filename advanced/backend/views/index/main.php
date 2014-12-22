@@ -48,9 +48,11 @@
             <li class="avatar">
                 <a href="#" title="admin"><img src='http://127.0.0.1/weike/data/avatar/default/man_small.jpg' uid='1' class='pic_small'></a>
             </li>
+             <?php $session=new  yii\web\Session()?>
+     
             <li class="name">
-                <span>上午好</span>，创始人<b>admin</b>
-                <span class="clock"> - 今天是<span id="date">2014-12-16 20:39:46</span></span>
+                <span>你好</span>，创始人<b><?php  echo $session->get("username")?></b>
+                <span class="clock"> - 今天是<span id="date"><?php echo date("Y-m-d H:i:m")?></span></span>
             </li>
             <li class="statistics clearfix">
                 <ul>

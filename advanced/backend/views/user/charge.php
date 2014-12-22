@@ -28,21 +28,17 @@
         <div class="tabcon">
         	<div class="title"><h2>手动充值</h2></div>
             <div class="detail">
-               <form action="#" method="post" name="frm_cash" id="frm_cash">
-                    <input type="hidden" name="view" value="charge">
-<input type="hidden" name="valid" id="valid">
-<input type="hidden" name="maxCash" id="maxCash">
-<input type="hidden" name="maxCredit" id="maxCredit">
+<form action="index.php?r=user/charge_add" method="post" name="frm_cash" id="frm_cash">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tbody>
                       <tr>
-                        <th scope="row" width='100'>UID/用户名：</th>
+                        <th scope="row" width='100'>UID：</th>
                         <td>
-                       		<input type="text" class="txt" style=" width:260px;" name="user"
+<input type="text" class="txt" style=" width:260px;" name="user"
 id="txt_user" title="请填写待充值用户的UID或 用户名"
-limit="required:true" msgArea="txt_user_msg"
-  	msg="用户UId或用户名不得为空"/>
-<b style="color:red"> *</b><span id="txt_user_msg"></span>用户的编号或用户名来查找用户<a class="button dbl_target" href="javascript:void(0);" onclick="validUser();">
+limit="required:true" msgArea="txt_user_msg" msg="用户UId或用户名不得为空"/>
+<b style="color:red"> *</b>
+<span id="txt_user_msg"></span>用户的编号或用户名来查找用户<a class="button dbl_target" href="javascript:void(0);" onclick="validUser();">
 <span class="chat icon"></span>
 验证</a>
 <div class="box tip clearfix p_relative" style="width:310px;display:none;" id="man_tips">
@@ -81,7 +77,7 @@ limit="required:true" msgArea="txt_user_msg"
                         <td>
                             <div class="clearfix padt10">
                             	<input type="hidden" name="is_submit" value="1">
-                                <button class="positive primary pill button" type="button" value="提交" onclick="frm_check();"><span class="check icon"></span>提交</button>
+                                <button class="positive primary pill button" type="submit" value="提交" ><span class="check icon"></span>提交</button>
                               
                             </div>
                         </td>
@@ -94,96 +90,9 @@ limit="required:true" msgArea="txt_user_msg"
         
     </div>
  <script type="text/javascript">
- 	var credit_is_allow = '2';
- 	function validUser(){
-var v   = $("#txt_user").val();
-if(v<1||$("#txt_user_msg").hasClass('valid_error')){
-art.dialog.tips("用户UId或用户名不得为空",1.5);
-$("#man_tips").hide('slow');
-$("#valid").val(0);
-}else{
-var url = "index.php?do=user&view=charge";
-$.getJSON(url,{check_uid:v},function(json){
-if(json.status==1){
-$("#ucash").html("可用现金: "+json.data.balance+"元");
-$("#ucredit").html("可用元宝："+json.data.credit);
-$("#man_tips").show('slow');
-$("#maxCash").val(json.data.balance);
-$("#maxCredit").val(json.data.credit);
-$("#valid").val(1);
-}else{
-art.dialog.tips(json.msg,1.5);
-$("#man_tips").hide('slow');
-$("#txt_user").focus();
-$("#valid").val(0);
-}
-});
-}
-}
- 	function frm_check(){
-var i =  checkForm(document.getElementById("frm_cash"),false);
-if(i){
-if($("#valid").val()==1){
-var t 			= true;
-var cash_type = $("#cash_type").val();
-var credit_type = $("#credit_type").val();
-var maxCash 	= $("#maxCash").val();
-var maxCredit 	= $("#maxCredit").val();
-var ca = parseFloat($("#cash").val()).toFixed(2);
-isNaN(ca)?ca=0:'';
-var cr = parseFloat($("#credit").val()).toFixed(2);
-isNaN(cr)?cr=0:'';
-if(ca<-maxCash){
-art.dialog.alert("警告，此用户最多可扣除 "+maxCash+" 元");
-t=false;
-}else if(cr<-maxCredit){
-art.dialog.alert("警告，此用户最多可扣除 "+maxCredit+" 元宝");
-t=false;
-}
-if(t===true){
-var content = '';
-if(cash_type == 1){
-if(credit_type == 1){
-if(credit_is_allow==1){
-content+="充值现金"+ca+"元;</br>"+"充值代金券"+cr+"元宝。";
-}else{
-content+="充值现金"+ca+"元;</br>";
-}
-}else{
-if(credit_is_allow==1){
-content+="充值现金"+ca+"元;</br>"+"扣除代金券"+Math.abs(cr)+"元宝。";
-}else{
-content+="充值现金"+ca+"元;</br>";
-}
-}
-}else{
-if(credit_type == 1){
-if(credit_is_allow==1){
-content+="扣除现金"+Math.abs(ca)+"元;</br>"+"充值代金券"+cr+"元宝。";
-}else{
-content+="扣除现金"+Math.abs(ca)+"元;</br>"
-}
-}else{
-if(credit_is_allow==1){
-content+="扣除现金"+Math.abs(ca)+"元;</br>"+"扣除代金券"+Math.abs(cr)+"元宝。";
-}else{
-content+="扣除现金"+Math.abs(ca)+"元;</br>"
-}
-}
-}
-art.dialog({
-title: "",
-content: content,
-icon: 'succeed',
-yesFn: function(){$("#frm_cash").submit();},
-noFn :function(){this.close();return false;}
-});
-}
-}else{
-art.dialog.tips("请先验证用户信息",1.5);
-}
-}
-}
+var credit_is_allow = '2';
+
+
  </script>
 </div>
 </div>
