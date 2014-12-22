@@ -1,3 +1,6 @@
+<?php
+use yii\widgets\LinkPager;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -38,18 +41,21 @@
  <tbody>
  	<tr>
  		<th>ID</th>
-<td><input type="text" class="txt" name="txt_shop_id" value="" onkeyup="clearstr(this);"></td>
+
+<td><input type="text" class="txt" name="txt_shop_id" value="" id='ida' onkeyup="clearstr(this);"></td>
 <th>店铺名称</th>
-<td><input type="text" class="txt" name='txt_name' value="" onkeyup="clearspecial(this);"></td>
+<td><input type="text" class="txt" name='txt_name' value=""  id='title' onkeyup="clearspecial(this);"></td>
+
  	</tr>
 
 <tr>
 <th>显示条数</th>
 <td>
-<select name="wh[page_size]" class="ps vm">
-<option value="10" selected="selected">每页显示10</option>
-<option value="20" >每页显示20</option>
-<option value="30" >每页显示30</option>
+
+<select name="page_size" onchange="pageJump(value)">
+     <option value="10" <?php if($pagesize==10){echo "selected";}?>>每页显示10条</option>
+     <option value="5" <?php if($pagesize==5){echo "selected"; }?>>每页显示5条</option>
+     <option value="3" <?php if($pagesize==3){echo "selected"; }?>>每页显示3条</option>
 </select>
 </td>
 <th>结果排序</th>
@@ -58,11 +64,13 @@
                            <option value="shop_id"  selected="selected">默认排序</option>
                            <option value="on_time" >申请时间</option>
                       </select>
-                      <select name="w[ord][]">
-                            <option selected="selected"  value="desc">递减</option>
-                            <option  value="asc">递增</option>
-                      </select>
-<button type="submit" name="sbt_search" value=搜索 class="pill" />
+
+                      <select name="ord[]" onchange="orderJump(this.value)">
+                                <option  value="asc"  <?php if($ord=='asc'){echo "selected";}?>>递增</option>
+                                <option  value="desc"  <?php if($ord=='desc'){echo "selected";}?>>递减</option>
+                                </select>
+<button type="button" name="sbt_search" value=搜索 class="pill"  onclick="search_task()" />
+
 <span class="icon magnifier">&nbsp;</span>搜索</button>
 </td>
 </tr>
@@ -89,125 +97,63 @@
             <th width="15%">状态</th>
             <th width="20%">操作</th>
 </tr>
+
+                     <?php             foreach($list as $key=>$val)
+      {?>
         <tr class="item">
-        	<td><input type="checkbox" name="ckb[]" class="checkbox" value="8">8</td>
-<td>mxc123</td>
-           <td>我就是我，就在这里</td>
-           <td>2013-04-09</td>
+        	<td><input type="checkbox" name="ckb" class="checkbox" value="<?php echo $val['shop_id']?>"><?php echo $val['shop_id']?></td>
+<td><?php echo $val['username']?></td>
+           <td><?php echo $val['shop_name']?></td>
+           <td><?php echo date("Y-m-d",$val['on_time'])?></td>
            <td>
-<span>待审核</span>
+               <?php if($val['shop_status']==2){ ?>
+                       <span> 待审核</span>          
+
+                    <?php }else  if($val['shop_status']==0){ ?>
+                      <span> 关闭</span>
+                   <?php }else  if($val['shop_status']==1){?>
+                      <span> 开启</span>
+                   <?php }else  if($val['shop_status']==3){?>
+                      <span> 审核未通过</span>
+                   <?php } ?>
            </td>
 <td>
-<a href="index.php?do=store&view=list&txt_username=&txt_shop_id=&page=1&w[ord][0]=&w[ord][1]=&wh[page_size]=10&ac=pass&shop_id=8" class="button"><span class="check icon"></span>通过审核</a>
-<a href="index.php?do=store&view=list&txt_username=&txt_shop_id=&page=1&w[ord][0]=&w[ord][1]=&wh[page_size]=10&ac=nopass&shop_id=8" class="button">审核不通过</a>
-<a href="index.php?do=store&view=info&shop_id=8" class="button"><span class="pen icon"></span>查看</a>
+     <?php    if($val['shop_status']==2){?>
+                        <a href="index.php?r=store/up_status&id=<?php echo $val['shop_id'] ?>&stu=0" class="button"><span class="check icon"></span>通过审核</a>
+                        <a href="index.php?r=store/up_status&id=<?php echo $val['shop_id'] ?>&stu=3" class="button">审核不通过</a>
+                        <a href="index.php?r=store/up_shop&id=<?php echo $val['shop_id'] ?>" class="button"><span class="pen icon"></span>查看</a>
+                   <?php }else  if($val['shop_status']==0){?>
+                       <a href="index.php?r=store/up_status&id=<?php echo $val['shop_id'] ?>&stu=1" class="button"><span class="pen icon"></span>开启</a>
+                       <a href="index.php?r=store/up_shop&id=<?php echo $val['shop_id'] ?>" class="button"><span class="pen icon"></span>查看</a>
+                  <?php }else  if($val['shop_status']==1){?>
+                       <a href="index.php?r=store/up_status&id=<?php echo $val['shop_id'] ?>&stu=0" class="button"><span class="pen icon"></span>关闭</a>
+                       <a href="index.php?r=store/up_shop&id=<?php echo $val['shop_id'] ?>" class="button"><span class="pen icon"></span>查看</a>
+                   <?php }else  if($val['shop_status']==3){?>
+                      <a href="index.php?r=store/up_shop&id=<?php echo $val['shop_id'] ?>" class="button"><span class="pen icon"></span>查看</a>
+                   <?php } ?>
+                       
+
 </td>
           </tr>
-         <tr class="item">
-        	<td><input type="checkbox" name="ckb[]" class="checkbox" value="7">7</td>
-<td>樱桃小丸子</td>
-           <td>我的小小小店铺</td>
-           <td>2013-04-09</td>
-           <td>
-<span>待审核</span>
-           </td>
-<td>
-<a href="index.php?do=store&view=list&txt_username=&txt_shop_id=&page=1&w[ord][0]=&w[ord][1]=&wh[page_size]=10&ac=pass&shop_id=7" class="button"><span class="check icon"></span>通过审核</a>
-<a href="index.php?do=store&view=list&txt_username=&txt_shop_id=&page=1&w[ord][0]=&w[ord][1]=&wh[page_size]=10&ac=nopass&shop_id=7" class="button">审核不通过</a>
-<a href="index.php?do=store&view=info&shop_id=7" class="button"><span class="pen icon"></span>查看</a>
-</td>
-          </tr>
-         <tr class="item">
-        	<td><input type="checkbox" name="ckb[]" class="checkbox" value="6">6</td>
-<td>红客</td>
-           <td>我就是我，就在这里</td>
-           <td>2013-04-09</td>
-           <td>
-<span>开启</span>
-           </td>
-<td>
-<a href="index.php?do=store&view=info&shop_id=6" class="button"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=store&view=list&txt_username=&txt_shop_id=&page=1&w[ord][0]=&w[ord][1]=&wh[page_size]=10&ac=close&shop_id=6" class="button"><span class="pen icon"></span>关闭</a>
-</td>
-          </tr>
-         <tr class="item">
-        	<td><input type="checkbox" name="ckb[]" class="checkbox" value="5">5</td>
-<td>墨客</td>
-           <td>想要漂亮小玩具吗，专业制作手工玩具</td>
-           <td>2013-04-09</td>
-           <td>
-<span>开启</span>
-           </td>
-<td>
-<a href="index.php?do=store&view=info&shop_id=5" class="button"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=store&view=list&txt_username=&txt_shop_id=&page=1&w[ord][0]=&w[ord][1]=&wh[page_size]=10&ac=close&shop_id=5" class="button"><span class="pen icon"></span>关闭</a>
-</td>
-          </tr>
-         <tr class="item">
-        	<td><input type="checkbox" name="ckb[]" class="checkbox" value="4">4</td>
-<td>晓茜</td>
-           <td>最具个性化的店铺，值得一看哦</td>
-           <td>2013-04-09</td>
-           <td>
-<span>开启</span>
-           </td>
-<td>
-<a href="index.php?do=store&view=info&shop_id=4" class="button"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=store&view=list&txt_username=&txt_shop_id=&page=1&w[ord][0]=&w[ord][1]=&wh[page_size]=10&ac=close&shop_id=4" class="button"><span class="pen icon"></span>关闭</a>
-</td>
-          </tr>
-         <tr class="item">
-        	<td><input type="checkbox" name="ckb[]" class="checkbox" value="3">3</td>
-<td>丸美弹力</td>
-           <td>我的完美店铺</td>
-           <td>2013-04-09</td>
-           <td>
-<span>开启</span>
-           </td>
-<td>
-<a href="index.php?do=store&view=info&shop_id=3" class="button"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=store&view=list&txt_username=&txt_shop_id=&page=1&w[ord][0]=&w[ord][1]=&wh[page_size]=10&ac=close&shop_id=3" class="button"><span class="pen icon"></span>关闭</a>
-</td>
-          </tr>
-         <tr class="item">
-        	<td><input type="checkbox" name="ckb[]" class="checkbox" value="2">2</td>
-<td>猪八戒</td>
-           <td>猪八戒的店铺</td>
-           <td>2013-04-09</td>
-           <td>
-<span>开启</span>
-           </td>
-<td>
-<a href="index.php?do=store&view=info&shop_id=2" class="button"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=store&view=list&txt_username=&txt_shop_id=&page=1&w[ord][0]=&w[ord][1]=&wh[page_size]=10&ac=close&shop_id=2" class="button"><span class="pen icon"></span>关闭</a>
-</td>
-          </tr>
-         <tr class="item">
-        	<td><input type="checkbox" name="ckb[]" class="checkbox" value="1">1</td>
-<td>shangk</td>
-           <td>SHANGK</td>
-           <td>2013-04-09</td>
-           <td>
-<span>开启</span>
-           </td>
-<td>
-<a href="index.php?do=store&view=info&shop_id=1" class="button"><span class="pen icon"></span>查看</a>
-<a href="index.php?do=store&view=list&txt_username=&txt_shop_id=&page=1&w[ord][0]=&w[ord][1]=&wh[page_size]=10&ac=close&shop_id=1" class="button"><span class="pen icon"></span>关闭</a>
-</td>
-          </tr>
+       <?php }?>          
+
            <tr>
             <td colspan="7">
             	<label for="checkbox">  
 全选</label>
 <input type="hidden" name="sbt_action" class="sbt_action"/>　
-<button type="submit" name="sbt_action" value="批量删除" class="negative pill button" onclick="return batch_act(this,'frm_list')" >
+
+<button type="submit" name="sbt_action" value="批量删除" class="negative pill button" onclick="return batch_act(this,'index.php?r=store/del_shop')" >
+
 <span class="trash icon"></span>批量删除</button>
 <button type="submit" name="sbt_action" value="批量审核" class="pill negative" onclick="return batch_act(this,'frm_list');" >
 <span class="lock icon"></span>批量审核</button>
 </td>
   </tr>
         </table>
-<div class="page"></div>
+
+<div class="page"><?= LinkPager::widget(['pagination' => $pages]); ?></div>
+
 </div>
 </div>
 </form>
@@ -313,17 +259,41 @@ function batch_act(obj, frm) {
 d = art.dialog;
 var frm = frm;
 var c = $(obj).val();
-var conf = $(":checkbox[name='ckb[]']:checked").length;
+var conf = $(":checkbox[name='ckb']:checked").length;
 if (conf > 0) {
 d.confirm("确定" + c + '?', function() {
-$(".sbt_action").val(c);
-$("#" + frm).submit();
+var conf = $(":checkbox[name='ckb']:checked").length;
+var ida = document.getElementsByName("ckb");
+var idarr=new Array();
+		var flag=0;
+		for (var i=0; i<conf; i++)
+		{
+			if(ida[i].checked==true)
+			{
+				idarr[flag]=ida[i].value;
+				flag++;
+			}
+		}
+ location.href="index.php?r=store/del_shop&id="+idarr;
+
 });
 } else {
 d.alert("您没有选择任何操作项");
 }
 return false;
 }
+function pageJump(value){
+location.href="index.php?r=store/store_list&pagesize="+value;
+}
+function orderJump(value){
+location.href="index.php?r=store/store_list&ord="+value;
+}
+function search_task(){
+    var id= document.getElementById("ida").value;
+    var title= document.getElementById("title").value;
+    location.href="index.php?r=store/store_list&search_id="+id+"&search_title="+title;
+}
 </script>
+
 </body>
 </html>
