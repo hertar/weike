@@ -3,8 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>keke admin</title>
-
-
 <link href="/public/tpl/css/admin_management.css" rel="stylesheet" type="text/css" />
 <link href="/public/resource/css/buttons.css" rel="stylesheet" type="text/css" />
 <link title="style1" href="/public/tpl/skin/default/style.css" rel="stylesheet" type="text/css" />
@@ -29,70 +27,43 @@
         <div class="tabcon">
         	<div class="title"><h2>行业合并</h2></div>
             <div class="detail">
-<form method="post" action="#" id="frm_cat_edit">
-    <input type="hidden" name="do" value="task"><input type="hidden" name="view" value="union_industry"><input type="hidden" name="hdn_indus_id" value="">
-    <div class="main">
- 
-        <table width="96%" height="200" border="0" cellspacing="0" cellpadding="0" class="tab_m t_l">
-        <tr>
-            <th scope="row">
-                选择行业：            </th>
-            <td>
-                <select name="slt_indus_id">
-                    <option value="0">置顶</option>
-                                        <option value="441" >品牌设计</option>
-                                        <option value="2" >网站开发</option>
-                                        <option value="201" >创意祝福</option>
-                                        <option value="249" >网游服务</option>
-                                        <option value="3" >文案写作</option>
-                                        <option value="335" >建筑/装修</option>
-                                        <option value="211" >头脑风暴</option>
-                                        <option value="350" >照片美化/编辑</option>
-                                        <option value="234" >法律服务</option>
-                                        <option value="160" >起名取名</option>
-                                        <option value="357" >影视/配音/歌词</option>
-                                        <option value="192" >生活服务</option>
-                                        <option value="218" >移动应用</option>
-                                        <option value="240" >招聘找人</option>
-                                        <option value="121" >软件开发</option>
-                                    </select>　
-<span style="color:red">(该行业是合并后的行业，将会被保留)</span>
-            </td>
-        </tr>
-        <tr>
-            <th  scope="row">
-                目标行业：            </th>
-            <td>
-                <select name="to_indus_id">
-                    <option value="0">置顶</option>
-                                          <option value="441" >品牌设计</option>
-                                          <option value="2" >网站开发</option>
-                                          <option value="201" >创意祝福</option>
-                                          <option value="249" >网游服务</option>
-                                          <option value="3" >文案写作</option>
-                                          <option value="335" >建筑/装修</option>
-                                          <option value="211" >头脑风暴</option>
-                                          <option value="350" >照片美化/编辑</option>
-                                          <option value="234" >法律服务</option>
-                                          <option value="160" >起名取名</option>
-                                          <option value="357" >影视/配音/歌词</option>
-                                          <option value="192" >生活服务</option>
-                                          <option value="218" >移动应用</option>
-                                          <option value="240" >招聘找人</option>
-                                          <option value="121" >软件开发</option>
-                                    </select>　
-<span style="color:red">(该行业是合并后将会自动被删除)</span>
-            </td>
-        </tr>
-        <td align="left" colspan="2">
-            <div style="padding-left:300px;">
-               <button value="提交" name="sbt_edit" type="submit" class="positive primary pill button"><span class="check icon"></span>提交</button>
-   
-    </div>
-        </td>
-        </tr>
-    </table>
-    </div>
+<form method="post" action="index.php?r=task/union" id="frm_cat_edit">
+<div class="main">
+<table width="96%" height="200" border="0" cellspacing="0" cellpadding="0" class="tab_m t_l">
+	<tr>
+	<th scope="row">选择行业：</th>
+	<td>
+	<select name="setid">
+	<option value="0">置顶</option>
+	<?php for($i=0;$i<count($res);$i++){?>
+	<option value="<?php echo $res[$i]['indus_id']?>"><?php echo $res[$i]['indus_name']?></option>
+	<?php }?>
+	</select>　
+	<span style="color:red">(该行业是合并后的行业，将会被保留)</span>
+	</td>
+	</tr>
+
+	<tr>
+	<th  scope="row">目标行业：</th>
+	<td>
+	<select name="delid">
+	<option value="0">置顶</option>
+	<?php for($i=0;$i<count($res);$i++){?>
+	<option value="<?php echo $res[$i]['indus_id']?>"><?php echo $res[$i]['indus_name']?></option>
+	<?php }?>
+	</select>　
+	<span style="color:red">(该行业是合并后将会自动被删除)</span>
+	</td>
+	</tr>
+<td align="left" colspan="2">
+<div style="padding-left:300px;">
+<button value="industry" name="submit" type="submit" class="positive primary pill button">
+<span class="check icon"></span>提交</button>
+</div>
+</td>
+</tr>
+</table>
+</div>
 </form>
 </div>
  
