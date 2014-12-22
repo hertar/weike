@@ -31,7 +31,7 @@
     <div class="tabcon">
         	<div class="title"><h2>添加帮助分类</h2></div>
             <div class="detail">
-                <form method="post" action="index.php?do=article&view=cat_edit" id="frm_cat_edit" >
+                <form method="post" action="index.php?r=article/category_update_pro" id="frm_cat_edit" >
                 <input type="hidden" name="do" value="article">
                 <input type="hidden" name="view" value="cat_edit">
                 <input type="hidden" name="hdn_art_cat_id" value="">
@@ -45,7 +45,9 @@
                                      msg = '请选择父分类' 
                                      title='你准备哪类的父分类呢？' 
                                      msgArea="msg_cat_id">
-                                                <option value=100>帮助中心</option>                                                <option value=294>&nbsp;&nbsp;&nbsp; |-新手上路</option>                                                <option value=347>&nbsp;&nbsp;&nbsp;&nbsp; |--违规</option>                                                <option value=346>&nbsp;&nbsp;&nbsp;&nbsp; |--交易维权</option>                                                <option value=345>&nbsp;&nbsp;&nbsp;&nbsp; |--名词解答</option>                                                <option value=364>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |---234</option>                                                <option value=327>&nbsp;&nbsp;&nbsp;&nbsp; |--账号管理</option>                                                <option value=312>&nbsp;&nbsp;&nbsp;&nbsp; |--如何支付</option>                                                <option value=311>&nbsp;&nbsp;&nbsp;&nbsp; |--如何赚钱</option>                                                <option value=310>&nbsp;&nbsp;&nbsp;&nbsp; |--相关认证</option>                                                <option value=298>&nbsp;&nbsp;&nbsp;&nbsp; |--注册登陆</option>                                                <option value=362>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |---dddd</option>                                                <option value=297>&nbsp;&nbsp;&nbsp;&nbsp; |--提现充值</option>                                                <option value=296>&nbsp;&nbsp;&nbsp;&nbsp; |--账号安全</option>                                                <option value=293>&nbsp;&nbsp;&nbsp; |-常见问题</option>                                                <option value=326>&nbsp;&nbsp;&nbsp;&nbsp; |--交易付款</option>                                                <option value=319>&nbsp;&nbsp;&nbsp;&nbsp; |--账号充值</option>                                                <option value=291>&nbsp;&nbsp;&nbsp; |-威客商城</option>                                                <option value=325>&nbsp;&nbsp;&nbsp;&nbsp; |--威客服务</option>                                                <option value=324>&nbsp;&nbsp;&nbsp;&nbsp; |--威客作品</option>                                                <option value=323>&nbsp;&nbsp;&nbsp;&nbsp; |--商城规则</option>                                                <option value=290>&nbsp;&nbsp;&nbsp; |-任务大厅</option>                                                <option value=329>&nbsp;&nbsp;&nbsp;&nbsp; |--我是服务商</option>                                                <option value=328>&nbsp;&nbsp;&nbsp;&nbsp; |--我是买家</option>                                                <option value=309>&nbsp;&nbsp;&nbsp;&nbsp; |--支付汇款</option>                                                <option value=308>&nbsp;&nbsp;&nbsp;&nbsp; |--任务选标</option>                                                <option value=307>&nbsp;&nbsp;&nbsp;&nbsp; |--线下交易</option>                                                <option value=306>&nbsp;&nbsp;&nbsp;&nbsp; |--招标任务</option>                                                <option value=305>&nbsp;&nbsp;&nbsp;&nbsp; |--悬赏任务</option>                                                <option value=304>&nbsp;&nbsp;&nbsp;&nbsp; |--雇佣任务</option>                                                <option value=303>&nbsp;&nbsp;&nbsp;&nbsp; |--任务问题</option>                                                <option value=302>&nbsp;&nbsp;&nbsp;&nbsp; |--评价&等级</option>                                                <option value=301>&nbsp;&nbsp;&nbsp;&nbsp; |--参与任务</option>                                                <option value=300>&nbsp;&nbsp;&nbsp;&nbsp; |--任务中标</option>                                           		 </select>
+                                                <option value=100>帮助中心</option>   
+                                                <option value=294>&nbsp;&nbsp;&nbsp; |-新手上路</option>
+                                                <option value=347>&nbsp;&nbsp;&nbsp;&nbsp; |--违规</option>                                                <option value=346>&nbsp;&nbsp;&nbsp;&nbsp; |--交易维权</option>                                                <option value=345>&nbsp;&nbsp;&nbsp;&nbsp; |--名词解答</option>                                                <option value=364>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |---234</option>                                                <option value=327>&nbsp;&nbsp;&nbsp;&nbsp; |--账号管理</option>                                                <option value=312>&nbsp;&nbsp;&nbsp;&nbsp; |--如何支付</option>                                                <option value=311>&nbsp;&nbsp;&nbsp;&nbsp; |--如何赚钱</option>                                                <option value=310>&nbsp;&nbsp;&nbsp;&nbsp; |--相关认证</option>                                                <option value=298>&nbsp;&nbsp;&nbsp;&nbsp; |--注册登陆</option>                                                <option value=362>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |---dddd</option>                                                <option value=297>&nbsp;&nbsp;&nbsp;&nbsp; |--提现充值</option>                                                <option value=296>&nbsp;&nbsp;&nbsp;&nbsp; |--账号安全</option>                                                <option value=293>&nbsp;&nbsp;&nbsp; |-常见问题</option>                                                <option value=326>&nbsp;&nbsp;&nbsp;&nbsp; |--交易付款</option>                                                <option value=319>&nbsp;&nbsp;&nbsp;&nbsp; |--账号充值</option>                                                <option value=291>&nbsp;&nbsp;&nbsp; |-威客商城</option>                                                <option value=325>&nbsp;&nbsp;&nbsp;&nbsp; |--威客服务</option>                                                <option value=324>&nbsp;&nbsp;&nbsp;&nbsp; |--威客作品</option>                                                <option value=323>&nbsp;&nbsp;&nbsp;&nbsp; |--商城规则</option>                                                <option value=290>&nbsp;&nbsp;&nbsp; |-任务大厅</option>                                                <option value=329>&nbsp;&nbsp;&nbsp;&nbsp; |--我是服务商</option>                                                <option value=328>&nbsp;&nbsp;&nbsp;&nbsp; |--我是买家</option>                                                <option value=309>&nbsp;&nbsp;&nbsp;&nbsp; |--支付汇款</option>                                                <option value=308>&nbsp;&nbsp;&nbsp;&nbsp; |--任务选标</option>                                                <option value=307>&nbsp;&nbsp;&nbsp;&nbsp; |--线下交易</option>                                                <option value=306>&nbsp;&nbsp;&nbsp;&nbsp; |--招标任务</option>                                                <option value=305>&nbsp;&nbsp;&nbsp;&nbsp; |--悬赏任务</option>                                                <option value=304>&nbsp;&nbsp;&nbsp;&nbsp; |--雇佣任务</option>                                                <option value=303>&nbsp;&nbsp;&nbsp;&nbsp; |--任务问题</option>                                                <option value=302>&nbsp;&nbsp;&nbsp;&nbsp; |--评价&等级</option>                                                <option value=301>&nbsp;&nbsp;&nbsp;&nbsp; |--参与任务</option>                                                <option value=300>&nbsp;&nbsp;&nbsp;&nbsp; |--任务中标</option>                                           		 </select>
                         <span id="msg_cat_id"></span>
                         </td>
                       </tr>
@@ -53,7 +55,7 @@
                       <tr>
                         <th scope="row">分类名称：</th>
                         <td> 
-                         <input type="text" class="txt" style=" width:260px;" name="txt_cat_name" id="txt_cat_name" value="" maxlength="20" 
+                         <input type="text" class="txt" style=" width:260px;" name="txt_cat_name" id="txt_cat_name" value="<?php echo $arr['cat_name']?>" maxlength="20" 
                          limit="required:true;len:2-20" 
                          msg="分类名称不能为空，长度限制在3-20" 
                          msgArea="cat_name_msg" 
@@ -64,7 +66,7 @@
                       <tr>
                         <th scope="row">排序：</th>
                         <td>
-                         <input type="text"  class="txt" style=" width:260px;" id="txt_listorder" name="txt_listorder" value="1" maxlength="5" 
+                         <input type="text"  class="txt" style=" width:260px;" id="txt_listorder" name="txt_listorder" value="<?php echo $arr['listorder'];?>" maxlength="5" 
 limit = "required:true;type:int" 
                                 onkeyup="clearstr(this)"
                                 msg = '请填写帮助分类{lang:order' 
@@ -77,7 +79,9 @@ limit = "required:true;type:int"
                         <th scope="row">是否推荐：</th>
                         <td>
                           <p>
-                            <label><input type="checkbox" value="1" name="chk_is_show" />&nbsp;是</label> <br />
+                            <label>
+                                <input type="checkbox" value="1" name="chk_is_show" />&nbsp;是
+                            </label> <br />
                           </p>
                         </td>
                       </tr>
@@ -85,10 +89,11 @@ limit = "required:true;type:int"
  
                     
                     <tr>
+                        <input type="hidden" name="art_cat_id" value="<?php echo $arr['art_cat_id']; ?>">
                         <th scope="row">&nbsp;</th>
                     	<td>
-                    	<button name="sbt_edit" value="1" onclick="return checkForm(document.getElementById('frm_cat_edit'),false)" class="pill positive primary  button" type="submit"><span class="check icon"></span>提交</button>
-                    	<button class="pill button" type="button" onclick="history.go(-1);" value="返回上一页"><span class="uparrow icon"></span>返回上一页</button>
+<button name="sbt_edit" value="1" onclick="return checkForm(document.getElementById('frm_cat_edit'),false)" class="pill positive primary  button" type="submit"><span class="check icon"></span>提交</button>
+<button class="pill button" type="button" onclick="history.go(-1);" value="返回上一页"><span class="uparrow icon"></span>返回上一页</button>
                     	</td>
                     </tr>
                     

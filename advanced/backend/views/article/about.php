@@ -1,3 +1,7 @@
+<?php
+use yii\widgets\LinkPager;
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -18,25 +22,25 @@
 <div id="append_parent"></div> 
  
 <div class="page_title">	
-    	<h1>关于网站管理</h1>
+    	<h1>网站公告管理</h1>
          <div class="tool">
-            <a href="index.php?r=article/about" class="here" >关于网站列表</a>
-            <a href="index.php?r=article/about_edit" >关于网站添加</a>
+            <a href="index.php?r=article/about" class="here" >网站公告列表</a>
+            <a href="index.php?r=article/about_edit" >网站公告添加</a>
     	</div>
 </div>
     <!--页头结束-->
 
     <!--提示结束-->
-     
+        
         <div class="box search p_relative">
     	<div class="title"><h2>搜索</h2></div>
         <div class="detail" id="detail">
            
-    <form action="#" method="get" name="s" id="sl">
-            	<input type="hidden" name="do" value="article">
-<input type="hidden" name="view" value="list">
-<input type="hidden" name="type" value="about">
-<input type="hidden" name="page" value="1">
+    <form action="index.php?r=article/about_search" method="post" name="s" id="sl">
+        <input type="hidden" name="do" value="article">
+        <input type="hidden" name="view" value="list">
+        <input type="hidden" name="type" value="bulletin">
+        <input type="hidden" name="page" value="1">
  
  
                 <table cellspacing="0" cellpadding="0">
@@ -47,27 +51,25 @@
                             <th>文章标题</th>
                             <td colspan="3"><input type="text" value="" name="w[art_title]" class="txt"/>*支持模糊查询</td>
                             
-</tr>
-    					
-
-                        
+</tr> 
                         <tr> 
 <th>排序</th>
 <td>
-                                <select name="ord[]">
+                                <select name="paixu">
                                 	<option value="art_id"  selected="selected">默认排序</option>
-                                	<option value="pub_time" >发布时间</option>
+                                	<option value="pub_time" value="pub_time" >发布时间</option>
                                 </select>
-                                <select name="ord[]">
+                                <select name="zengjian">
                                		 <option selected="selected"  value="desc">递减</option>
                                 	<option  value="asc">递增</option>
                                 </select>
 </td> 
                             <th>显示结果</th>
-                            <td><select name="page_size">
+                             <td>
+                                 <select name="page_size">
 <option value="10" selected="selected">每页显示10</option>
-<option value="20" >每页显示20</option>
-<option value="30" >每页显示30</option>
+                    <option value="20" >每页显示20</option>
+                    <option value="30" >每页显示30</option>
 </select>
                               	<button class="pill" type="submit" value="搜索" name="sbt_search">
                             		<span class="icon magnifier"></span>搜索</button>
@@ -84,7 +86,7 @@
     <!--搜索结束-->
     
     <div class="box list">
-    	<div class="title"><h2>关于网站列表</h2></div>
+    	<div class="title"><h2>网站公告列表</h2></div>
         <div class="detail">
         	<form action="" id='frm_list' method="post">
         		<div id="ajax_dom">
@@ -95,7 +97,7 @@
                     <th width="20">ID
 </th>
                     <th width="60">分类</th>
-                    <th width="30%" >关于网站标题</th>
+                    <th width="30%" >网站公告标题</th>
                     <th width="60">访问量</th>
                     <th width="60">发布者</th>
                     <th width="60">发布时间</th>
@@ -103,44 +105,36 @@
                     <th width="25%">操作</th>
                   </tr>
   </thead>
+                
                   <tbody>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="300" class="checkbox">300</td>
+  <?php foreach($model as $key=>$val){?>
+                      <tr class="item" id="<?php echo $val['art_id'];?>">
+                  	<td><input type="checkbox" name="ckb" value="<?php echo $val['art_id']?>" 
+                                   class="checkbox"><?php echo $val['art_id']?></td>
                     <td class="td28 wraphide">
-                    	关于网站</td>
+                    	关于我们</td>
                     <td>
-                    	<a href="index.php?do=article&view=edit&art_id=300&type=about&page=1" >
-联系我们</a>
+                    	<a href="index.php?do=article&view=edit&art_id=308&type=bulletin&page=1" >
+                            <?php echo $val['art_title']?>
+</a>
 </td>
                     <td class="wraphide">6</td>
-                    <td class="wraphide">客客族</td>
-                    <td class="ws_break">2012-08-31</td>
+                    <td class="wraphide"><?php echo $val['username'];?></td>
+                    <td class="ws_break"><?php echo date('Y-m-d H:m:s',time($val['pub_time']));?></td>
                     <td>
                     	 
-<a href="/public/index.php?do=single&art_id=300" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=300&type=about&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=about&ord[0]=&ord[1]=&art_id=300&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
+<a href="/public/index.php?do=single&art_id=308" target="_blank" class="button">
+    <span class="book icon"></span>浏览</a> 
+<a href="index.php?r=article/about_update&id=<?php echo $val['art_id'];?>" class="button dbl_target">
+    <span class="pen icon"></span>编辑</a>
+<a   onclick="return cdel(<?php echo $val['art_id']?>);" class="button">
+    <span class="trash icon">
+    </span>删除</a>
 </td>
                   </tr>
-                                    <tr class="item">
-                  	<td><input type="checkbox" name="ckb[]" value="299" class="checkbox">299</td>
-                    <td class="td28 wraphide">
-                    	关于网站</td>
-                    <td>
-                    	<a href="index.php?do=article&view=edit&art_id=299&type=about&page=1" >
-关于我们</a>
-</td>
-                    <td class="wraphide">8</td>
-                    <td class="wraphide">客客族</td>
-                    <td class="ws_break">2012-08-31</td>
-                    <td>
-                    	 
-<a href="/public/index.php?do=single&art_id=299" target="_blank" class="button"><span class="book icon"></span>浏览</a> 
-<a href="index.php?do=article&view=edit&art_id=299&type=about&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=list&w[username]=&w[art_title]=&w[art_cat_id]=&page_size=&page=&type=about&ord[0]=&ord[1]=&art_id=299&ac=del&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-</td>
-                  </tr>
+  <?php } ?>
                                     </tbody>
+ 
   <tfoot>
                   <tr>
                     <td colspan="7">
@@ -157,8 +151,13 @@
   <div class="page"></div>
   </div>
         	</form>
-        </div>       
+            <div class ="page">
+  <?= LinkPager::widget(['pagination' => $pages]); ?> 
+  </div>
+        </div>  
+
     </div>
+    
 <!--主体结束-->
 <script type="text/javascript">
 function createHtml(writedir,filename){
@@ -224,7 +223,19 @@ if (s) {
 c = s;
 }
 d.confirm(c, function() {
-window.location.href = o.href;
+ $.ajax({
+   type: "GET",
+   url: "index.php?r=article/about_del",
+    data: "art_id="+o,
+   success: function(msg){
+    if(msg==1){
+        $("#"+o).remove();
+    }else{
+        alert("删除失败");
+    }
+   }
+   
+}); 
 });
 return false;
 }
@@ -284,11 +295,38 @@ function batch_act(obj, frm) {
 d = art.dialog;
 var frm = frm;
 var c = $(obj).val();
-var conf = $(":checkbox[name='ckb[]']:checked").length;
+var conf = $(":checkbox[name='ckb']:checked").length;
 if (conf > 0) {
 d.confirm("确定" + c + '?', function() {
-$(".sbt_action").val(c);
-$("#" + frm).submit();
+var ida = document.getElementsByName("ckb");
+var idarr=new Array();
+var idaa=new Array();
+var flag=0;
+ for(var i=0;i<conf;i++){
+if(ida[i].checked==true){
+    idarr[flag]=ida[i].value;
+     idaa[flag]=ida[i].value;
+    flag++;
+    }
+}
+
+         $.ajax({
+   type: "GET",
+   url: "index.php?r=article/about_delall",
+    data: "id="+idarr,
+   success: function(msg){
+    if(msg==1){
+      for(var i=0;i<idarr.length;i++){
+          $("#"+idarr[i]).remove();
+      } 
+    }else{
+        alert("删除成功");
+    }
+   }
+   
+}); 
+//$(".sbt_action").val(c);
+//$("#" + frm).submit();
 });
 } else {
 d.alert("您没有选择任何操作项");

@@ -31,7 +31,7 @@
     <div class="tabcon">
         	<div class="title"><h2>添加文章分类</h2></div>
             <div class="detail">
-                <form method="post" action="index.php?do=article&view=cat_edit" id="frm_cat_edit" >
+                     <form method="post" action="index.php?r=article/cat_add_pro" id="frm_cat_edit" >
                 <input type="hidden" name="do" value="article">
                 <input type="hidden" name="view" value="cat_edit">
                 <input type="hidden" name="hdn_art_cat_id" value="">
@@ -45,7 +45,10 @@
                                      msg = '请选择父分类' 
                                      title='你准备哪类的父分类呢？' 
                                      msgArea="msg_cat_id">
-                                                <option value=1>客客资讯</option>                                                <option value=358>&nbsp;&nbsp;&nbsp; |-新闻列表</option>                                                <option value=203>&nbsp;&nbsp;&nbsp; |-安全交易</option>                                                <option value=202>&nbsp;&nbsp;&nbsp; |-关于我们</option>                                                <option value=17>&nbsp;&nbsp;&nbsp; |-网站公告</option>                                                <option value=7>&nbsp;&nbsp;&nbsp; |-媒体报导</option>                                                <option value=5>&nbsp;&nbsp;&nbsp; |-行业动态</option>                                                <option value=4>&nbsp;&nbsp;&nbsp; |-政策法规</option>                                                <option value=2>&nbsp;&nbsp;&nbsp; |-联系我们</option>                                           		 </select>
+                            <?php foreach ($arr as $key=>$val){?>
+                            <option value=<?php echo $val['art_cat_id']?>><?php echo $val['tmp']?><?php echo $val['cat_name']?></option>  
+                            <?php } ?>
+                        </select>
                         <span id="msg_cat_id"></span>
                         </td>
                       </tr>
@@ -87,6 +90,7 @@ limit = "required:true;type:int"
                     <tr>
                         <th scope="row">&nbsp;</th>
                     	<td>
+                    
                     	<button name="sbt_edit" value="1" onclick="return checkForm(document.getElementById('frm_cat_edit'),false)" class="pill positive primary  button" type="submit"><span class="check icon"></span>提交</button>
                     	<button class="pill button" type="button" onclick="history.go(-1);" value="返回上一页"><span class="uparrow icon"></span>返回上一页</button>
                     	</td>

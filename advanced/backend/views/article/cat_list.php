@@ -1,4 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+use yii\widgets\LinkPager;
+use yii\filters\AccessControl;
+use yii\web\Controller;
+use common\models\LoginForm;
+use yii\filters\VerbFilter;
+use app\models\WkWitkeyArticleCategory;
+use app\models\article;
+use yii\data\Pagination;
+use yii\db\Query;
+?>    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -43,7 +53,7 @@
     	<div class="title"><h2>搜索</h2></div>
         <div class="detail" id="detail">
            
-    <form action="" method="get">
+    <form action="index.php?r=article/cat_search" method="post">
             	<input type="hidden" name="do" value="article">
 <input type="hidden" name="view" value="cat_list">
 <input type="hidden" name="type" value="art">
@@ -51,11 +61,15 @@
  
                 <table cellspacing="0" cellpadding="0">
 <tbody>
+    
                         <tr>
                             <th>所属分类</th>
                             <td>
                             	<select   name="w[art_cat_pid]" id="catid">
-                            	<option value=1>客客资讯</option><option value=358>&nbsp;&nbsp;&nbsp; |-新闻列表</option><option value=203>&nbsp;&nbsp;&nbsp; |-安全交易</option><option value=202>&nbsp;&nbsp;&nbsp; |-关于我们</option><option value=17>&nbsp;&nbsp;&nbsp; |-网站公告</option><option value=7>&nbsp;&nbsp;&nbsp; |-媒体报导</option><option value=5>&nbsp;&nbsp;&nbsp; |-行业动态</option><option value=4>&nbsp;&nbsp;&nbsp; |-政策法规</option><option value=2>&nbsp;&nbsp;&nbsp; |-联系我们</option></select>
+                                     <?php foreach ($arr as $key=>$val){ ?>
+                            	<option value=<?php echo $val['art_cat_id'];?>><?php echo $val['tmp'];?><?php echo $val['cat_name'];?></option>
+                                     <?php } ?>
+                                </select>
 (父分类)
                             </td>
                             <th>分类名字</th>
@@ -67,18 +81,18 @@
 <th>结果排序</th>
 <td>
 
-<select name="ord[]">
+<select name="paixu">
                                 <option value="art_cat_id"  selected="selected">默认排序</option>
                                 <option value="on_time" >添加时间</option>
                                 </select>
-                                <select name="ord[]">
+                                <select name="zengjian">
                                 <option selected="selected"  value="desc">递减</option>
                                 <option  value="asc">递增</option>
                                 </select>
 <button class="pill" type="submit" value=搜索 name="sbt_search">
                             		<span class="icon magnifier">&nbsp;</span>搜索</button>
 </td>
-                             
+                              
                             <td colspan="3"> 
                               	&nbsp;
 </td>
@@ -106,10 +120,12 @@
                 </tr>
                 
                  <tbody id="indus_item_l_1" style="display:;">
-                  <tr class="item" align="left">
+                     <?php foreach($model as $key=>$val){?>
+                  <tr class="item" align="left" id="<?php echo $val['art_cat_id'];?>">
                   <!--	<td>1</td>-->
                     <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_1" value="10" onblur="edit_listorder(1,this.value)"></td>
+                    	<input type="text" size=3 class="txt" name="indus_item_listorder_1"
+    value="<?php echo $val['listorder'];?>" onblur="edit_listorder(<?php echo $val['art_cat_id']?>,this.value)"></td>
                     <td align="left">
                     	<span class="jia" 
 onclick="if($(this).attr('class')=='jia'){
@@ -120,362 +136,69 @@ $(this).attr('class','jia')}
 " >&nbsp;&nbsp;&nbsp;&nbsp;</span>
                             <span id="indus_item_span_1"
  style="font-weight:900;font-size:16px;">
-                            <input type="text" class="txt" value="客客资讯" 
-readonly="readonly" >
+  <input type="text"  onblur="edit_cat_name(<?php echo $val['art_cat_id']?>,this.value)" class="txt" value="<?php echo $val['cat_name'];?>" 
+ >
 </span>
-<a href="javascript:;" style="color:#ff6600" onclick="addchild(1,'')">增加子类</a>					
+<a href="javascript:;" style="color:#ff6600" onclick="addchild(<?php echo $val['art_cat_id']?>,'')">增加子类</a>					
 </td>                                
-                    <td>2011-12-27 17:39:05</td>
+                    <td><?php echo date('Y-m-d H:m:s',time($val['on_time']));?></td>
                     <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=1&art_cat_pid=0&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-
+                        <a href="index.php?r=article/category_update&id=<?php echo $val['art_cat_id'];?>" class="button dbl_target">
+    <span class="pen icon"></span>编辑</a>
+<a   onclick="return cdel(<?php echo $val['art_cat_id']?>);" class="button">
+    <span class="trash icon"></span>删除</a>
 </td>
                   </tr>
-  </tbody>
-                   <tbody id="indus_item_l_2" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>2</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_2" value="2" onblur="edit_listorder(2,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp; |-<span class="jian" 
->&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_2"
- style="font-weight:600;font-size:14px;">
-                            <input type="text" class="txt" value="联系我们" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2011-12-16 17:08:59</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=2&art_cat_pid=1&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=2&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_4" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>4</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_4" value="1" onblur="edit_listorder(4,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp; |-<span class="jian" 
->&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_4"
- style="font-weight:600;font-size:14px;">
-                            <input type="text" class="txt" value="政策法规" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2010-05-17 17:44:57</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=4&art_cat_pid=1&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=4&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_5" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>5</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_5" value="1" onblur="edit_listorder(5,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp; |-<span class="jian" 
->&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_5"
- style="font-weight:600;font-size:14px;">
-                            <input type="text" class="txt" value="行业动态" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2010-05-17 21:06:46</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=5&art_cat_pid=1&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=5&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_7" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>7</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_7" value="1" onblur="edit_listorder(7,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp; |-<span class="jian" 
->&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_7"
- style="font-weight:600;font-size:14px;">
-                            <input type="text" class="txt" value="媒体报导" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2010-05-17 21:07:27</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=7&art_cat_pid=1&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=7&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_17" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>17</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_17" value="0" onblur="edit_listorder(17,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp; |-<span class="jia" 
-onclick="if($(this).attr('class')=='jia'){
-showids_17('show');
-$(this).attr('class','jian');
-}else{showids_17('hide');
-$(this).attr('class','jia')}
-" >&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_17"
- style="font-weight:600;font-size:14px;">
-                            <input type="text" class="txt" value="网站公告" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2010-07-05 17:53:25</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=17&art_cat_pid=1&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=17&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_360" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>360</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_360" value="1" onblur="edit_listorder(360,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp;&nbsp; |--<span class="jian" 
->&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_360"
- style="font-weight:300;font-size:12px;">
-                            <input type="text" class="txt" value="你好吗" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2012-09-07 10:38:36</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=360&art_cat_pid=17&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=360&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_202" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>202</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_202" value="1" onblur="edit_listorder(202,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp; |-<span class="jian" 
->&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_202"
- style="font-weight:600;font-size:14px;">
-                            <input type="text" class="txt" value="关于我们" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2011-12-27 10:20:44</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=202&art_cat_pid=1&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=202&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_203" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>203</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_203" value="0" onblur="edit_listorder(203,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp; |-<span class="jia" 
-onclick="if($(this).attr('class')=='jia'){
-showids_203('show');
-$(this).attr('class','jian');
-}else{showids_203('hide');
-$(this).attr('class','jia')}
-" >&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_203"
- style="font-weight:600;font-size:14px;">
-                            <input type="text" class="txt" value="安全交易" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2010-12-18 15:54:41</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=203&art_cat_pid=1&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=203&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_359" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>359</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_359" value="1" onblur="edit_listorder(359,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp;&nbsp; |--<span class="jia" 
-onclick="if($(this).attr('class')=='jia'){
-showids_359('show');
-$(this).attr('class','jian');
-}else{showids_359('hide');
-$(this).attr('class','jia')}
-" >&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_359"
- style="font-weight:300;font-size:12px;">
-                            <input type="text" class="txt" value="111111111" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2012-09-06 17:51:52</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=359&art_cat_pid=203&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=359&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_365" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>365</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_365" value="1" onblur="edit_listorder(365,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |---<span class="jian" 
->&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_365"
- style="font-weight:0;font-size:10px;">
-                            <input type="text" class="txt" value="rrrrrr" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2012-09-07 11:35:58</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=365&art_cat_pid=359&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=365&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_361" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>361</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_361" value="1" onblur="edit_listorder(361,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp;&nbsp; |--<span class="jian" 
->&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_361"
- style="font-weight:300;font-size:12px;">
-                            <input type="text" class="txt" value="ffffff" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2012-09-07 10:42:10</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=361&art_cat_pid=203&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=361&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_358" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>358</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_358" value="1" onblur="edit_listorder(358,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp; |-<span class="jia" 
-onclick="if($(this).attr('class')=='jia'){
-showids_358('show');
-$(this).attr('class','jian');
-}else{showids_358('hide');
-$(this).attr('class','jia')}
-" >&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_358"
- style="font-weight:600;font-size:14px;">
-                            <input type="text" class="txt" value="新闻列表" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2011-12-19 11:08:10</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=358&art_cat_pid=1&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=358&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                   <tbody id="indus_item_l_363" style="display:none;">
-                  <tr class="item" align="left">
-                  <!--	<td>363</td>-->
-                    <td class="td28">
-                    	<input type="text" size=3 class="txt" name="indus_item_listorder_363" value="1" onblur="edit_listorder(363,this.value)"></td>
-                    <td align="left">
-                    	&nbsp;&nbsp;&nbsp;&nbsp; |--<span class="jian" 
->&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <span id="indus_item_span_363"
- style="font-weight:300;font-size:12px;">
-                            <input type="text" class="txt" value="2222" 
-readonly="readonly" >
-</span>
-</td>                                
-                    <td>2012-09-07 11:05:52</td>
-                    <td>
-<a href="index.php?do=article&view=cat_edit&art_cat_id=363&art_cat_pid=358&type=art" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=article&view=cat_list&type=art&w[art_cat_pid]=&w[cat_name]=
-		&=&art_cat_id=363&ac=del"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-
-</td>
-                  </tr>
-  </tbody>
-                                 <tr>
-               	<td>&nbsp;</td>
-                    <td colspan="6">
-                   
-                    
-                    <div class="clearfix">
-                  		<div class="clearfix">	
-                      <!--  <a href="index.php?do=task&view=union_industry"   class="button pill negative"><span class="icon cog">&nbsp;</span></a>-->
-<button  name="sbt_action" type="submit" value=提交 class="positive primary pill button" /><span class="check icon"></span>提交</button>
-                    </div>
-                    </div>
-                    </td>
-                  </tr>
-                </tbody>
+                     
+  </tbody> 
+                     <?php } ?>
               </table>
 
    	</form>
+          
         </div>       
     </div>
+      <div class="page">
+            <?= LinkPager::widget(['pagination' => $pages]); ?>
+                </div>
+    <style>
+        .pagination{float: left; clear: all;};
+        </style>
 <script type="text/javascript">
 
-    	function edit_listorder(iid,v){
-    		$.get('index.php?do=article&view=cat_list&ac=editlistorder',{iid:iid,val:v});
+    	function edit_cat_name(iid,v){
+            
+         $.ajax({
+   type: "GET",
+   url: "index.php?r=article/category_cat_name",
+    data: "iid="+iid+"&v="+v,
+   success: function(msg){
+    if(msg==1){
+   
+    }else{
+        alert("修改失败");
+    }
+   }
+   
+}); 
+  	
+       
     	}
-    	
+     	function edit_listorder(iid,v){
+            
+         $.ajax({
+   type: "GET",
+   url: "index.php?r=article/category_listorder",
+    data: "iid="+iid+"&v="+v,
+   success: function(msg){
+    if(msg==1){
+   
+    }else{
+        alert("修改失败");
+    }
+   }
+}); 
+}   	
     	var newindus_c = 0;
     	function addchild(pid,ext){
     		newindus_c++;
@@ -784,10 +507,27 @@ if (s) {
 c = s;
 }
 d.confirm(c, function() {
-window.location.href = o.href;
-});
+    $.ajax({
+      type: "GET",
+      url: "index.php?r=article/category_del",
+       data: "art_cat_id="+o,
+      success: function(msg){
+       if(msg==1){
+           $("#"+o).remove();
+       }else{
+           alert("删除失败");
+       }
+      }
+
+   }); 
+}
+);
 return false;
 }
+
+
+
+
 function cpass(o, s, type) {
 d = art.dialog;
 if (type == 1) {

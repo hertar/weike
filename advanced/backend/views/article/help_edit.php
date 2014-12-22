@@ -31,13 +31,13 @@
     <div class="tabcon">
         	<div class="title"><h2>添加帮助</h2></div>       	
             <div class="detail">
-                <form method="post" action="index.php?do=article&view=edit" id="frm_art_edit" enctype="multipart/form-data">
-                <input type="hidden" name="pk[art_id]" value="" id='art_id'>
+                <form method="post" action="index.php?r=article/help_add_pro" id="frm_art_edit" enctype="multipart/form-data">
+                <input type="hidden" name="pk[art_id]" value="200" id='art_id'>
                 <input type="hidden" name="type" value="help">
                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     
                       <tr>
-                        <th scope="row" width="130">帮助标题：</th>
+                        <th  scope="row" width="130">帮助标题：</th>
                         <td>
                         <input type="text" name="fields[art_title]" id="txt_art_title"  value="" maxlength="100"  class="txt" style=" width:260px;"
                         limit="required:true;len:3-100;general:false" 
@@ -55,177 +55,10 @@
                                      msg = '请选择帮助分类' 
                                      title='你准备选择哪类的帮助？' 
                                      msgArea="msg_cat_id">
-<option value="">请选择分类下的子类</option>                        <option value=100>帮助中心</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=294>&nbsp;&nbsp;&nbsp; |-新手上路</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=347>&nbsp;&nbsp;&nbsp;&nbsp; |--违规</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=346>&nbsp;&nbsp;&nbsp;&nbsp; |--交易维权</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=345>&nbsp;&nbsp;&nbsp;&nbsp; |--名词解答</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=364>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |---234</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=327>&nbsp;&nbsp;&nbsp;&nbsp; |--账号管理</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=312>&nbsp;&nbsp;&nbsp;&nbsp; |--如何支付</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=311>&nbsp;&nbsp;&nbsp;&nbsp; |--如何赚钱</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=310>&nbsp;&nbsp;&nbsp;&nbsp; |--相关认证</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=298>&nbsp;&nbsp;&nbsp;&nbsp; |--注册登陆</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=362>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |---dddd</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=297>&nbsp;&nbsp;&nbsp;&nbsp; |--提现充值</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=296>&nbsp;&nbsp;&nbsp;&nbsp; |--账号安全</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=293>&nbsp;&nbsp;&nbsp; |-常见问题</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=326>&nbsp;&nbsp;&nbsp;&nbsp; |--交易付款</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=319>&nbsp;&nbsp;&nbsp;&nbsp; |--账号充值</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=291>&nbsp;&nbsp;&nbsp; |-威客商城</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=325>&nbsp;&nbsp;&nbsp;&nbsp; |--威客服务</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=324>&nbsp;&nbsp;&nbsp;&nbsp; |--威客作品</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=323>&nbsp;&nbsp;&nbsp;&nbsp; |--商城规则</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=290>&nbsp;&nbsp;&nbsp; |-任务大厅</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=329>&nbsp;&nbsp;&nbsp;&nbsp; |--我是服务商</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=328>&nbsp;&nbsp;&nbsp;&nbsp; |--我是买家</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=309>&nbsp;&nbsp;&nbsp;&nbsp; |--支付汇款</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=308>&nbsp;&nbsp;&nbsp;&nbsp; |--任务选标</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=307>&nbsp;&nbsp;&nbsp;&nbsp; |--线下交易</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=306>&nbsp;&nbsp;&nbsp;&nbsp; |--招标任务</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=305>&nbsp;&nbsp;&nbsp;&nbsp; |--悬赏任务</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=304>&nbsp;&nbsp;&nbsp;&nbsp; |--雇佣任务</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=303>&nbsp;&nbsp;&nbsp;&nbsp; |--任务问题</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=302>&nbsp;&nbsp;&nbsp;&nbsp; |--评价&等级</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=301>&nbsp;&nbsp;&nbsp;&nbsp; |--参与任务</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        <option value=300>&nbsp;&nbsp;&nbsp;&nbsp; |--任务中标</option><!--	<optgroup >
-</optgroup>
-
--->
-
-                        
+                                        <?php foreach($arr as $key =>$val){?>
+                                    <option value="<?php echo $val['art_cat_id'];?>"><?php echo $val['tmp'];?><?php echo $val['cat_name'];?></option>
+                                    <?php } ?>   
+           
                      </select>
                      <span id="msg_cat_id"></span>
  <span>请勿选择父级分类，添加在父级分类下的帮助会无法在帮助中心展示</span> 
