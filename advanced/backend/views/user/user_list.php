@@ -44,10 +44,34 @@
 <tr>
 <th>显示条数</th>
 <td>
-<select name="slt_page_size" class="ps vm">
-<option value="10" selected="selected">每页显示10</option>
-<option value="20" >每页显示20</option>
-<option value="30" >每页显示30</option>
+<select name="slt_page_size" class="ps vm" id="spage" onchange="sort()">
+ <?php
+    if($page=='3'){
+ ?> 
+<option value="3" selected="selected">每页显示3</option>
+<option value="5" >每页显示5</option>
+<option value="10" >每页显示10</option>
+<?php
+    }elseif($page=="5"){
+?>
+<option value="3" >每页显示3</option>
+<option value="5" selected="selected">每页显示5</option>
+<option value="10" >每页显示10</option>
+<?php
+    }elseif($page=="10"){
+?>
+<option value="3" >每页显示3</option>
+<option value="5" s>每页显示5</option>
+<option value="10" elected="selected">每页显示10</option>
+<?php
+    }else{
+?>
+<option value="3" selected="selected">每页显示3</option>
+<option value="5" >每页显示5</option>
+<option value="10" >每页显示10</option>
+<?php
+    }
+?>
 </select>
 </td>
 <th>结果排序</th>
@@ -153,7 +177,7 @@
             <td class="td25 wraphide"><a href="javascript:void(0)" ><?php echo $v['username']?></a></td>
             <td class="wraphide"><?php echo $v['groupname']?></td>
 <td class="wraphide">普通</td>
-<td><?php echo $v['date']?></td>
+<td><?php echo date("Y-m-d",$v['reg_time'])?></td>
             <td><div class="ws_break" style="width:70%;"><?php echo $v['reg_ip']?></div></td>
             <td><div class="ws_break" style="width:70%;"><?php echo $v['credit']?></div></td>
 <td><div class="ws_break" style="width:70%;">￥<?php echo $v['balance']?>元</div></td>
@@ -359,8 +383,9 @@ if(confirm("确认删除？"))
 function sort(){
     ords=$("#ords").val();
     orda=$("#orda").val();
-    //alert(ords);
-    location.href="index.php?r=user/user_list&ords="+ords+"&orda="+orda;
+    spage=$("#spage").val();
+    //alert(page);
+    location.href="index.php?r=user/user_list&ords="+ords+"&orda="+orda+"&spage="+spage;
     }
 
 </script>

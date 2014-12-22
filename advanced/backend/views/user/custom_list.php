@@ -63,19 +63,60 @@
                         <th>
                             结果排序                        </th>
                         <td>
-                            <select name="ord[uid]">
-                                <option selected="selected"   value="desc">编号倒序</option>
-                                <option   value="asc">编号正序</option>
+                            <select name="ord" id="ord" onchange="sort()">
+                              <?php
+                                if($ord=="desc"){
+                              ?>
+                                <option   selected="selected"  value="desc">编号倒序</option>
+                                <option  value="asc">编号正序</option>
+                                <?
+                                }elseif($ord=="asc"){
+                                ?>
+                                <option    value="desc">编号倒序</option>
+                                <option  selected="selected" value="asc">编号正序</option>
+                                <?php
+                                }else{
+                                ?>
+                                <option    value="desc">编号倒序</option>
+                                <option  selected="selected" value="asc">编号正序</option>
+                                <?php
+                                }
+                                ?>
                             </select>
                         </td>
                         <th>
                             显示结果                        </th>
                         <td>
-                            <select name="w[page_size]">
+                            <select name="page_size" id="page_size" onchange="sort()">
+                                  <?php
+                                    if($page==3){
+                                ?>
+                                <option value="3"  selected>每页显示3</option>
+                                <option value="5" >每页显示5</option>
                                 <option value="10" >每页显示10</option>
-                                <option value="20" >每页显示20</option>
-                                <option value="30" >每页显示30</option>
+                                <?php
+                                    }elseif($page=="5"){
+                                ?>
+                                <option value="3"  >每页显示3</option>
+                                <option value="5" selected>每页显示5</option>
+                                <option value="10" >每页显示10</option>
+                                <?php
+                                    }elseif ($page=="10") {
+                                ?>
+                                <option value="3" >每页显示3</option>
+                                <option value="5" >每页显示5</option>
+                                <option value="10"  selected>每页显示10</option>
+                                <?php
+                                    }else{
+                                ?>
+                                <option value="3"  selected>每页显示3</option>
+                                <option value="5" >每页显示5</option>
+                                <option value="10" >每页显示10</option>
+                                <?php
+                                    }
+                                ?>
                             </select>
+                            
                             <button class="pill" type="submit" value="搜索" name="sbt_search">
                                 <span class="icon magnifier">&nbsp;</span>搜索                            </button>
                         </td>
@@ -165,7 +206,12 @@
                 </td>
             </tr>
         </table>
-<div class="page"></div>
+<?php
+use yii\widgets\LinkPager;
+?>
+
+<div class="page"><?= LinkPager::widget(['pagination' => $pages]) ?></div>
+
 </div>
 </form>
     </div>
@@ -340,6 +386,16 @@ if(confirm("确认删除？"))
         
 }
 }
+
+//排序
+//排序
+function sort(){
+    ord=$("#ord").val();
+ 
+    page_size=$("#page_size").val();
+    //alert(page_size);
+    location.href="index.php?r=user/custom_list&ord="+ord+"&page_size="+page_size;
+  }
 </script>
 </body>
 </html>

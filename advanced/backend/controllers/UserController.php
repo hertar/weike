@@ -25,19 +25,14 @@ class UserController extends Controller
         //print_r($_GET);
         @$ords=$_GET['ords'];
         @$orda=$_GET['orda'];
+        $page=$_GET['spage']?$_GET['spage']:3;
         if(empty($_POST)){
         $model=new \yii\db\Query();
         $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
                                 ->orderBy("$ords $orda")
                                 ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id")
                                 ->all();
-        foreach($rows as $key=>$v){
-             $rows[$key]['date']=date('Y-m-d',$v['reg_time']);
-        }      
-       
-        @$data['ords']=$ords;
-        @$data['orda']=$orda;
-        
+    
         }else{
         @$uid=$_POST['space_uid'];
         @$user_name=$_POST['space_username'];
@@ -72,17 +67,12 @@ class UserController extends Controller
             }
         }
       
-        //print_r($rows);die;
-        
-            foreach($rows as $key=>$v){
-                    $rows[$key]['date']=date('Y-m-d',$v['reg_time']);
-               } 
-                 @$data['ords']=$ords;
-                 @$data['orda']=$orda;                  
+                                
         }
-        
-     
-        $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>5]);
+        @$data['ords']=$ords;
+        @$data['orda']=$orda;   
+        @$data['spage']=$page;
+        $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>$page]);
         $rows=$model->offset($pages->offset)->limit($pages->limit)->all();
         
         //print_r($rows);die;
@@ -214,13 +204,18 @@ class UserController extends Controller
      
      //用户组
      public function actionCustom_list(){
+        $this->layout='@app/views/layouts/publics.php';
+
+        //print_r($_GET);
+        @$ord=$_GET['ord'];
+        $page=$_GET['page_size']?$_GET['page_size']:3;
        if(empty($_POST)){
         $model=new \yii\db\Query();
-        $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])->orderBy("uid desc")->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_member_group.group_id=1")->all();
-        foreach($rows as $key=>$v){
-             $rows[$key]['date']=date('Y-m-d',$v['reg_time']);
-        }      
-        $data['row']=$rows;
+        $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
+                                ->orderBy("uid $ord")
+                                ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_member_group.group_id=1")
+                                ->all();
+     
         }else{
         @$uid=$_POST['space_uid'];
         @$user_name=$_POST['space_username'];
@@ -228,7 +223,7 @@ class UserController extends Controller
         $model=new \yii\db\Query();
         if($uid&&$user_name==""){
             $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
-                                    ->orderBy("uid desc")
+                                    ->orderBy("uid $ord")
                                     ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_member_group.group_id=1 and wk_witkey_space.uid=$uid")                       
                                     ->all();
             if(!$rows){
@@ -237,7 +232,7 @@ class UserController extends Controller
         }
         if($uid==""&&$user_name){
             $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
-                                    ->orderBy("uid desc")
+                                    ->orderBy("uid $ord")
                                     ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_member_group.group_id=1 and wk_witkey_space.username='".$user_name."'")  
                                     ->all();
             if(!$rows){
@@ -247,7 +242,7 @@ class UserController extends Controller
         }
         if($uid&&$user_name){
             $rows = $model->from(['wk_witkey_space','wk_witkey_member_group'])
-                                    ->orderBy("uid desc")
+                                    ->orderBy("uid $ord")
                                     ->where("wk_witkey_space.group_id=wk_witkey_member_group.group_id and wk_witkey_member_group.group_id=1 and wk_witkey_space.uid=$uid and wk_witkey_space.username='".$user_name."'")  
                                     ->all();
             if(!$rows){
@@ -255,15 +250,14 @@ class UserController extends Controller
             }
         }
       
-        //print_r($rows);die;
-        
-            foreach($rows as $key=>$v){
-                    $rows[$key]['date']=date('Y-m-d',$v['reg_time']);
-               }    
-                 $data['row']=$rows;
         }
-          
-         return $this->renderPartial("custom_list",$data);
+        $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>$page]);
+        $rows=$model->offset($pages->offset)->limit($pages->limit)->all();
+        $data['row']=$rows;
+        $data['pages']=$pages;
+        $data['ord']=$ord;
+        $data['page']=$page;
+         return $this->render("custom_list",$data);
      }
      
      //删除
