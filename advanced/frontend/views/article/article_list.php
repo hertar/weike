@@ -125,7 +125,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                     <div class="search_box">
                         <div class="fl_l search_selcecter">
                         	<div id="search_select" class="search_options">
-                        	                           		 <a href="javascript:void(0);" class="selected" rel="task_list"><span>任务</span>▼</a>
+                        	        <a href="javascript:void(0);" class="selected" rel="task_list"><span>任务</span>▼</a>
                                		 <a href="javascript:void(0);" class="hidden"   rel="task_list">任务</a>
                            	 	<a href="javascript:void(0);" class="hidden"   rel="shop_list">商品</a>
                              </div>
@@ -153,14 +153,11 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
             	<div class="user_box clearfix grid_5">
                 	<!--注册登录按钮 start-->
                   	<ul id="login_sub" class="user_login ">
-                        <li><a href="index.php?do=register" class="m_h">免费注册</a></li>
-                        <li><a href="index.php?do=login">登录</a></li>
+                        <li><a href="index.php?r=index/register" class="m_h">免费注册</a></li>
+                        <li><a href="index.php?r=index/login">登录</a></li>
                     </ul>
                     <!--注册登录按钮 end--> 
 <div class="clear"></div>
-
-
-
 
                     <!--登录成功 start-->
                     <div id="logined" class="hidden">

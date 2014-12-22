@@ -30,4 +30,26 @@ class IndexController extends Controller
        $data['nav']=$rows;
        return $this->render("index",$data);
     }
+    //注册
+    public function actionRegister(){
+          $this->layout='@app/views/layouts/public.php';
+          $rows = (new \yii\db\Query())
+                ->select('nav_title, nav_url')
+                ->from('wk_witkey_nav')
+                ->all();
+        //$this->nav=$rows;
+       $data['nav']=$rows;
+       return $this->render("register",$data);
+    }
+    //登陆
+    public function actionLogin(){
+         $this->layout='@app/views/layouts/public.php';
+          $rows = (new \yii\db\Query())
+                ->select('nav_title, nav_url')
+                ->from('wk_witkey_nav')
+                ->all();
+        //$this->nav=$rows;
+       $data['nav']=$rows;
+       return $this->render("login",$data);
+    }
 }
