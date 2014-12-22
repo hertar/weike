@@ -90,7 +90,8 @@ use yii\widgets\LinkPager;
 <input type="hidden" name="page" value="1">
   		<table width="100%" border="0" cellspacing="0" cellpadding="0" >
           <tr>
-          	<th width="15%"><input type="checkbox" id="checkbox" onclick="checkall();">店铺ID</th>
+          	<th width="3%"><input type="checkbox" id="checkbox" onclick="checkall();"></th>
+                <th width="10%">店铺ID</th>
           	<th width="15%">用户名</th>
             <th width="15%">店铺名</th>
             <th width="20%">申请时间</th>
@@ -101,7 +102,7 @@ use yii\widgets\LinkPager;
                      <?php             foreach($list as $key=>$val)
       {?>
         <tr class="item">
-        	<td><input type="checkbox" name="ckb" class="checkbox" value="<?php echo $val['shop_id']?>"><?php echo $val['shop_id']?></td>
+        	<td><input type="checkbox" name="ckb" class="checkbox" value="<?php echo $val['shop_id']?>"></td><td><?php echo $val['shop_id']?></td>
 <td><?php echo $val['username']?></td>
            <td><?php echo $val['shop_name']?></td>
            <td><?php echo date("Y-m-d",$val['on_time'])?></td>
