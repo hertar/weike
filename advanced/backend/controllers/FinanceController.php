@@ -109,7 +109,7 @@ $session->set('bulletin',$session->get('bulletin'));
        }
      }
      //财务明细批量删除
-     public function actionDetail_delall(){
+     public function actionFinance_delall(){
          $id=$_GET['id'];
          $count = WkWitkeyFinance::deleteAll("fina_id in ($id)");
          if($count>0){
