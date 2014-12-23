@@ -24425,3 +24425,528 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1419254489.343
     'REQUEST_TIME' => 1419254489
 ]
+2014-12-23 01:38:01 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 27133 bytes' 
+
+in E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\aweike\advan...', 86, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('?a:53:{s:13:"54...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-23 01:38:01 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'htg0ov9mtmh98her1ehl29hf44'
+    '_csrf' => 'e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds:32:\"5phKYuVUgsOnJtEFfDLePkpMDhOCWACM\";'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=htg0ov9mtmh98her1ehl29hf44; _csrf=e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds%3A32%3A%225phKYuVUgsOnJtEFfDLePkpMDhOCWACM%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52934'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/index.php'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419295081.359
+    'REQUEST_TIME' => 1419295081
+]
+2014-12-23 01:38:01 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 27133 bytes' 
+
+in E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\aweike\advan...', 86, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('?a:53:{s:13:"54...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-23 01:38:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'htg0ov9mtmh98her1ehl29hf44'
+    '_csrf' => 'e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds:32:\"5phKYuVUgsOnJtEFfDLePkpMDhOCWACM\";'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=htg0ov9mtmh98her1ehl29hf44; _csrf=e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds%3A32%3A%225phKYuVUgsOnJtEFfDLePkpMDhOCWACM%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52934'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/main'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/main'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419295081.767
+    'REQUEST_TIME' => 1419295081
+]
+2014-12-23 01:38:25 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=192....', 'root', 'root', NULL)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(373): yii\db\Command->queryScalar()
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 E:\aweike\advanced\backend\controllers\StoreController.php(51): yii\db\Query->count()
+#10 [internal function]: backend\controllers\StoreController->actionStore_list()
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('store_list', Array)
+#14 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('store/store_lis...', Array)
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(373): yii\db\Command->queryScalar()
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 E:\aweike\advanced\backend\controllers\StoreController.php(51): yii\db\Query->count()
+#8 [internal function]: backend\controllers\StoreController->actionStore_list()
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('store_list', Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('store/store_lis...', Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+Additional Information:
+
+2014-12-23 01:38:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'store/store_list'
+    'tt' => '0.5640107255894691'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'htg0ov9mtmh98her1ehl29hf44'
+    '_csrf' => 'e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds:32:\"5phKYuVUgsOnJtEFfDLePkpMDhOCWACM\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=htg0ov9mtmh98her1ehl29hf44; _csrf=e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds%3A32%3A%225phKYuVUgsOnJtEFfDLePkpMDhOCWACM%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52934'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=store/store_list&tt=0.5640107255894691'
+    'REQUEST_URI' => '/backend/web/index.php?r=store/store_list&tt=0.5640107255894691'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419295084.373
+    'REQUEST_TIME' => 1419295084
+]
+2014-12-23 01:38:26 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=192....', 'root', 'root', NULL)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(373): yii\db\Command->queryScalar()
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 E:\aweike\advanced\backend\controllers\StoreController.php(51): yii\db\Query->count()
+#10 [internal function]: backend\controllers\StoreController->actionStore_list()
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('store_list', Array)
+#14 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('store/store_lis...', Array)
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(373): yii\db\Command->queryScalar()
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 E:\aweike\advanced\backend\controllers\StoreController.php(51): yii\db\Query->count()
+#8 [internal function]: backend\controllers\StoreController->actionStore_list()
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('store_list', Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('store/store_lis...', Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+Additional Information:
+
+2014-12-23 01:38:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'store/store_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'htg0ov9mtmh98her1ehl29hf44'
+    '_csrf' => 'e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds:32:\"5phKYuVUgsOnJtEFfDLePkpMDhOCWACM\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=htg0ov9mtmh98her1ehl29hf44; _csrf=e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds%3A32%3A%225phKYuVUgsOnJtEFfDLePkpMDhOCWACM%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52935'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=store/store_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=store/store_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419295085.545
+    'REQUEST_TIME' => 1419295085
+]
+2014-12-23 01:38:29 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=192....', 'root', 'root', NULL)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(373): yii\db\Command->queryScalar()
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 E:\aweike\advanced\backend\controllers\StoreController.php(124): yii\db\Query->count()
+#10 [internal function]: backend\controllers\StoreController->actionOrder()
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('order', Array)
+#14 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('store/order', Array)
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(373): yii\db\Command->queryScalar()
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 E:\aweike\advanced\backend\controllers\StoreController.php(124): yii\db\Query->count()
+#8 [internal function]: backend\controllers\StoreController->actionOrder()
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('order', Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('store/order', Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+Additional Information:
+
+2014-12-23 01:38:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'store/order'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'htg0ov9mtmh98her1ehl29hf44'
+    '_csrf' => 'e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds:32:\"5phKYuVUgsOnJtEFfDLePkpMDhOCWACM\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=htg0ov9mtmh98her1ehl29hf44; _csrf=e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds%3A32%3A%225phKYuVUgsOnJtEFfDLePkpMDhOCWACM%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52936'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=store/order'
+    'REQUEST_URI' => '/backend/web/index.php?r=store/order'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419295088.361
+    'REQUEST_TIME' => 1419295088
+]
+2014-12-23 01:38:29 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=192....', 'root', 'root', NULL)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(373): yii\db\Command->queryScalar()
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 E:\aweike\advanced\backend\controllers\StoreController.php(124): yii\db\Query->count()
+#10 [internal function]: backend\controllers\StoreController->actionOrder()
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('order', Array)
+#14 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('store/order', Array)
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(373): yii\db\Command->queryScalar()
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 E:\aweike\advanced\backend\controllers\StoreController.php(124): yii\db\Query->count()
+#8 [internal function]: backend\controllers\StoreController->actionOrder()
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('order', Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('store/order', Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+Additional Information:
+
+2014-12-23 01:38:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'store/order'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'htg0ov9mtmh98her1ehl29hf44'
+    '_csrf' => 'e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds:32:\"5phKYuVUgsOnJtEFfDLePkpMDhOCWACM\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=htg0ov9mtmh98her1ehl29hf44; _csrf=e6b46f218f21f6c6558c5a90fde80616512db644e462d946d5cf906a6e0fe57ds%3A32%3A%225phKYuVUgsOnJtEFfDLePkpMDhOCWACM%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52937'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=store/order'
+    'REQUEST_URI' => '/backend/web/index.php?r=store/order'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419295088.617
+    'REQUEST_TIME' => 1419295088
+]
