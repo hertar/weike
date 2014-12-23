@@ -20,12 +20,7 @@ class TaskController extends Controller
     public function actionTask_list(){
         
         $this->layout='@app/views/layouts/public.php';
-          $rows = (new \yii\db\Query())
-                ->select('nav_title, nav_url')
-                ->from('wk_witkey_nav')
-                ->all();
         
-        $data['nav']=$rows;
-        return $this->render("task_list",$data);
+        return $this->render("task_list");
    }
 }

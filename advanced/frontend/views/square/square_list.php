@@ -148,39 +148,47 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
             
 
 
-          
-            	<!--用户登录注册 start-->
-            	<div class="user_box clearfix grid_5">
+                      	<!--用户登录注册 start-->
+
+                <div class="user_box clearfix grid_5">
                 	<!--注册登录按钮 start-->
-                  	<ul id="login_sub" class="user_login ">
+<?php
+    $session=new \yii\web\Session();
+    if(!$session->get("user_name")){
+     
+?>           	<ul id="login_sub" class="user_login ">
                         <li><a href="index.php?r=index/register" class="m_h">免费注册</a></li>
                         <li><a href="index.php?r=index/login">登录</a></li>
                     </ul>
+<?php
+   
+    }else{
+       //echo $session->get("user_name");
+?>
                     <!--注册登录按钮 end--> 
 <div class="clear"></div>
 
-
-
-
                     <!--登录成功 start-->
-                    <div id="logined" class="hidden">
+                    <div id="logined" >
+                        
                     	<!--用户登录后内容 start-->
                         <ul class="user_logined clearfix">
                             <li id="avatar">
-                            	<a href="index.php?do=user" title="" rel="user_menu">
-                            		<img src='/public/data/avatar/default/man_small.jpg' uid='' class='pic_small'>                                    <span class="user_named m_h"></span>
+                            	<a href="index.php?r=user" title="" rel="user_menu">
+                                            <img src='/public/data/avatar/default/man_small.jpg' uid='' class='pic_small'>     
+                                            <span class="user_named m_h"><?php echo $session->get("user_name");?></span>
                             	</a>
 <!--用户登录后导航菜单 start-->
                     <div id="user_menu" class="user_nav_pop grid_5 alpha omega hidden m_h">
                         <ul class="nav_list clearfix">
-                                    	<li class="clearfix"><a href="index.php?do=user&view=finance&op=detail" title="金钱 | 元宝" id="money"> <div class="icon16 cur-yen reverse"></div>￥0.00元| ￥0.00元</a></li>
-                                        <li class="clearfix"><a href="index.php?do=release" title="发布任务" class="selected" ><div class="icon16 doc-new reverse"></div>发布任务</a></li>
+<li class="clearfix"><a href="index.php?do=user&view=finance&op=detail" title="金钱 | 元宝" id="money"> <div class="icon16 cur-yen reverse"></div>￥0.00元| ￥0.00元</a></li>
+<li class="clearfix"><a href="index.php?do=release" title="发布任务" class="selected" ><div class="icon16 doc-new reverse"></div>发布任务</a></li>
 <li class="clearfix"><a href="index.php?do=shop_release" title="发布商品" class="selected"><div class="icon16 doc-new reverse"></div>发布商品</a></li>
 <li class="clearfix hidden" id="manage_center"><a href="control/admin/index.php" title="管理中心" ><div class="icon16 key reverse"></div>管理中心</a></li>
 <li class="clearfix"><a href="index.php?do=user&view=index" title="用户中心"><div class="icon16 cog reverse"></div>用户中心</a></li>
 <li class="clearfix"><a href="http://127.0.0.1/weike/index.php?do=space&member_id=" title="我的店铺" id="space"><div class="icon16 compass reverse"></div>我的店铺</a></li>
 <!--<li class="clearfix"><a href="index.php?do=user&view=message" title="站内信"><div class="icon16 mail reverse"></div>站内信</a></li>-->
-<li class="clearfix"><a onclick="showWindow('out','index.php?do=logout');return false;" title="退出" href="index.php?do=logout">退出</a></li>
+<li class="clearfix"><a  title="退出" href="index.php?r=index/logout">退出</a></li>
                          </ul>
                     </div>
                     <!--用户登录后导航菜单 end-->
@@ -189,17 +197,20 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                             <li class="logout m_h"><a title="站内信" href="index.php?do=user&view=message">站内信</a></li>
                             <li class="clear"></li>
                         </ul>
+                    
                         <!--用户登录后内容 end-->
 
 
                     </div>
+                    <?php
+    }
+                    ?>
                     <!--登录成功 end-->
                     
                     
                     <div class="clear"></div>
                 </div>
                 <!--用户登录注册 end-->
-      
             <!--移动端菜单-->
 <div class="m_ctrl">
 <a class="icon32 zoom reverse" href="#" rel="search"></a>
@@ -218,6 +229,10 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
         	<div class="menu grid_24 clearfix">
                 <ul class="clearfix">
      <?php
+        $nav= (new \yii\db\Query())
+                ->select('nav_title, nav_url')
+                ->from('wk_witkey_nav')
+                ->all();
         foreach($nav as $v){
      ?>
 <li>
