@@ -21903,3 +21903,854 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1419247932.814
     'REQUEST_TIME' => 1419247932
 ]
+2014-12-22 12:50:25 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: arr' in E:\aweike\advanced\backend\controllers\ArticleController.php:302
+Stack trace:
+#0 E:\aweike\advanced\backend\controllers\ArticleController.php(302): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'E:\aweike\advan...', 302, Array)
+#1 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2014-12-22 12:50:23 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '63205'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249022.308
+    'REQUEST_TIME' => 1419249022
+]
+2014-12-22 12:50:25 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: arr' in E:\aweike\advanced\backend\controllers\ArticleController.php:302
+Stack trace:
+#0 E:\aweike\advanced\backend\controllers\ArticleController.php(302): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'E:\aweike\advan...', 302, Array)
+#1 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2014-12-22 12:50:23 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '63203'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249020.575
+    'REQUEST_TIME' => 1419249020
+]
+2014-12-22 12:50:25 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: arr' in E:\aweike\advanced\backend\controllers\ArticleController.php:452
+Stack trace:
+#0 E:\aweike\advanced\backend\controllers\ArticleController.php(452): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'E:\aweike\advan...', 452, Array)
+#1 [internal function]: backend\controllers\ArticleController->actionCat_list()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('cat_list', Array)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/cat_lis...', Array)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2014-12-22 12:50:24 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/cat_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '63207'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/cat_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/cat_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249024.246
+    'REQUEST_TIME' => 1419249024
+]
+2014-12-22 12:50:25 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: arr' in E:\aweike\advanced\backend\controllers\ArticleController.php:302
+Stack trace:
+#0 E:\aweike\advanced\backend\controllers\ArticleController.php(302): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'E:\aweike\advan...', 302, Array)
+#1 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2014-12-22 12:50:23 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '63204'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249021.223
+    'REQUEST_TIME' => 1419249021
+]
+2014-12-22 12:50:26 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: arr' in E:\aweike\advanced\backend\controllers\ArticleController.php:302
+Stack trace:
+#0 E:\aweike\advanced\backend\controllers\ArticleController.php(302): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'E:\aweike\advan...', 302, Array)
+#1 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2014-12-22 12:50:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '63210'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249025.846
+    'REQUEST_TIME' => 1419249025
+]
+2014-12-22 12:50:26 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: arr' in E:\aweike\advanced\backend\controllers\ArticleController.php:302
+Stack trace:
+#0 E:\aweike\advanced\backend\controllers\ArticleController.php(302): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'E:\aweike\advan...', 302, Array)
+#1 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2014-12-22 12:50:26 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '63211'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249026.607
+    'REQUEST_TIME' => 1419249026
+]
+2014-12-22 12:52:45 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: arr' in E:\aweike\advanced\backend\controllers\ArticleController.php:302
+Stack trace:
+#0 E:\aweike\advanced\backend\controllers\ArticleController.php(302): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'E:\aweike\advan...', 302, Array)
+#1 [internal function]: backend\controllers\ArticleController->actionArt_list()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('art_list', Array)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('article/art_lis...', Array)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2014-12-22 12:52:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'article/art_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '63301'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=article/art_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=article/art_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419249165.149
+    'REQUEST_TIME' => 1419249165
+]
+2014-12-22 13:11:57 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: spage' in E:\aweike\advanced\backend\controllers\UserController.php:28
+Stack trace:
+#0 E:\aweike\advanced\backend\controllers\UserController.php(28): yii\base\ErrorHandler->handleError(8, 'Undefined index...', 'E:\aweike\advan...', 28, Array)
+#1 [internal function]: backend\controllers\UserController->actionUser_list()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('user_list', Array)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('user/user_list', Array)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#8 {main}
+2014-12-22 13:11:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'user/user_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=user/user_add&tt=0.564493570709601'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '63724'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user/user_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=user/user_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419250317.192
+    'REQUEST_TIME' => 1419250317
+]
+2014-12-22 13:56:03 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'shop_id' in 'order clause'' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php:821
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(821): PDOStatement->execute()
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(373): yii\db\Command->queryScalar()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 E:\aweike\advanced\backend\controllers\StoreController.php(124): yii\db\Query->count()
+#5 [internal function]: backend\controllers\StoreController->actionOrder()
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('order', Array)
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('store/order', Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'shop_id' in 'order clause'
+The SQL being executed was: SELECT COUNT(*) FROM `wk_witkey_order` WHERE order_status=0 order by shop_id desc' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Schema.php:532
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(836): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetchColumn', 0)
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(373): yii\db\Command->queryScalar()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(280): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#4 E:\aweike\advanced\backend\controllers\StoreController.php(124): yii\db\Query->count()
+#5 [internal function]: backend\controllers\StoreController->actionOrder()
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('order', Array)
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('store/order', Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'shop_id' in 'order clause'
+)
+
+2014-12-22 13:56:02 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'store/order'
+    'ord' => 'desc'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=store/order'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '65074'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=store/order&ord=desc'
+    'REQUEST_URI' => '/backend/web/index.php?r=store/order&ord=desc'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419252962.839
+    'REQUEST_TIME' => 1419252962
+]
+2014-12-22 14:05:14 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: model/del_order' in E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('del_order', Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('model/del_order', Array)
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request: model/del_order' in E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\aweike\advanced\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2014-12-22 14:05:14 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'model/del_order'
+    'id' => '80004413'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=store/order'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '65285'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=model/del_order&id=80004413'
+    'REQUEST_URI' => '/backend/web/index.php?r=model/del_order&id=80004413'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419253514.517
+    'REQUEST_TIME' => 1419253514
+]
+2014-12-22 14:05:36 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'backend\controllers\WkWitkeyTask' not found' in E:\aweike\advanced\backend\controllers\StoreController.php:137
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-22 14:05:36 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'store/del_order'
+    'id' => '80004413'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=store/order'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '65292'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=store/del_order&id=80004413'
+    'REQUEST_URI' => '/backend/web/index.php?r=store/del_order&id=80004413'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419253536.18
+    'REQUEST_TIME' => 1419253536
+]
+2014-12-22 14:21:19 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'else' (T_ELSE)' in E:\aweike\advanced\backend\views\store\server_order.php:119
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-22 14:21:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'store/server_order'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49423'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=store/server_order'
+    'REQUEST_URI' => '/backend/web/index.php?r=store/server_order'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419254478.696
+    'REQUEST_TIME' => 1419254478
+]
+2014-12-22 14:21:29 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected end of file' in E:\aweike\advanced\backend\views\store\server_order.php:296
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-22 14:21:29 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'store/server_order'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uegk9slt5esn0m83nb37sulr85'
+    '_csrf' => '469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s:32:\"1WLSovMeP_qHCSysKxzAptZxePKFFVJp\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip,deflate,sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uegk9slt5esn0m83nb37sulr85; _csrf=469d6945d3d6efb266d1ab4fb6dfbfee46b7e6bff9f2c8fdd5025dbd2bf46573s%3A32%3A%221WLSovMeP_qHCSysKxzAptZxePKFFVJp%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\php\\Git\\bin;E:\\xampp\\mysql\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49427'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=store/server_order'
+    'REQUEST_URI' => '/backend/web/index.php?r=store/server_order'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419254489.343
+    'REQUEST_TIME' => 1419254489
+]
