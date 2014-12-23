@@ -8,6 +8,7 @@ use common\models\LoginForm;
 use yii\filters\VerbFilter;
 
 use app\models\Shop;
+use app\models\Order;
 use yii\data\Pagination;
 use app\models\Control;
 use yii\db\ActiveRecord;
@@ -95,7 +96,50 @@ class StoreController extends Controller
     
     //订单管理
     public function actionOrder(){
-        return $this->renderPartial("order");
+         $this->layout='@app/views/layouts/publics.php';
+        if(!empty($_GET['search_id'])||!empty($_GET['search_title'])){
+       $ord='asc';
+       $id=$_GET['search_id'];
+       $title=$_GET['search_title'];
+       $where='';
+       $where.='order_status=0';
+       if(!empty($_GET['search_id'])){
+       $where.=" and order_id like '%".$id."%'";
+       }
+        if(!empty($_GET['search_title'])){
+       $where.=" and order_username like '%".$title."%'";
+        }
+       $page_size=isset($_GET['pagesize'])?$_GET['pagesize']:10;
+       $data = Order::find()->where($where); 
+       }else{
+           $page_size=isset($_GET['pagesize'])?$_GET['pagesize']:10;
+           $where='';
+           $where.='order_status=0';
+           $ord=isset($_GET['ord'])?$_GET['ord']:'asc';
+            if(!empty($_GET['ord'])){
+                $where.=" order by order_id ".$_GET['ord']."";
+            }
+            $data = Order::find()->where($where); 
+       }
+       $total=$data->count();
+       $pages = new Pagination(['totalCount' =>$total, 'pageSize' =>$page_size ]);
+       $list = $data->offset($pages->offset)->limit($pages->limit)->all();
+       return $this->render('order',[
+             'list' => $list,
+             'pages' => $pages,
+             'pagesize'=>$page_size,
+             'ord'=>$ord,
+       ]);
+    }
+    //删除操作
+    public function actionDel_order(){
+       $order_id=$_GET['id'];
+       $count = Order::findOne($order_id)->delete();
+        if($count>0){
+          $this->redirect("?r=store/order");
+        }else{
+           $this->redirect("?r=store/order");
+        }
     }
     //作品管理
     public function actionWorks(){
@@ -114,10 +158,44 @@ class StoreController extends Controller
     //威客服务
     //订单管理
 public function actionServer_order(){
-    return $this->renderPartial("server_order");
+     $this->layout='@app/views/layouts/publics.php';
+        if(!empty($_GET['search_id'])||!empty($_GET['search_title'])){
+       $ord='asc';
+       $id=$_GET['search_id'];
+       $title=$_GET['search_title'];
+       $where='';
+       $where.='order_status!=0';
+       if(!empty($_GET['search_id'])){
+       $where.=" and order_id like '%".$id."%'";
+       }
+        if(!empty($_GET['search_title'])){
+       $where.=" and order_username like '%".$title."%'";
+        }
+       $page_size=isset($_GET['pagesize'])?$_GET['pagesize']:10;
+       $data = Order::find()->where($where); 
+       }else{
+           $page_size=isset($_GET['pagesize'])?$_GET['pagesize']:10;
+           $where='';
+           $where.='order_status!=0 ';
+           $ord=isset($_GET['ord'])?$_GET['ord']:'asc';
+            if(!empty($_GET['ord'])){
+                $where.=" order by order_id ".$_GET['ord']."";
+            }
+            $data = Order::find()->where($where); 
+       }
+       $total=$data->count();
+       $pages = new Pagination(['totalCount' =>$total, 'pageSize' =>$page_size ]);
+       $list = $data->offset($pages->offset)->limit($pages->limit)->all();
+       return $this->render('server_order',[
+             'list' => $list,
+             'pages' => $pages,
+             'pagesize'=>$page_size,
+             'ord'=>$ord,
+       ]);
 }
 //服务管理
     public function actionServer(){
+        
         return $this->renderPartial("server");
     }
     //服务配置

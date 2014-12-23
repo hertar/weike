@@ -1,4 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+use yii\widgets\LinkPager;
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -42,7 +44,7 @@ id="frm_art_search">
 <tr>
 <th>编号</th>
 <td><input type="text" class="txt" name="w[order_id]"
-id="order_id" value="" onkeyup="clearstr(this);">
+id="ida" value="" onkeyup="clearstr(this);">
 </td>
 <th>下订单人</th>
 <td><input type="text" class="txt" name="w[order_username]"
@@ -57,19 +59,18 @@ id="title" value=""></td>
 <td><select name="ord[]">
 <option value="order_id"  selected="selected">默认排序</option>
 <option value="order_time" >下单时间</option>
-</select> <select name="ord[]">
-<option selected="selected"
- value="desc">递减</option>
-<option  value="asc">递增</option>
-</select></td>
+</select> <select name="ord[]" onchange="orderJump(this.value)">
+                                <option  value="asc"  <?php if($ord=='asc'){echo "selected";}?>>递增</option>
+                                <option  value="desc"  <?php if($ord=='desc'){echo "selected";}?>>递减</option>
+                                </select></td>
 <th>显示结果</th>
-<td colspan="3"><select name="w[page_size]">
-<option value="10" >每页显示10</option>
-<option value="20" >每页显示20</option>
-<option value="30" >每页显示30</option>
+<td colspan="3"><select name="page_size" onchange="pageJump(value)">
+     <option value="10" <?php if($pagesize==10){echo "selected";}?>>每页显示10条</option>
+     <option value="5" <?php if($pagesize==5){echo "selected"; }?>>每页显示5条</option>
+     <option value="3" <?php if($pagesize==3){echo "selected"; }?>>每页显示3条</option>
 </select>
-<button class="pill" type="submit" value="搜索"
-name="sbt_search">
+<button class="pill" type="button" value="搜索"
+name="sbt_search"  onclick="search_task()">
 <span class="icon magnifier">&nbsp;</span>搜索</button></td>
 </tr>
 <tr>
@@ -94,6 +95,7 @@ name="sbt_search">
 <input type="hidden" name="page" value="1">
 <table cellspacing="0" cellpadding="0">
 <tr>
+<th></th>
 <th>ID</th>
 <th>订单名字</th>
 <th>订单金额</th>
@@ -102,21 +104,25 @@ name="sbt_search">
 <th>下单时间</th>
 <th>操作</th>
 </tr>
+              <?php             foreach($list as $key=>$val)
+      {?>
 <tr class="item">
-<td><input type="checkbox" name="ckb[]"
-value="80004483" class="checkbox">80004483</td>
+<td><input type="checkbox" name="ckb"
+value="<?php echo $val['order_id']?>" class="checkbox"></td>
+<td><?php echo $val['order_id']?></td>
 <td class="obj_link">
-购买商品<a href="index.php?do=service&sid=13">[图兰朵]婚纱摄影重磅推出 黄金路线启动</a></td>
-<td>￥2,000.00元</td>
-<td>交易完成</td>
-<td>丸美弹力</td>
+<?php echo $val['order_name']?></td>
+<td>￥<?php echo $val['order_amount']?>元</td>
+<td>已下订单</td>
+<td><?php echo $val['order_username']?></td>
 <td>
-2013-04-09 19:22:14</td>
+<?php echo date("Y-m-d H:i:s",$val['order_time'])?></td>
 <td><a onclick="return cdel(this);"
-href='index.php?do=model&model_id=6&view=order&w[order_id]=&w[order_username]=&w[order_status]=&page=1&w[page_size]=10&ord[0]=&ord[1]=&ac=del&order_id=80004483&page=1'
+href='index.php?r=store/del_order&id=<?php echo $val['order_id'] ?>'
 class="button"><span class="trash icon"></span>删除</a>
 </td>
 </tr>
+      <?php } ?>
 <tr>
 <td colspan="9">
 <div class="page fl_right"></div>
@@ -133,6 +139,7 @@ onclick="return pdel('frm_art_search');">
 </td>
 </tr>
 </table>
+    <div class="page"><?= LinkPager::widget(['pagination' => $pages]); ?></div>
 </div>
 </form>
 </div>
@@ -265,6 +272,17 @@ $("#" + frm).submit();
 d.alert("您没有选择任何操作项");
 }
 return false;
+}
+function pageJump(value){
+location.href="index.php?r=store/order&pagesize="+value;
+}
+function orderJump(value){
+location.href="index.php?r=store/order&ord="+value;
+}
+function search_task(){
+    var id= document.getElementById("ida").value;
+    var title= document.getElementById("title").value;
+    location.href="index.php?r=store/order&search_id="+id+"&search_title="+title;
 }
 </script>
 </body>
