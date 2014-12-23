@@ -318,6 +318,30 @@ window.location.href = o.href;
 });
 return false;
 }
+
+function cdel(o, s) {
+d = art.dialog;
+var c = "你确认删除操作？";
+if (s) {
+c = s;
+}
+d.confirm(c, function() {
+$.ajax({
+   type: "GET",
+   url: "index.php?r=finance/detail_del",
+    data: "art_id="+o,
+   success: function(msg){
+    if(msg==1){
+        $("#"+o).remove();
+    }else{
+        alert("删除失败");
+    }
+   }
+   
+}); 
+});
+return false;
+}
 function cfreeze(o, s, type) {
 d = art.dialog;
 if (type == 1) {

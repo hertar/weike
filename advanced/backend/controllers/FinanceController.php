@@ -99,7 +99,7 @@ $session->set('bulletin',$session->get('bulletin'));
     return $this->renderPartial('detail',['model'=>$model,'pages'=>$pages]);
 }
      //财务明细删除
-     public function actionFinance_delall(){
+     public function actionDetail_del(){
         $id=$_GET['id'];
         $a=WkWitkeyFinance::findOne($id)->delete(); 
        if($a){

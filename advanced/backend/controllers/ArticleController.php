@@ -913,7 +913,7 @@ public function actionHelp_add_pro(){
  //成功案例批量删除
    public function actionCase_delall(){
          $id=$_GET['id'];
-         $count = WkWitkeyCase::deleteAll("case_id in ($id)");
+         $count = WkWitkeyCase::deleteAll("case_id in ($id)" );
          if($count>0){
              echo 1;
         }else{
