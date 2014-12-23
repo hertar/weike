@@ -1,3 +1,14 @@
+<?php
+use yii\widgets\LinkPager;
+use yii\filters\AccessControl;
+use yii\web\Controller;
+use common\models\LoginForm;
+use yii\filters\VerbFilter;
+use app\models\WkWitkeyArticleCategory;
+use app\models\article;
+use yii\data\Pagination;
+use yii\db\Query;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -102,204 +113,36 @@
                 </tr>
 </thead>
 <tbody>
-                                <tr class="item">
+        <?php foreach($model as $key=>$val){?>
+                                <tr class="item"  id=" <?php echo $val['case_id'];?>  ">
                 	<td>
-                		<input type="checkbox" name="ckb[]" class="checkbox" value="9">
+                		<input type="checkbox" name="ckb"  class="checkbox" value="<?php echo $val['case_id'];?>">
                 	</td>
                     <td>
-                        9                    </td>
+                      <?php echo $val['case_id'];?>                   </td>
                     <td>
                         <a href="/public/index.php?do=service&sid=5" target="_blank">
-                        	【创意】网络视频</a>
+                        	   <?php echo $val['case_title'];?>   </a>
    
                     </td>
                     <td>
-                        ￥100.00元                    </td>
+                        ￥   <?php echo $val['case_price'];?>   元                    </td>
                     <td>
-                        商  品                    </td>
+                          <?php if($val['fina_type']=='task'){
+                              echo "任务";
+                          }else if($val['fina_type']=='service'){
+                              echo "商品";
+                          }?>                      </td>
                     <td>
-                        2013-04-09 20:38                    </td>
+                       <?php echo date('Y-m-d H:m:s',time($val['on_time']));?>                  </td>
                     <td>
                         <a href="index.php?do=case&view=add&case_id=9" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                       <a href="index.php?do=case&view=list&ac=del&case_id=9&page=1&w['page_size']=&w['obj_type']=" onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
+                       <a href="" onclick="return cdel(<?php echo $val['case_id']?>);" class="button"><span class="trash icon"></span>删除</a>
                     </td>
                 </tr>
-                <tr class="item">
-                	<td>
-                		<input type="checkbox" name="ckb[]" class="checkbox" value="8">
-                	</td>
-                    <td>
-                        8                    </td>
-                    <td>
-                        <a href="/public/index.php?do=service&sid=4" target="_blank">
-                        	【创意】3d生物模型制作（包括材质贴图）</a>
-   
-                    </td>
-                    <td>
-                        ￥1,000.00元                    </td>
-                    <td>
-                        商  品                    </td>
-                    <td>
-                        2013-04-09 20:37                    </td>
-                    <td>
-                        <a href="index.php?do=case&view=add&case_id=8" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                       <a href="index.php?do=case&view=list&ac=del&case_id=8&page=1&w['page_size']=&w['obj_type']=" onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-                    </td>
-                </tr>
-                <tr class="item">
-                	<td>
-                		<input type="checkbox" name="ckb[]" class="checkbox" value="7">
-                	</td>
-                    <td>
-                        7                    </td>
-                    <td>
-                        <a href="/public/index.php?do=service&sid=5" target="_blank">
-                        	【创意】网络视频</a>
-   
-                    </td>
-                    <td>
-                        ￥100.00元                    </td>
-                    <td>
-                        商  品                    </td>
-                    <td>
-                        2013-04-09 19:29                    </td>
-                    <td>
-                        <a href="index.php?do=case&view=add&case_id=7" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                       <a href="index.php?do=case&view=list&ac=del&case_id=7&page=1&w['page_size']=&w['obj_type']=" onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-                    </td>
-                </tr>
-                <tr class="item">
-                	<td>
-                		<input type="checkbox" name="ckb[]" class="checkbox" value="6">
-                	</td>
-                    <td>
-                        6                    </td>
-                    <td>
-                        <a href="/public/index.php?do=service&sid=1" target="_blank">
-                        	【创意】海报设计</a>
-   
-                    </td>
-                    <td>
-                        ￥1,000.00元                    </td>
-                    <td>
-                        商  品                    </td>
-                    <td>
-                        2013-04-09 19:28                    </td>
-                    <td>
-                        <a href="index.php?do=case&view=add&case_id=6" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                       <a href="index.php?do=case&view=list&ac=del&case_id=6&page=1&w['page_size']=&w['obj_type']=" onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-                    </td>
-                </tr>
-                <tr class="item">
-                	<td>
-                		<input type="checkbox" name="ckb[]" class="checkbox" value="5">
-                	</td>
-                    <td>
-                        5                    </td>
-                    <td>
-                        <a href="/public/index.php?do=service&sid=3" target="_blank">
-                        	【创意】著作权（版权）登记</a>
-   
-                    </td>
-                    <td>
-                        ￥20.00元                    </td>
-                    <td>
-                        商  品                    </td>
-                    <td>
-                        2013-04-09 19:28                    </td>
-                    <td>
-                        <a href="index.php?do=case&view=add&case_id=5" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                       <a href="index.php?do=case&view=list&ac=del&case_id=5&page=1&w['page_size']=&w['obj_type']=" onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-                    </td>
-                </tr>
-                <tr class="item">
-                	<td>
-                		<input type="checkbox" name="ckb[]" class="checkbox" value="4">
-                	</td>
-                    <td>
-                        4                    </td>
-                    <td>
-                        <a href="/public/index.php?do=task&task_id=46" target="_blank">
-                        	轻松下载每个可得钱</a>
-   
-                    </td>
-                    <td>
-                        ￥90.00元                    </td>
-                    <td>
-                        任  务                    </td>
-                    <td>
-                        2013-04-09 19:26                    </td>
-                    <td>
-                        <a href="index.php?do=case&view=add&case_id=4" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                       <a href="index.php?do=case&view=list&ac=del&case_id=4&page=1&w['page_size']=&w['obj_type']=" onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-                    </td>
-                </tr>
-                <tr class="item">
-                	<td>
-                		<input type="checkbox" name="ckb[]" class="checkbox" value="3">
-                	</td>
-                    <td>
-                        3                    </td>
-                    <td>
-                        <a href="/public/index.php?do=task&task_id=35" target="_blank">
-                        	淘宝网店推广</a>
-   
-                    </td>
-                    <td>
-                        ￥150.00元                    </td>
-                    <td>
-                        任  务                    </td>
-                    <td>
-                        2013-04-09 19:26                    </td>
-                    <td>
-                        <a href="index.php?do=case&view=add&case_id=3" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                       <a href="index.php?do=case&view=list&ac=del&case_id=3&page=1&w['page_size']=&w['obj_type']=" onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-                    </td>
-                </tr>
-                <tr class="item">
-                	<td>
-                		<input type="checkbox" name="ckb[]" class="checkbox" value="2">
-                	</td>
-                    <td>
-                        2                    </td>
-                    <td>
-                        <a href="/public/index.php?do=task&task_id=34" target="_blank">
-                        	淘宝网店推广 10元1稿 简单快捷</a>
-   
-                    </td>
-                    <td>
-                        ￥120.00元                    </td>
-                    <td>
-                        任  务                    </td>
-                    <td>
-                        2013-04-09 19:26                    </td>
-                    <td>
-                        <a href="index.php?do=case&view=add&case_id=2" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                       <a href="index.php?do=case&view=list&ac=del&case_id=2&page=1&w['page_size']=&w['obj_type']=" onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-                    </td>
-                </tr>
-                <tr class="item">
-                	<td>
-                		<input type="checkbox" name="ckb[]" class="checkbox" value="1">
-                	</td>
-                    <td>
-                        1                    </td>
-                    <td>
-                        <a href="/public/index.php?do=task&task_id=28" target="_blank">
-                        	彩票站宣传单设计</a>
-   
-                    </td>
-                    <td>
-                        ￥80.00元                    </td>
-                    <td>
-                        任  务                    </td>
-                    <td>
-                        2013-04-09 19:26                    </td>
-                    <td>
-                        <a href="index.php?do=case&view=add&case_id=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-                       <a href="index.php?do=case&view=list&ac=del&case_id=1&page=1&w['page_size']=&w['obj_type']=" onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-                    </td>
-                </tr>
+               
+        <?php } ?>
+               
 </tabody>
 <tfoot>
  <tr>
@@ -314,7 +157,9 @@
 </tr>		
 </tfoot>
   			</table>
-<div class="page"></div>
+             <div class ="page">
+                <?= LinkPager::widget(['pagination' => $pages]); ?> 
+            </div>
 </div>
 </form>
       </div>
@@ -359,7 +204,19 @@ if (s) {
 c = s;
 }
 d.confirm(c, function() {
-window.location.href = o.href;
+$.ajax({
+   type: "GET",
+   url: "index.php?r=article/case_del",
+    data: "art_id="+o,
+   success: function(msg){
+    if(msg==1){
+        $("#"+o).remove();
+    }else{
+        alert("删除失败");
+    }
+   }
+   
+}); 
 });
 return false;
 }
@@ -419,11 +276,37 @@ function batch_act(obj, frm) {
 d = art.dialog;
 var frm = frm;
 var c = $(obj).val();
-var conf = $(":checkbox[name='ckb[]']:checked").length;
+var conf = $(":checkbox[name='ckb']:checked").length;
 if (conf > 0) {
 d.confirm("确定" + c + '?', function() {
-$(".sbt_action").val(c);
-$("#" + frm).submit();
+var ida = document.getElementsByName("ckb");
+var idarr=new Array();
+var idaa=new Array();
+var flag=0;
+ for(var i=0;i<conf;i++){
+if(ida[i].checked==true){
+    idarr[flag]=ida[i].value;
+     idaa[flag]=ida[i].value;
+    flag++;
+    }
+}
+     $.ajax({
+    type: "GET",
+    url: "index.php?r=article/article_delall",
+    data: "id="+idarr,
+   success: function(msg){
+    if(msg==1){
+      for(var i=0;i<idarr.length;i++){
+          $("#"+idarr[i]).remove();
+      } 
+    }else{
+        alert("删除成功");
+    }
+   }
+   
+}); 
+//$(".sbt_action").val(c);
+//$("#" + frm).submit();
 });
 } else {
 d.alert("您没有选择任何操作项");
