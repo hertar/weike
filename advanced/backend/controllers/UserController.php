@@ -195,13 +195,35 @@ class UserController extends Controller
               $this->redirect("index.php?r=user/user_list");
         }
     }
+    
+    
     /*
       * 手动充值
       */
      public function actionCharge(){
+         
          return $this->renderPartial("charge");
      }
      
+     public function actionCharge_add(){
+         //print_r($_POST);
+         $arr= \app\models\Space::findone($_POST['user']);
+         
+         if($_POST["cash_type"]==1){
+             $arr["balance"]=$arr["balance"]+$_POST["cash"];
+         }else{
+             $arr["balance"]=$arr["balance"]-$_POST["cash"];
+         }
+         
+         if($arr->save()){
+              $this->redirect("index.php?r=user/user_list");
+         }
+     }
+
+     
+
+
+
      //用户组
      public function actionCustom_list(){
         $this->layout='@app/views/layouts/publics.php';
@@ -348,8 +370,31 @@ class UserController extends Controller
     }
     //系统组添加
     public function actionGroup_add(){
+        
         return $this->renderPartial("group_add");
     }
+    public function actionGroup_add_pro(){
+        //print_r($_POST);
+        $groupname=$_POST['txt_groupname'];
+        $resource=$_POST["chb_resource"];
+        //print_r($resource);
+        $roles=  implode(",", $resource);
+        $model= new \app\models\MemberGroup;
+        $model['groupname']=$groupname;
+        $model["group_roles"]=$roles;
+        $model["on_time"]=time();
+        if($model->insert()){
+              $this->redirect("index.php?r=user/group_list");
+        }
+    }
+    //删除组
+    public function actionGroup_del(){
+        $arr=  \app\models\MemberGroup::findOne($_GET['id'])->delete(); 
+        if($arr){
+            $this->redirect("index.php?r=user/group_list");
+        }
+    }
+
     //建议投诉
     public function actionSuggest(){
         return $this->renderPartial("suggest");

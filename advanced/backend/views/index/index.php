@@ -106,8 +106,8 @@ $("#show_much").hide();
         <div class="link_bar">
         	<a href="javascript:;" class="lock" onclick="fresh();" title="刷新">刷新</a> 
          	<a href="javascript:;" class="lock" onclick="del_cache();" title="清除缓存">清除缓存</a> 
-            <a href="../../index.php" target="_blank" class="sitehome">网站首页</a>
-            <a href="index.php?do=logout" class="exit">安全退出</a>        
+            <a href="http://www.weike.com/frontend/web/" target="_blank" class="sitehome">网站首页</a>
+            <a href="index.php?r=index/logout" class="exit">安全退出</a>        
         </div>
    </div>
 </div>

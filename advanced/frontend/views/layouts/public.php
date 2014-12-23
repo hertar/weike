@@ -105,12 +105,12 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 
 
     <!--头部 start-->
-    <header class="header" id="pageTop">
+ <header class="header" id="pageTop">
         <div class="container_24 clearfix">
         	<!--logo start-->
             <hgroup class="grid_7 logo">
              	 <h1><a href="index.php">
-             	 	<img src="/public/tpl/default/theme/blue/img/style/logo.png"
+             	 	<img src="tpl/default/theme/blue/img/style/logo.png"
  title="客客出品专业威客系统" alt="客客出品专业威客系统"></a></h1>
             </hgroup>
             <!--logo end-->
@@ -152,9 +152,9 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
             	<!--用户登录注册 start-->
             	<div class="user_box clearfix grid_5">
                 	<!--注册登录按钮 start-->
-                  	<ul id="login_sub" class="user_login hidden">
-                        <li><a href="index.php?do=register" class="m_h">免费注册</a></li>
-                        <li><a href="index.php?do=login">登录</a></li>
+                  	<ul id="login_sub" class="user_login ">
+                        <li><a href="index.php?r=index/register" class="m_h">免费注册</a></li>
+                        <li><a href="index.php?r=index/login">登录</a></li>
                     </ul>
                     <!--注册登录按钮 end--> 
 <div class="clear"></div>
@@ -163,22 +163,22 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 
 
                     <!--登录成功 start-->
-                    <div id="logined" class="">
+                    <div id="logined" class="hidden">
                     	<!--用户登录后内容 start-->
                         <ul class="user_logined clearfix">
                             <li id="avatar">
-                            	<a href="index.php?do=user" title="admin" rel="user_menu">
-                            		<img src='http://127.0.0.1/weike/data/avatar/default/man_small.jpg' uid='1' class='pic_small'>                                    <span class="user_named m_h">admin</span>
+                            	<a href="index.php?do=user" title="" rel="user_menu">
+                            		<img src='/public/data/avatar/default/man_small.jpg' uid='' class='pic_small'>                                    <span class="user_named m_h"></span>
                             	</a>
 <!--用户登录后导航菜单 start-->
                     <div id="user_menu" class="user_nav_pop grid_5 alpha omega hidden m_h">
                         <ul class="nav_list clearfix">
-                                    	<li class="clearfix"><a href="index.php?do=user&view=finance&op=detail" title="金钱 | 元宝" id="money"> <div class="icon16 cur-yen reverse"></div>￥405,405.06元| ￥77,529.19元</a></li>
-                                        <li class="clearfix"><a href="index.php?do=release" title="发布任务" class="selected" ><div class="icon16 doc-new reverse"></div>发布任务</a></li>
+<li class="clearfix"><a href="index.php?do=user&view=finance&op=detail" title="金钱 | 元宝" id="money"> <div class="icon16 cur-yen reverse"></div>￥0.00元| ￥0.00元</a></li>
+<li class="clearfix"><a href="index.php?do=release" title="发布任务" class="selected" ><div class="icon16 doc-new reverse"></div>发布任务</a></li>
 <li class="clearfix"><a href="index.php?do=shop_release" title="发布商品" class="selected"><div class="icon16 doc-new reverse"></div>发布商品</a></li>
-<li class="clearfix " id="manage_center"><a href="control/admin/index.php" title="管理中心" ><div class="icon16 key reverse"></div>管理中心</a></li>
+<li class="clearfix hidden" id="manage_center"><a href="control/admin/index.php" title="管理中心" ><div class="icon16 key reverse"></div>管理中心</a></li>
 <li class="clearfix"><a href="index.php?do=user&view=index" title="用户中心"><div class="icon16 cog reverse"></div>用户中心</a></li>
-<li class="clearfix"><a href="http://127.0.0.1/weike/index.php?do=space&member_id=1" title="我的店铺" id="space"><div class="icon16 compass reverse"></div>我的店铺</a></li>
+<li class="clearfix"><a href="http://127.0.0.1/weike/index.php?do=space&member_id=" title="我的店铺" id="space"><div class="icon16 compass reverse"></div>我的店铺</a></li>
 <!--<li class="clearfix"><a href="index.php?do=user&view=message" title="站内信"><div class="icon16 mail reverse"></div>站内信</a></li>-->
 <li class="clearfix"><a onclick="showWindow('out','index.php?do=logout');return false;" title="退出" href="index.php?do=logout">退出</a></li>
                          </ul>

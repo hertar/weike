@@ -83,7 +83,14 @@ class IndexController extends Controller
         ];
     }
 */
-    public function actionMain(){
+    
+public function actionLogout(){
+    $session=new \yii\web\Session;
+    $session->remove('username');
+    $this->redirect("index.php?r=index/index");
+}
+
+public function actionMain(){
         return $this->renderPartial("main");
     }
 

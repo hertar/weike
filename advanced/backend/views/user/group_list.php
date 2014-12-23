@@ -51,7 +51,7 @@
 <td>
  
 <a href="index.php?do=user&view=group_add&op=add&editgid=3&page=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=user&view=group_list&op=del&editgid=3&page=" onclick="return cdel(this);"class="button"><span class="trash icon"></span>删除</a>
+<a href="index.php?r=user/group_del&id=<?php echo $val["group_id"]?>" onclick="return cdel(this);"class="button"><span class="trash icon"></span>删除</a>
  
 </td>
           </tr>

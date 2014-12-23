@@ -153,8 +153,8 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
             	<div class="user_box clearfix grid_5">
                 	<!--注册登录按钮 start-->
                   	<ul id="login_sub" class="user_login ">
-                        <li><a href="index.php?do=register" class="m_h">免费注册</a></li>
-                        <li><a href="index.php?do=login">登录</a></li>
+                        <li><a href="index.php?r=index/register" class="m_h">免费注册</a></li>
+                        <li><a href="index.php?r=index/login">登录</a></li>
                     </ul>
                     <!--注册登录按钮 end--> 
 <div class="clear"></div>
