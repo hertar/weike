@@ -108,13 +108,13 @@ function win_confirm(url) {
 /** 用户登陆 */
 
 function login() {
-	location.href="index.php?do=login";
+	location.href="index.php?r=index/login";
 }
 
 function redirect_url(url){
 	 
    var furl = window.location.href;
-   var tourl =url?url:"index.php?do=login";
+   var tourl =url?url:"index.php?r=index/login";
    url = tourl.replace(/\?/,"\\?"); 
    var pos = furl.search(url);  
    if(pos == -1){ 

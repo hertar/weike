@@ -1,3 +1,4 @@
+
 <?php
 use yii\widgets\LinkPager;
 ?>
@@ -21,29 +22,16 @@ use yii\widgets\LinkPager;
         	<div class="menu grid_24 clearfix">
                 <ul class="clearfix">
      <?php
+          $nav = (new \yii\db\Query())
+                ->select('nav_title, nav_url')
+                ->from('wk_witkey_nav')
+                ->all();
         foreach($nav as $v){
      ?>
 <li>
     <a href="<?php echo $v['nav_url']?>"  ><span><?php echo $v['nav_title']?></span></a>
 </li>
 
-<li class="line"></li>
-<?php
-        }
-?>
-
-                </ul>
-                <!---->
-                  <div class="operate po_ab">
-                    	<a href="index.php?r=help" target="_blank" title="帮助中心">
-                        	<span class="icon16 help reverse"></span>
-帮助中心                        </a>
-                   </div>
-                <!---->
-</div>
-                <div class="clear"></div>
-        </div>
-    </nav>
 <div class="wrapper">	
 <!--页面头部-->
 <header class="clearfix page_header">

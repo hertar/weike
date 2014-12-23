@@ -1,31 +1,3 @@
- <nav id="nav" class="nav m_h">
-        <div class="container_24" >
-        	<div class="menu grid_24 clearfix">
-                <ul class="clearfix">
-     <?php
-        foreach($nav as $v){
-     ?>
-<li>
-    <a href="<?php echo $v['nav_url']?>"  ><span><?php echo $v['nav_title']?></span></a>
-</li>
-
-<li class="line"></li>
-<?php
-        }
-?>
-
-                </ul>
-                <!---->
-                  <div class="operate po_ab">
-                    	<a href="index.php?r=help" target="_blank" title="帮助中心">
-                        	<span class="icon16 help reverse"></span>
-帮助中心                        </a>
-                   </div>
-                <!---->
-</div>
-                <div class="clear"></div>
-        </div>
-    </nav>
 <!--内容区 satrt-->
   <div class="wrapper clearfix">
     <div class="container_24 clearfix"> 
