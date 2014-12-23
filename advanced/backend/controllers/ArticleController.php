@@ -15,6 +15,7 @@ use app\models\UploadForm;
 use yii\web\UploadedFile;
 use yii\web\Session;
 use app\models\tree;
+use app\models\WkWitkeyCase;
 /**
  * Site controller
  */
@@ -31,7 +32,7 @@ class ArticleController extends Controller
 //网站公告
     //公告列表
  public function actionBulletin(){  
-        $this->layout='@app/views/layouts/publics.php';
+      $this->layout='@app/views/layouts/publics.php';
        $model=new Query();
        $data = $model->from(['wk_witkey_article'])->orderby("listorder asc")->where("art_cat_id=17")->all();
        $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>5]);
@@ -52,6 +53,7 @@ $paixu=@$_POST['paixu'];
 $zengjian=@$_POST['zengjian'];
 $page_size=@$_POST['page_size'];
 $where="1";
+
 $where.=" and art_cat_id='17'";
 if(!empty($bulletin)&&empty($art_title)&&empty($username)&&empty($page_size)&&empty($paixu)&&empty($zengjian)){
 $session->set('bulletin',$session->get('bulletin'));
@@ -215,7 +217,7 @@ $a=$session->get('bulletin');
 $data=Article::find()->andWhere($a);	
 $pages =new Pagination(['totalCount'=>$data->count(),'pageSize'=>$page_size]);	
 $model = $data->offset($pages->offset)->limit($pages->limit)->all();
-return $this->renderPartial('about',['model'=>$model,'pages'=>$pages]);
+return $this->renderPartial('about',['model'=>$model,'pages'=>$pages]); 
 
 }    
 //网站添加
@@ -304,12 +306,11 @@ public function actionAbout_editpro(){
     $model=new Query();
     $data = $model->from(['wk_witkey_article'])->orderby("listorder asc")->where("cat_type='article'")->all();
     $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>5]);
-    $data=$model->offset($pages->offset)->limit($pages->limit)->all();   
-   
+    $data=$model->offset($pages->offset)->limit($pages->limit)->all();      
     return $this->render('art_list',[
     'model' => $data,
     'pages' => $pages,
-         'arr' => $arrs,
+    'arr' => $arrs,
     ]); 
   }
   //文章搜索
@@ -398,7 +399,7 @@ $a=$article->insert();
 }
 //文章删除
   public  function actionArt_del(){
-        $id=$_GET['art_id'];
+       $id=$_GET['art_id'];
        $a=article::findOne($id)->delete(); 
        if($a){
            echo 1;
@@ -431,7 +432,7 @@ $a=$article->insert();
         if($a){
         $this->redirect("./index.php?r=article/art_list");      
         }else{
-        echo 123;     
+             echo 123;     
         }
   }
 //文章批量删除
@@ -458,7 +459,7 @@ $a=$article->insert();
     return $this->render('cat_list',[
     'model' => $data,
     'pages' => $pages,
-         'arr' => $arrs,
+    'arr' => $arrs,
     ]); 
   }
   //文章分类搜索
@@ -886,12 +887,39 @@ public function actionHelp_add_pro(){
         }else{
          echo 0;
         }
-
   } 
   //成功案例(列表)
   public function actionCase_list(){
-      return $this->renderPartial("case_list");
+    $this->layout='@app/views/layouts/publics.php';
+    $model=new Query();
+    $data = $model->from(['wk_witkey_case'])->orderby("case_id asc")->all();
+    $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>5]);
+    $data=$model->offset($pages->offset)->limit($pages->limit)->all();     
+    return $this->render('case_list',[
+    'model' => $data,
+    'pages' => $pages,
+    ]); 
   }
+  //成功删除
+  public  function actionCase_del(){
+        $id=$_GET['art_id'];
+       $a=WkWitkeyCase::findOne($id)->delete(); 
+       if($a){
+           echo 1;
+       }else{
+           echo 0;   
+       }
+ }
+ //成功案例批量删除
+   public function actionCase_delall(){
+         $id=$_GET['id'];
+         $count = WkWitkeyCase::deleteAll("case_id in ($id)" );
+         if($count>0){
+             echo 1;
+        }else{
+             echo 0;
+        }
+  } 
   //添加案例
   public function actionCase_add(){
       return $this->renderPartial("case_add");
