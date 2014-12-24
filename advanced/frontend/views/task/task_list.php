@@ -2,35 +2,7 @@
 <?php
 use yii\widgets\LinkPager;
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>keke admin</title>
 
-
-<link href="/public/tpl/css/admin_management.css" rel="stylesheet" type="text/css" />
-<link href="/public/resource/css/buttons.css" rel="stylesheet" type="text/css" />
-<link title="style1" href="/public/tpl/skin/default/style.css" rel="stylesheet" type="text/css" />
-<!--<link title="style2" href="tpl/skin/light/style.css" rel="stylesheet" type="text/css" />-->
-<script type="text/javascript" src="/public/resource/js/jquery.js"></script>
-<script type="text/javascript" src="/public/resource/js/system/keke.js"></script>
-<script type="text/javascript" src="/public/resource/js/in.js"></script>
-</head>
-<nav id="nav" class="nav m_h">
-        <div class="container_24" >
-        	<div class="menu grid_24 clearfix">
-                <ul class="clearfix">
-     <?php
-          $nav = (new \yii\db\Query())
-                ->select('nav_title, nav_url')
-                ->from('wk_witkey_nav')
-                ->all();
-        foreach($nav as $v){
-     ?>
-<li>
-    <a href="<?php echo $v['nav_url']?>"  ><span><?php echo $v['nav_title']?></span></a>
-</li>
 
 <div class="wrapper">	
 <!--页面头部-->

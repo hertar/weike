@@ -40691,3 +40691,1506 @@ $_SERVER = [
     'REQUEST_TIME' => 1419340553
 >>>>>>> df9630e53055167b4ac5bc6db2ea6cb90ce03c1e
 ]
+2014-12-24 01:02:06 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50108 bytes' 
+
+in E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\aweike\advan...', 86, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD?a:...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-24 01:02:02 [127.0.0.1][-][-][info][application] $_SESSION = [
+    '__flash' => []
+    'yzm' => '0e19'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/frontend/'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51436'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/frontend/web/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379322.262
+    'REQUEST_TIME' => 1419379322
+]
+2014-12-24 01:02:25 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected end of file' in E:\aweike\advanced\frontend\views\task\task_list.php:705
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-24 01:02:17 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51453'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379337.377
+    'REQUEST_TIME' => 1419379337
+]
+2014-12-24 01:02:25 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50108 bytes' 
+
+in E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\aweike\advan...', 86, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD?a:...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\ErrorHandler.php(184): yii\log\Logger->flush(true)
+#7 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#8 {main}
+2014-12-24 01:02:17 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51453'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379337.377
+    'REQUEST_TIME' => 1419379337
+]
+2014-12-24 01:02:26 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected end of file' in E:\aweike\advanced\frontend\views\task\task_list.php:705
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-24 01:02:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/frontend/web/'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51456'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379345.753
+    'REQUEST_TIME' => 1419379345
+]
+2014-12-24 01:02:26 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50108 bytes' 
+
+in E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\aweike\advan...', 86, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD?a:...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\ErrorHandler.php(184): yii\log\Logger->flush(true)
+#7 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#8 {main}
+2014-12-24 01:02:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/frontend/web/'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51456'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379345.753
+    'REQUEST_TIME' => 1419379345
+]
+2014-12-24 01:02:47 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50108 bytes' 
+
+in E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\aweike\advan...', 86, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD?a:...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-24 01:02:47 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => '06c3'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/frontend/'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51466'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/frontend/web/'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379366.982
+    'REQUEST_TIME' => 1419379366
+]
+2014-12-24 01:02:49 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected end of file' in E:\aweike\advanced\frontend\views\task\task_list.php:705
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-24 01:02:49 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51469'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379369.304
+    'REQUEST_TIME' => 1419379369
+]
+2014-12-24 01:02:49 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50108 bytes' 
+
+in E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\aweike\advan...', 86, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD?a:...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\ErrorHandler.php(184): yii\log\Logger->flush(true)
+#7 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#8 {main}
+2014-12-24 01:02:49 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51469'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379369.304
+    'REQUEST_TIME' => 1419379369
+]
+2014-12-24 01:02:49 [127.0.0.1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected end of file' in E:\aweike\advanced\frontend\views\task\task_list.php:705
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-24 01:02:49 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/frontend/web/'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51466'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379369.612
+    'REQUEST_TIME' => 1419379369
+]
+2014-12-24 01:02:49 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50108 bytes' 
+
+in E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\aweike\advan...', 86, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD?a:...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\base\ErrorHandler.php(184): yii\log\Logger->flush(true)
+#7 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#8 {main}
+2014-12-24 01:02:49 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/frontend/web/'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51466'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379369.612
+    'REQUEST_TIME' => 1419379369
+]
+2014-12-24 01:05:03 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 50108 bytes' 
+
+in E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'E:\aweike\advan...', 86, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD?a:...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-24 01:05:02 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => '06c3'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51545'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379502.886
+    'REQUEST_TIME' => 1419379502
+]
+2014-12-24 01:06:45 [127.0.0.1][-][-][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: frontend\controllers\TaskController::renderPartail()' in E:\aweike\advanced\vendor\yiisoft\yii2\base\Component.php:282
+Stack trace:
+#0 E:\aweike\advanced\frontend\controllers\TaskController.php(67): yii\base\Component->__call('renderPartail', Array)
+#1 E:\aweike\advanced\frontend\controllers\TaskController.php(67): frontend\controllers\TaskController->renderPartail('task_list', Array)
+#2 [internal function]: frontend\controllers\TaskController->actionTask_list()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('task_list', Array)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('task/task_list', Array)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#9 {main}
+2014-12-24 01:06:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51578'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379605.316
+    'REQUEST_TIME' => 1419379605
+]
+2014-12-24 01:09:26 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=192....', 'root', 'root', NULL)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(130): yii\db\Query->all(NULL)
+#9 E:\aweike\advanced\frontend\controllers\TaskController.php(31): yii\db\ActiveQuery->all()
+#10 [internal function]: frontend\controllers\TaskController->actionTask_list()
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('task_list', Array)
+#14 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('task/task_list', Array)
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(130): yii\db\Query->all(NULL)
+#7 E:\aweike\advanced\frontend\controllers\TaskController.php(31): yii\db\ActiveQuery->all()
+#8 [internal function]: frontend\controllers\TaskController->actionTask_list()
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('task_list', Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('task/task_list', Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+Additional Information:
+
+2014-12-24 01:09:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51630'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379745.661
+    'REQUEST_TIME' => 1419379745
+]
+2014-12-24 01:11:09 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=192....', 'root', 'root', NULL)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(130): yii\db\Query->all(NULL)
+#9 E:\aweike\advanced\frontend\controllers\TaskController.php(31): yii\db\ActiveQuery->all()
+#10 [internal function]: frontend\controllers\TaskController->actionTask_list()
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('task_list', Array)
+#14 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('task/task_list', Array)
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\ActiveQuery.php(130): yii\db\Query->all(NULL)
+#7 E:\aweike\advanced\frontend\controllers\TaskController.php(31): yii\db\ActiveQuery->all()
+#8 [internal function]: frontend\controllers\TaskController->actionTask_list()
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('task_list', Array)
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('task/task_list', Array)
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+Additional Information:
+
+2014-12-24 01:10:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51667'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_list'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_list'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379848.525
+    'REQUEST_TIME' => 1419379848
+]
+2014-12-24 01:11:24 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=192....', 'root', 'root', NULL)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#8 E:\aweike\advanced\frontend\views\layouts\public.php(235): yii\db\Query->all()
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('E:\aweike\advan...')
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\aweike\advan...', Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('E:\aweike\advan...', Array, Object(frontend\controllers\IndexController))
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<!--????????? s...')
+#13 E:\aweike\advanced\frontend\controllers\IndexController.php(27): yii\base\Controller->render('index')
+#14 [internal function]: frontend\controllers\IndexController->actionIndex()
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#16 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#18 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#19 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#6 E:\aweike\advanced\frontend\views\layouts\public.php(235): yii\db\Query->all()
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('E:\aweike\advan...')
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\aweike\advan...', Array)
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('E:\aweike\advan...', Array, Object(frontend\controllers\IndexController))
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<!--????????? s...')
+#11 E:\aweike\advanced\frontend\controllers\IndexController.php(27): yii\base\Controller->render('index')
+#12 [internal function]: frontend\controllers\IndexController->actionIndex()
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#14 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#16 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#17 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2014-12-24 01:11:02 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => '0537'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51679'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/frontend/web/index.php'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379862.913
+    'REQUEST_TIME' => 1419379862
+]
+2014-12-24 01:12:28 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=192....', 'root', 'root', NULL)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#8 E:\aweike\advanced\frontend\views\layouts\public.php(235): yii\db\Query->all()
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('E:\aweike\advan...')
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\aweike\advan...', Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('E:\aweike\advan...', Array, Object(frontend\controllers\IndexController))
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<!--????????? s...')
+#13 E:\aweike\advanced\frontend\controllers\IndexController.php(27): yii\base\Controller->render('index')
+#14 [internal function]: frontend\controllers\IndexController->actionIndex()
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#16 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#18 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#19 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#6 E:\aweike\advanced\frontend\views\layouts\public.php(235): yii\db\Query->all()
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('E:\aweike\advan...')
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\aweike\advan...', Array)
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('E:\aweike\advan...', Array, Object(frontend\controllers\IndexController))
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<!--????????? s...')
+#11 E:\aweike\advanced\frontend\controllers\IndexController.php(27): yii\base\Controller->render('index')
+#12 [internal function]: frontend\controllers\IndexController->actionIndex()
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#14 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#16 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#17 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2014-12-24 01:12:07 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+    '_csrf' => 'e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des:32:\"j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh\";'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => '2684'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7; _csrf=e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des%3A32%3A%22j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51700'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/frontend/web/index.php'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379927.607
+    'REQUEST_TIME' => 1419379927
+]
+2014-12-24 01:12:49 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=192....', 'root', 'root', NULL)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#6 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#8 E:\aweike\advanced\frontend\views\layouts\public.php(235): yii\db\Query->all()
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('E:\aweike\advan...')
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\aweike\advan...', Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('E:\aweike\advan...', Array, Object(frontend\controllers\IndexController))
+#12 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<!--????????? s...')
+#13 E:\aweike\advanced\frontend\controllers\IndexController.php(27): yii\base\Controller->render('index')
+#14 [internal function]: frontend\controllers\IndexController->actionIndex()
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#16 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#17 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#18 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#19 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+' in E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(208): yii\db\Connection->getSlavePdo()
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(815): yii\db\Command->prepare(true)
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\db\Command.php(350): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 E:\aweike\advanced\vendor\yiisoft\yii2\db\Query.php(206): yii\db\Command->queryAll()
+#6 E:\aweike\advanced\frontend\views\layouts\public.php(235): yii\db\Query->all()
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('E:\aweike\advan...')
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\aweike\advan...', Array)
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(382): yii\base\View->renderFile('E:\aweike\advan...', Array, Object(frontend\controllers\IndexController))
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(368): yii\base\Controller->renderContent('<!--????????? s...')
+#11 E:\aweike\advanced\frontend\controllers\IndexController.php(27): yii\base\Controller->render('index')
+#12 [internal function]: frontend\controllers\IndexController->actionIndex()
+#13 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#14 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#16 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#17 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2014-12-24 01:12:20 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+    '_csrf' => 'e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des:32:\"j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh\";'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => '04ee'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=44i9r64mahoajkqbm48d66dsb7; _csrf=e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des%3A32%3A%22j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51709'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/frontend/web/index.php'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419379940.409
+    'REQUEST_TIME' => 1419379940
+]
+2014-12-24 01:15:07 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: nav' in E:\aweike\advanced\frontend\views\task\task_up.php:24
+Stack trace:
+#0 E:\aweike\advanced\frontend\views\task\task_up.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'E:\aweike\advan...', 24, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('E:\aweike\advan...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\aweike\advan...', Array, Object(frontend\controllers\TaskController))
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('task_up', Array, Object(frontend\controllers\TaskController))
+#5 E:\aweike\advanced\frontend\controllers\TaskController.php(78): yii\base\Controller->render('task_up', Array)
+#6 [internal function]: frontend\controllers\TaskController->actionTask_up()
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('task_up', Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('task/task_up', Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2014-12-24 01:15:06 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_up'
+    'id' => '63'
+]
+
+$_COOKIE = [
+    'kekeshow_cookie' => '1'
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+    '_csrf' => 'e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des:32:\"j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_COOKIE' => 'kekeshow_cookie=1; PHPSESSID=44i9r64mahoajkqbm48d66dsb7; _csrf=e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des%3A32%3A%22j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51907'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_up&id=63'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_up&id=63'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419380106.971
+    'REQUEST_TIME' => 1419380106
+]
+2014-12-24 01:15:07 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: nav' in E:\aweike\advanced\frontend\views\task\task_up.php:24
+Stack trace:
+#0 E:\aweike\advanced\frontend\views\task\task_up.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'E:\aweike\advan...', 24, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('E:\aweike\advan...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\aweike\advan...', Array, Object(frontend\controllers\TaskController))
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('task_up', Array, Object(frontend\controllers\TaskController))
+#5 E:\aweike\advanced\frontend\controllers\TaskController.php(78): yii\base\Controller->render('task_up', Array)
+#6 [internal function]: frontend\controllers\TaskController->actionTask_up()
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('task_up', Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('task/task_up', Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2014-12-24 01:15:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_up'
+    'id' => '63'
+]
+
+$_COOKIE = [
+    'kekeshow_cookie' => '1'
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+    '_csrf' => 'e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des:32:\"j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/frontend/web/index.php?r=task/task_list'
+    'HTTP_COOKIE' => 'kekeshow_cookie=1; PHPSESSID=44i9r64mahoajkqbm48d66dsb7; _csrf=e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des%3A32%3A%22j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '51909'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_up&id=63'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_up&id=63'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419380107.272
+    'REQUEST_TIME' => 1419380107
+]
+2014-12-24 01:23:21 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: nav' in E:\aweike\advanced\frontend\views\task\task_up.php:24
+Stack trace:
+#0 E:\aweike\advanced\frontend\views\task\task_up.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'E:\aweike\advan...', 24, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('E:\aweike\advan...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\aweike\advan...', Array, Object(frontend\controllers\TaskController))
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('task_up', Array, Object(frontend\controllers\TaskController))
+#5 E:\aweike\advanced\frontend\controllers\TaskController.php(78): yii\base\Controller->render('task_up', Array)
+#6 [internal function]: frontend\controllers\TaskController->actionTask_up()
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('task_up', Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('task/task_up', Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2014-12-24 01:23:21 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_up'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'kekeshow_cookie' => ''
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+    '_csrf' => 'e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des:32:\"j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_COOKIE' => 'kekeshow_cookie=; PHPSESSID=44i9r64mahoajkqbm48d66dsb7; _csrf=e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des%3A32%3A%22j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh%22%3B'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '52206'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_up&id=1'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_up&id=1'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419380601.014
+    'REQUEST_TIME' => 1419380601
+]
+2014-12-24 01:23:21 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: nav' in E:\aweike\advanced\frontend\views\task\task_up.php:24
+Stack trace:
+#0 E:\aweike\advanced\frontend\views\task\task_up.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'E:\aweike\advan...', 24, Array)
+#1 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('E:\aweike\advan...')
+#2 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('E:\aweike\advan...', Array)
+#3 E:\aweike\advanced\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('E:\aweike\advan...', Array, Object(frontend\controllers\TaskController))
+#4 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(367): yii\base\View->render('task_up', Array, Object(frontend\controllers\TaskController))
+#5 E:\aweike\advanced\frontend\controllers\TaskController.php(78): yii\base\Controller->render('task_up', Array)
+#6 [internal function]: frontend\controllers\TaskController->actionTask_up()
+#7 E:\aweike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 E:\aweike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 E:\aweike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('task_up', Array)
+#10 E:\aweike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('task/task_up', Array)
+#11 E:\aweike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 E:\aweike\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2014-12-24 01:23:21 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'task/task_up'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'kekeshow_cookie' => ''
+    'PHPSESSID' => '44i9r64mahoajkqbm48d66dsb7'
+    '_csrf' => 'e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des:32:\"j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'E:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'E:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/frontend/web/index.php?r=task/task_list'
+    'HTTP_COOKIE' => 'kekeshow_cookie=; PHPSESSID=44i9r64mahoajkqbm48d66dsb7; _csrf=e758c8c873c1458888edfc7c8175971ee6d8af324616e11d67ebcde9f7ad43des%3A32%3A%22j4zkya2sRZ2-R4LwdafNxBGkgLClvRJh%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;;E:\\php\\jdk\\bin;E:\\php\\jdk\\jre\\bin;E:\\xampp\\mysql\\bin;E:\\php\\Git\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Win32) OpenSSL/1.0.1e PHP/5.5.9'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/aweike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'E:/aweike/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '52208'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=task/task_up&id=1'
+    'REQUEST_URI' => '/frontend/web/index.php?r=task/task_up&id=1'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419380601.278
+    'REQUEST_TIME' => 1419380601
+]

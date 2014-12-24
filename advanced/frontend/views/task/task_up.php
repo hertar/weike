@@ -1,49 +1,8 @@
 <?php
 use yii\widgets\LinkPager;
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>keke admin</title>
 
 
-<link href="/public/tpl/css/admin_management.css" rel="stylesheet" type="text/css" />
-<link href="/public/resource/css/buttons.css" rel="stylesheet" type="text/css" />
-<link title="style1" href="/public/tpl/skin/default/style.css" rel="stylesheet" type="text/css" />
-<!--<link title="style2" href="tpl/skin/light/style.css" rel="stylesheet" type="text/css" />-->
-<script type="text/javascript" src="/public/resource/js/jquery.js"></script>
-<script type="text/javascript" src="/public/resource/js/system/keke.js"></script>
-<script type="text/javascript" src="/public/resource/js/in.js"></script>
-</head>
-<nav id="nav" class="nav m_h">
-        <div class="container_24" >
-        	<div class="menu grid_24 clearfix">
-                <ul class="clearfix">
-     <?php
-        foreach($nav as $v){
-     ?>
-<li>
-    <a href="<?php echo $v['nav_url']?>"  ><span><?php echo $v['nav_title']?></span></a>
-</li>
-
-<li class="line"></li>
-<?php
-        }
-?>
-
-                </ul>
-                <!---->
-                  <div class="operate po_ab">
-                    	<a href="index.php?r=help" target="_blank" title="帮助中心">
-                        	<span class="icon16 help reverse"></span>
-帮助中心                        </a>
-                   </div>
-                <!---->
-</div>
-                <div class="clear"></div>
-        </div>
-    </nav>
  <div class="wrapper">
   <!--页面头部-->
   <header class="clearfix page_header">
@@ -217,7 +176,7 @@ use yii\widgets\LinkPager;
         <summary  class="fontb">需求</summary>
          <!--内容-->
       
-<pre class="ws_prewrap ws_break" ><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;福彩双色球2元可中1000万</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一样的彩票站，不一样的服务</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站免费为彩民量血压</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;彩票站WIFI覆盖</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果您累了，电子宾馆彩票站为您提供休息的椅子和茶水</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子宾馆彩票站为了回馈彩民朋友开展二次抽奖活动</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子宾馆彩票站买彩票也可以积分，一注彩票积2分，满500分赠送双色球一注</p>KPPW2.2安装包默认数据均为测试演示数据，无任何商业意图，请各位站长测试后自行删除。如有违规，自行承责。</pre> 
+<pre class="ws_prewrap ws_break" ><?php echo $list['task_desc']?></pre> 
       </details>
       <!--end 内容1-->
   <!--start补充需求-->
