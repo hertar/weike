@@ -126,7 +126,7 @@ use yii\widgets\LinkPager;
                                     <tr class="item">
                  	<td class="td25"><input type="checkbox" name="ckb" class="checkbox" value="<?php echo $val['task_id']?>" class="checkbox"></td><td><?php echo $val['task_id']?></td>
                     <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=70" target="_blank"><?php echo $val['task_title']?></a>
+                    	<a href="index.php?r=model/up_deposittask&id=<?php echo $val['task_id'] ?>" target="_blank"><?php echo $val['task_title']?></a>
 </td>
                    
                     <td>￥<?php echo $val['task_cash']?>元</td>
@@ -138,8 +138,7 @@ use yii\widgets\LinkPager;
                    <?php }?>
  
                     <td>
- <a href="index.php?do=model&model_id=5&view=list&id=42&ac=recommend&page=1&task_id=42" onclick="return crecomm(this,'',1);" class="button"><span class="cog icon"></span>荐</a>
- <a href="index.php?do=model&model_id=5&view=list&ac=unrecommend&task_id=29&page=1" onclick="return crecomm(this,'',2);" class="button"><span class="cog icon"></span>取消推荐</a>
+ 
 <a href="index.php?r=model/up_deposittask&id=<?php echo $val['task_id'] ?>" class="button dbl_target"><span class="pen icon"></span>查看</a>
 <a href="index.php?r=model/del_deposittask&id=<?php echo $val['task_id'] ?>" class="button"  onclick="return cdel(this);"><span class="trash icon"></span>删除</a>
 </td>

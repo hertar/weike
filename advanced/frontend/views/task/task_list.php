@@ -36,13 +36,12 @@ use yii\widgets\LinkPager;
                             <dt class="grid_2 omega">
                                 任务分类                            </dt>
                             <dd class="grid_21">
-                                 <a href="index.php?r=task/task_list&fl=0"    class='selected' >全部 </a>
+                                <a href="index.php?r=task/task_list&fl=0"  class='selected'>全部 </a>
 								<?php foreach($fenlei as $f=>$l){?>
                                 <a href="index.php?r=task/task_list&fl=<?php echo $l['indus_id']?>&ms=<?php echo @$can['ms']?>&min=<?php echo @$can['min']?>&max=<?php echo @$can['max']?>" ><?php echo $l['indus_name']?></a>
 								<?php }?>
                             </dd>
                         </dl>
-                        
                         <!--end 分类--><!--条件1-->
                         <dl class="condition clearfix">
                             <dt class="grid_2 omega">
@@ -84,8 +83,8 @@ use yii\widgets\LinkPager;
                                    任务赏金                                </dt>
                                     <dd class="grid_21">
                                         <span id="general_search" >
-                                        	<a href="index.php?r=task/task_list&f1=&ms="   class="selected" >全部 </a>
- <a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&min=0&max=100">100元以下  </a>
+                                        	<a href="index.php?r=task/task_list&f1=&ms=&min=&max="   class="selected" >全部 </a>
+ <a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&min=1&max=100">100元以下  </a>
  
 <a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&min=100&max=500">100-500 </a>
  
@@ -95,7 +94,7 @@ use yii\widgets\LinkPager;
  
 <a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&min=5000&max=20000"  >5000-20000 </a>
  
-<a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&max=20000"  >2万以上 </a>
+<a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&min=20000&max=100000"  >2万以上 </a>
 
 <a class="button" style="" onclick="custom_search_cash('task_list_search_cash')">
                                         	<span class="icon cog"></span>自定义</a></span>
