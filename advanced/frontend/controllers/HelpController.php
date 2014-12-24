@@ -20,41 +20,23 @@ class HelpController extends Controller
     public function actionIndex(){
         
        $this->layout='@app/views/layouts/public.php';
-          $rows = (new \yii\db\Query())
-                ->select('nav_title, nav_url')
-                ->from('wk_witkey_nav')
-                ->all();
-      
-        $data['nav']=$rows;
-       return $this->renderPartial("index",$data);
-      //return $this->render("index",$data);
+         
+       return $this->renderPartial("index");
+     
       
    }
    //商品规则
     public function actionRuler(){
         
        $this->layout='@app/views/layouts/public.php';
-          $rows = (new \yii\db\Query())
-                ->select('nav_title, nav_url')
-                ->from('wk_witkey_nav')
-                ->all();
       
-        $data['nav']=$rows;
-       return $this->renderPartial("ruler",$data);
-      //return $this->render("index",$data);
-      
+       return $this->renderPartial("ruler");
    }
    //威客作品
      public function actionWorks(){
         
        $this->layout='@app/views/layouts/public.php';
-          $rows = (new \yii\db\Query())
-                ->select('nav_title, nav_url')
-                ->from('wk_witkey_nav')
-                ->all();
-      
-        $data['nav']=$rows;
-       return $this->renderPartial("works",$data);
-      //return $this->render("index",$data);     
+         
+       return $this->renderPartial("works");    
    }
 }

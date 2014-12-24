@@ -41,6 +41,7 @@ class ShopController extends Controller
    //详情页
    public function actionShop_content(){
         $this->layout='@app/views/layouts/public.php';
+
         $id=$_GET['id'];
         $arr=WkWitkeyService::findOne($id); 
       $indus_id=$arr['indus_id'];
@@ -59,5 +60,9 @@ class ShopController extends Controller
          return $this->render('shop_content',['nav'=>$rows,
                                  'arr'=>$arr,
        ]);   
+
+          
+    
+
    }
 }

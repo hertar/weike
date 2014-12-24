@@ -19,13 +19,8 @@ class SquareController extends Controller
     public function actionSquare_list(){
         
        $this->layout='@app/views/layouts/public.php';
-          $rows = (new \yii\db\Query())
-                ->select('nav_title, nav_url')
-                ->from('wk_witkey_nav')
-                ->all();
-      
-        $data['nav']=$rows;
-       return $this->renderPartial("square_list",$data);
+          
+       return $this->renderPartial("square_list");
       // return $this->render("square_list",$data);
       
    }

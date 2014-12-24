@@ -14,12 +14,13 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
 
-class ServerController extends Controller
+class UserController extends Controller
 {
-    public function actionSeller_list(){
+    //用户中心
+    public function actionIndex(){
         
-       $this->layout='@app/views/layouts/public.php';
-          
-         return $this->render("seller_list");
+        $this->layout='@app/views/layouts/public.php';
+        
+        return $this->render("index");
    }
 }
