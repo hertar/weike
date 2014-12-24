@@ -63,8 +63,21 @@ class ShopController extends Controller
       }
          if($_GET['on_time']!=''){
             $can=['on_time'=>$_GET['on_time']];
-            $time=strtotime("-".$_GET['on_time']." day");
-            $where.="  and on_time>".$time."";
+                    if($_GET['on_time']=='1'){
+                      
+                        $time=strtotime(" - 1 day");
+                    }else if($_GET['on_time']=='3'){
+                          
+                       $time=strtotime(" - 3 day"); 
+                    }else if($_GET['on_time']=='7'){
+                          
+                       $time=strtotime(" - 7 day"); 
+                    }else if($_GET['on_time']=='30'){
+                          
+                       $time=strtotime(" - 30 day"); 
+                    }
+       
+            $where.="  and wk_witkey_service.on_time>".$time."";
       }
    
       $indus_all=WkWitkeyIndustry::find()->where(['indus_pid' => '0'])->all();

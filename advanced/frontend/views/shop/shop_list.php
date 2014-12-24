@@ -321,7 +321,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                             <dt class="grid_2 omega">商品金额</dt>
                             <dd class="grid_21">
                                         <span id="general_search" >
-                                        	<a href="index.php?do=shop_list&path="   class="selected" >全部</a>
+                                        	<a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=&max=&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"   class="selected" >全部</a>
  
 <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min='1'&max='100'&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"  >100元以下 </a>
  
@@ -391,15 +391,15 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                            <dl class="condition clearfix">
                             <dt class="grid_2 omega">发布时间</dt>
                             <dd class="grid_21">
- <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time='0'&address=<?php echo @$can['address'];?>"  class="selected" >全部</a> 
+ <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=&address=<?php echo @$can['address'];?>"  class="selected" >全部</a> 
   
-    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time='1'&address=<?php echo @$can['address'];?>"   >近一天</a> 
+    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=1&address=<?php echo @$can['address'];?>"   >近一天</a> 
                                   
-    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time='3'&address=<?php echo @$can['address'];?>"   >近三天</a> 
+    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=3&address=<?php echo @$can['address'];?>"   >近三天</a> 
                                   
-    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time='7'&address=<?php echo @$can['address'];?>"   >近一周</a> 
+    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=7&address=<?php echo @$can['address'];?>"   >近一周</a> 
                                   
-    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time='30'&address=<?php echo @$can['address'];?>"   >近一个月</a> 
+    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=30&address=<?php echo @$can['address'];?>"   >近一个月</a> 
                                                                 </dd>
                            </dl>
                            <!--end 条件4-->
