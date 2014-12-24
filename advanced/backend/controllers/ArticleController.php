@@ -16,6 +16,7 @@ use yii\web\UploadedFile;
 use yii\web\Session;
 use app\models\tree;
 use app\models\WkWitkeyCase;
+use app\models\WkWitkeyService;
 /**
  * Site controller
  */
@@ -170,7 +171,9 @@ public function actionAbout(){
      $this->layout='@app/views/layouts/publics.php';
     $model=new Query();
     $data = $model->from(['wk_witkey_article'])->orderby("listorder asc")->where("art_cat_id=202")->all();
+
     $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>5]);
+      
     $data=$model->offset($pages->offset)->limit($pages->limit)->all();     
     return $this->render('about',[
     'model' => $data,
