@@ -174,7 +174,20 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                         <ul class="user_logined clearfix">
                             <li id="avatar">
                             	<a href="index.php?r=user/index" title="" rel="user_menu">
-                                            <img src='/public/data/avatar/default/man_small.jpg' uid='' class='pic_small'>     
+                                    <?php
+                                         $uid=$session->get("u_id");
+                                         $arr=\app\models\Space::find()->where(["uid"=>"$uid"])->one();
+                                         //print_r($arr);
+                                         if($arr){
+                                    ?>
+                                            <img src="/public/data/avatar/system<?php echo $arr["images"]?>" uid='' class='pic_small'>   
+                                            <?php
+                                         }else{
+                                            ?>
+                                            <img src='/public/data/avatar/default/man_small.jpg' uid='' class='pic_small'>   
+                                            <?php
+                                         }
+                                            ?>
                                             <span class="user_named m_h"><?php echo $session->get("user_name");?></span>
                             	</a>
 <!--用户登录后导航菜单 start-->

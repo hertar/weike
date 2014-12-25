@@ -166,6 +166,7 @@ function receive(){
             success:function(e){
                 //alert(e);    
                 if(e=="no"){
+                    alert("请仔细检查输入的验证码");
                     return false;
                 }
             }

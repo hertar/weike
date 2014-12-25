@@ -227,7 +227,7 @@ d.confirm(c, function() {
 $.ajax({
    type: "GET",
    url: "index.php?r=article/art_del",
-    data: "art_id="+o,
+   data: "art_id="+o,
    success: function(msg){
     if(msg==1){
         $("#"+o).remove();

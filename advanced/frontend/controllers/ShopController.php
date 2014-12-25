@@ -16,6 +16,7 @@ use yii\filters\AccessControl;
 use app\models\WkWitkeyIndustry;
 use app\models\WkWitkeyService;
 use app\models\WkWitkeyComment;
+use app\models\WkWitkeyOrder;
 class ShopController extends Controller
 {
     public function actionShop_list(){
@@ -159,6 +160,58 @@ class ShopController extends Controller
    public function actionShop_sale(){   
        $service_id=$_GET['id'];  
    }
+  //购买商品
+   public function actionShop_buy(){
+        $this->layout='@app/views/layouts/public.php';
+        $service_id=$_GET['service_id'];  
+        $where="wk_witkey_service.service_id=".$service_id."";
+        $model=new Query();
+        $res=$model->from(['wk_witkey_service','wk_witkey_space'])->where("wk_witkey_service.uid=wk_witkey_space.uid and $where")->all();
+        return $this->render('shop_buy',['arr'=>$res]);
+   }
+ //生成订单
+   public function actionShop_order(){
+         $this->layout='@app/views/layouts/public.php';
+        $session=new \yii\web\Session();
+        $service_id=$_GET['service_id']; 
+        $where="service_id=".$service_id."";
+        $username= $session->get("user_name");
+        $uid=$session->get("u_id");
+        $content=$_GET['content'];
+        $model = new WkWitkeyComment();
+        if($content){
+        $model->obj_id =  $service_id;
+        $model->uid =  $uid;
+        $model->username =$username;
+        $model->content = $content;
+        $model->on_time = time();
+        $model->insert(); 
+        }
+        $model=new Query();
+        $res=$model->from(['wk_witkey_service','wk_witkey_space'])->where("wk_witkey_service.uid=wk_witkey_space.uid and $where")->all();
+        $time=time();
+        $model = new WkWitkeyOrder();
+        $model->order_name =$res[0]['title'];
+        $model->order_time =$time;
+        $model->order_amount =$res[0]['price'];
+      $model->order_status='0';
+        $model->order_uid = $uid;
+        $model->order_username = $username;
+        $model->seller_uid =$res[0]['uid'];
+        $model->seller_username =$res[0]['username'];
+        $model->insert(); 
+        $arr=WkWitkeyOrder::find()->where(['order_name' =>$res[0]['title'],'order_time'=>$time,'order_uid'=>$uid])->one(); 
+        return $this->render('shop_order',['arr'=>$arr]); 
+   }
    
-  
+   //取消订单
+   public function actionShop_order_q(){
+       $order_id=$_GET['order_id'];
+       $a=WkWitkeyOrder::findOne($order_id)->delete(); 
+        if($a){
+           echo 1;
+       }else{
+           echo 0;   
+       }
+   }
 }
