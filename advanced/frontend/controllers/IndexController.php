@@ -23,8 +23,12 @@ class IndexController extends Controller
     //首页
      public function actionIndex(){
         //加载布局文件
-        $this->layout='@app/views/layouts/public.php';       
-        return $this->render("index");
+        $this->layout='@app/views/layouts/public.php'; 
+        $arr=$this->actionIndus();
+        $indus=  \app\models\Industry::find()->all();
+        $data["indus"]=$indus;  
+        $data["arr"]=$arr;
+        return $this->render("index",$data);
     }
     //注册
     public function actionRegister(){
@@ -225,4 +229,10 @@ class IndexController extends Controller
             echo "手机号必存在";
         }
     }*/
+    
+       //任务
+       public function actionIndus(){
+           $arr=  \app\models\Industry::find()->where(["indus_pid"=>0])->all();
+           return $arr;
+       }
 }

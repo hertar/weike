@@ -16,7 +16,8 @@ use yii\filters\AccessControl;
 
 class ArticleController extends Controller
 {
-    public function actionArticle_list(
+    public function actionArticle_list(){
+        
         return $this->renderPartial("article_list");
    }
 }
