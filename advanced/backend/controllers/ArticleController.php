@@ -24,8 +24,7 @@ use app\models\WkWitkeyService;
 class ArticleController extends Controller
 {
   // $this->layout='@app/views/layouts/publics.php';
-    public $enableCsrfValidation=false;//加上这句代码,前台可以使用普通的form表单语法
-   
+    public $enableCsrfValidation=false;//加上这句代码,前台可以使用普通的form表单语法 
     /**
      * @inheritdoc
      */
@@ -54,7 +53,6 @@ $paixu=@$_POST['paixu'];
 $zengjian=@$_POST['zengjian'];
 $page_size=@$_POST['page_size'];
 $where="1";
-
 $where.=" and art_cat_id='17'";
 if(!empty($bulletin)&&empty($art_title)&&empty($username)&&empty($page_size)&&empty($paixu)&&empty($zengjian)){
 $session->set('bulletin',$session->get('bulletin'));

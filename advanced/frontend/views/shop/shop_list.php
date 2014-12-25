@@ -1,3 +1,6 @@
+<?php
+use yii\widgets\LinkPager;
+?>
 <!DOCTYPE HTML>
 <!--[if lt IE 7]> <html dir="ltr" lang="zh-cn" id="ie6"> <![endif]-->
 <!--[if IE 7]>    <html dir="ltr" lang="zh-cn" id="ie7"> <![endif]-->
@@ -272,13 +275,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
           </div>
         </header> 
         <!--end 页面标题-->
-        
-        
-        
-        
-        
-        
-        <!--主内容-->
+         <!--主内容-->
         <section class="clearfix content">
             <div class="container_24">
             	
@@ -297,25 +294,13 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                         <!--分类-->
                         <dl class="condition clearfix">
                             <dt class="grid_2 omega">
-                                商城分类                            </dt>
+                                商城分类                </dt>
                             <dd class="grid_21">
-                                <a href="index.php?do=shop_list&path="    class='selected' >全部 </a>
-                                <a href="index.php?do=shop_list&path=A441" >品牌设计</a>
-                                <a href="index.php?do=shop_list&path=A2" >网站开发</a>
-                                <a href="index.php?do=shop_list&path=A201" >创意祝福</a>
-                                <a href="index.php?do=shop_list&path=A249" >网游服务</a>
-                                <a href="index.php?do=shop_list&path=A3" >文案写作</a>
-                                <a href="index.php?do=shop_list&path=A335" >建筑/装修</a>
-                                <a href="index.php?do=shop_list&path=A211" >头脑风暴</a>
-                                <a href="index.php?do=shop_list&path=A350" >照片美化/编辑</a>
-                                <a href="index.php?do=shop_list&path=A234" >法律服务</a>
-                                <a href="index.php?do=shop_list&path=A160" >起名取名</a>
-                                <a href="index.php?do=shop_list&path=A357" >影视/配音/歌词</a>
-                                <a href="index.php?do=shop_list&path=A192" >生活服务</a>
-                                <a href="index.php?do=shop_list&path=A218" >移动应用</a>
-                                <a href="index.php?do=shop_list&path=A240" >招聘找人</a>
-                                <a href="index.php?do=shop_list&path=A121" >软件开发</a>
-                                 
+   <a href="index.php?r=shop/shop_search&indus_pid=&service_type=&min=&max=&on_time=&address="    class='selected' >全部 </a>
+                              <?php foreach($indus_all as $key=>$v){?>
+                                <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$v['indus_id'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=<?php echo @$can['on_time'];?>&address='<?php echo @$can['address'];?>'" >
+                                       <?php echo $v['indus_name'];?></a>
+                              <?php } ?>
                             </dd>
                         </dl>
                          <!--end 分类-->
@@ -324,12 +309,10 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                           <dl class="condition clearfix">
                             <dt class="grid_2 omega">商品种类</dt>
                             <dd class="grid_21">
-                            	                                <a href="index.php?do=shop_list&path="  class="selected" >全部</a> 
-    
-    <a href="index.php?do=shop_list&path=C7"  >服务</a> 
-                                    
-    <a href="index.php?do=shop_list&path=C6"  >作品（源码）</a> 
-                                                                </dd>
+                 <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"  class="selected" >全部</a> 
+                 <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type='0'&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"  >服务</a>                            
+                 <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type='1'&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"  >作品（源码）</a> 
+                            </dd>
                            </dl>
    
                            <div id="condition_list" style="display:none;">
@@ -338,19 +321,19 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                             <dt class="grid_2 omega">商品金额</dt>
                             <dd class="grid_21">
                                         <span id="general_search" >
-                                        	<a href="index.php?do=shop_list&path="   class="selected" >全部</a>
+                                        	<a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=&max=&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"   class="selected" >全部</a>
  
-<a href="index.php?do=shop_list&path=B1"  >100元以下 </a>
+<a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min='1'&max='100'&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"  >100元以下 </a>
  
-<a href="index.php?do=shop_list&path=B2"  >100-500 </a>
+<a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min='100'&max='500'&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"  >100-500 </a>
  
-<a href="index.php?do=shop_list&path=B3"  >500-1000 </a>
+<a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min='500'&max='1000'&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"  >500-1000 </a>
  
-<a href="index.php?do=shop_list&path=B4"  >1000-5000 </a>
+<a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min='1000'&max='5000'&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"  >1000-5000 </a>
  
-<a href="index.php?do=shop_list&path=B5"  >5000-20000 </a>
+<a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min='5000'&max='20000'&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"  >5000-20000 </a>
  
-<a href="index.php?do=shop_list&path=B6"  >2万以上 </a>
+<a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min='20000'&max='200000'&on_time=<?php echo @$can['on_time'];?>&address=<?php echo @$can['address'];?>"  >2万以上 </a>
 
 <a class="button" style="" onclick="custom_search_cash('shop_list_search_cash')">
                                         		<span class="icon cog"></span>自定义</a>
@@ -408,15 +391,15 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                            <dl class="condition clearfix">
                             <dt class="grid_2 omega">发布时间</dt>
                             <dd class="grid_21">
-                            	                                <a href="index.php?do=shop_list&path="  class="selected" >全部</a> 
+ <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=&address=<?php echo @$can['address'];?>"  class="selected" >全部</a> 
   
-    <a href="index.php?do=shop_list&path=D1"   >近一天</a> 
+    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=1&address=<?php echo @$can['address'];?>"   >近一天</a> 
                                   
-    <a href="index.php?do=shop_list&path=D2"   >近三天</a> 
+    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=3&address=<?php echo @$can['address'];?>"   >近三天</a> 
                                   
-    <a href="index.php?do=shop_list&path=D3"   >近一周</a> 
+    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=7&address=<?php echo @$can['address'];?>"   >近一周</a> 
                                   
-    <a href="index.php?do=shop_list&path=D4"   >近一个月</a> 
+    <a href="index.php?r=shop/shop_search&indus_pid=<?php echo @$can['indus_pid'];?>&service_type=<?php echo @$can['service_type'];?>&min=<?php echo @$can['min'];?>&max=<?php echo @$can['max'];?>&on_time=30&address=<?php echo @$can['address'];?>"   >近一个月</a> 
                                                                 </dd>
                            </dl>
                            <!--end 条件4-->
@@ -531,35 +514,35 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                                                 </ul>
                                               </dd>
                             
- 
+  <?php foreach($model as $key =>$val){?>
                                             <dd class="po_re clearfix 
       "
    >
                                                 <ul class="clearfix pt_10">
                                                     <li class="w5 info">
                                                         <div class="img_box">
-                                                        	<a href="index.php?do=service&sid=13"><img src="data/uploads/2013/04/09/100_2282751640079d7d50.jpg" onerror='$(this).attr("src","/public/tpl/default/img/shop/shop_default.gif")' title="[图兰朵]婚纱摄影重磅推出 黄金路线启动"></a>
+                                                        	<a href="index.php?r=shop/shop_content&id=<?php echo $val['service_id'];?>"><img src="/public/<?php echo $val['pic'];?>" onerror='$(this).attr("src","/public/tpl/default/img/shop/shop_default.gif")' title="?php echo $val['title'];?>"></a>
                                                         </div>
                                                         
                                                     	<div class="img_des">
-                                                    	
-                                                        	<a href="index.php?do=service&sid=13" class="font14b list_small_title" title="[图兰朵]婚纱摄影重磅推出 黄金路线启动">[图兰朵]婚纱摄影重磅推出 黄金路线启动</a>
+                                      	
+                                                        	<a href="index.php?do=service&sid=13" class="font14b list_small_title" title="<?php echo $val['title'];?>"><?php echo $val['title'];?></a>
                                                             <p class="models">
                                                               商品类型：                                                                                                                                  <strong class="c393">作品</strong>
                                                                                                                               
                                                             </p>
                                                             <p class="block">
                                                             商城分类：	
-照片美化/编辑 / 婚纱照美化</p> 
+<?php  echo $val['tmp']."/".$val['indus_name'];?> </p> 
                                                         	                                                     	                                                              </div>
                                                     </li>
                                                     <li class="w3 describe ws_break">
-                                                    	<a href="index.php?do=space&member_id=2">猪八戒</a>
-                                                        <p>&nbsp;本单特色1.京城十佳婚纱摄影工作室2.W. P. T&nbsp;婚纱摄影模式3.资深摄影师、化妆师全程VIP一对一服务</p>
+                                                    	<a href="index.php?do=space&member_id=2"><?php echo $val['username'];?></a>
+                                                        <p><?php echo htmlspecialchars_decode(substr($val['content'],0,200))?></p>
                                                     </li>
                                                     <li class="w2 price">
-                                                    	<p class="cc00 font14b">&nbsp; ￥2,000.00元 </p>
-                                                        <span>成功售出 1 笔</span>                                                    </li>
+                                                    	<p class="cc00 font14b">&nbsp; ￥<?php echo $val['price'];?>元 </p>
+                                                        <span>成功售出 <?php echo $val['total_sale'];?>笔</span>                                                    </li>
                                                     
                                                 </ul>
                                                 <div class="clear"></div>
@@ -570,279 +553,9 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                                                    <a class="" href="index.php?do=ajax&view=share&oid=0&title=[图兰朵]婚纱摄影重磅推出 黄金路线启动" id="share0" onclick="return false;" onmouseover="share(this);return false;" title="分享"><span class="icon16 share">分享</span></a></a>
                                                 </div>-->
                                               </dd>
-                                             <dd class="po_re clearfix 
-      "
-   >
-                                                <ul class="clearfix pt_10">
-                                                    <li class="w5 info">
-                                                        <div class="img_box">
-                                                        	<a href="index.php?do=service&sid=12"><img src="data/uploads/2013/04/09/100_69285163fcde4fe35.jpg" onerror='$(this).attr("src","/public/tpl/default/img/shop/shop_default.gif")' title="商务|贸易|通用PPT模板"></a>
-                                                        </div>
-                                                        
-                                                    	<div class="img_des">
-                                                    	
-                                                        	<a href="index.php?do=service&sid=12" class="font14b list_small_title" title="商务|贸易|通用PPT模板">商务|贸易|通用PPT模板</a>
-                                                            <p class="models">
-                                                              商品类型：                                                                                                                                  <strong class="c393">作品</strong>
-                                                                                                                              
-                                                            </p>
-                                                            <p class="block">
-                                                            商城分类：	
-文案写作 / ppt设计</p> 
-                                                        	                                                     	                                                              </div>
-                                                    </li>
-                                                    <li class="w3 describe ws_break">
-                                                    	<a href="index.php?do=space&member_id=2">猪八戒</a>
-                                                        <p>&nbsp;商务贸易通用ppt末班，总有一款你需要的KPPW2.2安装包默认数据均为测试演示数据，无任何商业意图，请各位站长测试</p>
-                                                    </li>
-                                                    <li class="w2 price">
-                                                    	<p class="cc00 font14b">&nbsp; ￥100.00元 </p>
-                                                                                                            </li>
-                                                    
-                                                </ul>
-                                                <div class="clear"></div>
-<!--
-                                                <div class="operate clearfix ">
-                                                    <a href="javascript:favor('service_id','service','goods','2','12','商务|贸易|通用PPT模板','12')" original-title="收藏" ><span class="icon16 star-fav-empty">收藏</span> </a>
-                                                    <a href="index.php?do=service&sid=12" target="_blank" original-title="新窗口打开"><span class="icon16 expand">新窗口打开</span></a>
-                                                   <a class="" href="index.php?do=ajax&view=share&oid=1&title=商务|贸易|通用PPT模板" id="share1" onclick="return false;" onmouseover="share(this);return false;" title="分享"><span class="icon16 share">分享</span></a></a>
-                                                </div>-->
-                                              </dd>
-                                             <dd class="po_re clearfix 
-   app_recmd
-      "
-   >
-                                                <ul class="clearfix pt_10">
-                                                    <li class="w5 info">
-                                                        <div class="img_box">
-                                                        	<a href="index.php?do=service&sid=9"><img src="data/uploads/2013/04/09/100_34715163f16eaa527.png" onerror='$(this).attr("src","/public/tpl/default/img/shop/shop_default.gif")' title="【创意】【澎 R26; 然心动】宣传册页设计"></a>
-                                                        </div>
-                                                        
-                                                    	<div class="img_des">
-                                                    	
-                                                        	<a href="index.php?do=service&sid=9" class="font14b list_small_title" title="【创意】【澎 R26; 然心动】宣传册页设计">【创意】【澎 R26; 然心动】宣传册页设计</a>
-                                                            <p class="models">
-                                                              商品类型：                                                                                                                                  <strong class="c393">作品</strong>
-                                                                                                                              
-                                                            </p>
-                                                            <p class="block">
-                                                            商城分类：	
-文案写作 / 宣传册页</p> 
-                                                        	                                                     	      <img src="http://www.wk.com//public/resource/img/ico/tj.png" alt="推荐" title="推荐">                                                        </div>
-                                                    </li>
-                                                    <li class="w3 describe ws_break">
-                                                    	<a href="index.php?do=space&member_id=2">猪八戒</a>
-                                                        <p>&nbsp;专注于品牌设计，品牌价值提升！为您提供更放心满意的服务。&nbsp;具有4年专业从事企业产品画册/宣传册设计</p>
-                                                    </li>
-                                                    <li class="w2 price">
-                                                    	<p class="cc00 font14b">&nbsp; ￥100.00元 </p>
-                                                                                                            </li>
-                                                    
-                                                </ul>
-                                                <div class="clear"></div>
-<!--
-                                                <div class="operate clearfix ">
-                                                    <a href="javascript:favor('service_id','service','goods','2','9','【创意】【澎 R26; 然心动】宣传册页设计','9')" original-title="收藏" ><span class="icon16 star-fav-empty">收藏</span> </a>
-                                                    <a href="index.php?do=service&sid=9" target="_blank" original-title="新窗口打开"><span class="icon16 expand">新窗口打开</span></a>
-                                                   <a class="" href="index.php?do=ajax&view=share&oid=2&title=【创意】【澎 R26; 然心动】宣传册页设计" id="share2" onclick="return false;" onmouseover="share(this);return false;" title="分享"><span class="icon16 share">分享</span></a></a>
-                                                </div>-->
-                                              </dd>
-                                             <dd class="po_re clearfix 
-   app_recmd
-      "
-   >
-                                                <ul class="clearfix pt_10">
-                                                    <li class="w5 info">
-                                                        <div class="img_box">
-                                                        	<a href="index.php?do=service&sid=8"><img src="data/uploads/2013/04/09/100_198065163f0bc185b1.jpg" onerror='$(this).attr("src","/public/tpl/default/img/shop/shop_default.gif")' title="家庭装修设计作品-1"></a>
-                                                        </div>
-                                                        
-                                                    	<div class="img_des">
-                                                    	
-                                                        	<a href="index.php?do=service&sid=8" class="font14b list_small_title" title="家庭装修设计作品-1">家庭装修设计作品-1</a>
-                                                            <p class="models">
-                                                              商品类型：                                                                                                                                  <strong class="c393">作品</strong>
-                                                                                                                              
-                                                            </p>
-                                                            <p class="block">
-                                                            商城分类：	
-照片美化/编辑 / 图片编辑</p> 
-                                                        	                                                     	      <img src="http://www.wk.com//public/resource/img/ico/tj.png" alt="推荐" title="推荐">                                                        </div>
-                                                    </li>
-                                                    <li class="w3 describe ws_break">
-                                                    	<a href="index.php?do=space&member_id=4">shangk</a>
-                                                        <p>&nbsp;家庭装修设计作品-1家庭装修设计作品-1家庭装修设计作品-1家庭装修设计作品-1家庭装修设计作品-1家庭装修设</p>
-                                                    </li>
-                                                    <li class="w2 price">
-                                                    	<p class="cc00 font14b">&nbsp; ￥1,000.00元 </p>
-                                                                                                            </li>
-                                                    
-                                                </ul>
-                                                <div class="clear"></div>
-<!--
-                                                <div class="operate clearfix ">
-                                                    <a href="javascript:favor('service_id','service','goods','4','8','家庭装修设计作品-1','8')" original-title="收藏" ><span class="icon16 star-fav-empty">收藏</span> </a>
-                                                    <a href="index.php?do=service&sid=8" target="_blank" original-title="新窗口打开"><span class="icon16 expand">新窗口打开</span></a>
-                                                   <a class="" href="index.php?do=ajax&view=share&oid=3&title=家庭装修设计作品-1" id="share3" onclick="return false;" onmouseover="share(this);return false;" title="分享"><span class="icon16 share">分享</span></a></a>
-                                                </div>-->
-                                              </dd>
-                                             <dd class="po_re clearfix 
-      "
-   >
-                                                <ul class="clearfix pt_10">
-                                                    <li class="w5 info">
-                                                        <div class="img_box">
-                                                        	<a href="index.php?do=service&sid=7"><img src="data/uploads/2013/04/09/100_192895163e866c4dc9.jpg" onerror='$(this).attr("src","/public/tpl/default/img/shop/shop_default.gif")' title="【创意】企业网站定制开发"></a>
-                                                        </div>
-                                                        
-                                                    	<div class="img_des">
-                                                    	
-                                                        	<a href="index.php?do=service&sid=7" class="font14b list_small_title" title="【创意】企业网站定制开发">【创意】企业网站定制开发</a>
-                                                            <p class="models">
-                                                              商品类型：                                                                                                                                  <strong class="c393">作品</strong>
-                                                                                                                              
-                                                            </p>
-                                                            <p class="block">
-                                                            商城分类：	
-网站开发 / 网站广告</p> 
-                                                        	                                                     	                                                              </div>
-                                                    </li>
-                                                    <li class="w3 describe ws_break">
-                                                    	<a href="index.php?do=space&member_id=2">猪八戒</a>
-                                                        <p>&nbsp;服务范围：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;移动应用，系统</p>
-                                                    </li>
-                                                    <li class="w2 price">
-                                                    	<p class="cc00 font14b">&nbsp; ￥10,000.00元 </p>
-                                                                                                            </li>
-                                                    
-                                                </ul>
-                                                <div class="clear"></div>
-<!--
-                                                <div class="operate clearfix ">
-                                                    <a href="javascript:favor('service_id','service','goods','2','7','【创意】企业网站定制开发','7')" original-title="收藏" ><span class="icon16 star-fav-empty">收藏</span> </a>
-                                                    <a href="index.php?do=service&sid=7" target="_blank" original-title="新窗口打开"><span class="icon16 expand">新窗口打开</span></a>
-                                                   <a class="" href="index.php?do=ajax&view=share&oid=4&title=【创意】企业网站定制开发" id="share4" onclick="return false;" onmouseover="share(this);return false;" title="分享"><span class="icon16 share">分享</span></a></a>
-                                                </div>-->
-                                              </dd>
-                                             <dd class="po_re clearfix 
-   app_recmd
-      "
-   >
-                                                <ul class="clearfix pt_10">
-                                                    <li class="w5 info">
-                                                        <div class="img_box">
-                                                        	<a href="index.php?do=service&sid=5"><img src="data/uploads/2013/04/09/100_201825163e6a867205.png" onerror='$(this).attr("src","/public/tpl/default/img/shop/shop_default.gif")' title="【创意】网络视频"></a>
-                                                        </div>
-                                                        
-                                                    	<div class="img_des">
-                                                    	
-                                                        	<a href="index.php?do=service&sid=5" class="font14b list_small_title" title="【创意】网络视频">【创意】网络视频</a>
-                                                            <p class="models">
-                                                              商品类型：                                                                                                                                  <strong class="c393">作品</strong>
-                                                                                                                              
-                                                            </p>
-                                                            <p class="block">
-                                                            商城分类：	
-影视/配音/歌词 / 影视制作</p> 
-                                                        	                                                     	      <img src="http://www.wk.com//public/resource/img/ico/tj.png" alt="推荐" title="推荐">                                                        </div>
-                                                    </li>
-                                                    <li class="w3 describe ws_break">
-                                                    	<a href="index.php?do=space&member_id=2">猪八戒</a>
-                                                        <p>&nbsp;购买服务，雇主威客一对一，满意再付款，交易有保障！KPPW2.2安装包默认数据均为测试演示数据，无任何商业意图，请各位</p>
-                                                    </li>
-                                                    <li class="w2 price">
-                                                    	<p class="cc00 font14b">&nbsp; ￥100.00元 </p>
-                                                                                                            </li>
-                                                    
-                                                </ul>
-                                                <div class="clear"></div>
-<!--
-                                                <div class="operate clearfix ">
-                                                    <a href="javascript:favor('service_id','service','goods','2','5','【创意】网络视频','5')" original-title="收藏" ><span class="icon16 star-fav-empty">收藏</span> </a>
-                                                    <a href="index.php?do=service&sid=5" target="_blank" original-title="新窗口打开"><span class="icon16 expand">新窗口打开</span></a>
-                                                   <a class="" href="index.php?do=ajax&view=share&oid=5&title=【创意】网络视频" id="share5" onclick="return false;" onmouseover="share(this);return false;" title="分享"><span class="icon16 share">分享</span></a></a>
-                                                </div>-->
-                                              </dd>
-                                             <dd class="po_re clearfix 
-   app_recmd
-      "
-   >
-                                                <ul class="clearfix pt_10">
-                                                    <li class="w5 info">
-                                                        <div class="img_box">
-                                                        	<a href="index.php?do=service&sid=2"><img src="data/uploads/2013/04/09/100_16875163e52fe2415.jpg" onerror='$(this).attr("src","/public/tpl/default/img/shop/shop_default.gif")' title="【创意】LOGO设计"></a>
-                                                        </div>
-                                                        
-                                                    	<div class="img_des">
-                                                    	
-                                                        	<a href="index.php?do=service&sid=2" class="font14b list_small_title" title="【创意】LOGO设计">【创意】LOGO设计</a>
-                                                            <p class="models">
-                                                              商品类型：                                                                                                                                  <strong class="c393">作品</strong>
-                                                                                                                              
-                                                            </p>
-                                                            <p class="block">
-                                                            商城分类：	
-照片美化/编辑 / 图片编辑</p> 
-                                                        	                                                     	      <img src="http://www.wk.com//public/resource/img/ico/tj.png" alt="推荐" title="推荐">                                                        </div>
-                                                    </li>
-                                                    <li class="w3 describe ws_break">
-                                                    	<a href="index.php?do=space&member_id=4">shangk</a>
-                                                        <p>&nbsp;【创意】LOGO设计【创意】LOGO设计【创意】LOGO设计【创意】LOGO设计【创意】LOGO设计【创意】LOGO设计【创</p>
-                                                    </li>
-                                                    <li class="w2 price">
-                                                    	<p class="cc00 font14b">&nbsp; ￥100.00元 </p>
-                                                                                                            </li>
-                                                    
-                                                </ul>
-                                                <div class="clear"></div>
-<!--
-                                                <div class="operate clearfix ">
-                                                    <a href="javascript:favor('service_id','service','goods','4','2','【创意】LOGO设计','2')" original-title="收藏" ><span class="icon16 star-fav-empty">收藏</span> </a>
-                                                    <a href="index.php?do=service&sid=2" target="_blank" original-title="新窗口打开"><span class="icon16 expand">新窗口打开</span></a>
-                                                   <a class="" href="index.php?do=ajax&view=share&oid=6&title=【创意】LOGO设计" id="share6" onclick="return false;" onmouseover="share(this);return false;" title="分享"><span class="icon16 share">分享</span></a></a>
-                                                </div>-->
-                                              </dd>
-                                             <dd class="po_re clearfix 
-   app_recmd
-      "
-   >
-                                                <ul class="clearfix pt_10">
-                                                    <li class="w5 info">
-                                                        <div class="img_box">
-                                                        	<a href="index.php?do=service&sid=1"><img src="data/uploads/2013/04/09/100_314595163e47017e15.jpg" onerror='$(this).attr("src","/public/tpl/default/img/shop/shop_default.gif")' title="【创意】海报设计"></a>
-                                                        </div>
-                                                        
-                                                    	<div class="img_des">
-                                                    	
-                                                        	<a href="index.php?do=service&sid=1" class="font14b list_small_title" title="【创意】海报设计">【创意】海报设计</a>
-                                                            <p class="models">
-                                                              商品类型：                                                                                                                                  <strong class="c393">作品</strong>
-                                                                                                                              
-                                                            </p>
-                                                            <p class="block">
-                                                            商城分类：	
-照片美化/编辑 / 图片编辑</p> 
-                                                        	                                                     	      <img src="http://www.wk.com//public/resource/img/ico/tj.png" alt="推荐" title="推荐">                                                        </div>
-                                                    </li>
-                                                    <li class="w3 describe ws_break">
-                                                    	<a href="index.php?do=space&member_id=4">shangk</a>
-                                                        <p>&nbsp;【创意】海报设计【创意】海报设计【创意】海报设计【创意】海报设计【创意】海报设计【创意】海报设计【创</p>
-                                                    </li>
-                                                    <li class="w2 price">
-                                                    	<p class="cc00 font14b">&nbsp; ￥1,000.00元 </p>
-                                                                                                            </li>
-                                                    
-                                                </ul>
-                                                <div class="clear"></div>
-<!--
-                                                <div class="operate clearfix ">
-                                                    <a href="javascript:favor('service_id','service','goods','4','1','【创意】海报设计','1')" original-title="收藏" ><span class="icon16 star-fav-empty">收藏</span> </a>
-                                                    <a href="index.php?do=service&sid=1" target="_blank" original-title="新窗口打开"><span class="icon16 expand">新窗口打开</span></a>
-                                                   <a class="" href="index.php?do=ajax&view=share&oid=7&title=【创意】海报设计" id="share7" onclick="return false;" onmouseover="share(this);return false;" title="分享"><span class="icon16 share">分享</span></a></a>
-                                                </div>-->
-                                              </dd>
-   
+                                              <?php } ?>
                                             </dl>    
+                                            
                                         </div>
                                         <!--end 列表主内容-->
 <!--右下角的返回顶部--
@@ -851,15 +564,11 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                                                     <a href="#" class="" title="返回顶部"><span class="icon16 arrow-top"></span><span class="return_word">返回顶部</span></a>
                                         </div>
                                         <!--end右下角的返回顶部-->      
-                                    </div>
-                                     
+                                    </div>                   
                                     <!--page 翻页 start-->
-                                    <div class="page">
-                                        <p class="clearfix">
-                                            <span class="stats">共 8 条 </span>
-                                                                                   </p>
-                                        <div class="clear"></div>
-                                    </div>
+                                   <div class="page">
+       <?= LinkPager::widget(['pagination' => $pages]); ?>
+  </div>
                                     <!--page 翻页 end-->
                                     <div class="clear"></div>
                                          
