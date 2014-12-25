@@ -32,23 +32,10 @@
                             <dt class="grid_2 omega">
                                     行业分类                            </dt>
                             <dd class="grid_21">
-                                <a href="index.php?do=seller_list&path="    class='selected' >全部 </a>
-                                <a href="index.php?do=seller_list&path=A441" >品牌设计</a>
-                                <a href="index.php?do=seller_list&path=A2" >网站开发</a>
-                                <a href="index.php?do=seller_list&path=A201" >创意祝福</a>
-                                <a href="index.php?do=seller_list&path=A249" >网游服务</a>
-                                <a href="index.php?do=seller_list&path=A3" >文案写作</a>
-                                <a href="index.php?do=seller_list&path=A335" >建筑/装修</a>
-                                <a href="index.php?do=seller_list&path=A211" >头脑风暴</a>
-                                <a href="index.php?do=seller_list&path=A350" >照片美化/编辑</a>
-                                <a href="index.php?do=seller_list&path=A234" >法律服务</a>
-                                <a href="index.php?do=seller_list&path=A160" >起名取名</a>
-                                <a href="index.php?do=seller_list&path=A357" >影视/配音/歌词</a>
-                                <a href="index.php?do=seller_list&path=A192" >生活服务</a>
-                                <a href="index.php?do=seller_list&path=A218" >移动应用</a>
-                                <a href="index.php?do=seller_list&path=A240" >招聘找人</a>
-                                <a href="index.php?do=seller_list&path=A121" >软件开发</a>
-                                 
+                                <a href="index.php?r=task/task_list&fl=0"  class='selected'>全部 </a>
+								<?php foreach($fenlei as $f=>$l){?>
+                                <a href="index.php?r=task/task_list&fl=<?php echo $l['indus_id']?>&ms=<?php echo @$can['ms']?>&min=<?php echo @$can['min']?>&max=<?php echo @$can['max']?>" ><?php echo $l['indus_name']?></a>
+								<?php }?>
                             </dd>
                         </dl>
                          <!--end 分类-->

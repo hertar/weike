@@ -130,7 +130,7 @@ class TaskController extends Controller
     }
     //删除回复
     public function actionDel_comment(){
-         $session=new \yii\web\Session();
+         $session=new \yii\web\Session(); 
         $comment_id = $_GET['comment_id'];
         Comment::findOne($comment_id)->delete();
         $task_id=$_GET['id'];
