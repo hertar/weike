@@ -2,7 +2,7 @@
 <!--contain start-->
 <div class="wrapper">
     <div class="container_24">
-        <link href="tpl/default/css/user_center.css" rel="stylesheet" type="text/css">
+        <link href="/public/tpl/default/css/user_center.css" rel="stylesheet" type="text/css">
 <header class="page_title clearfix  Anchor">
     <div class="grid_17">
         <h2 class="title pt_5">用户中心</h2>
@@ -68,7 +68,7 @@
            <!--子导航开始-->
       <ul class="nav_group clearfix">
              <li>
-                 <a href="index.php?r=user/setting" title="进入基本资料" class="selected">
+                 <a href="index.php?r=user/setting" title="进入基本资料">
                    <div class="icon16 contact-card">icon</div><strong>基本资料</strong>
      </a>
              </li>
@@ -80,7 +80,7 @@
         </ul>
        <ul class="nav_group clearfix">
              <li>
-                 <a href="index.php?r=user/setting_safe" title="进入安全设置" >
+                 <a href="index.php?r=user/setting_safe" title="进入安全设置"  class="selected" >
                    <div class="icon16 shield">icon</div><strong>安全设置</strong>
      </a>
              </li>
@@ -124,20 +124,26 @@
                     <article class="box_detail">
                         <div class="messages m_warn clearfix">
                             <span class="icon16 fl_l"></span>
-安全码变更：在进行操作同时，请牢记自己的新安全码！安全码将用于涉及到资金流确认时使用。如：提现、付款等.<strong class="cc00">
-【用户的初始安全码与用户密码相同。】</strong>
+安全码变更：在进行操作同时，请牢记自己的新安全码！安全码将用于涉及到资金流确认时使用。如：提现、付款等.
+<strong class="cc00">
+【用户的初始安全码与用户密码相同。】
+</strong>
 <a href="###" class="close">&times;</a>
                         </div>
                         <div class=" prefix_1 suffix_1">
                             <div class="box waring form_box">
                                 <div class="inner">
-<form action="index.php?do=user&view=setting&op=safe&opp=sec_code" method="post" name="frm" id="frm" onload="document.form.autocomplete.setAttribute('autocomplete', 'off');">
+<form action="index.php?r=user/setting_sec_change" method="post" name="frm" id="frm" onload="document.form.autocomplete.setAttribute('autocomplete', 'off');">
                                     <div class="rowElem clearfix">
                                         <label class="grid_4">
                                             当前安全码：                                        </label>
-                                        <div class="grid_11">
-                                            <input class="txt_input" type="password" size="40" title=输入原安全码 name="old_sec_code" id="old_sec_code" limit="required:true" ajax="index.php?do=user&view=setting&op=safe&opp=sec_code&check_old=" msg=输入原安全码 msgArea="span_old"/><span id="span_old"></span>
-                                        </div>
+                                            <div class="grid_11">
+                                                <input class="txt_input" type="password" size="40" title=输入原安全码 
+                                                       name="old_sec_code" id="old_sec_code" limit="required:true" 
+                                                       ajax="index.php?r=user/setting_sec_code_old&pwd=" 
+                                                       msg=输入原安全码 msgArea="span_old"/>
+                                                <span id="span_old"></span>
+                                            </div>
                                     </div>
                                     <div class="rowElem clearfix">
                                         <label class="grid_4">
@@ -158,7 +164,7 @@
                                             &nbsp;
                                         </div>
                                         <div class="grid_10 t_l">
-                                            <button class="grid_2 alpha" type="submit" value=提交 onclick="formSub('frm','form',true)">
+                                            <button class="grid_2 alpha" type="submit" value=提交 >
                                                 提交                                            </button>
                                         </div>
                                     </div>
@@ -196,7 +202,7 @@ $("html,body").animate({scrollTop:$(".Anchor").offset().top});
 function check(obj){
 return checkForm(document.getElementById(obj));
 }
-In.add('jscolor',{path:"resource/js/others/jscolor.js",type:'js'}); 
+In.add('jscolor',{path:"/public/resource/js/others/jscolor.js",type:'js'}); 
 In('calendar'); 
 
 $(function(){

@@ -67,6 +67,7 @@ class IndexController extends Controller
     public function actionLogout(){
         $session=new \yii\web\Session;
         $session->remove('user_name');
+        $session->remove("uid");
         $this->redirect("index.php?r=index/index");
     }
     
