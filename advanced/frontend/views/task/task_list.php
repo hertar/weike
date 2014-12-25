@@ -2,8 +2,6 @@
 <?php
 use yii\widgets\LinkPager;
 ?>
-
-
 <div class="wrapper">	
 <!--页面头部-->
 <header class="clearfix page_header">
@@ -403,7 +401,7 @@ use yii\widgets\LinkPager;
                                 <div class="grid_4 m_h">
                                    
    <div class="mb_10">
-   	<a href="http://127.0.0.1/weike/index.php?do=release" class="submit block">发布任务</a>
+   	<a href="index.php?r=task/release" class="submit block">发布任务</a>
    </div>
    
    
