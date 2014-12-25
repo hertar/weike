@@ -279,7 +279,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
         <header class="clearfix page_header">
         	<div class="container_24">
         	
-<div class='adv'><a href='http://www.kppw.cn' target='_blank' title='adv1'><img src='data/uploads/sys/ad/adv.jpg' width='' height='' alt='adv1' title='adv1'></a></div>  
+<div class='adv'><a href='http://www.kppw.cn' target='_blank' title='adv1'><img src='/public/data/uploads/sys/ad/adv.jpg' width='' height='' alt='adv1' title='adv1'></a></div>  
             <!--页面导航-->
             <div class="breadcrumbs clearfix">
                 <a href="index.php">首页</a> &gt; <span>商城大厅</span>
