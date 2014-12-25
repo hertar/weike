@@ -5,7 +5,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use frontend\widgets\Alert;
-   $where.="indus_pid=$_GET['indus_pid']";
+//$where.="indus_pid=$_GET['indus_pid']";
 /* @var $this \yii\web\View */
 /* @var $content string */
 

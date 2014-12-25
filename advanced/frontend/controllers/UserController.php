@@ -227,12 +227,133 @@ class UserController extends Controller
    //更改密码
    public function actionSetting_safe(){
          $this->layout='@app/views/layouts/user.php';
+        
          return $this->render("setting_safe");
    }
    
-   //更换安全密码
+   public function actionSetting_safe_old(){
+      
+         $session=new \yii\web\Session();
+         $uid=$session->get("u_id");
+         $arr=  \app\models\Member::findone($uid);
+         if(md5($_GET["pwd"])==$arr["password"]){
+             echo true;
+         }else{
+             echo "原密码输入错误";
+         }
+   }
+   
+   public function actionSetting_safe_change(){
+       $pwd=$_POST["new_password"];
+       $session=new \yii\web\Session();
+       $uid=$session->get("u_id");
+       $user=\app\models\Space::findOne($uid);
+       $mem=  \app\models\Member::findone($uid);
+       $user->password=md5($pwd);
+       $mem->password=md5($pwd);
+       if($user->save()&&$mem->save()){     
+            $session->remove('user_name');
+            $session->remove("u_id");
+           echo "<script>alert('密码修改成功！请重新登陆');location.href='index.php?r=index/login'</script>";
+       }
+   }
+
+      //更换安全密码
    public function actionSetting_sec_code(){
          $this->layout='@app/views/layouts/user.php';
          return $this->render("setting_sec_code");
    }
+   
+   public function actionSetting_sec_code_old(){
+         
+         $session=new \yii\web\Session();
+         $uid=$session->get("u_id");
+         $arr=  \app\models\Space::findone($uid);
+         if(md5($_GET["pwd"])==$arr["sec_code"]){
+             echo true;
+         }else{
+             echo "原安全密码输入错误";
+         }
+   }
+   
+    public function actionSetting_sec_change(){
+ 
+       $pwd=$_POST["new_sec_code"];
+       $session=new \yii\web\Session();
+       $uid=$session->get("u_id");
+       $user=\app\models\Space::findOne($uid);
+       $user->sec_code=md5($pwd);    
+       if($user->save()){     
+            
+           echo "<script>alert('安全码修改成功！');location.href='index.php?r=user/setting_sec_code'</script>";
+       }
+   }
+   
+   //店铺设置
+   
+   public function actionSetting_space(){
+       $this->layout='@app/views/layouts/user.php';
+       $session=new \yii\web\Session();
+       $uid=$session->get("u_id");
+       $user=  \app\models\Space::findone($uid);
+       if($user['user_type']!=""){
+           $this->redirect("index.php?r=user/setting_space_open");
+       }
+       $count=  \app\models\Shop::find()->count();
+       $shop=\app\models\Shop::find()->where(["uid"=>"$uid"])->one();
+       $data["shop"]=$shop;
+       $data["count"]=$count;
+       
+       $data["user_type"]=$user["user_type"];
+       return $this->render("setting_space",$data);
+   }
+   
+   public function actionSetting_space_open(){
+       $this->layout='@app/views/layouts/user.php';
+       $session=new \yii\web\Session();
+       $uid=$session->get("u_id");
+       $shop=\app\models\Shop::find()->where(["uid"=>"$uid"])->one();
+       $data["shop"]=$shop;
+       return $this->render("setting_space_open",$data);
+   }
+   
+   public function actionSetting_space_add(){
+       $session=new \yii\web\Session();
+       $uid=$session->get("u_id");
+       $name=$session->get("user_name");
+       $user=\app\models\Space::findone($uid);
+       $user_type=$user["user_type"];
+       $arr=\app\models\Shop::find()->where(["uid"=>"$uid"])->one();
+       if($arr){
+            $shop=\app\models\Shop::findone($arr["shop_id"]);
+            $shop->uid=$uid;
+            $shop->username=$name;
+            $shop->shop_type=$user_type;
+            $shop->shop_name=$_POST["shop_name"];
+            $shop->shop_slogans=$_POST["shop_slogans"];
+            $shop->on_time=time();
+       }else{
+            $shop=new \app\models\Shop();
+            $shop->uid=$uid;
+            $shop->username=$name;
+            $shop->shop_type=$user_type;
+            $shop->shop_name=$_POST["shop_name"];
+            $shop->shop_slogans=$_POST["shop_slogans"];
+            $shop->on_time=time();
+       }
+       if($shop->save()){
+           $this->redirect("index.php?r=user/setting_space_open");
+       }
+   }
+   
+   //财务管理
+   public function actionFinance(){
+      $this->layout='@app/views/layouts/user.php';
+       $session=new \yii\web\Session();
+       $uid=$session->get("u_id");
+       $user=\app\models\Space::find()->where(["uid"=>"$uid"])->one();
+       $data["arr"]=$user;
+       return $this->render("finance",$data);
+   }
 }
+                                                                                                                                              

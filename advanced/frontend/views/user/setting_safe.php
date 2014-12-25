@@ -19,7 +19,7 @@
                     欢迎您，<?php $session=new \yii\web\Session();  echo $session->get("user_name")?> </li>
                 <li>
                     <strong class="cf60">币种405405.061</strong>
-                   现金 | <strong><a href="index.php?do=user&view=message">4 条消息</a></strong>
+                   现金 | <strong><a href="index.php?do=user&view=message"> 条消息</a></strong>
                 </li>
             </ul>
         </div>
@@ -132,12 +132,16 @@
                         <div class=" prefix_1 suffix_1">
                             <div class="box waring  form_box">
                             	<div class="inner">
-                                <form action="index.php?do=user&view=setting&op=safe&opp=change_password" method="post" name="frm" id="frm" onload="document.form.autocomplete.setAttribute('autocomplete', 'off');">
+                                <form action="index.php?r=user/setting_safe_change" method="post" name="frm" id="frm" onload="document.form.autocomplete.setAttribute('autocomplete', 'off');">
                                     <div class="rowElem clearfix">
                                         <label class="grid_4">
                                             当前密码：                                        </label>
                                         <div class="grid_11">
-                                            <input class="txt_input" type="password" size="40" title=输入原密码 name="old_password" id="old_password" limit="required:true" ajax="index.php?do=user&view=setting&op=safe&check_old=" msg=输入原密码 msgArea="span_old"/><span id="span_old"></span>
+                                         
+                                            <input class="txt_input" type="password" size="40" title=输入原密码 name="old_password" id="old_password" limit="required:true"
+                                                   ajax="index.php?r=user/setting_safe_old&pwd=" 
+                                                   msg=输入原密码 msgArea="span_old"/>
+                                            <span id="span_old"></span>
                                         </div>
                                     </div>
                                     <div class="rowElem clearfix">
@@ -159,7 +163,7 @@
                                             &nbsp;
                                         </div>
                                         <div class="grid_10 t_l">
-                                            <button class="grid_2 alpha" type="submit" value=提交 onclick="formSub('frm','form',true)">
+                                            <button class="grid_2 alpha" type="submit" value=提交 >
                                                 提交                                            </button>
                                         </div>
                                     </div>
@@ -197,7 +201,7 @@ $("html,body").animate({scrollTop:$(".Anchor").offset().top});
 function check(obj){
 return checkForm(document.getElementById(obj));
 }
-In.add('jscolor',{path:"resource/js/others/jscolor.js",type:'js'}); 
+In.add('jscolor',{path:"/public/resource/js/others/jscolor.js",type:'js'}); 
 In('calendar'); 
 
 $(function(){
