@@ -11,14 +11,14 @@
         <div class="user_info">
             <div class="fl_l mr_10">
                 <p>
-                    <img src='/public/data/avatar/default/man_small.jpg' uid='1' class='pic_small'>                </p>
+                    <img src='/public/data/avatar/default/man_small.jpg' uid='1' class='pic_small'></p>
             </div>
             <ul class="intor">
                 <li>
                     欢迎您，<?php  $session=new \yii\web\Session();  echo $session->get("user_name")?> </li>
                 <li>
-                    <strong class="cf60">币种405405.061</strong>
-                   现金 | <strong><a href="index.php?do=user&view=message">4 条消息</a></strong>
+                    <strong class="cf60">币种<?php echo $arr["balance"]?></strong>
+                   现金 | <strong><a href="index.php?do=user&view=message"> 条消息</a></strong>
                 </li>
             </ul>
         </div>
@@ -30,28 +30,28 @@
     <a name="userCenter"></a>
     <ul>
                 <li>
-            <a href="index.php?do=user&view=index" class="selected"><span class="icon32 meter">管理面板</span><em>管理面板</em></a>
+            <a href="index.php?r=user/index" class="selected"><span class="icon32 meter">管理面板</span><em>管理面板</em></a>
         </li>
                 <li>
-            <a href="index.php?do=user&view=setting" ><span class="icon32 cog">企业设置</span><em>企业设置</em></a>
+            <a href="index.php?r=user/setting" ><span class="icon32 cog">企业设置</span><em>企业设置</em></a>
         </li>
                 <li>
-            <a href="index.php?do=user&view=finance" ><span class="icon32 chart-line2">财务管理</span><em>财务管理</em></a>
+            <a href="index.php?r=user/finance" ><span class="icon32 chart-line2">财务管理</span><em>财务管理</em></a>
         </li>
                 <li>
-            <a href="index.php?do=user&view=employer" ><span class="icon32 buyer">雇主|买家</span><em>雇主|买家</em></a>
+            <a href="index.php?r=user/employer" ><span class="icon32 buyer">雇主|买家</span><em>雇主|买家</em></a>
         </li>
                 <li>
             <a href="index.php?do=user&view=witkey" ><span class="icon32 seller">威客|卖家</span><em>威客|卖家</em></a>
         </li>
                 <li>
-            <a href="index.php?do=user&view=message" ><span class="icon32 sound-high">消息管理</span><em>消息管理</em><strong class="badge">4</strong></a>
+            <a href="index.php?r=user/message" ><span class="icon32 sound-high">消息管理</span><em>消息管理</em><strong class="badge">4</strong></a>
         </li>
                 <li>
-            <a href="index.php?do=user&view=collect" ><span class="icon32 star-fav">我的收藏</span><em>我的收藏</em></a>
+            <a href="index.php?r=user/collect" ><span class="icon32 star-fav">我的收藏</span><em>我的收藏</em></a>
         </li>
                 <li>
-            <a href="index.php?do=user&view=payitem" ><span class="icon32 bookmark-2">增值服务</span><em>增值服务</em></a>
+            <a href="index.php?r=user/payitem" ><span class="icon32 bookmark-2">增值服务</span><em>增值服务</em></a>
         </li>
             </ul>
     
@@ -70,9 +70,10 @@
 <div class="grid_4 clearfix pl_5 omega">
 <ul class="font14">
 <li><a href="index.php?do=space&member_id=1" class="font14b"><?php echo $session->get("user_name")?></a></li>
-<li>用户等级：<img src="/public/data/uploads/sys/mark/28624f3b088d957db.gif?fid=2077" align="absmiddle" title="头衔 ：六级威客&#13;&#10;能力值：47478&#13;&#10;等级：6"></li>
-<li>能力值：47478</li>
-<li>信誉值：257803</li>
+<li>用户等级：<?php echo $resb[0][0]?></li>
+<li>能力值：0</li>
+<li>信誉值：0</li>
+<!--
 <li>
 <div class="font14 auth">
 认证信息：<a href="index.php?do=user&view=payitem&op=auth&auth_code=email#userCenter"><img class="mar0" src="/public/data/uploads/sys/auth/mail_0.gif" width="16px" height="16px" alt="" title="邮箱认证"></a>
@@ -95,6 +96,7 @@
 			
 </div>
 </li>
+-->
 </ul>
 </div>
 <div class="clear"></div>
@@ -113,10 +115,10 @@
 </header>
 <div class="box_detail">
 <div class="font14">
- 现金：<a class="font12">￥405,405.06元</a>
+ 现金：<a class="font12">￥<?php echo $arr["balance"]?>元</a>
 </div>
 <div class="font14">
-元宝：<a class="font12">77529.188</a>
+元宝：<a class="font12"><?php echo $arr["credit"]?></a>
 </div>
 <div class=" mt_10 mb_20 t_c">
 <a href="index.php?do=user&view=finance&op=recharge" class="button btn_width mr_5" title="充值">充值</a>
@@ -138,11 +140,11 @@
 <!--安全设置-->
 
 <div class="t_c pb_20">
-<a class="button btn_width mr_5 mt_5" href="index.php?do=user&view=setting&op=safe" class="mr_10">修改密码</a>
-<a class="button btn_width mt_5" href="index.php?do=user&view=setting&op=safe&opp=sec_code" class="mr_10">修改安全码</a>	
+<a class="button btn_width mr_5 mt_5" href="index.php?r=user/setting_safe" class="mr_10">修改密码</a>
+<a class="button btn_width mt_5" href="index.php?r=user/setting_sec_code" class="mr_10">修改安全码</a>	
 
 <div class="mt_5">											
-<a class="button btn_width mr_5 mt_5" href="index.php?do=user&view=setting&op=basic">完善资料</a>										
+<a class="button btn_width mr_5 mt_5" href="index.php?r=user/setting">完善资料</a>										
 <a class="button btn_width mt_5" href="index.php?do=user&view=payitem&op=auth">认证中心</a>
 </div>
 </div>

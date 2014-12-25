@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html dir="ltr" lang="zh-cn"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>客客出品专业威客系统</title>
+<title>用户中心</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE,chrome=1">
 <meta name="keywords" content="客客出品专业威客系统">
 <meta name="description" content="客客出品专业威客系统">
@@ -17,11 +17,16 @@
 <meta name="copyright" content="Copyright &#169; 2010 -2013 kekezu. All rights reserved" />
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="apple-touch-icon" href="favicon.ico"/>
+ <style type="text/css" media="screen">
+  html, body { height:100%; background-color: #ffffff;}
+  #flashContent { width:100%; height:100%; }
+  </style>
+  
 <script type="text/javascript">
 var SITEURL= "http://127.0.0.1/weike",
-    SKIN_PATH = '/public/tpl/default',
+    SKIN_PATH = 'tpl/default',
 LANG       = 'cn',
-    INDEX      = 'index',
+    INDEX      = 'user',
     CHARSET    = "utf-8";
 </script>
 <link href="/public/resource/css/reset.css" rel="stylesheet" charset="utf-8">
@@ -76,7 +81,8 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 
 
 </head>
-    <body id="index">
+
+    <body id="user">
 
 <div class="blue_style" id="wrapper">
 
@@ -174,7 +180,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                         <ul class="user_logined clearfix">
                             <li id="avatar">
                             	<a href="index.php?r=user/index" title="" rel="user_menu">
-                                    <?php
+                                           <?php
                                          $uid=$session->get("u_id");
                                          $arr=\app\models\Space::find()->where(["uid"=>"$uid"])->one();
                                          //print_r($arr);
@@ -187,7 +193,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                                             <img src='/public/data/avatar/default/man_small.jpg' uid='' class='pic_small'>   
                                             <?php
                                          }
-                                            ?>
+                                            ?>     
                                             <span class="user_named m_h"><?php echo $session->get("user_name");?></span>
                             	</a>
 <!--用户登录后导航菜单 start-->
