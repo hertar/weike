@@ -5,10 +5,10 @@
 <!--[if gt IE 8]><!--> <html dir="ltr" lang="zh-cn"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>资讯中心-客客出品专业威客系统</title>
+<title>警惕交易诈骗，注意帐户安全警惕交易诈骗，注意帐户安全- 客客出品专业威客系统</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE,chrome=1">
-<meta name="keywords" content="资讯中心-客客出品专业威客系统">
-<meta name="description" content="资讯中心-客客出品专业威客系统">
+<meta name="keywords" content="警惕交易诈骗，注意帐户安全-客客出品专业威客系统">
+<meta name="description" content="警惕交易诈骗，注意帐户安全-客客出品专业威客系统">
 <meta name="generator" content="客客出品 2.2" />
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -47,7 +47,7 @@ LANG       = 'cn',
 
 <!--jQuery1.4.4库-->
 <script src="/public/resource/js/jquery.js" type="text/javascript"></script>
-<script src="/public/lang/cn/script/lang.js" type="text/javascript"></script>
+<script src="lang/cn/script/lang.js" type="text/javascript"></script>
 <script src="/public/resource/js/system/keke.js" type="text/javascript"></script>
 <script src="/public/resource/js/in.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -125,7 +125,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                     <div class="search_box">
                         <div class="fl_l search_selcecter">
                         	<div id="search_select" class="search_options">
-                        	        <a href="javascript:void(0);" class="selected" rel="task_list"><span>任务</span>▼</a>
+                        	                           		 <a href="javascript:void(0);" class="selected" rel="task_list"><span>任务</span>▼</a>
                                		 <a href="javascript:void(0);" class="hidden"   rel="task_list">任务</a>
                            	 	<a href="javascript:void(0);" class="hidden"   rel="shop_list">商品</a>
                              </div>
@@ -149,9 +149,8 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 
 
           
-            	            	<!--用户登录注册 start-->
-
-                <div class="user_box clearfix grid_5">
+            	<!--用户登录注册 start-->
+            	 <div class="user_box clearfix grid_5">
                 	<!--注册登录按钮 start-->
 <?php
     $session=new \yii\web\Session();
@@ -276,31 +275,34 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 <!--页面头部-->
     <header class="clearfix page_header">
 <div class="container_24">
-<div class='adv'><a href='http://www.kppw.cn' target='_blank' title='adv'><img src='/public/data/uploads/sys/ad/adv.jpg' width='' height='' alt='adv' title='adv'></a></div>    <!--页面导航-->
+<div class='adv'><a href='http://www.kppw.cn' target='_blank' title='xdfvcxvcxvxvxcvxcb'>
+        <img src='/public/data/uploads/sys/ad/adv.jpg' width='' height='' alt='xdfvcxvcxvxvxcvxcb' title='xdfvcxvcxvxvxcvxcb'></a></div>    <!--页面导航-->
     <div class="breadcrumbs clearfix">
         <a href="index.php">首页</a> &gt;
-<span>资讯中心</span>
+<a href="index.php?r=article/article_list">资讯中心</a> &gt;
+<span>安全交易</span>
     </div>
     <!--end 页面导航--><!--页面标题(搜索前)-
     <div class="page_title clearfix">
-        <h2 class="title"><a href="index.php?do=article&view=article_index">资讯中心</a></h2>
+        <h2 class="title">
+                                         <a href="index.php?do=article&view=article_list&art_cat_id=203">
+                   安全交易</a></h2>
     </div>
     <!--end 页面标题-->
-
 </div>
 </header>
-<!--end 页面头部--><!--主内容-->
+<!--end 页面头部-->
+<!--主内容-->
 <section class="clearfix content">
     <div class="container_24">
-    	<div class="clear"></div>
-  <!--资讯_顶部通栏广告 start-->
- 		   <!--资讯_顶部通栏广告 end-->
-<div class="clear"></div>
         <section class="clearfix section">
             <div class="second_menu container_24 po_ab">
                 <div class="suffix_23 pull_1">
                     <nav class="minor_nav box">
-                        <ul class="nav_group clearfix">
+                        <ul class="nav_group">
+                        	<li>
+                        <a href="index.php?r=article/article_list" class="" title="返回资讯首页"><span class="icon16 home">返回首页</span></a>
+                        	</li>
                             <li>
                                 <a href="index.php?r=help" title="帮助中心"><span class="icon16 help">帮助中心</span><b class="font14 ml_5 po_re" style="top:4px;">？</b></a>
                             </li>
@@ -311,74 +313,60 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
             <div class="show_panel container_24 po_re">
                 <div class="po_re clearfix">
                     <!--左边内容-->
-                    <div class="grid_19 omega">
-                        <div class="box normal1 clearfix bord_c">
-                            <!--资讯缩略-->
-                            <div class="news_list">
-                                <!--新闻-->                                 <?php
-                foreach($res as $v){
-             ?>
-                               <div class="item clearfix">
-                                    <div class="news_article">
-                                        <h3 class="news_title ws_break">
-                                            <a title="警惕交易诈骗，注意帐户安全"
-           href="index.php?r=article/article_info&art_id=<?php echo $v['art_id']?>">
-<?php echo $v["art_title"]?>
-    <?php
-        if($v["is_recommend"]==1){
-    ?>
-<font color="red">[荐]</font>
-<?php
-                }
-?>
-</a>
-</h3>
-<p class="clearfix">
-<span class="c999"><?php echo date("Y-m-d",$v["pub_time"])?></span>
-
-<a href="index.php?do=article&view=article_list&art_cat_id=203">
-<?php echo $v["cat_name"]?></a>
+                    <div class="grid_19">
+                        <div class="box normal clearfix">
+                            <!--资讯详细介绍-->
+                            <div class="news_detail clearfix" >
+                               
+                                    <h1 class="c333"><?php echo $res["art_title"]?></h1>
+                                    <div class="clearfix pt_5">
+                                    	<div class="fl_r operate">
+                                        	<a id="share1" href="index.php?do=ajax&view=share&oid=1&title=警惕交易诈骗，注意帐户安全" class=""  onclick="return false" onmouseover="share(this)" title="分享"><span class="icon16 share">分享</span></a>
+                                            <a href="javascript:setfontsize();" class="" title="文字大小"><span class="icon16 text-letter-t">文字大小</span></a>
+                                            <a href="javascript:setprint('details');" class="" title="打印"><span class="icon16 print">打印</span></a>
+                                        </div>
+                                        <div class=" c666">
+                                        	<?php echo date("Y-m-d",$res['pub_time'])?> |
+<?php echo $res["views"]?>次浏览 | 
+作者:<?php echo $res["username"]?> </div>
+                                        
+                                    </div>
 
 
-</p>
-<div class="news_img">
-<a href="index.php?do=article&view=article_info&art_cat_id=203&art_id=227" class="ov_hide 
-mt_10"></a>
-
-
-</div>
-<div class="news_content">
-<p>
-<?php echo htmlspecialchars_decode(substr($v["content"],0,100))?>                                         </p>
-</div>
+                                    <div id="details" class="news_content mt_10">
+                                     <?php echo htmlspecialchars_decode($res['content'])?>
+                                    </div>
+                            
 <div class="clear"></div>
-<div class="m_h">
-
-<?php echo $v["views"]?>浏览<a href="index.php?
-do=article&view=article_info&art_cat_id=203&art_id=227">阅读全文</a>
-
-</div>
-</div>
-</div>
-       <?php
-                }
-       ?>
-<!--end 新闻-->
-
-                            </div><!--end 资讯缩略-->
-                        </div>
-                        <!--page 翻页 start-->
-                        <div class="page">
-                            <p class="clearfix">
+<!--左内容头-->
+                            <div class=" clearfix pad5" >
                                 <?php
-                                use yii\widgets\LinkPager;
+                                    if(isset($next)){
+                                       
                                 ?>
-                                <?= LinkPager::widget(['pagination' => $pages]) ?>                         
-                            </p>
-                            <div class="clear">
+                                 <a href="index.php?r=article/article_info&art_id=<?php echo array_keys($next)[0]?>" class="fl_r mr_20">
+                                     
+                   <strong class="font_simsun mr_5 c555">下一篇：</strong><?php echo $next[array_keys($next)[0]]?></a>
+                                <?php
+                                    }
+                                ?>
+                                <?php
+                                    if(isset($last)){
+                                ?>
+                                <a href="index.php?r=article/article_info&art_id=<?php echo array_keys($last)[0]?>" class="fl_r mr_20">
+                   <strong class="font_simsun mr_5 c555">上一篇：</strong><?php echo $last[array_keys($last)[0]]?></a>
+                                <?php
+                                    }
+                                ?>
+                    
+                                                            </div>
+                            <!--end 左内容头-->
+    <div class="clear">
+                                </div>
+                               
                             </div>
+                            <!--end 资讯详细介绍-->
                         </div>
-                        <!--page 翻页 end-->         
                     </div>
                     <!--end 左边部分-->
                     <!--右边部分-->
@@ -389,27 +377,113 @@ do=article&view=article_info&art_cat_id=203&art_id=227">阅读全文</a>
             <h3 class="title">分类</h3>
             <div class="mt_5 news_sort">
                 <ul>
-                       <?php
-                                 foreach ($cat as $val) {
-                                                    
-                       ?>                 
+                                        
                     <li class="second_sort ">                    	
                 		                                                                                                                                                                                                                                                                                                                                                                                                                                                
 <span class="ico"></span>
 				
                            <a href="index.php?do=article&view=article_list&art_cat_id=2" class="minus">
-                        		<?php echo $val["cat_name"]?></a>
+                        		联系我们</a>
 <p class="news_secondMenu" id="art_p_2" style="display:none">                    		
                                                     </p>                        
                     </li>
-         <?php
-                                 }
-         ?>    
-               </ul>
+              
+                                        
+                    <li class="second_sort ">                    	
+                		                                                                                                                                                                                                                                                                                                                                                                                                                                                
+<span class="ico"></span>
+				
+                           <a href="index.php?do=article&view=article_list&art_cat_id=5" class="minus">
+                        		行业动态</a>
+<p class="news_secondMenu" id="art_p_5" style="display:none">                    		
+                                                    </p>                        
+                    </li>
+              
+                                        
+                    <li class="second_sort ">                    	
+                		                                                                                                                                                                                                                                                                                                                                                                                                                                                
+<span class="ico"></span>
+				
+                           <a href="index.php?do=article&view=article_list&art_cat_id=7" class="minus">
+                        		媒体报导</a>
+<p class="news_secondMenu" id="art_p_7" style="display:none">                    		
+                                                    </p>                        
+                    </li>
+              
+                                        
+                    <li class="second_sort ">                    	
+                		                                                                                                                                                                                                                                                                                                                                                                                                                                                
+<span class="ico"></span>
+				
+                           <a href="index.php?do=article&view=article_list&art_cat_id=17" class="minus">
+                        		网站公告</a>
+<p class="news_secondMenu" id="art_p_17" style="display:none">                    		
+                                                    </p>                        
+                    </li>
+              
+                                        
+                    <li class="second_sort ">                    	
+                		                                                                                                                                                                                                                                                                                                                                                                                                                                                
+<span class="ico"></span>
+				
+                           <a href="index.php?do=article&view=article_list&art_cat_id=202" class="minus">
+                        		关于我们</a>
+<p class="news_secondMenu" id="art_p_202" style="display:none">                    		
+                                                    </p>                        
+                    </li>
+              
+                                        
+                    <li class="second_sort ">                    	
+                		                                                                                                                                                                                                                                                                                                                                                                                                                                                
+<span class="ico"></span>
+				
+                           <a href="index.php?do=article&view=article_list&art_cat_id=4" class="minus">
+                        		政策法规</a>
+<p class="news_secondMenu" id="art_p_4" style="display:none">                    		
+                                                    </p>                        
+                    </li>
+              
+                                        
+                    <li class="second_sort selected">                    	
+                		                                                                                                                                                                                                                                                                                                                                                                                                                                                
+<span class="ico"></span>
+				
+                           <a href="index.php?do=article&view=article_list&art_cat_id=203" class="minus">
+                        		安全交易</a>
+<p class="news_secondMenu" id="art_p_203" style="display:none">                    		
+                                                    </p>                        
+                    </li>
+              
+                                        
+                    <li class="second_sort ">                    	
+                		                                                                                                                                                                                                                                                                                                                                                                                                                                                
+<span class="ico"></span>
+				
+                           <a href="index.php?do=article&view=article_list&art_cat_id=358" class="minus">
+                        		新闻列表</a>
+<p class="news_secondMenu" id="art_p_358" style="display:none">                    		
+                                                    </p>                        
+                    </li>
+              
+                                    </ul>
             </div>
         </div>
         <!--end 分类--><!--归档-->
-      
+        <div class="box normal pad10 mt_10">
+            <h3 class="title">归档</h3>
+            <div class="mt_5 pl_20">
+                <ul>
+                                        <li>
+                    	                           <a href="index.php?do=article&view=article_list&year=2012">
+                        2012年归档[22]</a>
+                    </li>
+                                        <li>
+                    	                           <a href="index.php?do=article&view=article_list&year=2013">
+                        2013年归档[3]</a>
+                    </li>
+                                    </ul>
+            </div>
+        </div>
         <!--end 归档-->
  
 </div>
@@ -431,10 +505,16 @@ do=article&view=article_info&art_cat_id=203&art_id=227">阅读全文</a>
                 </div>
             </div>
         </section>
-<div class='adv'><a href='http://www.kppw.cn' target='_blank' title='adv'><img src='/public/data/uploads/sys/ad/adv.jpg' width='' height='' alt='adv' title='adv'></a></div>    </div>
+<!--资讯中心_底部广告-->
+<div class='adv'><a href='http://www.kppw.cn' target='_blank' title='adv'>
+        <img src='/public/data/uploads/sys/ad/adv.jpg' width='' height='' alt='adv' title='adv'></a></div>    </div>
 </section>
 <!--end 主内容-->
-</div>
+
+<script type="text/javascript" >
+In('print');
+</script>
+
 
 <!--页脚 satrt-->
 <footer class="footer clearfix">
@@ -533,11 +613,10 @@ do=article&view=article_info&art_cat_id=203&art_id=227">阅读全文</a>
     <!--页脚 end-->
 </div>
 <script type="text/javascript">
-var uid='';
-var xyq = "l7j743n462jfogqvjvalrom7a6";
-
+var uid='1';
+var xyq = "gkkeu0b6c16cetjnkgeea4um90";
 $(function(){
-   $.get('/public/tpl/js/js.php?op=time&r='+Math.random());	
+   $.get('js.php?op=time&r='+Math.random());	
 })
  //js异步加载
 In('header_top','custom','lavalamp','tipsy','autoIMG','slides');
