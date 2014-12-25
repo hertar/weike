@@ -52,7 +52,7 @@
                                   <!--  <p><span style="width:430px;display:inline-block;" class="t_r">账户余额：</span><span class="cc00 font18">￥393,305.06元</span></p>-->
                                  </div>
                                 <div class="t_c mt_20">
-                                	                                      <button class="big button" name="confirm_to_pay" id="confirm_to_pay">付款</button>
+<button class="big button" name="confirm_to_pay" id="confirm_to_pay"  onclick="fukuan()">付款</button>
 <button class="big button" value="1" name="confirm_to_close" id="confirm_to_close"
         onclick='backorder(<?php echo $arr['order_id'];?>)'>取消订单 </button>
                                 	
@@ -113,6 +113,10 @@ var url = basic_url+'&op=close_order&order_id='+order_id;
 formSub(url,'url',false);
 })
 })
+
+function fukuan(){
+    location.href="http://192.168.1.152/zhifubao/alipay/index.php?out_trade_no=201412250000"+"&subject=123"+"&body='浮点数是电风扇的发生地方 '"+"&price=0.1";
+}
 </script>
 
 <!--页脚 satrt-->

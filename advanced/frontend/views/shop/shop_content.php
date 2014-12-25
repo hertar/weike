@@ -178,11 +178,11 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                             	<a href="index.php?r=user/index" title="" rel="user_menu">
                                                <?php
                                          $uid=$session->get("u_id");
-                                         $arr=\app\models\Space::find()->where(["uid"=>"$uid"])->one();
+                                         $arrs=\app\models\Space::find()->where(["uid"=>"$uid"])->one();
                                          //print_r($arr);
                                          if($arr){
                                     ?>
-                                            <img src="/public/data/avatar/system<?php echo $arr["images"]?>" uid='' class='pic_small'>   
+                                            <img src="/public/data/avatar/system<?php echo $arrs["images"]?>" uid='' class='pic_small'>   
                                             <?php
                                          }else{
                                             ?>
