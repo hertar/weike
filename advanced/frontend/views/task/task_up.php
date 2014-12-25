@@ -30,7 +30,7 @@ use yii\widgets\LinkPager;
 <a href="task-task_id-28.html"><?php echo $list['task_title'];?></a>
     </h2>
     <div class="page_sub_title c666 mb_10">
-       <span>任务发布时间：<?php echo date("Y-m-d H:i:s",$list['end_time']);?></span>
+       <span>任务发布时间：<?php echo date("Y-m-d H:i:s",$list['start_time']);?></span>
    <span class="border_l_c mar10">&nbsp;</span>
        <a class="mre_task_kind c333" href="javascript:void(0);" title="方案中标发放赏金，所需稿件1个，稿件单价￥72.00元，已交稿件1个，已中标1个"> <?php if($list['model_id']==1){?>
                                                                     单人悬赏
