@@ -176,7 +176,20 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                         <ul class="user_logined clearfix">
                             <li id="avatar">
                             	<a href="index.php?r=user/index" title="" rel="user_menu">
-                                            <img src='/public/data/avatar/default/man_small.jpg' uid='' class='pic_small'>     
+                                               <?php
+                                         $uid=$session->get("u_id");
+                                         $arrs=\app\models\Space::find()->where(["uid"=>"$uid"])->one();
+                                         //print_r($arr);
+                                         if($arr){
+                                    ?>
+                                            <img src="/public/data/avatar/system<?php echo $arrs["images"]?>" uid='' class='pic_small'>   
+                                            <?php
+                                         }else{
+                                            ?>
+                                            <img src='/public/data/avatar/default/man_small.jpg' uid='' class='pic_small'>   
+                                            <?php
+                                         }
+                                            ?>     
                                             <span class="user_named m_h"><?php echo $session->get("user_name");?></span>
                             <input type="hidden" id="abcde" value="<?php echo $session->get("user_name");?>">
                                <input type="hidden" id="service_id" value="<?php echo $arr['service_id'];?>">
@@ -415,7 +428,8 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 <p><span>地区</span>暂无</p>
 <p><span>交付方式</span>联系客服</p>
 <p class="grid_5 alpha omega">
-<a href="index.php?do=shop_order&sid=13&steps=step1&op=buy" class="submit block">现在购买</a>
+<input type='hidden' id='user_login_p' value='<?php echo $arr['service_id'];?>'>    
+    <a onclick='user_login_p()' class="submit block">现在购买</a>
 </p>
                                      <div class="clear"></div>
  <p class="clearfix msg msg_warn grid_8 alpha omega">友情提醒：为保障您的利益，请网上成交，贵重物品，请将付款托管到平台进行交易。</p>
@@ -942,6 +956,8 @@ if(this.value=="发表新评论"){
 this.value==''?this.value="发表新评论":'';
 })
 })
+
+
 //增加评论
 function comment_add()
 {
@@ -1217,7 +1233,16 @@ $(function(){
 })
  //js异步加载
 In('header_top','custom','lavalamp','tipsy','autoIMG','slides');
-
+function user_login_p(){
+     var service_id=$("#service_id").val();
+    if($("#abcde").val()==null){
+        alert('请登录');
+        location.href="index.php?r=index/login";
+    }else{
+          location.href="index.php?r=shop/shop_buy&service_id="+service_id;
+        }
+    
+}
 </script>
 <!--[if IE 6]></div><![endif]-->
 <!--[if IE 7]></div><![endif]-->
