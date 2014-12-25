@@ -14,11 +14,11 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\data\Pagination;
 use app\models\Task;
+use app\models\Comment;
 use app\models\Industry;
 use app\models\Model;
 use yii\db\ActiveRecord;
 use yii\db\Query;
-
 
 class TaskController extends Controller
 {
@@ -54,7 +54,7 @@ class TaskController extends Controller
             $min=$_GET['min'];
              $max=$_GET['max'];
             //$where.=" ";
-            $where.=" and real_cash>$min and task_cash<$max";
+            $where.=" and real_cash>$min and task_cash<=$max";
             $session->set("sj",$min."-".$max);
         }
         $model=new Query();
@@ -72,13 +72,92 @@ class TaskController extends Controller
          
        $id=$_GET['id'];
        $list= Task::findone($id);
+       $huifu_count=Comment::find()->andWhere(['p_id' =>$id])->count('comment_id');
+       $t_list=Comment::find()->where(['p_id' => $id])->all();  
        return $this->render('task_up',[
-             
              'list' => $list,
+             'h_count'=>$huifu_count,
+             't_list'=>$t_list,
        ]);
 
         
         return $this->render("task_list");
 
    }
+   //添加留言
+   public function actionComment_add(){
+       $session=new \yii\web\Session();
+        if(empty($session->get("user_name"))){
+            return 1;
+            $this->redirect("?r=index/login");
+        }
+        $task_id=$_GET['id'];
+        if($_GET['key']==1){
+        $t=$_GET['t'];
+        $model = new Comment();
+        $model->p_id = $task_id;
+        $model->uid = $session->get("u_id");
+        $model->username =$session->get("user_name");
+        $model->content = $t;
+        $model->on_time = time();
+        $model->insert();
+        }
+        $list=Comment::find()->where(['p_id' => $task_id])->all();  
+        $str='';
+        foreach($list as $key=>$val){
+          $str.="<div class='ly1 mt_10 mb_10' id='p_4'>
+                        <div class='top1 clearfix'>
+                                        <a href='index.php?do=space&member_id=1' class='block fl_l'>
+                                            <img src='http://www.weike1.com/data/avatar/default/man_small.jpg' uid='1' class='pic_small'></a>
+            <div class='operate po_ab hidden'>";
+          if($val['uid']== $session->get("u_id")){
+            $str.="<a onclick=del_comment(".$val['comment_id'].",".$val['p_id'].") ><span class='icon16 trash'></span>删除</a>";
+          }
+            $str.="<a href='javascript:;' onclick='comment_reply()'><span class='icon16 spechbubble'></span>回复</a>
+                                        </div>
+            <div class='comment_detail'>
+            <a href='index.php?do=space&member_id=1'>".$val['username']."</a>
+                                        <span>".date("Y-m-d H:i:s",$val['on_time'])."</span>
+                                         <p class='font14 ws_prewrap ws_break'>".$val['content']."</p> 
+                                    </div>
+            </div>
+            <div class='cc pl_30 mt_10' id='p_reply_4'>
+            </div>
+            </div>";
+        }
+        $h_count=Comment::find()->andWhere(['p_id' =>$task_id])->count('comment_id');  
+        return $str.'@#@'.$h_count;
+    }
+    //删除回复
+    public function actionDel_comment(){
+         $session=new \yii\web\Session(); 
+        $comment_id = $_GET['comment_id'];
+        Comment::findOne($comment_id)->delete();
+        $task_id=$_GET['id'];
+        $list=Comment::find()->where(['p_id' => $task_id])->all();  
+        $str='';
+        foreach($list as $key=>$val){
+          $str.="<div class='ly1 mt_10 mb_10' id='p_4'>
+                        <div class='top1 clearfix'>
+                                        <a href='index.php?do=space&member_id=1' class='block fl_l'>
+                                            <img src='http://www.weike1.com/data/avatar/default/man_small.jpg' uid='1' class='pic_small'></a>
+            <div class='operate po_ab hidden'>";
+          if($val['uid']== $session->get("u_id")){
+            $str.="<a onclick=del_comment(".$val['comment_id'].",".$val['p_id'].") onclick='comment_del()'><span class='icon16 trash'></span>删除</a>";
+          }
+            $str.="<a href='javascript:;' onclick='comment_reply()'><span class='icon16 spechbubble'></span>回复</a>
+                                        </div>
+            <div class='comment_detail'>
+            <a href='index.php?do=space&member_id=1'>".$val['username']."</a>
+                                        <span>".date("Y-m-d H:i:s",$val['on_time'])."</span>
+                                         <p class='font14 ws_prewrap ws_break'>".$val['content']."</p> 
+                                    </div>
+            </div>
+            <div class='cc pl_30 mt_10' id='p_reply_4'>
+            </div>
+            </div>";
+        }
+        $h_count=Comment::find()->andWhere(['p_id' =>$task_id])->count('comment_id');  
+        return $str.'@#@'.$h_count;
+    }
 }

@@ -224,7 +224,7 @@ $("#hdn_myprovince").val(art.dialog.data('myprovince'));
  <tr>
                         <th scope="row">任务描述：</th>
                         <td>
-                         <textarea rows="18" name="task_desc" style="width:75%;" id="tar_content"  class="xheditor {urlBase:'http://www.weike1.com/',tools:'mfull',admin:'/public/',html5Upload:false,upImgUrl:'/public/index.php?do=ajax&view=upload&file_type=att'}" cols="70"><?php echo $list['task_desc']?></textarea>
+                        <pre class="ws_prewrap ws_break" ><?php echo htmlspecialchars_decode($list['task_desc']) ?></pre>
 </td>
 </tr>
                     <tr>

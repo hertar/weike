@@ -123,7 +123,7 @@ use yii\widgets\LinkPager;
                                     <tr class="item">
                  	<td class="td25"><input type="checkbox" name="ckb" class="checkbox" value="<?php echo $val['task_id']?>" class="checkbox"></td><td><?php echo $val['task_id']?></td>
                     <td class="td28">
-                    	<a href="/public/index.php?do=task&task_id=70" target="_blank"><?php echo $val['task_title']?></a>
+                    	<a href="index.php?r=model/up_jijiantask&id=<?php echo $val['task_id'] ?>" target="_blank"><?php echo $val['task_title']?></a>
 </td>
                    
                     <td>￥<?php echo $val['task_cash']?>元</td>

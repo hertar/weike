@@ -16,6 +16,7 @@ use yii\web\UploadedFile;
 use yii\web\Session;
 use app\models\tree;
 use app\models\WkWitkeyCase;
+use app\models\WkWitkeyService;
 /**
  * Site controller
  */
@@ -23,8 +24,7 @@ use app\models\WkWitkeyCase;
 class ArticleController extends Controller
 {
   // $this->layout='@app/views/layouts/publics.php';
-    public $enableCsrfValidation=false;//加上这句代码,前台可以使用普通的form表单语法
-   
+    public $enableCsrfValidation=false;//加上这句代码,前台可以使用普通的form表单语法 
     /**
      * @inheritdoc
      */
@@ -53,7 +53,6 @@ $paixu=@$_POST['paixu'];
 $zengjian=@$_POST['zengjian'];
 $page_size=@$_POST['page_size'];
 $where="1";
-
 $where.=" and art_cat_id='17'";
 if(!empty($bulletin)&&empty($art_title)&&empty($username)&&empty($page_size)&&empty($paixu)&&empty($zengjian)){
 $session->set('bulletin',$session->get('bulletin'));
@@ -170,7 +169,9 @@ public function actionAbout(){
      $this->layout='@app/views/layouts/publics.php';
     $model=new Query();
     $data = $model->from(['wk_witkey_article'])->orderby("listorder asc")->where("art_cat_id=202")->all();
+
     $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>5]);
+      
     $data=$model->offset($pages->offset)->limit($pages->limit)->all();     
     return $this->render('about',[
     'model' => $data,

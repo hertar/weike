@@ -1,49 +1,8 @@
 <?php
 use yii\widgets\LinkPager;
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>keke admin</title>
 
 
-<link href="/public/tpl/css/admin_management.css" rel="stylesheet" type="text/css" />
-<link href="/public/resource/css/buttons.css" rel="stylesheet" type="text/css" />
-<link title="style1" href="/public/tpl/skin/default/style.css" rel="stylesheet" type="text/css" />
-<!--<link title="style2" href="tpl/skin/light/style.css" rel="stylesheet" type="text/css" />-->
-<script type="text/javascript" src="/public/resource/js/jquery.js"></script>
-<script type="text/javascript" src="/public/resource/js/system/keke.js"></script>
-<script type="text/javascript" src="/public/resource/js/in.js"></script>
-</head>
-<nav id="nav" class="nav m_h">
-        <div class="container_24" >
-        	<div class="menu grid_24 clearfix">
-                <ul class="clearfix">
-     <?php
-        foreach($nav as $v){
-     ?>
-<li>
-    <a href="<?php echo $v['nav_url']?>"  ><span><?php echo $v['nav_title']?></span></a>
-</li>
-
-<li class="line"></li>
-<?php
-        }
-?>
-
-                </ul>
-                <!---->
-                  <div class="operate po_ab">
-                    	<a href="index.php?r=help" target="_blank" title="帮助中心">
-                        	<span class="icon16 help reverse"></span>
-帮助中心                        </a>
-                   </div>
-                <!---->
-</div>
-                <div class="clear"></div>
-        </div>
-    </nav>
  <div class="wrapper">
   <!--页面头部-->
   <header class="clearfix page_header">
@@ -122,20 +81,35 @@ use yii\widgets\LinkPager;
 </div>
 </div>
    
-   
+ <style>
+a{cursor:pointer;}
+</style>
+  
    <div class="clear"></div>
     <!--页面子导航-->
 <div id="header_nav" class="po_re grid_19">
      <nav class="clearfix page_nav po_re" id="top_nav">
        <ul>
-         <li class="selected"><a href="task-task_id-28.html" title="描述"><span class="icon16 notepad-2 mr_5"></span>描述</a></li>
+         <li ><a title="描述"  onclick='desc()'><span class="icon16 notepad-2 mr_5"></span>描述</a></li>
          <li ><a href="task-task_id-28-view-work.html" title="稿件"><span class="icon16 spechbubble-sq-line mr_5"></span>稿件 <span class="c999">[<span id="work_num">1</span>]</span></a></li>		 
-         <li ><a href="task-task_id-28-view-comment.html" class="留言"><span class="icon16 spechbubble-2 mr_5"></span>留言 <span class="c999">[0]</span></a></a></li>
+         <li ><a  class="留言" onclick='yan()'><span class="icon16 spechbubble-2 mr_5"></span>留言 <span class="c999">[<span id='h_conunt'><?php echo $h_count; ?></span>]</span></a></a></li>
          <li ><a href="task-task_id-28-view-mark.html" title="评价"><span class="icon16 cert mr_5"></span>评价<span class="c999">[2]</span></a></a></li>
          	         
 <!--  <li class="border_n"><a href="javascript:void(0);" class="" title="停靠在左侧"><span class="icon16 arrow-bottom-left block" id="arrow-bottom-left">停靠在左边</span></a></li> -->
        </ul>
  </nav>
+    <script>
+        function yan(){
+            document.getElementById("desc").style.display='none';
+            document.getElementById("yan").style.display='block';
+            document.getElementById("inner1").style.display='none';
+        }
+        function desc(){
+            document.getElementById("desc").style.display='block';
+            document.getElementById("yan").style.display='none';
+             document.getElementById("inner1").style.display='block';
+        }
+    </script>
  <!--工具栏-->
         <div class="operate po_ab hidden">
                   <a href="javascript:setfontsize();" class="" title="文字大小"><div class="icon16 text-letter-t">文字大小</div></a>
@@ -214,10 +188,282 @@ use yii\widgets\LinkPager;
        <!--内容1-->
        <details open class="mb_20 " id="details">
        <!--标题-->
+       <div id='desc'>
         <summary  class="fontb">需求</summary>
          <!--内容-->
       
-<pre class="ws_prewrap ws_break" ><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;福彩双色球2元可中1000万</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一样的彩票站，不一样的服务</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站免费为彩民量血压</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;彩票站WIFI覆盖</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果您累了，电子宾馆彩票站为您提供休息的椅子和茶水</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子宾馆彩票站为了回馈彩民朋友开展二次抽奖活动</p><p style="border: 0px; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 宋体, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 25px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">7.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子宾馆彩票站买彩票也可以积分，一注彩票积2分，满500分赠送双色球一注</p>KPPW2.2安装包默认数据均为测试演示数据，无任何商业意图，请各位站长测试后自行删除。如有违规，自行承责。</pre> 
+<pre class="ws_prewrap ws_break" ><?php echo htmlspecialchars_decode($list['task_desc']) ?></pre>
+       </div>
+<div id='yan' style="display:none">
+    
+      <div class="show_panel container_24 ">
+         <div class="grid_24 po_re">
+<div class="panel clearfix box">
+                
+<!--留言部分-->
+                <div class="lyk pl_20 mt_10 mb_20 clearfix">
+                	<h3 id="h3_pub_comment">发表新留言</h3>
+                    <div class="grid_14">
+                    	
+ <div class="work_answer">
+<div class="answer-form">
+                       <textarea class="font14 txt_input"  id="tar_comment"  cols="100" onkeydown="checkCommentInner(this,event)">发表新评论</textarea>
+<div class=" ">
+<button type="button" class="button block fl_l" value="发送留言" onclick="comment_add(<?php echo $list['task_id'];?>)"><span class="check icon"></span>发表</button>
+<span class="answer_word">你还能输入100个字!</span>
+</div>
+</div>
+</div>
+
+                    </div>
+                    <div class="grid_8">
+                        <p class="ly_notice">
+                            	站长很辛苦的，请尊重站长的劳动成果。严禁一切非法的非和谐的内容以及广告链接出现，一经发现封号。                        </p>
+                    </div>
+                </div>
+                <!--end 留言部分-->
+<div class="clear"></div>
+                <div class="pl_20 pr_20">
+                	
+
+<h3>留言[<span id='h_conunt1'><?php echo $h_count; ?></span>]</h3>
+
+
+                	<div id="comment_page">
+                     
+                    <!--留言-->
+                   <div id='huifu'>
+                       <?php
+                       foreach(@$t_list as $key=>$val){?>
+          <div class='ly1 mt_10 mb_10' id='p_4'>
+                        <div class='top1 clearfix'>
+                                        <a href='index.php?do=space&member_id=1' class='block fl_l'>
+                                            <img src='http://www.weike1.com/data/avatar/default/man_small.jpg' uid='1' class='pic_small'></a>
+            <div class='operate po_ab hidden'> 
+                <?php
+                $session=new \yii\web\Session();
+                if($val['uid']== $session->get("u_id")){?>
+            <a onclick='del_comment(<?php echo $val['comment_id'] ?>,<?php echo $val['p_id'] ?>)' ><span class='icon16 trash'></span>删除</a>
+                <?php }?>
+            <a href='javascript:;' onclick='comment_reply()'><span class='icon16 spechbubble'></span>回复</a>
+                                        </div>
+            <div class='comment_detail'>
+            <a href='index.php?do=space&member_id=1'><?php echo $val['username'] ;?></a>
+                                        <span><?php echo date("Y-m-d H:i:s",$val['on_time']) ; ?></span>
+                                         <p class='font14 ws_prewrap ws_break'><?php echo $val['content'] ?></p> 
+                                    </div>
+            </div>
+            <div class='cc pl_30 mt_10' id='p_reply_4'>
+            </div>
+            </div>
+       <?php  } ?>
+                   </div>
+
+ <!--有留言才有回复-->
+<div class="work_answer pl_30 pt_10 pb_10 clearfix hidden" id="answers_4">
+<div class="answer-form ">
+                    	<div class="grid_10 alpha">
+<textarea class=" txt_input reply_comment" onkeydown="checkCommentInner(this,event)" cols="70" id="txt_reply_4" style="height:15px;">回复</textarea>
+                       	   <div class="answer-textarea  answer-zone pt_10" >
+                                <button type="button" class="button answer-zone" value="确定" onclick="comment_reply('4')"><span class="check icon"></span>回复</button>
+                                <span class="answer_word">你还能输入100个字!</span>
+                            </div>
+                        </div>
+</div>
+  	</div>
+                   
+
+ <!--有留言才有回复-->
+<div class="work_answer pl_30 pt_10 pb_10 clearfix hidden" id="answers_1">
+<div class="answer-form ">
+                    	<div class="grid_10 alpha">
+<textarea class=" txt_input reply_comment" onkeydown="checkCommentInner(this,event)" cols="70" id="txt_reply_1" style="height:15px;">回复</textarea>
+                       	   <div class="answer-textarea  answer-zone pt_10" >
+                                <button type="button" class="button answer-zone" value="确定" onclick="comment_reply('1')"><span class="check icon"></span>回复</button>
+                                <span class="answer_word">你还能输入100个字!</span>
+                            </div>
+                        </div>
+</div>
+  	</div>
+
+<!--end留言-->
+                <!--page 翻页 start-->
+                                <!--page 翻页 end-->
+                <div class="clear">
+                </div>
+</div>
+</div>
+<div class="clear"></div>
+
+                
+            </div>
+</div>
+          <script type="text/javascript" src="/public/resource/js/jquery.js"></script>
+<script type="text/javascript">
+$(function (){ 
+notice_comment();
+})
+//增加评论
+function comment_add(id)
+{
+if(check_user_login())
+{
+var t = $("#tar_comment").val().toString().substr(0,100);
+if(t=="发表新评论"||t==''){
+showDialog("请说点什么",'alert',"留言失败","",1);return false;
+}else{
+    //创建ajax对象
+  var ajax = new XMLHttpRequest();
+  ajax.onreadystatechange=function(){
+    //alert(ajax.readyState)
+    if (ajax.readyState==4)
+    {
+     //接收数据
+     //alert(ajax.responseText);
+     if(ajax.responseText==1){
+         alert("请先登录")
+         location.href="index.php?r=index/login";
+     }else{
+         var str=ajax.responseText;    
+           $arr=str.split('@#@');
+           document.getElementById('huifu').innerHTML=$arr[0];
+           document.getElementById('h_conunt').innerHTML=$arr[1];
+           document.getElementById('h_conunt1').innerHTML=$arr[1];
+     }
+     //document.getElementById("sppwd").innerHTML = ajax.responseText;
+    }
+  }
+  //与服务器建立连接
+  ajax.open("get","index.php?r=task/comment_add&t="+t+"&id="+id+"&key="+1);
+  //处理请求
+  ajax.send(null);
+}
+}
+}
+
+function del_comment(comment_id,task_id){
+ var ajax = new XMLHttpRequest();
+  ajax.onreadystatechange=function(){
+    //alert(ajax.readyState)
+    if (ajax.readyState==4)
+    {
+     //接收数据
+     //alert(ajax.responseText);
+     if(ajax.responseText==1){
+         alert("请先登录")
+         location.href="index.php?r=index/login";
+     }else{
+         var str=ajax.responseText;    
+           $arr=str.split('@#@');
+           document.getElementById('huifu').innerHTML=$arr[0];
+           document.getElementById('h_conunt').innerHTML=$arr[1];
+           document.getElementById('h_conunt1').innerHTML=$arr[1];
+     }
+     //document.getElementById("sppwd").innerHTML = ajax.responseText;
+    }
+  }
+  //与服务器建立连接
+  ajax.open("get","index.php?r=task/del_comment&comment_id="+comment_id+"&id="+task_id);
+  //处理请求
+  ajax.send(null);
+}
+
+//删除评论
+function comment_del(obj,comment_id){ 
+var obj = obj ;
+var comment_id = comment_id;
+$.post(basic_url+"&view=comment&op=del",{comment_id:comment_id},function(json){
+if(json.status!=0){ 
+$("#"+obj).slideUp(600);  
+$("#answers_"+comment_id).slideUp(600); 
+}else{ 
+     showDialog(json.data,"alert",json.msg);	
+} 
+},'json');  
+}
+//回复
+function comment_reply(comment_id){
+var reply_box = $('#answers_'+comment_id);
+if(reply_box.is(':visible')){
+var comment_id = comment_id;
+var t = $("#txt_reply_"+comment_id).val().toString().substr(0,100);
+$.post(basic_url+"&view=comment&op=reply",{content:t,pid:comment_id},function(text){
+if(text=='2'){
+showDialog("您已进行回复",'alert',"操作失败","",1); 
+}else if(text=='3'){
+showDialog("输入内容包含敏感词汇，请重新输入",'alert',"处理失败","",1); 
+}else if (text == '5') {
+                            showDialog("操作过于频繁,请稍候再试", 'alert', "提交失败", "", 1);
+                        }else{ 
+var text_val = $(text);
+$(text_val).appendTo($("#p_reply_"+comment_id)); 
+text_val.hide(); 
+text_val.slideDown(500); 
+comment();
+}
+},'text'); 
+$("#txt_reply_"+comment_id).val('');
+}else{
+reply_box.removeClass('hidden');
+}
+
+
+} 
+function comment(){
+$('.operate a').tipsy({gravity:$.fn.tipsy.autoNS}).hover(function(){
+$(this).children('.icon16').addClass("reverse");
+}, function(){
+$(this).children('.icon16').removeClass("reverse");
+});
+//评论鼠标移动事件显示工具栏
+$(".top1,.comment_item").hover(function(){
+$(this).children('.operate').removeClass('hidden');
+
+},function(){
+$(this).children('.operate').addClass('hidden');
+}); 
+};
+
+function notice_comment(){
+
+$(".reply_comment").focus(function(){ 
+    var content = $(this).val(); 
+    if (content == "回复") {
+
+        $(this).val("");
+//			$(this).siblings('.answer-zone').removeClass('hidden');
+    }
+    }); 
+    $(".reply_comment").blur(function(){
+        var content = $(this).val();
+        if (!content) {
+            $(this).val("回复");
+//				$(this).siblings('.answer-zone').addClass('hidden');
+        }
+    });
+}
+$(function (){ 
+$(".reply_comment").live('click',function(){
+notice_comment();
+})
+$("#tar_comment").focus(function(){
+if(this.value=="发表新评论"){
+ this.value = ''; 
+ }
+}).blur(function(){
+this.value==''?this.value="发表新评论":'';
+})
+$(".top1,.comment_item").live("hover",function(){
+$(this).children('.operate').removeClass('hidden');
+
+}),
+$(".top1,.comment_item").live("mouseleave",function(){
+$(this).children('.operate').addClass('hidden');
+}); 
+})	
+</script>  
+    
+    <div>
       </details>
       <!--end 内容1-->
   <!--start补充需求-->
@@ -244,11 +490,11 @@ use yii\widgets\LinkPager;
   </div>
   </div>
   
-  <div class="grid_5  clearfix mre_btns">
+  <div class="grid_5  clearfix mre_btns" id="inner1">
  	<!--作者信息-->
             	<div class="shop_author box normal2 clearfix mb_10">
-            	<div class="inner">
-            		<div class="box_header">
+            	<div class="inner" >
+            		<div class="box_header" >
                 	<h2 class="title">雇主信息</h2>
                 </div>
 <div class="pad5 clearfix border_b_c">

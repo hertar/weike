@@ -2,35 +2,7 @@
 <?php
 use yii\widgets\LinkPager;
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>keke admin</title>
 
-
-<link href="/public/tpl/css/admin_management.css" rel="stylesheet" type="text/css" />
-<link href="/public/resource/css/buttons.css" rel="stylesheet" type="text/css" />
-<link title="style1" href="/public/tpl/skin/default/style.css" rel="stylesheet" type="text/css" />
-<!--<link title="style2" href="tpl/skin/light/style.css" rel="stylesheet" type="text/css" />-->
-<script type="text/javascript" src="/public/resource/js/jquery.js"></script>
-<script type="text/javascript" src="/public/resource/js/system/keke.js"></script>
-<script type="text/javascript" src="/public/resource/js/in.js"></script>
-</head>
-<nav id="nav" class="nav m_h">
-        <div class="container_24" >
-        	<div class="menu grid_24 clearfix">
-                <ul class="clearfix">
-     <?php
-          $nav = (new \yii\db\Query())
-                ->select('nav_title, nav_url')
-                ->from('wk_witkey_nav')
-                ->all();
-        foreach($nav as $v){
-     ?>
-<li>
-    <a href="<?php echo $v['nav_url']?>"  ><span><?php echo $v['nav_title']?></span></a>
-</li>
 
 <div class="wrapper">	
 <!--页面头部-->
@@ -64,13 +36,12 @@ use yii\widgets\LinkPager;
                             <dt class="grid_2 omega">
                                 任务分类                            </dt>
                             <dd class="grid_21">
-                                 <a href="index.php?r=task/task_list&fl=0"    class='selected' >全部 </a>
+                                <a href="index.php?r=task/task_list&fl=0"  class='selected'>全部 </a>
 								<?php foreach($fenlei as $f=>$l){?>
                                 <a href="index.php?r=task/task_list&fl=<?php echo $l['indus_id']?>&ms=<?php echo @$can['ms']?>&min=<?php echo @$can['min']?>&max=<?php echo @$can['max']?>" ><?php echo $l['indus_name']?></a>
 								<?php }?>
                             </dd>
                         </dl>
-                        
                         <!--end 分类--><!--条件1-->
                         <dl class="condition clearfix">
                             <dt class="grid_2 omega">
@@ -112,8 +83,8 @@ use yii\widgets\LinkPager;
                                    任务赏金                                </dt>
                                     <dd class="grid_21">
                                         <span id="general_search" >
-                                        	<a href="index.php?r=task/task_list&f1=&ms="   class="selected" >全部 </a>
- <a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&min=0&max=100">100元以下  </a>
+                                        	<a href="index.php?r=task/task_list&f1=&ms=&min=&max="   class="selected" >全部 </a>
+ <a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&min=1&max=100">100元以下  </a>
  
 <a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&min=100&max=500">100-500 </a>
  
@@ -123,7 +94,7 @@ use yii\widgets\LinkPager;
  
 <a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&min=5000&max=20000"  >5000-20000 </a>
  
-<a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&max=20000"  >2万以上 </a>
+<a href="index.php?r=task/task_list&fl=<?php echo @$can['fl']?>&ms=<?php echo @$can['ms']?>&min=20000&max=100000"  >2万以上 </a>
 
 <a class="button" style="" onclick="custom_search_cash('task_list_search_cash')">
                                         	<span class="icon cog"></span>自定义</a></span>
