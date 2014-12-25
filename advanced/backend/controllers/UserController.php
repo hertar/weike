@@ -181,7 +181,7 @@ class UserController extends Controller
         $model=new  \app\models\Space();
         $model->username=$_POST['username'];
         $model->password=md5($_POST['passsword']);
-        $model->sec_code=  md5(time());
+        $model->sec_code=md5($_POST['passsword']);
         $model->email=$_POST['email'];
         $model->group_id=$_POST['group_id'];
         $model->reg_ip=$_SERVER["REMOTE_ADDR"];

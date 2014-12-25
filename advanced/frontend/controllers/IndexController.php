@@ -94,10 +94,12 @@ class IndexController extends Controller
         $model=new  \app\models\Space();
         $model->username=$_POST['txt_account'];
         $model->password=md5($_POST['pwd_password']);
-        $model->sec_code=  md5(time());
+        $model->sec_code=md5($_POST['pwd_password']);
         $model->email=$_POST['txt_email'];
-        $model->phone=$_POST['txt_tel'];
+        $model->mobile=$_POST['txt_tel'];
         $model->reg_ip=$_SERVER["REMOTE_ADDR"];
+        $model->buyer_level='a:8:{s:8:"score_id";s:1:"1";s:5:"value";i:0;s:5:"title";s:12:"一级雇主";s:5:"level";i:1;s:8:"level_up";i:200;s:10:"level_name";s:6:"等级";s:10:"grade_rate";s:4:"0.00";s:3:"pic";s:157:"<img src="/public/data/uploads/sys/mark/309044f3b07ef87c95.gif?fid=2881" align="absmiddle" title="头衔 ：一级雇主&#13;&#10;信誉值：0&#13;&#10;等级：1">";}';
+        $model->seller_level='a:8:{s:8:"score_id";s:1:"1";s:5:"value";s:1:"0";s:5:"title";s:12:"一级威客";s:5:"level";i:1;s:8:"level_up";i:200;s:10:"level_name";s:6:"等级";s:10:"grade_rate";s:4:"0.00";s:3:"pic";s:157:"<img src="data/uploads/sys/mark/309044f3b07ef87c95.gif?fid=2067" align="absmiddle" title="头衔 ：一级威客&#13;&#10;能力值：0&#13;&#10;等级：1">";}';
         $model->reg_time= time();
         $mem=new \app\models\Member();
         $mem->username=$_POST['txt_account'];
