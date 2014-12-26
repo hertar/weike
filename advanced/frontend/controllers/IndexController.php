@@ -42,10 +42,96 @@ class IndexController extends Controller
             $row->count=1;
             $row->insert();
         }
-        return $this->render("index",$data);
+        
+         //ip库
+           require_once '../../public/ip/ip.php';
+            
+            //载入qqwry.dat 
+            $url='../../public/ip/qqwry.dat';
+            $IpLocation = new \IpLocation($url);
+            //获取ip对应信息。getip()
+            //郑州ip:222.88.32.134
+            //北京ip:222.128.176.179
+            //福建福州：218.66.59.145
+            //黑龙江哈尔滨：221.212.89.178
+            $infoIP= $IpLocation->getlocation('222.128.176.179');
+            $arrs= preg_split('/省|市/',iconv('gbk','utf-8',$infoIP['country']));
+            //print_r($arrs);
+            $pro=$arrs[0];
+            $reg= \app\models\Region::find()->andWhere(["region_name"=>"$pro","parent_id"=>"1"])->one();
+            //print_r($reg);
+            $pro_id=$reg['region_id'];
+            $ad=  \app\models\Ad::find()->where(["pro"=>"$pro_id"])->all();
+            //print_r($ad);
+            $data['ad']=$ad;
+            
+            $art=  \app\models\Article::find()->where(["art_cat_id"=>17])
+                                                                ->orderBy("art_id desc")
+                                                                ->limit( 4 )
+                                                                ->all();
+            $data["art"]=$art;
+            return $this->render("index",$data);
         
     }
-    //注册
+   //公告
+   public function actionArt(){
+      $this->layout='@app/views/layouts/public.php'; 
+      $art_id=$_GET["art_id"];  
+      $row=  \app\models\Article::findone($art_id);
+      $row["views"]=$row["views"]+1;
+      $row->save();
+      $model=new \yii\db\Query();  
+      $arr = $model->from(['wk_witkey_article','wk_witkey_article_category'])
+                             ->orderBy("is_recommend desc")
+                             ->where("wk_witkey_article.art_cat_id=wk_witkey_article_category.art_cat_id")
+                             ->all();
+       
+       $key=md5($row["art_title"]);
+        if(Yii::$app->cache->get($key)){
+            echo "来自memcache";
+            $res=Yii::$app->cache->get($key);
+        }else{
+            echo "来自数据库";
+            $res = $model->from(['wk_witkey_article','wk_witkey_article_category'])                         
+                             ->where("wk_witkey_article.art_cat_id=wk_witkey_article_category.art_cat_id and wk_witkey_article.art_id='".$art_id."'")
+                             ->one();
+            Yii::$app->cache->set($key, $res);
+        }         
+         foreach ($arr as $key=>$val) {
+          $brr[][$val["art_id"]]=$val["art_title"];
+      }
+      for($i=0;$i<count($brr);$i++){
+            foreach ($brr[$i] as $key=>$v){
+                if($i-1>=0&&$i+1<=count($brr)){
+                  
+                    if($art_id==$key){
+                        $last=$brr[$i-1];
+                        $next=$brr[$i+1];
+                        
+                    }
+                }
+                if($i-1<0){
+                    if($art_id==$key){
+                       
+                        $next=$brr[$i+1];
+                        
+                    }
+                }
+                if(i+1>count($brr)){
+                    if($art_id==$key){
+                        $last=$brr[$i-1];                   
+                    }
+                }
+            }
+       }
+            $data["last"]=$last;
+            $data["next"]=$next;
+       $data["res"]=$res;
+       return $this->render("art",$data);
+   }
+
+
+   //注册
     public function actionRegister(){
           $this->layout='@app/views/layouts/public.php';
        

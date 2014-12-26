@@ -19,9 +19,10 @@
 <div class="page_title">
     <h1>广告管理</h1>
     <div class="tool">
-        <a  href="index.php?r=tool/ad" >广告位</a> 
-<!--<a href="index.php?do=tpl&view=ad_private_add" >广告位添加</a>-->  
+        
+        
         <a href="index.php?r=tool/ad_list" class="here" >广告列表</a>
+        <a href="index.php?r=tool/ad_add" >广告添加</a>  
        
     </div>
 </div>
@@ -50,35 +51,7 @@
     
                         
                         <tr> 
-                            <th>广告类型</th>
-                            <td>
-                            	<select class="ps vm" name="target_id" id="catid" onchange="return sync_select();">
-                            		<option value=""/>请选择</option>
-                            	<option  value="1"/>全局_顶部通栏广告</option>
-<option  value="2"/>首页_左右对联广告</option>
-<option  value="4"/>首页_中部一栏广告</option>
-<option  value="5"/>首页_中部二栏广告</option>
-<option  value="6"/>首页_中部三栏广告</option>
-<option  value="7"/>首页_中部四栏广告</option>
-<option  value="8"/>任务大厅_头部广告</option>
-<option  value="9"/>任务大厅_右侧广告</option>
-<option  value="10"/>任务大厅_底部广告</option>
-<option  value="11"/>威客商城_头部广告</option>
-<option  value="12"/>威客商城_右侧广告</option>
-<option  value="13"/>威客商城_底部广告</option>
-<option  value="14"/>服务商_头部广告</option>
-<option  value="15"/>服务商_右侧广告</option>
-<option  value="16"/>服务商_底部广告</option>
-<option  value="17"/>资讯中心_头部广告</option>
-<option  value="18"/>资讯中心_底部广告</option>
-<option  value="19"/>任务详情_底部广告</option>
-<option  value="20"/>商品详情_底部广告</option>
-<option  value="21"/>资讯详情_头部广告</option>
-<option  value="22"/>资讯详情_底部广告</option>
-<option  value="3"/>首页_顶部幻灯广告</option>
-
-</select>
-</td>
+                          
 <th>结果排序</th>
 <td>
                                 <select name="ord[]">
@@ -117,201 +90,75 @@
                 <tbody>
                   <tr>
                     <th width="20%">广告标题</th>
-<th width="15%">位置</th>
+
                     <th width="15%">起始时间</th>
                     <th width="15%">终止时间</th>
-<th width="15%">编辑时间</th>
-<th width="10%">是否可用</th>
+                    <th width="15%">编辑时间</th>
+                    <th width="10%">是否可用</th>
                     <th>操作</th>
                   </tr>
-                  
+                  <?php
+                    foreach($list as $v){
+                  ?>
                                     <tr class="item">
                   
-                    <td class="td28">xdfvcxvcxvxvxcvxcb</td>
-                    <td>资讯详情_头部广告</td><!-- 投放范围 -->
+                    <td class="td28"><?php echo $v["ad_name"]?></td>
+                    <?php
+                        if($v["start_time"]==0){
+                    ?>
     <td>永久有效</td> <!-- 起始时间 -->
+    <?php
+                    }
+    ?>
+                    <?php
+                        if($v["end_time"]==0){
+                    ?>
                     <td>永久有效</td>
-<td>2014-12-16</td>
-                    <td><span style="color:green">可用</span></td><!-- 是否可用 -->
+                    <?php
+                        }
+                    ?>
+<td><?php echo date("Y-m-d",$v["on_time"])?></td>
+    <?php
+        if($v["is_allow"]==1){
+    ?>
+                    <td><span style="color:green" >可用</span></td><!-- 是否可用 -->
+    <?php
+        }else{
+    ?>
+                    <td><span style="color:green" >不可用</span></td><!-- 是否可用 -->
+   <?php
+        }
+  ?>          
                     <td>
 <!-- <a href="/public/index.php?do=article&view=article_info&art_id=" target="_blank">浏览</a> -->
-<a href="index.php?do=tpl&view=ad_add&ac=edit&ad_id=292&target_id=21&page=1&ord=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<!--<a href="index.php?do=tpl&view=ad_list&ac=del&ad_id=292&target_id=21&page=1&ord="  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>-->
+<a href="index.php?r=tool/ad_edit&ad_id=<?php echo $v["ad_id"]?>" class="button dbl_target"><span class="pen icon"></span>编辑</a>
+<a href="index.php?r=tool/ad_del&ad_id=<?php echo $v["ad_id"]?>"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
 <!-- <a href="#" onclick="javascript:setCopy(document.getElementById('code_292').value, 复制代码);" class="button"><span class="book icon"></span>复制</a>  -->
 </td>
                   </tr>
-                                    <tr class="item">
-                  
-                    <td class="td28">震撼上市</td>
-                    <td>首页_顶部幻灯广告</td><!-- 投放范围 -->
-    <td>永久有效</td> <!-- 起始时间 -->
-                    <td>永久有效</td>
-<td>2013-04-01</td>
-                    <td><span style="color:green">可用</span></td><!-- 是否可用 -->
-                    <td>
-<!-- <a href="/public/index.php?do=article&view=article_info&art_id=" target="_blank">浏览</a> -->
-<a href="index.php?do=tpl&view=ad_add&ac=edit&ad_id=236&target_id=3&page=1&ord=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<!--<a href="index.php?do=tpl&view=ad_list&ac=del&ad_id=236&target_id=3&page=1&ord="  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>-->
-<!-- <a href="#" onclick="javascript:setCopy(document.getElementById('code_236').value, 复制代码);" class="button"><span class="book icon"></span>复制</a>  -->
-</td>
-                  </tr>
-                                    <tr class="item">
-                  
-                    <td class="td28">adv</td>
-                    <td>商品详情_底部广告</td><!-- 投放范围 -->
-    <td>永久有效</td> <!-- 起始时间 -->
-                    <td>永久有效</td>
-<td>2013-04-10</td>
-                    <td><span style="color:green">可用</span></td><!-- 是否可用 -->
-                    <td>
-<!-- <a href="/public/index.php?do=article&view=article_info&art_id=" target="_blank">浏览</a> -->
-<a href="index.php?do=tpl&view=ad_add&ac=edit&ad_id=291&target_id=20&page=1&ord=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<!--<a href="index.php?do=tpl&view=ad_list&ac=del&ad_id=291&target_id=20&page=1&ord="  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>-->
-<!-- <a href="#" onclick="javascript:setCopy(document.getElementById('code_291').value, 复制代码);" class="button"><span class="book icon"></span>复制</a>  -->
-</td>
-                  </tr>
-                                    <tr class="item">
-                  
-                    <td class="td28">adv</td>
-                    <td>任务详情_底部广告</td><!-- 投放范围 -->
-    <td>永久有效</td> <!-- 起始时间 -->
-                    <td>永久有效</td>
-<td>2013-04-10</td>
-                    <td><span style="color:green">可用</span></td><!-- 是否可用 -->
-                    <td>
-<!-- <a href="/public/index.php?do=article&view=article_info&art_id=" target="_blank">浏览</a> -->
-<a href="index.php?do=tpl&view=ad_add&ac=edit&ad_id=290&target_id=19&page=1&ord=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<!--<a href="index.php?do=tpl&view=ad_list&ac=del&ad_id=290&target_id=19&page=1&ord="  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>-->
-<!-- <a href="#" onclick="javascript:setCopy(document.getElementById('code_290').value, 复制代码);" class="button"><span class="book icon"></span>复制</a>  -->
-</td>
-                  </tr>
-                                    <tr class="item">
-                  
-                    <td class="td28">adv</td>
-                    <td>资讯中心_头部广告</td><!-- 投放范围 -->
-    <td>永久有效</td> <!-- 起始时间 -->
-                    <td>永久有效</td>
-<td>2014-12-16</td>
-                    <td><span style="color:green">可用</span></td><!-- 是否可用 -->
-                    <td>
-<!-- <a href="/public/index.php?do=article&view=article_info&art_id=" target="_blank">浏览</a> -->
-<a href="index.php?do=tpl&view=ad_add&ac=edit&ad_id=288&target_id=17&page=1&ord=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<!--<a href="index.php?do=tpl&view=ad_list&ac=del&ad_id=288&target_id=17&page=1&ord="  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>-->
-<!-- <a href="#" onclick="javascript:setCopy(document.getElementById('code_288').value, 复制代码);" class="button"><span class="book icon"></span>复制</a>  -->
-</td>
-                  </tr>
-                                    <tr class="item">
-                  
-                    <td class="td28">adv</td>
-                    <td>资讯中心_底部广告</td><!-- 投放范围 -->
-    <td>永久有效</td> <!-- 起始时间 -->
-                    <td>永久有效</td>
-<td>2014-12-16</td>
-                    <td><span style="color:green">可用</span></td><!-- 是否可用 -->
-                    <td>
-<!-- <a href="/public/index.php?do=article&view=article_info&art_id=" target="_blank">浏览</a> -->
-<a href="index.php?do=tpl&view=ad_add&ac=edit&ad_id=289&target_id=18&page=1&ord=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<!--<a href="index.php?do=tpl&view=ad_list&ac=del&ad_id=289&target_id=18&page=1&ord="  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>-->
-<!-- <a href="#" onclick="javascript:setCopy(document.getElementById('code_289').value, 复制代码);" class="button"><span class="book icon"></span>复制</a>  -->
-</td>
-                  </tr>
-                                    <tr class="item">
-                  
-                    <td class="td28">adv</td>
-                    <td>服务商_底部广告</td><!-- 投放范围 -->
-    <td>永久有效</td> <!-- 起始时间 -->
-                    <td>永久有效</td>
-<td>2014-12-16</td>
-                    <td><span style="color:green">可用</span></td><!-- 是否可用 -->
-                    <td>
-<!-- <a href="/public/index.php?do=article&view=article_info&art_id=" target="_blank">浏览</a> -->
-<a href="index.php?do=tpl&view=ad_add&ac=edit&ad_id=287&target_id=16&page=1&ord=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<!--<a href="index.php?do=tpl&view=ad_list&ac=del&ad_id=287&target_id=16&page=1&ord="  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>-->
-<!-- <a href="#" onclick="javascript:setCopy(document.getElementById('code_287').value, 复制代码);" class="button"><span class="book icon"></span>复制</a>  -->
-</td>
-                  </tr>
-                                    <tr class="item">
-                  
-                    <td class="td28">adc</td>
-                    <td>服务商_右侧广告</td><!-- 投放范围 -->
-    <td>永久有效</td> <!-- 起始时间 -->
-                    <td>永久有效</td>
-<td>2014-12-16</td>
-                    <td><span style="color:green">可用</span></td><!-- 是否可用 -->
-                    <td>
-<!-- <a href="/public/index.php?do=article&view=article_info&art_id=" target="_blank">浏览</a> -->
-<a href="index.php?do=tpl&view=ad_add&ac=edit&ad_id=286&target_id=15&page=1&ord=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<!--<a href="index.php?do=tpl&view=ad_list&ac=del&ad_id=286&target_id=15&page=1&ord="  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>-->
-<!-- <a href="#" onclick="javascript:setCopy(document.getElementById('code_286').value, 复制代码);" class="button"><span class="book icon"></span>复制</a>  -->
-</td>
-                  </tr>
-                                    <tr class="item">
-                  
-                    <td class="td28">首页_顶部幻灯广告123</td>
-                    <td>首页_顶部幻灯广告</td><!-- 投放范围 -->
-    <td>永久有效</td> <!-- 起始时间 -->
-                    <td>永久有效</td>
-<td>2013-03-30</td>
-                    <td><span style="color:green">可用</span></td><!-- 是否可用 -->
-                    <td>
-<!-- <a href="/public/index.php?do=article&view=article_info&art_id=" target="_blank">浏览</a> -->
-<a href="index.php?do=tpl&view=ad_add&ac=edit&ad_id=234&target_id=3&page=1&ord=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<!--<a href="index.php?do=tpl&view=ad_list&ac=del&ad_id=234&target_id=3&page=1&ord="  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>-->
-<!-- <a href="#" onclick="javascript:setCopy(document.getElementById('code_234').value, 复制代码);" class="button"><span class="book icon"></span>复制</a>  -->
-</td>
-                  </tr>
-                                    <tr class="item">
-                  
-                    <td class="td28">震撼上市3</td>
-                    <td>首页_顶部幻灯广告</td><!-- 投放范围 -->
-    <td>永久有效</td> <!-- 起始时间 -->
-                    <td>永久有效</td>
-<td>2013-03-30</td>
-                    <td><span style="color:green">可用</span></td><!-- 是否可用 -->
-                    <td>
-<!-- <a href="/public/index.php?do=article&view=article_info&art_id=" target="_blank">浏览</a> -->
-<a href="index.php?do=tpl&view=ad_add&ac=edit&ad_id=240&target_id=3&page=1&ord=" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<!--<a href="index.php?do=tpl&view=ad_list&ac=del&ad_id=240&target_id=3&page=1&ord="  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>-->
-<!-- <a href="#" onclick="javascript:setCopy(document.getElementById('code_240').value, 复制代码);" class="button"><span class="book icon"></span>复制</a>  -->
-</td>
-                  </tr>
+                    <?php                 
+                    }
+                    ?>
+                   
+           
+                           
                                     <tr>
                     <td colspan="7">
                     <div class="clearfix">
                         <input type="hidden" name="sbt_action" class="sbt_action"/>
-<select class="ps vm" id="ad_target_id">
-<option value="">请选择</option>
-                            	<option selected="selected" value="1">全局_顶部通栏广告</option>
-<option  value="2">首页_左右对联广告</option>
-<option  value="4">首页_中部一栏广告</option>
-<option  value="5">首页_中部二栏广告</option>
-<option  value="6">首页_中部三栏广告</option>
-<option  value="7">首页_中部四栏广告</option>
-<option  value="8">任务大厅_头部广告</option>
-<option  value="9">任务大厅_右侧广告</option>
-<option  value="10">任务大厅_底部广告</option>
-<option  value="11">威客商城_头部广告</option>
-<option  value="12">威客商城_右侧广告</option>
-<option  value="13">威客商城_底部广告</option>
-<option  value="14">服务商_头部广告</option>
-<option  value="15">服务商_右侧广告</option>
-<option  value="16">服务商_底部广告</option>
-<option  value="17">资讯中心_头部广告</option>
-<option  value="18">资讯中心_底部广告</option>
-<option  value="19">任务详情_底部广告</option>
-<option  value="20">商品详情_底部广告</option>
-<option  value="21">资讯详情_头部广告</option>
-<option  value="22">资讯详情_底部广告</option>
-<option  value="3">首页_顶部幻灯广告</option>
-</select>
-<a href="#" id="add_ad" class="button" onclick="return setlinks();"><span class="check icon"></span>添加广告</a>
+
+<a href="index.php?r=tool/ad_add" id="add_ad" class="button"><span class="check icon"></span>添加广告</a>
                     </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
-  <div class="page"><span> 1 / 3页 </span> <a class="selected">1</a><a href=javascript:; onclick=ajaxpage('ajax_dom','index.php?do=tpl&view=ad_list&ad_id=&ad_type=&ad_name=&target_id=&ord=&page=1&page=2','2','1')>2</a><a href=javascript:; onclick=ajaxpage('ajax_dom','index.php?do=tpl&view=ad_list&ad_id=&ad_type=&ad_name=&target_id=&ord=&page=1&page=3','3','1')>3</a><a href=javascript:; onclick=ajaxpage('ajax_dom','index.php?do=tpl&view=ad_list&ad_id=&ad_type=&ad_name=&target_id=&ord=&page=1&page=2','2','1')>下一页>></a></div>
-              </div>
+<?php
+use yii\widgets\LinkPager;
+?>
+  <div class="page">
+           <?= LinkPager::widget(['pagination' => $pages]) ?>
+ </div>
         	</form>
         </div>       
     </div>

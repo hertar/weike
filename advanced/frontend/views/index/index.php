@@ -12,8 +12,12 @@
          <div id="slides">
           <!--图片内容区域 start-->
               <div class="slides_container">
+                  <?php
+                    if(count($ad)==0){
+                  ?>
                    <a href="http://www.kppw.cn" target="_blank" title="震撼上市1">
-                       <img src="/public/data/uploads/sys/ad/banner1.jpg" width="710" height="320" alt="震撼上市1"></a>
+                       <img src="/public/data/uploads/sys/ad/banner1.jpg" width="710" height="320" alt="震撼上市1">
+                   </a>
                   <a href="/public/data/uploads/sys/ad/banner2.jpg" target="_blank" title="首页_顶部幻灯广告123">
                       <img src="/public/data/uploads/sys/ad/banner2.jpg" width="710" height="320" alt="首页_顶部幻灯广告123"></a>
                   <a href="http://www.kppw.cn" target="_blank" title="震撼上市4">
@@ -21,7 +25,20 @@
                   <a href="http://ww.baidu.com" target="_blank" title="震撼上市">
                       <img src="/public/data/uploads/sys/ad/banner1.jpg" width="710" height="320" alt="震撼上市"></a>
                   <a href="http://www.kppw.cn" target="_blank" title="震撼上市3">
-                      <img src="/public/data/uploads/sys/ad/banner3.jpg" width="710" height="320" alt="震撼上市3"></a>            
+                      <img src="/public/data/uploads/sys/ad/banner3.jpg" width="710" height="320" alt="震撼上市3">
+                  </a>
+                  <?php
+                    }else{
+                  ?>
+                  <?php 
+                  foreach ($ad as $val) {
+           ?>
+                  <a href="<?php echo $val["ad_url"]?>" target="_blank" title="震撼上市3">
+                      <img src="/public/data/uploads/sys/ad/<?php echo $val['ad_file']?>" width="710" height="320" alt="震撼上市3">
+                  </a>
+                  <?php
+                    }}
+                  ?>
               </div>
           <!--图片内容区域 end-->
 
@@ -42,7 +59,7 @@
               <tr>
                 <td>
                    <h2>海量服务商提交稿件，任您选！</h2>
-                    <p><a href="index.php?do=release" class="submit block mar10">发布任务</a></p>
+                    <p><a href="index.php?r=task/release" class="submit block mar10">发布任务</a></p>
                     <p>客客出品专业威客系统</p>
                 </td>
               </tr>
@@ -67,10 +84,13 @@
  <!--公告detail内容 start-->
          <article class="box_detail" id="div_plac_1">
            <ul>
-              <li><a href="index.php?do=single&art_id=308"></a></li>
- <li><a href="index.php?do=single&art_id=304">震撼上线4</a></li>
- <li><a href="index.php?do=single&art_id=303">震撼上线3</a></li>
- <li><a href="index.php?do=single&art_id=302">震撼上线2</a></li>
+               <?php
+                foreach($art as $v){
+               ?>
+              <li><a href="index.php?r=index/art&art_id=<?php echo $v["art_id"]?>"><?php echo $v["art_title"]?></a></li>
+              <?php
+                }
+              ?>
             </ul>
          </article>
         <article class="box_detail hidden" id="div_plac_2">
@@ -516,7 +536,8 @@
                 <div>
                 <!--商城按钮 start-->
                     <div class="btns">
-                      <a href="index.php?do=shop_release" class="button primary"><span class="plus icon"></span>发布商品</a><a href="index.php?do=shop_list" class="button"><span class="rightarrow icon"></span>进入商城</a>
+                      <a href="index.php?r=shop_release" class="button primary"><span class="plus icon"></span>发布商品</a>
+                      <a href="index.php?r=shop/shop_list" class="button"><span class="rightarrow icon"></span>进入商城</a>
                     </div>
                 <!--商城按钮 end-->
                 </div>
@@ -1004,69 +1025,69 @@
                                                                   <li>
                     <!--头条图片 start-->
                        <div class="main_img">
-                          <a href="index.php?do=article&view=article_info&art_id=227" title="警惕交易诈骗，注意帐户安全">
+                          <a href="index.php?r=article/article_info&art_id=227" title="警惕交易诈骗，注意帐户安全">
                             <img name="lazyImg" src="/public/tpl/default/img/style/new_default.gif" alt="警惕交易诈骗，注意帐户安全" title="警惕交易诈骗，注意帐户安全"/>
               </a>
                        </div>
                     <!--头条图片 end-->
                     <!--头条标题 start-->
                      <div class="main_title clearfix">
-                       <a href="index.php?do=article&view=article_info&art_id=227" title="警惕交易诈骗，注意帐户安全">警惕交易诈骗，注意帐户安全</a>
+                       <a href="index.php?r=article/article_info&art_id=227" title="警惕交易诈骗，注意帐户安全">警惕交易诈骗，注意帐户安全</a>
                       <span class="date">2012-02-17</span>
                      </div>
                   </li>
                                                                  <li>
                      <div class="item">
-                         <a href="index.php?do=article&view=article_info&art_id=225" title="唯冠召开iPad维权发布会：起诉苹果是维权">唯冠召开iPad维权发布会：起诉苹果是维权</a>
+                         <a href="index.php?r=article/article_info&art_id=225" title="唯冠召开iPad维权发布会：起诉苹果是维权">唯冠召开iPad维权发布会：起诉苹果是维权</a>
                             <span class="date">2012-02-17</span>
                      </div>
                      <div class="clear"></div>
                  </li>
                                                                  <li>
                      <div class="item">
-                         <a href="index.php?do=article&view=article_info&art_id=250" title="中金香港直销Facebook股权：初定100万股门槛">中金香港直销Facebook股权：初定100万股门槛</a>
+                         <a href="index.php?r=article/article_info&art_id=250" title="中金香港直销Facebook股权：初定100万股门槛">中金香港直销Facebook股权：初定100万股门槛</a>
                             <span class="date">2012-02-17</span>
                      </div>
                      <div class="clear"></div>
                  </li>
                                                                  <li>
                      <div class="item">
-                         <a href="index.php?do=article&view=article_info&art_id=249" title="依法诚信纳税共建和谐社会">依法诚信纳税共建和谐社会</a>
+                         <a href="index.php?r=article/article_info&art_id=249" title="依法诚信纳税共建和谐社会">依法诚信纳税共建和谐社会</a>
                             <span class="date">2012-02-17</span>
                      </div>
                      <div class="clear"></div>
                  </li>
                                                                  <li>
                      <div class="item">
-                         <a href="index.php?do=article&view=article_info&art_id=248" title="诚信体系之诚信保障">诚信体系之诚信保障</a>
+                         <a href="index.php?r=article/article_info&art_id=248" title="诚信体系之诚信保障">诚信体系之诚信保障</a>
                             <span class="date">2012-02-17</span>
                      </div>
                      <div class="clear"></div>
                  </li>
                                                                  <li>
                      <div class="item">
-                         <a href="index.php?do=article&view=article_info&art_id=246" title="威客营销的成功之路及潜在危机分析">威客营销的成功之路及潜在危机分析</a>
+                         <a href="index.php?r=article/article_info&art_id=246" title="威客营销的成功之路及潜在危机分析">威客营销的成功之路及潜在危机分析</a>
                             <span class="date">2012-02-17</span>
                      </div>
                      <div class="clear"></div>
                  </li>
                                                                  <li>
                      <div class="item">
-                         <a href="index.php?do=article&view=article_info&art_id=247" title="拥有梦想的快乐威客">拥有梦想的快乐威客</a>
+                         <a href="index.php?r=article/article_info&art_id=247" title="拥有梦想的快乐威客">拥有梦想的快乐威客</a>
                             <span class="date">2012-02-17</span>
                      </div>
                      <div class="clear"></div>
                  </li>
                                                                  <li>
                      <div class="item">
-                         <a href="index.php?do=article&view=article_info&art_id=244" title="什么是威客？">什么是威客？</a>
+                         <a href="index.php?r=article/article_info&art_id=244" title="什么是威客？">什么是威客？</a>
                             <span class="date">2012-02-17</span>
                      </div>
                      <div class="clear"></div>
                  </li>
                                                                  <li>
                      <div class="item">
-                         <a href="index.php?do=article&view=article_info&art_id=243" title="威客必看：发帖任务参与须知">威客必看：发帖任务参与须知</a>
+                         <a href="index.php?r=article/article_info&art_id=243" title="威客必看：发帖任务参与须知">威客必看：发帖任务参与须知</a>
                             <span class="date">2012-02-17</span>
                      </div>
                      <div class="clear"></div>
@@ -1166,10 +1187,10 @@
          <dt>任务大厅</dt>
             <dd>
              <ul>
-                <li><a href="index.php?do=release" target="_blank">发布任务</a></li>
-<li><a href="index.php?do=task_list" target="_blank">参与任务</a></li>
-<li><a href="index.php?do=task_list" target="_blank">任务大厅</a></li>
-<li><a href="index.php?do=task_map" target="_blank">任务地图</a></li> 
+                <li><a href="index.php?r=task/release" target="_blank">发布任务</a></li>
+                <li><a href="index.php?r=task/task_list" target="_blank">参与任务</a></li>
+                <li><a href="index.php?r=task/task_list" target="_blank">任务大厅</a></li>
+                <li><a href="index.php?r=task/task_map" target="_blank">任务地图</a></li> 
               </ul>
              </dd>
         </dl>
@@ -1180,8 +1201,8 @@
             <dt>威客商城</dt>
               <dd>
                  <ul>
-                        <li><a href="index.php?do=shop_release" target="_blank">发布商品</a></li>
-<li><a href="index.php?do=shop_release&model_id=7" target="_blank">发布服务</a></li>
+                        <li><a href="index.php?r=shop/shop_release" target="_blank">发布商品</a></li>
+                        <li><a href="index.php?do=shop_release&model_id=7" target="_blank">发布服务</a></li>
                                <li><a href="index.php?do=shop_list&path=C6" target="_blank">威客作品</a></li>
                        <li><a href="index.php?do=shop_list&path=C7" target="_blank">威客服务</a></li>
 
