@@ -45,7 +45,7 @@ class ArticleController extends Controller
    
    public function actionArticle_info(){
       
-       $art_id=$_GET["art_id"];  
+      $art_id=$_GET["art_id"];  
       $row=  \app\models\Article::findone($art_id);
       $row["views"]=$row["views"]+1;
       $row->save();
