@@ -404,8 +404,13 @@ objType:'service'
             url: "index.php?r=square/square_add",
             data: "xuqiu="+xuqiu+"&txt_title="+txt_title+"&tar_content="+tar_content,
             success: function(msg){
-             
-                  $("#data_contain").html(msg);
+               
+                    if(msg==3){
+                       location.href="index.php?r=square/square_task"; 
+                    }else{
+                        $("#data_contain").html(msg); 
+                    }
+                 
             } 
          }); 
     }
@@ -419,12 +424,24 @@ objType:'service'
 <div class="core_down clearfix">
 <h2>最新动态</h2>
 <div class="core_down_nav ml_20 mr_20">
-<a href="index.php?r=square/square_list&type='all'" class="selected">所有</a>
-<a href="index.php?r=square/square_list&type='free_task'" >免费需求</a>
+<a href="index.php?r=square/square_list&type=all" class="selected"><span onclick='alla()'>所有</span></a>
+<a href="index.php?r=square/square_task" ><span onclick='task()'>免费需求</span></a>
 <a href="index.php?do=square&view=index&t=task" >赏金任务</a>
-<a href="index.php?do=square&view=index&t=free_service" >免费服务</a>
+<a href="index.php?r=square/square_list&type=free_service" ><span onclick='alla()'>免费服务</span></a>
 <a href="index.php?do=square&view=index&t=service" >付费商品</a>
 </div>
+<script type="text/javascript">
+<!--
+    function alla(){
+        $("#all").show();
+        $("#task").hide();  
+    }
+    function task(){
+           $("#all").hide();
+        $("#task").show();  
+    }
+//-->
+</script>
 <input type="hidden" value="11" id="last_id">
 <input type="hidden" value="" id="last_time">
 <div class="msg msg_need block ml_20 mr_20 hidden" id="show_new" >
@@ -432,7 +449,7 @@ objType:'service'
 </div>
 <div class="core_down_info mt_10 mb_10 clearfix" >
 <ul id="data_contain">
-    
+    <div id='all'>
 <!-------------------出售------------------>
 <?php foreach($model as $key=>$val){?>
 <li class="clearfix frame" >
@@ -462,7 +479,7 @@ objType:'service'
 ￥<?php echo  $val['price'];?>元</span>来自：<span><?php if($val['service_type']=='1'){
     echo "威客服务";
 }else if($val['service_type']=='0'){
-    echo "免费需求"; 
+    echo "免费服务"; 
 }?></span>
 </div>
 <div class="info_talk clearfix">
@@ -473,7 +490,9 @@ objType:'service'
 </div>
 </li>
 <?php } ?>
+</div>
 <!----------------------需求------------------------------------------------------->
+<div id='task'>
 <li class="clearfix frame">
 <div class="info_van clearfix">
 <a href="index.php?do=space&member_id=2" target="_blank">
@@ -498,6 +517,7 @@ objType:'service'
 </div>
 </div>
 </li>
+</div>
 </ul>
 
 <!--翻页-->
