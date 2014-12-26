@@ -102,9 +102,10 @@ class ShopController extends Controller
   }  
    //详情页
    public function actionShop_content(){ 
-       $id=$_GET['id'];
+     
+        $id=$_GET['id'];
         $h_conunt=WkWitkeyComment::find()->andWhere(['obj_id' =>$id])->count('comment_id');
-       $t_list=WkWitkeyComment::find()->where(['obj_id' => $id])->all();  
+        $t_list=WkWitkeyComment::find()->where(['obj_id' => $id])->all();  
         $arr=WkWitkeyService::findOne($id); 
         $indus_id=$arr['indus_id'];
         $indus_pid=$arr['indus_pid'];

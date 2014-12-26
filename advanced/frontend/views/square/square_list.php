@@ -1,3 +1,7 @@
+<?php
+use yii\widgets\LinkPager;
+
+?>
 <!DOCTYPE HTML>
 <!--[if lt IE 7]> <html dir="ltr" lang="zh-cn" id="ie6"> <![endif]-->
 <!--[if IE 7]>    <html dir="ltr" lang="zh-cn" id="ie7"> <![endif]-->
@@ -189,7 +193,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                                             <?php
                                          }
                                             ?>        
-                                            <span class="user_named m_h"><?php echo $session->get("user_name");?></span>
+                                            <span class="user_named m_h" id='username_login'><?php echo $session->get("user_name");?></span>
                             	</a>
 <!--用户登录后导航菜单 start-->
                     <div id="user_menu" class="user_nav_pop grid_5 alpha omega hidden m_h">
@@ -296,8 +300,9 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 <div class="core_com clearfix">
 <div class="core_com_up">
 <div class="drop_down" id="pub_select">
-<a href="javascript:void(0);" class="selected" rel="free_task"><span>免费需求</span>▼</a>
-<a href="javascript:void(0);"  class="hidden" rel="free_task">免费需求</a>
+
+<a href="javascript:void(0);" class="selected" rel="free_task" ><span id='xuqiu'>免费需求</span>▼</a>
+<a href="javascript:void(0);"  class="hidden" rel="free_task" >免费需求</a>
 <a href="javascript:void(0);"  class="hidden" rel="free_service">免费服务</a>
 </div> 
 <input type="text" id="txt_title" class="togg_a" name="txt_title" onkeydown="checkTitleLen()" value="需求设计标志、取名、开发网站、写策划案..." rel="需求设计标志、取名、开发网站、写策划案...">
@@ -337,7 +342,7 @@ limit:max_filecount},
 fileType:'att',
 objType:'service'
 });
-})
+});
 </script>
             <!--end 上传内容-->
 </div>
@@ -378,18 +383,44 @@ objType:'service'
 </li>
 </ul>
 
-<a href="javascript:void(0);" onclick="freeSub();" id="sub_button" class="submit fl_r" disabled="disabled" >发布</a>
+<a  onclick="freeSubs()" id="sub_button" class="submit fl_r">发布</a>
 </div>
 </form>
 </div>
 </div>
+    <script type="text/javascript">
+<!--
+    
+	function freeSubs(){  
+           if($("#username_login").html()==null){
+            alert('请登录');
+            location.href="index.php?r=index/login";
+    }else{
+         var xuqiu=$("#xuqiu").html();
+         var txt_title=$("#txt_title").val();
+         var tar_content=$("#tar_content").val();
+       $.ajax({
+            type: "GET",
+            url: "index.php?r=square/square_add",
+            data: "xuqiu="+xuqiu+"&txt_title="+txt_title+"&tar_content="+tar_content,
+            success: function(msg){
+             
+                  $("#data_contain").html(msg);
+            } 
+         }); 
+    }
+          
+               
+        }
+//-->
+</script>
 <!-- core_top end  -->
 <!-- core_down start  -->
 <div class="core_down clearfix">
 <h2>最新动态</h2>
 <div class="core_down_nav ml_20 mr_20">
-<a href="index.php?do=square&view=index" class="selected">所有</a>
-<a href="index.php?do=square&view=index&t=free_task" >免费需求</a>
+<a href="index.php?r=square/square_list&type='all'" class="selected">所有</a>
+<a href="index.php?r=square/square_list&type='free_task'" >免费需求</a>
 <a href="index.php?do=square&view=index&t=task" >赏金任务</a>
 <a href="index.php?do=square&view=index&t=free_service" >免费服务</a>
 <a href="index.php?do=square&view=index&t=service" >付费商品</a>
@@ -401,82 +432,48 @@ objType:'service'
 </div>
 <div class="core_down_info mt_10 mb_10 clearfix" >
 <ul id="data_contain">
-
-<li class="clearfix frame">
+    
+<!-------------------出售------------------>
+<?php foreach($model as $key=>$val){?>
+<li class="clearfix frame" >
 <div class="info_van clearfix">
 <a href="index.php?do=space&member_id=2" target="_blank">
-<img src='/public/data/avatar/system/2_small.jpg' uid='2' class='pic_small'><p class="c999">猪八戒</p>
+<img src='/public/data/avatar/system/<?php echo $val['images'];?>' uid='2' class='pic_small'><p class="c999"><?php echo $val['username'];?></p>
 </a>
 </div>
 <div class="info_body clearfix">
 <div>
 <span class="sale mr_5">出售 </span>
-<a href="index.php?do=service&sid=11"  class="task_info" target="_blank">【创意】著作权（版权）登记</a>
+<a href="index.php?r=shop/shop_content&id=<?php echo $val['service_id'];?>"  class="task_info" target="_blank"><?php echo $val['title'];?></a>
 
-<span class="ml_5 mr_5 c999">1年8个月12天21小时24分前</span>
-<a href="index.php?do=space&member_id=6" target="_blank">丸美弹力</a><span class="c999">购买</span>
+<span class="ml_5 mr_5 c999"><?php
+                                                            $startdate=date('Y-m-d H:i:s',time());
+                                                            $enddate=date('Y-m-d H:i:s',$val['on_time']);
+                                                            $hour=floor((strtotime($startdate)-strtotime($enddate))%86400/3600);
+                                                            if($hour==0){
+                                                                ?>
+                                                             &nbsp; 刚刚
+                                                            <?php }  else{
+                                                               echo "在".$hour."小时前";
+                                                             } ?> <?php echo @$val['username'];?></a><span class="c999">发布</span></span>
+<a href="index.php?do=space&member_id=6" target="_blank">                         <?php echo @$val['order_name'];?></a>    <span class="c999">购买</span>
 </div>
 <div>售价：<span class="mr_5 org">
-￥100.00元</span>来自：<span>威客服务</span>
+￥<?php echo  $val['price'];?>元</span>来自：<span><?php if($val['service_type']=='1'){
+    echo "威客服务";
+}else if($val['service_type']=='0'){
+    echo "免费需求"; 
+}?></span>
 </div>
 <div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
+<a href="javascript:void(0);" class="border_r_c"><span><?php echo  $val['leave_num'];?></span>留言</a>
 <a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="javascript:void(0)" class="border_r_c"><span>1</span>售出</a>
+<a href="javascript:void(0)" class="border_r_c"><span>1</span><?php echo  $val['sale_num'];?>售出</a>
 </div>
 </div>
 </li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=2" target="_blank">
-<img src='/public/data/avatar/system/2_small.jpg' uid='2' class='pic_small'><p class="c999">猪八戒</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="sale mr_5">出售 </span>
-<a href="index.php?do=service&sid=11"  class="task_info" target="_blank">【创意】著作权（版权）登记</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天21小时24分前</span>
-<a href="index.php?do=space&member_id=6" target="_blank">丸美弹力</a><span class="c999">购买</span>
-</div>
-<div>售价：<span class="mr_5 org">
-￥100.00元</span>来自：<span>威客服务</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="javascript:void(0)" class="border_r_c"><span>1</span>售出</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=6" target="_blank">
-<img src='/public/data/avatar/system/16_small.jpg' uid='6' class='pic_small'><p class="c999">丸美弹力</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=34"  class="task_info" target="_blank">淘宝网店推广 10元1稿 简单快捷</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天21小时24分前</span>
-<a href="index.php?do=space&member_id=4" target="_blank">shangk</a><span class="c999">投稿</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥120.00元</span>来自：<span>计件悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>1</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-</div>
-</div>
-</li>
-
+<?php } ?>
+<!----------------------需求------------------------------------------------------->
 <li class="clearfix frame">
 <div class="info_van clearfix">
 <a href="index.php?do=space&member_id=2" target="_blank">
@@ -501,428 +498,16 @@ objType:'service'
 </div>
 </div>
 </li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=6" target="_blank">
-<img src='/public/data/avatar/system/16_small.jpg' uid='6' class='pic_small'><p class="c999">丸美弹力</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=35"  class="task_info" target="_blank">淘宝网店推广</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天21小时26分前</span>
-<a href="index.php?do=space&member_id=4" target="_blank">shangk</a><span class="c999">投稿</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥150.00元</span>来自：<span>计件悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>1</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=2" target="_blank">
-<img src='/public/data/avatar/system/2_small.jpg' uid='2' class='pic_small'><p class="c999">猪八戒</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="sale mr_5">出售 </span>
-<a href="index.php?do=service&sid=13"  class="task_info" target="_blank">[图兰朵]婚纱摄影重磅推出 黄金路线启动</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天21小时27分前</span>
-<a href="index.php?do=space&member_id=6" target="_blank">丸美弹力</a><span class="c999">购买</span>
-</div>
-<div>售价：<span class="mr_5 org">
-￥2,000.00元</span>来自：<span>威客作品</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="javascript:void(0)" class="border_r_c"><span>1</span>售出</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=2" target="_blank">
-<img src='/public/data/avatar/system/2_small.jpg' uid='2' class='pic_small'><p class="c999">猪八戒</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="sale mr_5">出售 </span>
-<a href="index.php?do=service&sid=13"  class="task_info" target="_blank">[图兰朵]婚纱摄影重磅推出 黄金路线启动</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天21小时27分前</span>
-<a href="index.php?do=space&member_id=6" target="_blank">丸美弹力</a><span class="c999">购买</span>
-</div>
-<div>售价：<span class="mr_5 org">
-￥2,000.00元</span>来自：<span>威客作品</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="javascript:void(0)" class="border_r_c"><span>1</span>售出</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=6" target="_blank">
-<img src='/public/data/avatar/system/16_small.jpg' uid='6' class='pic_small'><p class="c999">丸美弹力</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=46"  class="task_info" target="_blank">轻松下载每个可得钱</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天21小时27分前</span>
-<a href="index.php?do=space&member_id=4" target="_blank">shangk</a><span class="c999">投稿</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥90.00元</span>来自：<span>计件悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>3</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=6" target="_blank">
-<img src='/public/data/avatar/system/16_small.jpg' uid='6' class='pic_small'><p class="c999">丸美弹力</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=43"  class="task_info" target="_blank">希望女友收到来自各地的祝福短信</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天21小时28分前</span>
-<a href="index.php?do=space&member_id=4" target="_blank">shangk</a><span class="c999">投稿</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥300.00元</span>来自：<span>计件悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>3</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=6" target="_blank">
-<img src='/public/data/avatar/system/16_small.jpg' uid='6' class='pic_small'><p class="c999">丸美弹力</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=57"  class="task_info" target="_blank">进驻商场&企业生活馆餐饮店的竞标报告</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天21小时29分前</span>
-<a href="index.php?do=space&member_id=1" target="_blank">admin</a><span class="c999">投稿</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥100.00元</span>来自：<span>计件悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>3</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=2" target="_blank">
-<img src='/public/data/avatar/system/2_small.jpg' uid='2' class='pic_small'><p class="c999">猪八戒</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="sale mr_5">出售 </span>
-<a href="index.php?do=service&sid=12"  class="task_info" target="_blank">商务|贸易|通用PPT模板</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天21小时57分前</span>
-<a href="index.php?do=space&member_id=2" target="_blank">猪八戒</a><span class="c999">发布</span>
-</div>
-<div>售价：<span class="mr_5 org">
-￥100.00元</span>来自：<span>威客作品</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="javascript:void(0)" class="border_r_c"><span>0</span>售出</a>
-<a href="index.php?do=service&sid=12" class="border_r_c">举报</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=5" target="_blank">
-<img src='/public/data/avatar/system/10_small.jpg' uid='5' class='pic_small'><p class="c999">mxc123</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=70"  class="task_info" target="_blank">男宝宝起名</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天22小时24分前</span>
-<a href="index.php?do=space&member_id=5" target="_blank">mxc123</a><span class="c999">发布</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥8,000.00元</span>来自：<span>单人悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="index.php?do=task&task_id=70" class="border_r_c">举报</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=5" target="_blank">
-<img src='/public/data/avatar/system/10_small.jpg' uid='5' class='pic_small'><p class="c999">mxc123</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=69"  class="task_info" target="_blank">用于淘宝和拍拍的广告</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天22小时27分前</span>
-<a href="index.php?do=space&member_id=5" target="_blank">mxc123</a><span class="c999">发布</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥80.00元</span>来自：<span>单人悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="index.php?do=task&task_id=69" class="border_r_c">举报</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=2" target="_blank">
-<img src='/public/data/avatar/system/2_small.jpg' uid='2' class='pic_small'><p class="c999">猪八戒</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="sale mr_5">出售 </span>
-<a href="index.php?do=service&sid=10"  class="task_info" target="_blank">【创意】企业（个人）法律咨询</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天22小时28分前</span>
-<a href="index.php?do=space&member_id=2" target="_blank">猪八戒</a><span class="c999">发布</span>
-</div>
-<div>售价：<span class="mr_5 org">
-￥1,000.00元</span>来自：<span>威客服务</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="javascript:void(0)" class="border_r_c"><span>0</span>售出</a>
-<a href="index.php?do=service&sid=10" class="border_r_c">举报</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=9" target="_blank">
-<img src='/public/data/avatar/system/2_small.jpg' uid='9' class='pic_small'><p class="c999">墨客</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=68"  class="task_info" target="_blank">屌丝一族逆袭歌词招募</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天22小时28分前</span>
-<a href="index.php?do=space&member_id=9" target="_blank">墨客</a><span class="c999">发布</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥1,000.00元</span>来自：<span>多人悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="index.php?do=task&task_id=68" class="border_r_c">举报</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=7" target="_blank">
-<img src='/public/data/avatar/default/man_small.jpg' uid='7' class='pic_small'><p class="c999">hahapa</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=67"  class="task_info" target="_blank">公司LOGO设计及VI基本部分的整套设计</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天22小时29分前</span>
-<a href="index.php?do=space&member_id=7" target="_blank">hahapa</a><span class="c999">发布</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥8,000.00元</span>来自：<span>单人悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="index.php?do=task&task_id=67" class="border_r_c">举报</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=9" target="_blank">
-<img src='/public/data/avatar/system/2_small.jpg' uid='9' class='pic_small'><p class="c999">墨客</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=66"  class="task_info" target="_blank">找人代画电路原理图和PCB版图，有现成SCH和PCB参考</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天22小时30分前</span>
-<a href="index.php?do=space&member_id=9" target="_blank">墨客</a><span class="c999">发布</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥100.00元</span>来自：<span>多人悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="index.php?do=task&task_id=66" class="border_r_c">举报</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=5" target="_blank">
-<img src='/public/data/avatar/system/10_small.jpg' uid='5' class='pic_small'><p class="c999">mxc123</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=65"  class="task_info" target="_blank">10秒20元,新手入门必做任务,最高价！10秒付款！急急急！</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天22小时31分前</span>
-<a href="index.php?do=space&member_id=5" target="_blank">mxc123</a><span class="c999">发布</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥80.00元</span>来自：<span>单人悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="index.php?do=task&task_id=65" class="border_r_c">举报</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=9" target="_blank">
-<img src='/public/data/avatar/system/2_small.jpg' uid='9' class='pic_small'><p class="c999">墨客</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=64"  class="task_info" target="_blank">新房装修设计，二室二厅一卫</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天22小时32分前</span>
-<a href="index.php?do=space&member_id=9" target="_blank">墨客</a><span class="c999">发布</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥100.00元</span>来自：<span>多人悬赏</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="index.php?do=task&task_id=64" class="border_r_c">举报</a>
-</div>
-</div>
-</li>
-
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=8" target="_blank">
-<img src='/public/data/avatar/system/7_small.jpg' uid='8' class='pic_small'><p class="c999">红客</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=63"  class="task_info" target="_blank">网站取名网站取名</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天22小时32分前</span>
-<a href="index.php?do=space&member_id=8" target="_blank">红客</a><span class="c999">发布</span>
-</div>
-<div>赏金：<span class="mr_5 org">
-￥1,000.00元-￥2,000.00元</span>来自：<span>订金招标</span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>投标</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="index.php?do=task&task_id=63" class="border_r_c">举报</a>
-</div>
-</div>
-</li>
 </ul>
 
 <!--翻页-->
-                                  <div class="page">
-                                    <p class="clearfix">
-                                             <a class="selected">1</a><a href="index.php?do=square&view=index&t=&page=2">2</a> <a href="index.php?do=square&view=index&t=&page=3">3</a> <a href="index.php?do=square&view=index&t=&page=4">4</a> <a href="index.php?do=square&view=index&t=&page=5">5</a> <a href="index.php?do=square&view=index&t=&page=2">下一页>></a><span class="fl_l"> 1 / 5页</span>                                       </p>
-                                      <div class="clear"></div>
-                                  </div>
+                               
                                                                     <!--end 翻页-->
                                   
 </div>
-</div>
+</div>   <div class="page">           
+                                           <?= LinkPager::widget(['pagination' => $pages]); ?>
+                                  </div>
 <!-- core_down end -->
 </div>
 <div class="index_right clearfix">
@@ -950,13 +535,7 @@ objType:'service'
 <!--页脚 satrt-->
 <footer class="footer clearfix">
 <!--网站链接以及语言栏 关注我们 搜索 start-->
-
-
-
-
-
-
-            <!--网站版权声明 start-->
+  <!--网站版权声明 start-->
             <section class="site_copyright clearfix">
             	<div class="container_24 clearfix ">
             		
@@ -1048,9 +627,6 @@ var uid='';
 var xyq = "l7j743n462jfogqvjvalrom7a6";
  //js异步加载
 In('header_top','custom','lavalamp','tipsy','autoIMG','slides');
-
-
-
 
 </script>
 

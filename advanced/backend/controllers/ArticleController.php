@@ -101,7 +101,7 @@ public function actionBullentin_edit_pro(){
     $article->pub_time =$time;  
     $article->listorder=$_POST['fields']['listorder']; 
     $article->is_recommend=$_POST['fields']['is_recommend']; 
-      $article->username=$_POST['fields']['username']; 
+    $article->username=$_POST['fields']['username']; 
     $article->content=$_POST['fields']['content']; 
     $article->seo_title=$_POST['fields']['seo_title']; 
     $article->seo_keyword=$_POST['fields']['seo_keyword']; 
