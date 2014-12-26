@@ -280,7 +280,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
     <div class="breadcrumbs clearfix">
         <a href="index.php">首页</a> &gt;
 <a href="index.php?r=article/article_list">资讯中心</a> &gt;
-<span>安全交易</span>
+<span><?php echo $res["art_title"]?></span>
     </div>
     <!--end 页面导航--><!--页面标题(搜索前)-
     <div class="page_title clearfix">

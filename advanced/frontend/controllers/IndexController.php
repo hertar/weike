@@ -20,7 +20,8 @@ class IndexController extends Controller
      public $enableCsrfValidation=false;//加上这句代码,前台可以使用普通的form表单语法
      
      
-    //首页
+
+     //首页
      public function actionIndex(){
         //加载布局文件
         $this->layout='@app/views/layouts/public.php'; 
@@ -28,7 +29,21 @@ class IndexController extends Controller
         $indus=  \app\models\Industry::find()->all();
         $data["indus"]=$indus;  
         $data["arr"]=$arr;
+        
+        $time=date("Y-m-d");
+        $pv= \app\models\Pv::find()->where(["day"=>"$time"])->one();
+        
+        if($pv){
+            $pv->count=$pv["count"]+1;
+            $pv->save();
+        }else{
+            $row=new \app\models\Pv();
+            $row->day=$time;
+            $row->count=1;
+            $row->insert();
+        }
         return $this->render("index",$data);
+        
     }
     //注册
     public function actionRegister(){
