@@ -44,7 +44,7 @@ class IndexController extends Controller
         }
         
          //ip库
-           require_once '/public/ip/ip.php';
+           require_once '../../public/ip/ip.php';
             
             //载入qqwry.dat 
             $url='../../public/ip/qqwry.dat';

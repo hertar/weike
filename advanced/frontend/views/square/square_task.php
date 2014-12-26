@@ -183,7 +183,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                                          $uid=$session->get("u_id");
                                          $arr=\app\models\Space::find()->where(["uid"=>"$uid"])->one();
                                          //print_r($arr);
-                                         if($arr["images"])){
+                                         if($arr){
                                     ?>
                                             <img src="/public/data/avatar/system<?php echo $arr["images"]?>" uid='' class='pic_small'>   
                                             <?php
@@ -405,11 +405,11 @@ objType:'service'
             data: "xuqiu="+xuqiu+"&txt_title="+txt_title+"&tar_content="+tar_content,
             success: function(msg){
                
-                    if(msg==3){
-                       location.href="index.php?r=square/square_task"; 
-                    }else{
-                        $("#data_contain").html(msg); 
-                    }
+                if(msg==3){
+                    location.href='index.php?r=square/square_task';
+                }else{
+                     location.href='index.php?r=square/square_list';
+                }
                  
             } 
          }); 
@@ -425,7 +425,7 @@ objType:'service'
 <h2>最新动态</h2>
 <div class="core_down_nav ml_20 mr_20">
 <a href="index.php?r=square/square_list&type=all" class="selected"><span onclick='alla()'>所有</span></a>
-<a href="index.php?r=square/square_task" ><span onclick='task()'>免费需求</span></a>
+<a href="index.php?r=square/square_task&type=free_task" ><span onclick='task()'>免费需求</span></a>
 <a href="index.php?do=square&view=index&t=task" >赏金任务</a>
 <a href="index.php?r=square/square_list&type=free_service" ><span onclick='alla()'>免费服务</span></a>
 <a href="index.php?do=square&view=index&t=service" >付费商品</a>
@@ -450,9 +450,12 @@ objType:'service'
 <div class="core_down_info mt_10 mb_10 clearfix" >
 <ul id="data_contain">
     <div id='all'>
-<!-------------------出售------------------>
-<?php foreach($model as $key=>$val){?>
-<li class="clearfix frame" >
+
+</div>
+<!----------------------需求------------------------------------------------------->
+<div id='task'>
+    <?php foreach($datas as $key=>$val){?>
+<li class="clearfix frame">
 <div class="info_van clearfix">
 <a href="index.php?do=space&member_id=2" target="_blank">
 <img src='/public/data/avatar/system/<?php echo $val['images'];?>' uid='2' class='pic_small'><p class="c999"><?php echo $val['username'];?></p>
@@ -460,55 +463,23 @@ objType:'service'
 </div>
 <div class="info_body clearfix">
 <div>
-<span class="sale mr_5">出售 </span>
-<a href="index.php?r=shop/shop_content&id=<?php echo $val['service_id'];?>"  class="task_info" target="_blank"><?php echo $val['title'];?></a>
+<span class="needs mr_5">需求 </span>
+<a href="index.php?do=task&task_id=28"  class="task_info" target="_blank"><?php echo $val['task_title'];?></a>
 
 <span class="ml_5 mr_5 c999"><?php
                                                             $startdate=date('Y-m-d H:i:s',time());
-                                                            $enddate=date('Y-m-d H:i:s',$val['on_time']);
+                                                            $enddate=date('Y-m-d H:i:s',$val['sub_time']);
                                                             $hour=floor((strtotime($startdate)-strtotime($enddate))%86400/3600);
                                                             if($hour==0){
                                                                 ?>
                                                              &nbsp; 刚刚
                                                             <?php }  else{
                                                                echo "在".$hour."小时前";
-                                                             } ?> <?php echo @$val['username'];?></a><span class="c999">发布</span></span>
-<a href="index.php?do=space&member_id=6" target="_blank">                         <?php echo @$val['order_name'];?></a>    <span class="c999">购买</span>
-</div>
-<div>售价：<span class="mr_5 org">
-￥<?php echo  $val['price'];?>元</span>来自：<span><?php if($val['service_type']=='1'){
-    echo "威客服务";
-}else if($val['service_type']=='0'){
-    echo "免费服务"; 
-}?></span>
-</div>
-<div class="info_talk clearfix">
-<a href="javascript:void(0);" class="border_r_c"><span><?php echo  $val['leave_num'];?></span>留言</a>
-<a href="javascript:void(0);" class="border_r_c"><span>0</span>收藏</a>
-<a href="javascript:void(0)" class="border_r_c"><span>1</span><?php echo  $val['sale_num'];?>售出</a>
-</div>
-</div>
-</li>
-<?php } ?>
-</div>
-<!----------------------需求------------------------------------------------------->
-<div id='task'>
-<li class="clearfix frame">
-<div class="info_van clearfix">
-<a href="index.php?do=space&member_id=2" target="_blank">
-<img src='/public/data/avatar/system/2_small.jpg' uid='2' class='pic_small'><p class="c999">猪八戒</p>
-</a>
-</div>
-<div class="info_body clearfix">
-<div>
-<span class="needs mr_5">需求 </span>
-<a href="index.php?do=task&task_id=28"  class="task_info" target="_blank">彩票站宣传单设计</a>
-
-<span class="ml_5 mr_5 c999">1年8个月12天21小时24分前</span>
-<a href="index.php?do=space&member_id=1" target="_blank">admin</a><span class="c999">投稿</span>
+                                                             } ?> <?php echo @$val['username'];?></span>
+<a href="index.php?do=space&member_id=1" target="_blank"><?php echo $val['username'];?></a><span class="c999">投稿</span>
 </div>
 <div>赏金：<span class="mr_5 org">
-￥80.00元</span>来自：<span>计件悬赏</span>
+￥0.00元</span>来自：<span>免费需求</span>
 </div>
 <div class="info_talk clearfix">
 <a href="javascript:void(0);" class="border_r_c"><span>1</span>投标</a>
@@ -517,6 +488,7 @@ objType:'service'
 </div>
 </div>
 </li>
+    <?php } ?>
 </div>
 </ul>
 
