@@ -401,7 +401,7 @@ window.onload = function(){
                   <dd>
                         <ul >
                         	
-<li><a href="index.php?r=tool/ad" target="display_frame" r_id="32">广告管理</a></li>
+<li><a href="index.php?r=tool/ad_list" target="display_frame" r_id="32">广告管理</a></li>
  		                        </ul>
                   </dd>
                 </dl>
