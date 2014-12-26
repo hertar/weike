@@ -13,7 +13,7 @@
           <!--图片内容区域 start-->
               <div class="slides_container">
                   <?php
-                    if($ad[0]==""){
+                    if(count($ad)==0){
                   ?>
                    <a href="http://www.kppw.cn" target="_blank" title="震撼上市1">
                        <img src="/public/data/uploads/sys/ad/banner1.jpg" width="710" height="320" alt="震撼上市1">
