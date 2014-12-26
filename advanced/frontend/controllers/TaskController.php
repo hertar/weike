@@ -26,7 +26,7 @@ class TaskController extends Controller
     public function actionTask_list(){
         
         $this->layout='@app/views/layouts/public.php';
-
+        $data_list = Task::find()->where("mark_num=0 order by task_id desc")->limit(5)->all();
         $session=new \yii\web\Session();
         $fenlei=Industry::find()->where(['indus_pid'=>0])->all();
         $moshi= Model::find()->all();
@@ -58,13 +58,25 @@ class TaskController extends Controller
             $session->set("sj",$min."-".$max);
         }
         $model=new Query();
-        $data1 = $model->from(['wk_witkey_task','wk_witkey_model'])->where("wk_witkey_task.model_id=wk_witkey_model.model_id and $where order by end_time desc")->all();
+        if(empty($where)){
+            $key='a';
+        }else{
+            $key=md5($where);
+        }
+         $data1 = $model->from(['wk_witkey_task','wk_witkey_model'])->where("wk_witkey_task.model_id=wk_witkey_model.model_id and $where order by end_time desc")->all();
+            
         //print_r($_GET);//die;
         $total=$model->count();
         $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>10]);
+        if(Yii::$app->cache->get($key)){
+           $data1=Yii::$app->cache->get($key);
+        }else{
         $data1=$model->offset($pages->offset)->limit($pages->limit)->all();
         //print_r($data1);
-        return $this->render('task_list',['total'=>$total,'fenlei'=>$fenlei,'moshi'=>$moshi,'list'=>$data1,'pages' => $pages,'can'=>$can]);
+        Yii::$app->cache->set($key,$data1);
+        }
+         
+        return $this->render('task_list',['data_list'=>$data_list,'total'=>$total,'fenlei'=>$fenlei,'moshi'=>$moshi,'list'=>$data1,'pages' => $pages,'can'=>$can]);
    }
    public function actionTask_up(){
         

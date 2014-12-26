@@ -413,7 +413,30 @@ use yii\widgets\LinkPager;
                                         </div>
                                             <div class=" pl_10 pr_10 pb_10">
                                                 <ul id="history_collect">
-                                                                                                    </ul>
+                                                    <?php  foreach($data_list as $key=>$val){?>
+                                                      <li>
+                                                        <p>
+                                                        <strong class="" style='color:red'><?php echo $val['username'] ?></strong>
+                                                        <?php
+                                                            $startdate=date('Y-m-d H:i:s',time());
+                                                            $enddate=date('Y-m-d H:i:s',$val['start_time']);
+                                                            $hour=floor((strtotime($startdate)-strtotime($enddate))%86400/3600);
+                                                            if($hour==0){
+                                                                ?>
+                                                             &nbsp; 刚刚
+                                                            <?php }  else{
+                                                               echo "在".$hour."小时前";
+                                                             } 
+                                                        ?> </p>
+                                                        <p>
+发布了 
+<a href="index.php?r=task/task_up&id=<?php echo $val['task_id'] ?>"> <?php echo $val['task_title']?></a></p>
+                                                    </li>
+                                                                                                        	
+                                                    <?php }?>             
+                                                                                                        	
+     
+                                                </ul>
                                             </div>
                                         </div>
                                         <!--end搜索历史-->
