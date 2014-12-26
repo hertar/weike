@@ -22,11 +22,11 @@ use yii\db\Query;
 
 class TaskController extends Controller
 {
-    //任务大厅
+    public $enableCsrfValidation=false;
     public function actionTask_list(){
         
         $this->layout='@app/views/layouts/public.php';
-
+        $data_list = Task::find()->where("mark_num=0 order by task_id desc")->limit(5)->all();
         $session=new \yii\web\Session();
         $fenlei=Industry::find()->where(['indus_pid'=>0])->all();
         $moshi= Model::find()->all();
@@ -58,13 +58,25 @@ class TaskController extends Controller
             $session->set("sj",$min."-".$max);
         }
         $model=new Query();
-        $data1 = $model->from(['wk_witkey_task','wk_witkey_model'])->where("wk_witkey_task.model_id=wk_witkey_model.model_id and $where order by end_time desc")->all();
+        if(empty($where)){
+            $key='a';
+        }else{
+            $key=md5($where);
+        }
+         $data1 = $model->from(['wk_witkey_task','wk_witkey_model'])->where("wk_witkey_task.model_id=wk_witkey_model.model_id and $where order by end_time desc")->all();
+            
         //print_r($_GET);//die;
         $total=$model->count();
         $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>10]);
+        if(Yii::$app->cache->get($key)){
+           $data1=Yii::$app->cache->get($key);
+        }else{
         $data1=$model->offset($pages->offset)->limit($pages->limit)->all();
         //print_r($data1);
-        return $this->render('task_list',['total'=>$total,'fenlei'=>$fenlei,'moshi'=>$moshi,'list'=>$data1,'pages' => $pages,'can'=>$can]);
+        Yii::$app->cache->set($key,$data1);
+        }
+         
+        return $this->render('task_list',['data_list'=>$data_list,'total'=>$total,'fenlei'=>$fenlei,'moshi'=>$moshi,'list'=>$data1,'pages' => $pages,'can'=>$can]);
    }
    public function actionTask_up(){
         
@@ -160,4 +172,152 @@ class TaskController extends Controller
         $h_count=Comment::find()->andWhere(['p_id' =>$task_id])->count('comment_id');  
         return $str.'@#@'.$h_count;
     }
-}
+    //发布任务
+    public function actionRelease(){
+         $this->layout='@app/views/layouts/public.php';
+         $session=new \yii\web\Session();
+        if(empty($session->get("user_name"))){
+            $this->redirect("?r=index/login");
+        }
+         return $this->renderPartial("release");
+    }
+    public function actionPub_mode(){
+        if($_GET['key']==1){
+        
+        $end_time= $_POST['st'];
+        $task_cash= $_POST['txt_task_cash'];
+        $model_id='1';
+        $fenlei=Industry::find()->where(['indus_pid'=>0])->all();
+        return $this->renderPartial("pub_mode",['fenlei'=>$fenlei,'end_time'=>$end_time,'task_cash'=>$task_cash,'model_id'=>$model_id]);
+        }
+        if($_GET['key']==2){
+        
+        $end_time= $_POST['txt_task_day'];
+        $task_cash= $_POST['txt_task_cash'];
+        $model_id='3';
+        $fenlei=Industry::find()->where(['indus_pid'=>0])->all();
+        return $this->renderPartial("pub_mode",['fenlei'=>$fenlei,'end_time'=>$end_time,'task_cash'=>$task_cash,'model_id'=>$model_id]);
+        }
+        if($_GET['key']==3){
+        
+        $end_time= $_POST['txt_task_day'];
+        $task_cash= $_POST['txt_task_cash'];
+        $model_id='2';
+        $fenlei=Industry::find()->where(['indus_pid'=>0])->all();
+        return $this->renderPartial("pub_mode",['fenlei'=>$fenlei,'end_time'=>$end_time,'task_cash'=>$task_cash,'model_id'=>$model_id]);
+        }
+        if($_GET['key']==4){
+        
+        $end_time= $_POST['txt_task_day'];
+        $task_cash= $_POST['task_cash_cove'];
+        $model_id='4';
+        $fenlei=Industry::find()->where(['indus_pid'=>0])->all();
+        return $this->renderPartial("pub_mode",['fenlei'=>$fenlei,'end_time'=>$end_time,'task_cash'=>$task_cash,'model_id'=>$model_id]);
+        }
+        if($_GET['key']==5){
+        
+        $end_time= $_POST['txt_task_day'];
+        $task_cash= $_POST['task_cash_cove'];
+        $model_id='5';
+        $fenlei=Industry::find()->where(['indus_pid'=>0])->all();
+        return $this->renderPartial("pub_mode",['fenlei'=>$fenlei,'end_time'=>$end_time,'task_cash'=>$task_cash,'model_id'=>$model_id]);
+        }
+    }
+    public function actionGet_indus(){
+        $id=$_GET['id'];
+        $list=Industry::find()->where(['indus_pid'=>$id])->all();
+        if(empty($id)){
+            $str="<option value=''>请选择子分类</option>";
+            return $str;
+        }else{
+            $str="<option value=''>请选择子分类</option>";
+	    foreach($list as $f=>$val){
+            $str.=" <option value=".$val['indus_id']." >".$val['indus_name']."</option>";
+	    }
+            return $str;
+        }
+    }
+    //上传
+    public function actionUpload_mode(){
+         $session=new \yii\web\Session(); 
+        if($_GET['key']==1){
+        $up = move_uploaded_file($_FILES['upload']['tmp_name'] ,"../../public/img/".$_FILES['upload']['name']);
+        if($up){
+                $data['end_time']=$_POST['end_time'];
+                $data['task_cash']=$_POST['task_cash'];
+                $data['indus_pid']=$_POST['indus_pid'];
+                $data['task_title']=$_POST['txt_title'];
+                $data['task_desc']=$_POST['tar_content'];
+                $data['indus_id']=$_POST['indus_id'];
+                $data['contact']=$_POST['txt_mobile'];
+                $data['model_id']=$_POST['model_id'];
+                $session->set("data",$data);
+                $indus1=Industry::find()->where(['indus_id'=> $data['indus_pid']])->all();
+                $indus2=Industry::find()->where(['indus_id'=> $data['indus_id']])->all();
+                return $this->renderPartial("upload_mode",[
+                    'data'=>$data,
+                    'indus1'=>$indus1,
+                    'indus2'=>$indus2,
+                ]);              
+        }else{
+                
+                $data['end_time']=$_POST['end_time'];
+                $data['task_cash']=$_POST['task_cash'];
+                $data['indus_pid']=$_POST['indus_pid'];
+                $data['task_title']=$_POST['txt_title'];
+                $data['task_desc']=$_POST['tar_content'];
+                $data['indus_id']=$_POST['indus_id'];
+                $data['contact']=$_POST['txt_mobile'];
+                 $data['model_id']=$_POST['model_id'];
+                $session->set("data",$data);
+                $indus1=Industry::find()->where(['indus_id'=> $data['indus_pid']])->all();
+                $indus2=Industry::find()->where(['indus_id'=> $data['indus_id']])->all();
+                //print_r($indus1);die;
+                return $this->renderPartial("upload_mode",[
+                    'data'=>$data,
+                    'indus1'=>$indus1,
+                    'indus2'=>$indus2,
+                ]);
+        }
+        }
+        if($_GET['key']==2){
+            $data=$session->get("data");
+            $data['end_time']=strtotime($data['end_time']);
+            $data['real_cash']= $data['task_cash']-$data['task_cash']/10;
+            $model = new Task();
+            $model->model_id = $data['model_id'];
+            $model->task_title = $data['task_title'];
+            $model->task_desc = $data['task_desc'];
+            $model->real_cash = $data['real_cash'];
+            $model->task_cash = $data['task_cash'];
+            $model->end_time = $data['end_time'] ;
+            $model->start_time = time();
+            $model->indus_pid = $data['indus_pid'];
+            $model->indus_id = $data['indus_id'];
+            $model->contact = $data['contact'];
+            $model->uid = $session->get("u_id");
+            $model->username =$session->get("user_name");
+           // print_r($data);die;
+            if($model->insert()){
+                $title= $data['task_title'];
+                $list=Task::find()->where(['task_title' => $title])->one();
+                //print_r($list);die;
+                return $this->renderPartial("success_mode",['list'=>$list,]);
+            }
+        }
+    }
+    //多人悬赏发布任务
+    public function actionMany(){
+        return $this->renderPartial("many");
+    }
+    
+    public function actionJijian(){
+        return $this->renderPartial("jijian");
+    }
+    public function actionNormal(){
+        return $this->renderPartial("normal");
+    }
+    public function actionDeposit(){
+        return $this->renderPartial("deposit");
+    }
+} 

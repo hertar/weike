@@ -183,7 +183,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                                          $uid=$session->get("u_id");
                                          $arr=\app\models\Space::find()->where(["uid"=>"$uid"])->one();
                                          //print_r($arr);
-                                         if($arr){
+                                         if($arr["images"])){
                                     ?>
                                             <img src="/public/data/avatar/system<?php echo $arr["images"]?>" uid='' class='pic_small'>   
                                             <?php

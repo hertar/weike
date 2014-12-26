@@ -12,8 +12,12 @@
          <div id="slides">
           <!--图片内容区域 start-->
               <div class="slides_container">
+                  <?php
+                    if(count($ad)==0){
+                  ?>
                    <a href="http://www.kppw.cn" target="_blank" title="震撼上市1">
-                       <img src="/public/data/uploads/sys/ad/banner1.jpg" width="710" height="320" alt="震撼上市1"></a>
+                       <img src="/public/data/uploads/sys/ad/banner1.jpg" width="710" height="320" alt="震撼上市1">
+                   </a>
                   <a href="/public/data/uploads/sys/ad/banner2.jpg" target="_blank" title="首页_顶部幻灯广告123">
                       <img src="/public/data/uploads/sys/ad/banner2.jpg" width="710" height="320" alt="首页_顶部幻灯广告123"></a>
                   <a href="http://www.kppw.cn" target="_blank" title="震撼上市4">
@@ -21,7 +25,20 @@
                   <a href="http://ww.baidu.com" target="_blank" title="震撼上市">
                       <img src="/public/data/uploads/sys/ad/banner1.jpg" width="710" height="320" alt="震撼上市"></a>
                   <a href="http://www.kppw.cn" target="_blank" title="震撼上市3">
-                      <img src="/public/data/uploads/sys/ad/banner3.jpg" width="710" height="320" alt="震撼上市3"></a>            
+                      <img src="/public/data/uploads/sys/ad/banner3.jpg" width="710" height="320" alt="震撼上市3">
+                  </a>
+                  <?php
+                    }else{
+                  ?>
+                  <?php 
+                  foreach ($ad as $val) {
+           ?>
+                  <a href="<?php echo $val["ad_url"]?>" target="_blank" title="震撼上市3">
+                      <img src="/public/data/uploads/sys/ad/<?php echo $val['ad_file']?>" width="710" height="320" alt="震撼上市3">
+                  </a>
+                  <?php
+                    }}
+                  ?>
               </div>
           <!--图片内容区域 end-->
 

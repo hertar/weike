@@ -20,7 +20,8 @@ class IndexController extends Controller
      public $enableCsrfValidation=false;//加上这句代码,前台可以使用普通的form表单语法
      
      
-    //首页
+
+     //首页
      public function actionIndex(){
         //加载布局文件
         $this->layout='@app/views/layouts/public.php'; 
@@ -28,8 +29,46 @@ class IndexController extends Controller
         $indus=  \app\models\Industry::find()->all();
         $data["indus"]=$indus;  
         $data["arr"]=$arr;
-        return $this->render("index",$data);
+        
+        $time=date("Y-m-d");
+        $pv= \app\models\Pv::find()->where(["day"=>"$time"])->one();
+        
+        if($pv){
+            $pv->count=$pv["count"]+1;
+            $pv->save();
+        }else{
+            $row=new \app\models\Pv();
+            $row->day=$time;
+            $row->count=1;
+            $row->insert();
+        }
+        
+         //ip库
+           require_once '../../public/ip/ip.php';
+            
+            //载入qqwry.dat 
+            $url='../../public/ip/qqwry.dat';
+            $IpLocation = new \IpLocation($url);
+            //获取ip对应信息。getip()
+            //郑州ip:222.88.32.134
+            //北京ip:222.128.176.179
+            //福建福州：218.66.59.145
+            //黑龙江哈尔滨：221.212.89.178
+            $infoIP= $IpLocation->getlocation('218.66.59.145');
+            $arrs= preg_split('/省|市/',iconv('gbk','utf-8',$infoIP['country']));
+            //print_r($arrs);
+            $pro=$arrs[0];
+            $reg= \app\models\Region::find()->andWhere(["region_name"=>"$pro","parent_id"=>"1"])->one();
+            //print_r($reg);
+            $pro_id=$reg['region_id'];
+            $ad=  \app\models\Ad::find()->where(["pro"=>"$pro_id"])->all();
+            //print_r($ad);
+            $data['ad']=$ad;
+            return $this->render("index",$data);
+        
     }
+    
+   
     //注册
     public function actionRegister(){
           $this->layout='@app/views/layouts/public.php';

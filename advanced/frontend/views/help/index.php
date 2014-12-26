@@ -292,59 +292,55 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
           <div class="grid_6 alpha omega ">
             <div class="nav_list clearfix">
               <dl>
-              	               <dt>
+                  <?php foreach($fenlei as $key=>$val){?>
+              	 <dt>
                   <a class="small_nav block clearfix po_re selected" fpid="100" spid="291" href="###">
-                 <span class="ml_20">威客商城</span>
+                 <span class="ml_20"><?php echo $val['cat_name']?></span>
  
-                  <div class="icon16 po_ab spread_back  sq-minus"></div>
+                  <div class="icon16 po_ab spread_back  sq-plus"></div>
                    </a>                                           
                 </dt>
 <dd class="clearfix">
  <ul>
- 	     <li tpid="325">
-<a href="index.php?r=help/index" class="selected">威客服务</a>
-</li>
-        <li tpid="323">
-       	<a href="index.php?r=help/ruler" >商城规则</a>
-</li>
-        <li tpid="324">
-       	<a href="index.php?r=help/works" >威客作品</a>
-</li>
+            <?php 
+            foreach($article as $k=>$v){ 
+                if($v['art_cat_id']==$val['art_cat_id']){?>
+ 	     <li tpid="<?php echo @$v['art_id']?>">
+             <a onclick='getarticle(<?php echo @$v['art_id']?>)' class="selected"><?php echo @$v['art_title']?></a>
+            </li>
+                  <?php
+                }
+                }?>
         </ul>
 </dd>
-               <dt>
-                  <a class="small_nav block clearfix po_re " fpid="100" spid="294" href="###">
-                 <span class="ml_20">新手上路</span>
- 
-                  <div class="icon16 po_ab spread_back sq-plus"></div>
-                   </a>                                           
-                </dt>
-<dd class="clearfix">
- <ul>
- 	  </ul>
-</dd>
-               <dt>
-                  <a class="small_nav block clearfix po_re " fpid="100" spid="290" href="###">
-                 <span class="ml_20">任务大厅</span>
- 
-                  <div class="icon16 po_ab spread_back sq-plus"></div>
-                   </a>                                           
-                </dt>
-<dd class="clearfix">
- <ul>
- 	  </ul>
-</dd>
-               <dt>
-                  <a class="small_nav block clearfix po_re " fpid="100" spid="293" href="###">
-                 <span class="ml_20">常见问题</span>
- 
-                  <div class="icon16 po_ab spread_back sq-plus"></div>
-                   </a>                                           
-                </dt>
-<dd class="clearfix">
- <ul>
- 	  </ul>
-</dd>
+                  <?php }?>
+
+
+<style>
+a{cursor:pointer;}
+</style>
+<script>
+function getarticle(id){
+     //创建ajax对象
+    var ajax = new XMLHttpRequest();
+    //alert(ajax.readyState)
+
+    //ajax事件
+    ajax.onreadystatechange=function(){
+      //alert(ajax.readyState)
+      if (ajax.readyState==4)
+      {
+       //接收数据
+       //alert(ajax.responseText);
+       document.getElementById("sparticle").innerHTML = ajax.responseText;
+      }
+    }
+    //与服务器建立连接
+    ajax.open("get","index.php?r=help/getarticle&id="+id);
+    //处理请求
+    ajax.send(null);
+}
+</script>
             </dl>
           </div>
           </div>
@@ -356,7 +352,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 <div class="top_content clearfix">
               <form action="#" method="post" name="frm_help" id="frm_help" class="grid_9">
                   <label class="icon32 zoom mr_5 fl_l"></label>
-                      <input name="keyword" type="text" id="keyword" value="想了解什么?"class="fl_l togg1 txt_input c999" t="想了解什么?" size="30"/><a class="button fl_l ml_5" href="javascript:void(0);" onclick="searchKeyword();">　搜索&nbsp;&nbsp;&nbsp;</a>
+                      <input name="keyword" id='keyword' type="text" id="keyword" value="想了解什么?"class="fl_l togg1 txt_input c999" t="想了解什么?" size="30"/><a class="button fl_l ml_5" href="javascript:void(0);" onclick="searchart();">　搜索&nbsp;&nbsp;&nbsp;</a>
               </form>
   <div class="clear"></div>
   <div class="tell clearfix mt_5">
@@ -370,15 +366,18 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
 <!--右边主体下端内容-->                  
              <div class="bottom_content">
                <div class="loadcontent newcontent clearfix">
-
+<span id='sparticle'>
+    <?php foreach($article_list as $key=>$val){?>
   <div class="all_content ws_break ">
  <a href="javascript:void(0);" class="question">
   <span class="icon16 br-down"></span>
- <strong class="q_title"> 生生世世</strong>
+ <strong class="q_title"> <?php echo $val['art_title']?></strong>
   </a>
  <div class="article hidden">
-ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooollbcghhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</div>
+<?php echo $val['content']?></div>
 </div>
+    <?php }?>
+</span>
   	
   <!--page 翻页 start-->
                        <div class="page">

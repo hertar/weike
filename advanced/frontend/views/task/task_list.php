@@ -2,8 +2,6 @@
 <?php
 use yii\widgets\LinkPager;
 ?>
-
-
 <div class="wrapper">	
 <!--页面头部-->
 <header class="clearfix page_header">
@@ -403,7 +401,7 @@ use yii\widgets\LinkPager;
                                 <div class="grid_4 m_h">
                                    
    <div class="mb_10">
-   	<a href="http://127.0.0.1/weike/index.php?do=release" class="submit block">发布任务</a>
+   	<a href="index.php?r=task/release" class="submit block">发布任务</a>
    </div>
    
    
@@ -415,7 +413,30 @@ use yii\widgets\LinkPager;
                                         </div>
                                             <div class=" pl_10 pr_10 pb_10">
                                                 <ul id="history_collect">
-                                                                                                    </ul>
+                                                    <?php  foreach($data_list as $key=>$val){?>
+                                                      <li>
+                                                        <p>
+                                                        <strong class="" style='color:red'><?php echo $val['username'] ?></strong>
+                                                        <?php
+                                                            $startdate=date('Y-m-d H:i:s',time());
+                                                            $enddate=date('Y-m-d H:i:s',$val['start_time']);
+                                                            $hour=floor((strtotime($startdate)-strtotime($enddate))%86400/3600);
+                                                            if($hour==0){
+                                                                ?>
+                                                             &nbsp; 刚刚
+                                                            <?php }  else{
+                                                               echo "在".$hour."小时前";
+                                                             } 
+                                                        ?> </p>
+                                                        <p>
+发布了 
+<a href="index.php?r=task/task_up&id=<?php echo $val['task_id'] ?>"> <?php echo $val['task_title']?></a></p>
+                                                    </li>
+                                                                                                        	
+                                                    <?php }?>             
+                                                                                                        	
+     
+                                                </ul>
                                             </div>
                                         </div>
                                         <!--end搜索历史-->
