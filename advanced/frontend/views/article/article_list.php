@@ -321,8 +321,8 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                                <div class="item clearfix">
                                     <div class="news_article">
                                         <h3 class="news_title ws_break">
-<a title="警惕交易诈骗，注意帐户安全" href="index.php?
-do=article&view=article_info&art_cat_id=203&art_id=227">
+                                            <a title="警惕交易诈骗，注意帐户安全"
+           href="index.php?r=article/article_info&art_id=<?php echo $v['art_id']?>">
 <?php echo $v["art_title"]?>
     <?php
         if($v["is_recommend"]==1){
@@ -336,8 +336,8 @@ do=article&view=article_info&art_cat_id=203&art_id=227">
 <p class="clearfix">
 <span class="c999"><?php echo date("Y-m-d",$v["pub_time"])?></span>
 
-<a href="index.php?do=article&view=article_list&art_cat_id=203">
-<?php echo $v["cat_name"]?></a>
+<a href="index.php?r=article/article_list&art_cat_id=<?php echo $v["art_cat_id"]?>">
+[<?php echo $v["cat_name"]?>]</a>
 
 
 </p>
@@ -349,13 +349,13 @@ mt_10"></a>
 </div>
 <div class="news_content">
 <p>
-<?php echo htmlspecialchars_decode(substr($v["content"],0,100))?>                                         </p>
+<?php echo htmlspecialchars_decode(substr($v["content"],0,100))?></p>
 </div>
 <div class="clear"></div>
 <div class="m_h">
 
-<?php echo $v["views"]?>浏览<a href="index.php?
-do=article&view=article_info&art_cat_id=203&art_id=227">阅读全文</a>
+<?php echo $v["views"]?>人浏览过<a href="index.php?
+r=article/article_info&art_id=<?php echo $v["art_id"]?>">阅读全文</a>
 
 </div>
 </div>
@@ -397,7 +397,7 @@ do=article&view=article_info&art_cat_id=203&art_id=227">阅读全文</a>
                 		                                                                                                                                                                                                                                                                                                                                                                                                                                                
 <span class="ico"></span>
 				
-                           <a href="index.php?do=article&view=article_list&art_cat_id=2" class="minus">
+<a href="index.php?r=article/article_list&art_cat_id=<?php echo $val["art_cat_id"]?>" class="minus">
                         		<?php echo $val["cat_name"]?></a>
 <p class="news_secondMenu" id="art_p_2" style="display:none">                    		
                                                     </p>                        
