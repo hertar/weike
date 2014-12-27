@@ -126,12 +126,16 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                     <div class="search_box">
                         <div class="fl_l search_selcecter">
                         	<div id="search_select" class="search_options">
-                        	                           		 <a href="javascript:void(0);" class="selected" rel="task_list"><span>任务</span>▼</a>
-                               		 <a href="javascript:void(0);" class="hidden"   rel="task_list">任务</a>
-                           	 	<a href="javascript:void(0);" class="hidden"   rel="shop_list">商品</a>
+                        	         <a class="selected" rel="task_list" onclick='search_type(1)' ><span>任务</span>▼</a>
+                               		 <a class="hidden"   rel="task_list"  onclick='search_type(1)' >任务</a>
+                           	 	<a  class="hidden"    onclick='search_type(2)' rel="shop_list">商品</a>
                              </div>
                         </div>
-<input type="text" name="search_key" onkeydown="search_keydown(event);" id="search_key" class="fl_l search_input txt_input togg c999"
+<style>
+a{cursor:pointer;}
+</style>
+
+<input type="text" name="search_key" id='keyword' onkeydown="search_keydown(event);" id="search_key" class="fl_l search_input txt_input togg c999"
  value="输入任务/商品" 
    x-webkit-speech x-webkit-grammar="bUIltin:search" lang="zh-CN">
                     </div>
@@ -139,14 +143,14 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                     <!--搜索框和选项 end-->
                     <!--搜索提交 start-->
                     <div class="fl_l header_btn">
-                    	<button class="search_btn" id="search_btn" type="button" onclick="topSearch();"><span class="icon magnifier"></span>搜索</button>
+                    	<button class="search_btn" id="search_btn" type="button" onclick="search_task();"><span class="icon magnifier"></span>搜索</button>
                     </div>
                     <!--搜索提交 end-->
                 </div>
                 <!--主搜索 end-->
 
             </div>
-          
+ 
             	<!--用户登录注册 start-->
 
                 <div class="user_box clearfix grid_5">
@@ -386,7 +390,22 @@ In('header_top','custom','lavalamp','tipsy','autoIMG','slides');
 
 
 </script>
-
+<script>search_type
+    function search_type(type){
+        localStorage.setItem("search_type",type);   
+}
+        function search_task(){
+        var search_type= localStorage.getItem("search_type");   
+        if(search_type==1){
+            var s_task=document.getElementById('keyword').value;
+            if(s_task=='输入任务/商品'||s_task==''){
+                return fasle;
+            }else{
+                location.href="index.php?r=task/task_list&key=1&keyword="+s_task;
+            }
+        }
+}
+</script>
 <!--[if IE 6]></div><![endif]-->
 <!--[if IE 7]></div><![endif]-->
 <!--[if IE 8]></div><![endif]-->

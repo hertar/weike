@@ -180,7 +180,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                                          $uid=$session->get("u_id");
                                          $arrs=\app\models\Space::find()->where(["uid"=>"$uid"])->one();
                                          //print_r($arr);
-                                         if($arr["images"]){
+                                         if($arrs["images"]){
                                     ?>
                                             <img src="/public/data/avatar/system<?php echo $arrs["images"]?>" uid='' class='pic_small'>   
                                             <?php
@@ -774,7 +774,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
   </div>	
 </section>
 <!--商品详情_底部广告-->
-   <div class="adv"><a title="adv" target="_blank" href="http://www.kppw.cn"><img width="" height="" alt="adv" src="data/uploads/sys/ad/adv.jpg" original-title="adv"></a></div>
+   <div class="adv"><a title="adv" target="_blank" href="http://www.kppw.cn"><img width="" height="" alt="adv" src="/public/data/uploads/sys/ad/adv.jpg" original-title="adv"></a></div>
 <aside class=" mb_10 clearfix">	
                         <div class="grid_12 ">
                             <div class="example box normal2 clearfix pb_10">
@@ -886,7 +886,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
           <div class='ly1 mt_10 mb_10' id='p_4'>
                         <div class='top1 clearfix'>
                                         <a href='index.php?do=space&member_id=1' class='block fl_l'>
-                                            <img src='http://www.weike1.com/data/avatar/default/man_small.jpg' uid='1' class='pic_small'></a>
+                                            <img src='/public/data/avatar/default/man_small.jpg' uid='1' class='pic_small'></a>
             <div class='operate po_ab hidden'> 
             <a href='javascript:;' onclick='comment_del()'><span class='icon16 trash'></span>删除</a>
             <a href='javascript:;' onclick='comment_reply()'><span class='icon16 spechbubble'></span>回复</a>
@@ -1060,47 +1060,7 @@ $(".reply_comment").focus(function(){
 </script>
                           </div>	
 </section>
-<!--商品详情_底部广告-->
-   <div class="adv"><a title="adv" target="_blank" href="http://www.kppw.cn"><img width="" height="" alt="adv" src="data/uploads/sys/ad/adv.jpg" original-title="adv"></a></div>
-<aside class=" mb_10 clearfix">	
-                        <div class="grid_12 ">
-                            <div class="example box normal2 clearfix pb_10">
-                                <div class="inner">
-                                    <div class="box_header">
-                                        <h3 class="title">
-                                            <span class="font14 ml_10">同类热销案例</span>
-                                        </h3>
-                                    </div>
-                                <div class="pt_10 clearfix">
-                                <div class="t_c">
-                      暂无</div>
-                                                                
-                            </div>
-                        </div>
-                    </div>
-                 </div>
-                        
-                      
-                        <div class="grid_12 alpha omega">
-                            <div class="box normal2 example clearfix pb_10 shop_list">
-                                <div class="inner"> 
-                                <div class="box_header">
-                                    <h3 class="title"><span class="font14 ml_10">相关分类任务列表</span></h3>
-                                </div>
-                                <div class="pt_10 clearfix">
-                                <div class="t_c">
-                      暂无</div>
-                            </div>
-                            </div>
 
-                            </div>
-                        </div>
-
-             </aside>      
-            
-        
-    </div>
-</section>
 
 
 <!------------------------------------------------------------------------------------------->
