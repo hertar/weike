@@ -19,7 +19,7 @@ class ArticleController extends Controller
     public function actionArticle_list(){
         
         $model=new \yii\db\Query();
-        if($_GET["art_cat_id"]){
+        if(isset($_GET["art_cat_id"])){
             $id=$_GET["art_cat_id"];
         $res = $model->from(['wk_witkey_article','wk_witkey_article_category'])
                              ->orderBy("is_recommend desc")
