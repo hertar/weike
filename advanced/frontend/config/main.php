@@ -35,7 +35,7 @@ return [
         'class' => '\yii\caching\MemCache',
         'servers' => [
             [
-                'host' => '192.168.1.154',
+                'host' => '192.168.1.151',
                 'port' => 11211,
                 'weight' => 100,
             ],
@@ -44,3 +44,17 @@ return [
     ],
 ],
 ];
+//sphinx
+/*
+return [
+    'components' => [
+        'sphinx' => [
+            'class' => 'yii\sphinx\Connection',
+            'dsn' => 'mysql:host=192.168.1.151;port=9306;',
+            'username' => 'root',
+            'password' => 'root',
+        ],
+    ],
+];
+ * */
+ 
