@@ -26,6 +26,57 @@ class TaskController extends Controller
     public function actionTask_list(){
         
         $this->layout='@app/views/layouts/public.php';
+        if(@$_GET['key']==1){
+            $keyword=$_GET['keyword'];
+            $data_list = Task::find()->where("mark_num=0 order by task_id desc")->limit(5)->all();
+        $session=new \yii\web\Session();
+        $fenlei=Industry::find()->where(['indus_pid'=>0])->all();
+        $moshi= Model::find()->all();
+        $can=[];
+        $where='1=1';
+        if(@$_GET['fl']){
+            $can=['fl'=>$_GET['fl'],'ms'=>@$_GET['ms'],'min'=>@$_GET['min'],'max'=>@$_GET['max']];
+            $indus_id=$_GET['fl'];
+            //echo $indus_id;die;
+            $indus=Industry::findOne($indus_id);
+            //print_r($indus['indus_name']);die;
+             $session->set("fl",$indus['indus_name']);
+             //echo $session->get('indus');die;
+            $where.=" and indus_pid=$indus_id";
+        }
+        if(@$_GET['ms']){
+            $can=['fl'=>@$_GET['fl'],'ms'=>@$_GET['ms'],'min'=>@$_GET['min'],'max'=>@$_GET['max']];
+            $model_id=$_GET['ms']; 
+            $indus=Model::findOne($model_id);
+             $session->set("ms",$indus['model_name']);
+            $where.=" and wk_witkey_task.model_id=$model_id";
+        }
+        if(@$_GET['min'] && @$_GET['max']){
+            $can=['fl'=>@$_GET['fl'],'ms'=>@$_GET['ms'],'min'=>$_GET['min'],'max'=>@$_GET['max']];
+            $min=$_GET['min'];
+             $max=$_GET['max'];
+            //$where.=" ";
+            $where.=" and real_cash>$min and task_cash<=$max";
+            $session->set("sj",$min."-".$max);
+        }
+            require '../../public/Sphinxapi.php';
+            $cl = new \SphinxClient();
+            $cl->SetServer( "192.168.1.155", 9312 );
+	    $cl->SetMatchMode(SPH_MATCH_ANY);
+            $res = $cl->query($keyword);
+	    $arr = $res['matches'];
+            $str='';
+            foreach($arr as $key => $val) {
+		 $str.=$key.',';
+	    }
+            $str=trim($str ,',');
+            //echo $str;die;
+            $data1 = Task::findBySql("SELECT * FROM wk_witkey_task where task_id in ($str)")->all(); 
+             $total=count($data1) ;
+             $pages = new Pagination(['totalCount'=>$total,'pageSize'=>10]);
+            return $this->render('task_list',['data_list'=>$data_list,'total'=>$total,'fenlei'=>$fenlei,'moshi'=>$moshi,'list'=>$data1,'pages' => $pages,'can'=>$can]);
+            
+        }else{
         $data_list = Task::find()->where("mark_num=0 order by task_id desc")->limit(5)->all();
         $session=new \yii\web\Session();
         $fenlei=Industry::find()->where(['indus_pid'=>0])->all();
@@ -71,12 +122,13 @@ class TaskController extends Controller
         if(Yii::$app->cache->get($key)){
            $data1=Yii::$app->cache->get($key);
         }else{
-        $data1=$model->offset($pages->offset)->limit($pages->limit)->all();
+           $data1=$model->offset($pages->offset)->limit($pages->limit)->all();
         //print_r($data1);
         Yii::$app->cache->set($key,$data1);
         }
          
         return $this->render('task_list',['data_list'=>$data_list,'total'=>$total,'fenlei'=>$fenlei,'moshi'=>$moshi,'list'=>$data1,'pages' => $pages,'can'=>$can]);
+        }
    }
    public function actionTask_up(){
         
