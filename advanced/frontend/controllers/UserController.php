@@ -203,14 +203,18 @@ class UserController extends Controller
    }
    
    public function actionSetting_pic_show(){
-       //print_r($_POST);
+       //echo 133;die;
+       //print_r($_POST);die;
        $session=new \yii\web\Session();
        $uid=$session->get("u_id");
+      // print_r($uid);
        $user=\app\models\Space::findOne($uid);
+       //print_r($user);die;
        $img=$_POST["img"];
        $str=substr($img,strripos($img,"/"));
        
        $user->images=$str;
+       
        if($user->save()){
           
            echo "ok";

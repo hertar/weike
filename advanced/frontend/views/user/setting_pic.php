@@ -244,7 +244,9 @@ $(".togg_u").focus(function(){
            data:{"img":s},
            type:"post",
            success:function(e){
+               
                if(e=="ok"){
+              
               location.href="index.php?r=user/setting_pic"
                }
            }
