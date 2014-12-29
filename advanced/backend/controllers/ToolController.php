@@ -35,11 +35,11 @@ class ToolController extends Controller
     public function actionPv(){
         
         
-        require_once '/public/src/jpgraph.php';
-        require_once '/public/src/jpgraph_line.php';
-        require_once '/public/src/jpgraph_bar.php';
-        require_once ("public/src/jpgraph_pie.php");
-        require_once ("public/src/jpgraph_pie3d.php");   //引用3D饼图PiePlot3D对象所在的类文件
+        require_once '../../public/src/jpgraph.php';
+        require_once '../../public/src/jpgraph_line.php';
+        require_once '../../public/src/jpgraph_bar.php';
+        require_once ("../../public/src/jpgraph_pie.php");
+        require_once ("../../public/src/jpgraph_pie3d.php");   //引用3D饼图PiePlot3D对象所在的类文件
         $arr=  \app\models\Pv::find()->all();
         for($i=0;$i<count($arr);$i++){
             $y[]=$arr[$i]["count"];
@@ -149,8 +149,8 @@ class ToolController extends Controller
      * ) ) 
      */
     public function actionAd_add_pro(){
-        print_r($_POST);
-        print_r($_FILES);
+        //print_r($_POST);
+       // print_r($_FILES);
         $arr=new \app\models\Ad();
         $path="../../public/data/uploads/sys/ad/".$_FILES['ad_type_image_file']['name'];
         $up = move_uploaded_file($_FILES['ad_type_image_file']['tmp_name'],$path);

@@ -116,6 +116,7 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
      */
     public function open()
     {
+		
         if ($this->getIsActive()) {
             return;
         }
@@ -142,6 +143,8 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
      */
     protected function registerSessionHandler()
     {
+		ini_set('session.save_handler','memcache');
+		ini_set('session.save_path','192.168.1.152:11211');
         if ($this->handler !== null) {
             if (!is_object($this->handler)) {
                 $this->handler = Yii::createObject($this->handler);

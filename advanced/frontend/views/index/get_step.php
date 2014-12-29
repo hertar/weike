@@ -25,22 +25,12 @@
                               class="mb_30" onsubmit="return checkf()">
                             <input type="hidden" name="formhash" id="formhash" value="ce9abd">
                             <input type="hidden" name="handlekey" value="get_form1"><!--账号-->
-                            <div class="rowElem clearfix po_re mt_30">
-                                <label class="grid_4">
-              手&nbsp;&nbsp;机&nbsp;&nbsp;号： </label>
-      <div class="fl_l mr_5 ml_5">
-            <input type="text" class="txt txt_input" autocomplete="off" name="txt_tel" 
-                        id="txt_tel" limit="required:true;len:9-11;type:string;general:true" 
-                        msg="手机号错误" 
-                        title="请输入手机号" msgArea="login_account_msg" style="width:200px;" />
-     
-      </div><span class="msg" id="login_account_msg"><i></i></span>
-      <input type="button" value="验证" onclick="sends()">
-                            </div>
+                            
 <label class="grid_4">
        验&nbsp;&nbsp;证&nbsp;&nbsp;码    ：                      
 
 </label>
+<input type="hidden" value="<?php echo $str?>" id="str">
 <input type="hidden" value="<?php echo $name?>" id="user_name" name="user_name">
 <input type="hidden" value="<?php echo $id?>" id="user_id" name="user_id">
 <div class="fl_l mr_5 ml_5">
@@ -150,6 +140,7 @@ var get_str=$("#get_str").val();
         alert("验证码不能为空!");
         return false;
     }
+
 
 }    
 function receive(){

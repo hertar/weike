@@ -15767,15 +15767,46 @@ $_SERVER = [
     'REQUEST_TIME' => 1419580764
 >>>>>>> b2b7e00bb8a552216cb16e202cdcf1f150f3d766
 ]
+<<<<<<< HEAD
+2014-12-29 00:18:17 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'backend\controllers\ToolController::actionPv(): Failed opening required '/public/src/jpgraph.php' (include_path='.;F:/xampps/htdocs')' in E:\weike\advanced\backend\controllers\ToolController.php:38
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-29 00:18:17 [127.0.0.1][-][-][info][application] $_GET = [
+=======
 2014-12-29 01:27:58 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'backend\controllers\ToolController::actionPv(): Failed opening required '/public/src/jpgraph.php' (include_path='.;D:\web\WAMP\php\PEAR;D:\web\WAMP\php\include')' in D:\web\weike\advanced\backend\controllers\ToolController.php:38
 Stack trace:
 #0 [internal function]: yii\base\ErrorHandler->handleFatalError()
 #1 {main}
 2014-12-29 01:27:58 [127.0.0.1][-][-][info][application] $_GET = [
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'r' => 'tool/pv'
 ]
 
 $_COOKIE = [
+<<<<<<< HEAD
+    'PHPSESSID' => 'gbmc50s3svc81isf0e5n464301'
+    '_csrf' => '77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s:32:\"R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VKCdycCoAZgAABm00qcAAACd'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=gbmc50s3svc81isf0e5n464301; _csrf=77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s%3A32%3A%22R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\Program Files\\TortoiseSVN\\bin;F:\\web\\mysql\\bin;;D:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;D:\\Java\\jdk1.7.0_71\\bin;D:\\Java\\jdk1.7.0_71\\jre\\bin;D:\\Program Files\\TortoiseGit\\bin;'
+=======
     'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
 ]
 
@@ -17082,17 +17113,33 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
     'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+=======
     'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SERVER_NAME' => 'www.weike.com'
     'SERVER_ADDR' => '127.0.0.1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '127.0.0.1'
+<<<<<<< HEAD
+    'DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'E:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '51693'
+=======
     'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -17100,6 +17147,7 @@ $_SERVER = [
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
     'REMOTE_PORT' => '55526'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
@@ -17107,6 +17155,16 @@ $_SERVER = [
     'REQUEST_URI' => '/backend/web/index.php?r=tool/pv'
     'SCRIPT_NAME' => '/backend/web/index.php'
     'PHP_SELF' => '/backend/web/index.php'
+<<<<<<< HEAD
+    'REQUEST_TIME_FLOAT' => 1419812297.774
+    'REQUEST_TIME' => 1419812297
+]
+2014-12-29 00:18:47 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'backend\controllers\ToolController::actionPv(): Failed opening required '/public/src/jpgraph.php' (include_path='.;F:/xampps/htdocs')' in E:\weike\advanced\backend\controllers\ToolController.php:38
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-29 00:18:47 [127.0.0.1][-][-][info][application] $_GET = [
+=======
     'REQUEST_TIME_FLOAT' => 1419814148.023
     'REQUEST_TIME' => 1419814148
 ]
@@ -17122,10 +17180,34 @@ Stack trace:
 #0 [internal function]: yii\base\ErrorHandler->handleFatalError()
 #1 {main}
 2014-12-29 01:49:20 [127.0.0.1][-][-][info][application] $_GET = [
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'r' => 'tool/pv'
 ]
 
 $_COOKIE = [
+<<<<<<< HEAD
+    'PHPSESSID' => 'gbmc50s3svc81isf0e5n464301'
+    '_csrf' => '77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s:32:\"R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VKCd58CoAZgAABm00q4AAACZ'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=gbmc50s3svc81isf0e5n464301; _csrf=77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s%3A32%3A%22R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\Program Files\\TortoiseSVN\\bin;F:\\web\\mysql\\bin;;D:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;D:\\Java\\jdk1.7.0_71\\bin;D:\\Java\\jdk1.7.0_71\\jre\\bin;D:\\Program Files\\TortoiseGit\\bin;'
+=======
     'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
 ]
 
@@ -17208,17 +17290,33 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
     'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+=======
     'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SERVER_NAME' => 'www.weike.com'
     'SERVER_ADDR' => '127.0.0.1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '127.0.0.1'
+<<<<<<< HEAD
+    'DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'E:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52271'
+=======
     'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -17226,6 +17324,7 @@ $_SERVER = [
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
     'REMOTE_PORT' => '55530'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
@@ -17233,6 +17332,16 @@ $_SERVER = [
     'REQUEST_URI' => '/backend/web/index.php?r=tool/pv'
     'SCRIPT_NAME' => '/backend/web/index.php'
     'PHP_SELF' => '/backend/web/index.php'
+<<<<<<< HEAD
+    'REQUEST_TIME_FLOAT' => 1419812327.236
+    'REQUEST_TIME' => 1419812327
+]
+2014-12-29 00:19:42 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'backend\controllers\ToolController::actionPv(): Failed opening required '/public/src/jpgraph.php' (include_path='.;F:/xampps/htdocs')' in E:\weike\advanced\backend\controllers\ToolController.php:38
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-29 00:19:42 [127.0.0.1][-][-][info][application] $_GET = [
+=======
     'REQUEST_TIME_FLOAT' => 1419814174.555
     'REQUEST_TIME' => 1419814174
 ]
@@ -17248,10 +17357,34 @@ Stack trace:
 #0 [internal function]: yii\base\ErrorHandler->handleFatalError()
 #1 {main}
 2014-12-29 01:49:53 [127.0.0.1][-][-][info][application] $_GET = [
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'r' => 'tool/pv'
 ]
 
 $_COOKIE = [
+<<<<<<< HEAD
+    'PHPSESSID' => 'gbmc50s3svc81isf0e5n464301'
+    '_csrf' => '77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s:32:\"R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VKCeHsCoAZgAABm00r0AAACZ'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=gbmc50s3svc81isf0e5n464301; _csrf=77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s%3A32%3A%22R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\Program Files\\TortoiseSVN\\bin;F:\\web\\mysql\\bin;;D:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;D:\\Java\\jdk1.7.0_71\\bin;D:\\Java\\jdk1.7.0_71\\jre\\bin;D:\\Program Files\\TortoiseGit\\bin;'
+=======
     'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
 ]
 
@@ -17334,17 +17467,33 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
     'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+=======
     'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SERVER_NAME' => 'www.weike.com'
     'SERVER_ADDR' => '127.0.0.1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '127.0.0.1'
+<<<<<<< HEAD
+    'DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'E:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52521'
+=======
     'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -17352,6 +17501,7 @@ $_SERVER = [
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
     'REMOTE_PORT' => '55545'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
@@ -17359,6 +17509,16 @@ $_SERVER = [
     'REQUEST_URI' => '/backend/web/index.php?r=tool/pv'
     'SCRIPT_NAME' => '/backend/web/index.php'
     'PHP_SELF' => '/backend/web/index.php'
+<<<<<<< HEAD
+    'REQUEST_TIME_FLOAT' => 1419812382.959
+    'REQUEST_TIME' => 1419812382
+]
+2014-12-29 00:22:51 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'backend\controllers\ToolController::actionPv(): Failed opening required '/public/src/jpgraph.php' (include_path='.;F:/xampps/htdocs')' in E:\weike\advanced\backend\controllers\ToolController.php:38
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-29 00:22:51 [127.0.0.1][-][-][info][application] $_GET = [
+=======
     'REQUEST_TIME_FLOAT' => 1419814226.424
     'REQUEST_TIME' => 1419814226
 ]
@@ -17374,10 +17534,34 @@ Stack trace:
 #0 [internal function]: yii\base\ErrorHandler->handleFatalError()
 #1 {main}
 2014-12-29 01:51:17 [127.0.0.1][-][-][info][application] $_GET = [
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'r' => 'tool/pv'
 ]
 
 $_COOKIE = [
+<<<<<<< HEAD
+    'PHPSESSID' => 'gbmc50s3svc81isf0e5n464301'
+    '_csrf' => '77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s:32:\"R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VKCe28CoAZgAABm00uYAAACe'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=gbmc50s3svc81isf0e5n464301; _csrf=77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s%3A32%3A%22R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\Program Files\\TortoiseSVN\\bin;F:\\web\\mysql\\bin;;D:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;D:\\Java\\jdk1.7.0_71\\bin;D:\\Java\\jdk1.7.0_71\\jre\\bin;D:\\Program Files\\TortoiseGit\\bin;'
+=======
     'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
 ]
 
@@ -17460,6 +17644,96 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
     'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+=======
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+<<<<<<< HEAD
+    'DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'E:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52918'
+=======
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55554'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tool/pv'
+    'REQUEST_URI' => '/backend/web/index.php?r=tool/pv'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+<<<<<<< HEAD
+    'REQUEST_TIME_FLOAT' => 1419812571.145
+    'REQUEST_TIME' => 1419812571
+=======
+    'REQUEST_TIME_FLOAT' => 1419814333.674
+    'REQUEST_TIME' => 1419814333
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
+]
+2014-12-29 02:38:35 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:38:35 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => 'dc6a'
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
@@ -17477,14 +17751,2402 @@ $_SERVER = [
     'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
-    'REMOTE_PORT' => '55554'
+    'REMOTE_PORT' => '56080'
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
-    'QUERY_STRING' => 'r=tool/pv'
-    'REQUEST_URI' => '/backend/web/index.php?r=tool/pv'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/'
     'SCRIPT_NAME' => '/backend/web/index.php'
     'PHP_SELF' => '/backend/web/index.php'
-    'REQUEST_TIME_FLOAT' => 1419814333.674
-    'REQUEST_TIME' => 1419814333
+    'REQUEST_TIME_FLOAT' => 1419817115.044
+    'REQUEST_TIME' => 1419817115
+]
+2014-12-29 02:38:35 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:38:35 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => 'dc6a'
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56080'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/main'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/main'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817115.211
+    'REQUEST_TIME' => 1419817115
+]
+2014-12-29 02:40:37 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:40:37 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/logout'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => '85fa'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56114'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/logout'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/logout'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817237.644
+    'REQUEST_TIME' => 1419817237
+]
+2014-12-29 02:40:37 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:40:37 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => '85fa'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56114'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/index'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/index'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817237.726
+    'REQUEST_TIME' => 1419817237
+]
+2014-12-29 02:40:37 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:40:37 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56114'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/login'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/login'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817237.807
+    'REQUEST_TIME' => 1419817237
+]
+2014-12-29 02:40:54 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:40:54 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/login_pro'
+]
+
+$_POST = [
+    'username' => 'admin'
+    'password' => 'rootroot'
+    'login' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => '85fa'
+    'uid' => 1
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '39'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=index/login_pro'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/login_pro'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817254.314
+    'REQUEST_TIME' => 1419817254
+]
+2014-12-29 02:40:54 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:40:54 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => '85fa'
+    'uid' => 1
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/index.php'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817254.415
+    'REQUEST_TIME' => 1419817254
+]
+2014-12-29 02:40:54 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:40:54 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => '85fa'
+    'uid' => 1
+    'username' => 'admin'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/main'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/main'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817254.531
+    'REQUEST_TIME' => 1419817254
+]
+2014-12-29 02:40:57 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:40:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'tool/cache'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=tool/cache'
+    'REQUEST_URI' => '/backend/web/index.php?r=tool/cache'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817257.662
+    'REQUEST_TIME' => 1419817257
+]
+2014-12-29 02:40:58 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:40:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'config/quanju'
+    'tt' => '0.7726659702602774'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=config/quanju&tt=0.7726659702602774'
+    'REQUEST_URI' => '/backend/web/index.php?r=config/quanju&tt=0.7726659702602774'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817258.344
+    'REQUEST_TIME' => 1419817258
+]
+2014-12-29 02:40:59 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:40:59 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'config/integration'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=config/integration'
+    'REQUEST_URI' => '/backend/web/index.php?r=config/integration'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817259.655
+    'REQUEST_TIME' => 1419817259
+]
+2014-12-29 02:41:00 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:41:00 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'config/nav'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=config/nav'
+    'REQUEST_URI' => '/backend/web/index.php?r=config/nav'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817260.59
+    'REQUEST_TIME' => 1419817260
+]
+2014-12-29 02:41:01 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:41:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'config/currencies'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56125'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=config/currencies'
+    'REQUEST_URI' => '/backend/web/index.php?r=config/currencies'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817261.177
+    'REQUEST_TIME' => 1419817261
+]
+2014-12-29 02:48:09 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:48:09 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'config/currencies'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56185'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=config/currencies'
+    'REQUEST_URI' => '/backend/web/index.php?r=config/currencies'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817689.119
+    'REQUEST_TIME' => 1419817689
+]
+2014-12-29 02:48:10 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:48:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'config/model'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56185'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=config/model'
+    'REQUEST_URI' => '/backend/web/index.php?r=config/model'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817690.732
+    'REQUEST_TIME' => 1419817690
+]
+2014-12-29 02:48:12 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:48:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'config/quanju'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56185'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=config/quanju'
+    'REQUEST_URI' => '/backend/web/index.php?r=config/quanju'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817692.38
+    'REQUEST_TIME' => 1419817692
+]
+2014-12-29 02:48:12 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:48:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'config/model'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56185'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=config/model'
+    'REQUEST_URI' => '/backend/web/index.php?r=config/model'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817692.861
+    'REQUEST_TIME' => 1419817692
+]
+2014-12-29 02:48:13 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:48:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'config/integration'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56185'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=config/integration'
+    'REQUEST_URI' => '/backend/web/index.php?r=config/integration'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817693.357
+    'REQUEST_TIME' => 1419817693
+]
+2014-12-29 02:48:14 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:48:14 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'config/integration'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56185'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=config/integration'
+    'REQUEST_URI' => '/backend/web/index.php?r=config/integration'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817694.579
+    'REQUEST_TIME' => 1419817694
+]
+2014-12-29 02:48:15 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 02:48:15 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'config/nav'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56185'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=config/nav'
+    'REQUEST_URI' => '/backend/web/index.php?r=config/nav'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419817695.076
+    'REQUEST_TIME' => 1419817695
+]
+2014-12-29 12:05:07 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:05:06 [127.0.0.1][-][-][info][application] $_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49816'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851104.633
+    'REQUEST_TIME' => 1419851104
+]
+2014-12-29 12:05:07 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:05:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/login'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49816'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/login'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/login'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851107.639
+    'REQUEST_TIME' => 1419851107
+]
+2014-12-29 12:05:16 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:05:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/login_pro'
+]
+
+$_POST = [
+    'username' => 'admin'
+    'password' => 'rootroot'
+    'login' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '39'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49816'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=index/login_pro'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/login_pro'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851113.447
+    'REQUEST_TIME' => 1419851113
+]
+2014-12-29 12:05:17 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:05:16 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49816'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/index.php'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851116.953
+    'REQUEST_TIME' => 1419851116
+]
+2014-12-29 12:05:17 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:05:17 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49816'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/main'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/main'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851117.242
+    'REQUEST_TIME' => 1419851117
+]
+2014-12-29 12:05:28 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:05:28 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49957'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/index.php'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851128.429
+    'REQUEST_TIME' => 1419851128
+]
+2014-12-29 12:05:29 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:05:29 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '49961'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/main'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/main'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851129.373
+    'REQUEST_TIME' => 1419851129
+]
+2014-12-29 12:05:36 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:05:36 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '50012'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/index.php'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851136.59
+    'REQUEST_TIME' => 1419851136
+]
+2014-12-29 12:05:36 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:05:36 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '50017'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/main'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/main'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851136.786
+    'REQUEST_TIME' => 1419851136
+]
+2014-12-29 12:06:50 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:06:50 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '50400'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/index.php'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851210.394
+    'REQUEST_TIME' => 1419851210
+]
+2014-12-29 12:06:51 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:06:50 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '50401'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/main'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/main'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851210.649
+    'REQUEST_TIME' => 1419851210
+]
+2014-12-29 12:06:59 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:06:59 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '50457'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/index.php'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851219.334
+    'REQUEST_TIME' => 1419851219
+]
+2014-12-29 12:06:59 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:06:59 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '50458'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/main'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/main'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851219.547
+    'REQUEST_TIME' => 1419851219
+]
+2014-12-29 12:07:07 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:07:07 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '50505'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/index.php'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851227.183
+    'REQUEST_TIME' => 1419851227
+]
+2014-12-29 12:07:07 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 35281 bytes' 
+
+in D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'D:\\web\\weike\\ad...', 86, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('<<<<<<< HEAD\r\na...')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('D:\\web\\weike\\ad...', Array)
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\log\Logger.php(170): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2014-12-29 12:07:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/main'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2c0tiogiohbrvt7hkmfg08tkm1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2c0tiogiohbrvt7hkmfg08tkm1'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '50514'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index/main'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/main'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851227.476
+    'REQUEST_TIME' => 1419851227
+]
+2014-12-29 12:12:09 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'ini_set(): A session is active. You cannot change the session module's ini settings at this time' in D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php:119
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'ini_set(): A se...', 'D:\\web\\weike\\ad...', 119, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(119): ini_set('session.save_ha...', 'memcache')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(560): yii\web\Session->open()
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(621): yii\web\Session->get('__flash', Array)
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(133): yii\web\Session->updateFlashCounters()
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(560): yii\web\Session->open()
+#6 D:\web\weike\advanced\backend\controllers\IndexController.php(25): yii\web\Session->get('username')
+#7 [internal function]: backend\controllers\IndexController->actionIndex()
+#8 D:\web\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#11 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#12 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\web\weike\advanced\backend\web\index.php(19): yii\base\Application->run()
+#14 {main}
+2014-12-29 12:12:09 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52069'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419851529.266
+    'REQUEST_TIME' => 1419851529
 ]
