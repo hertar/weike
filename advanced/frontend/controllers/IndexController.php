@@ -63,7 +63,7 @@ class IndexController extends Controller
             $reg= \app\models\Region::find()->andWhere(["region_name"=>"$pro","parent_id"=>"1"])->one();
             //print_r($reg);
             $pro_id=$reg['region_id'];
-            $ad=  \app\models\Ad::find()->where(["pro"=>"$pro_id"])->all();
+            $ad=  \app\models\Ad::find()->where(["pro"=>"$pro_id"])->orderby("listorder desc")->all();
             //print_r($ad);
             $data['ad']=$ad;
             
@@ -400,4 +400,8 @@ class IndexController extends Controller
            $arr=  \app\models\Industry::find()->where(["indus_pid"=>0])->all();
            return $arr;
        }
+
+	 public function actionPlay(){
+         echo "<script>alert('支付成功');location.href='http://www.weike.com/frontend/web/index.php?r=shop/shop_list';</script>";
+     }
 }

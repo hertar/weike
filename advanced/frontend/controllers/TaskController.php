@@ -120,8 +120,10 @@ class TaskController extends Controller
         $total=$model->count();
         $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>10]);
         if(@Yii::$app->cache->get($key)){
+			echo "来自memcache";
            $data1=Yii::$app->cache->get($key);
         }else{
+			echo "来自数据库";
            $data1=$model->offset($pages->offset)->limit($pages->limit)->all();
            //print_r($data1);
           Yii::$app->cache->set($key,$data1);
