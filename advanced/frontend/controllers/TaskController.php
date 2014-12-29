@@ -119,12 +119,12 @@ class TaskController extends Controller
         //print_r($_GET);//die;
         $total=$model->count();
         $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>10]);
-        if(Yii::$app->cache->get($key)){
+        if(@Yii::$app->cache->get($key)){
            $data1=Yii::$app->cache->get($key);
         }else{
            $data1=$model->offset($pages->offset)->limit($pages->limit)->all();
-        //print_r($data1);
-        Yii::$app->cache->set($key,$data1);
+           //print_r($data1);
+          Yii::$app->cache->set($key,$data1);
         }
          
         return $this->render('task_list',['data_list'=>$data_list,'total'=>$total,'fenlei'=>$fenlei,'moshi'=>$moshi,'list'=>$data1,'pages' => $pages,'can'=>$can]);

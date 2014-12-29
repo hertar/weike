@@ -18,7 +18,9 @@ class IndexController extends Controller
 {
      //public $nav=null ;
      public $enableCsrfValidation=false;//加上这句代码,前台可以使用普通的form表单语法
-     
+     public function actionPlay(){
+         echo "<script>alert('支付成功');location.href='http://www.weike.com/frontend/web/index.php?r=shop/shop_list';</script>";
+     }
      
 
      //首页
@@ -146,7 +148,37 @@ class IndexController extends Controller
     
     //判断登陆
     public function actionLogin_pro(){
-        //print_r($_POST);die;
+        require_once '../../config.inc.php';
+        require_once '../../uc_client/client.php';
+        //通过接口判断登录帐号的正确性，返回值为数组
+        list($uid, $username, $password, $email) = uc_user_login($_POST['txt_account'], $_POST['pwd_password']);
+
+        setcookie('Example_auth', '', -86400);
+        if($uid > 0) {
+                //用户登陆成功，设置 Cookie，加密直接用 uc_authcode 函数，用户使用自己的函数
+                setcookie('Example_auth', uc_authcode($uid."\t".$username, 'ENCODE'));
+                 $session=new \yii\web\Session();
+                 $session->set('user_name',$username);
+                 $user=  \app\models\Member::find()->where(['username' => "$username"])->one();
+                 $session->set('u_id',$user['uid']);
+                 
+                  //cho $uid;die;
+                //生成同步登录的代码
+                $ucsynlogin = uc_user_synlogin($uid);
+               // echo $ucsynlogin;die;
+                echo $ucsynlogin.'<br><script>location.href="index.php?r=index/index"</script>';
+                exit;
+        } elseif($uid == -1) {
+                //$this->error('用户不存在,或者被删除');
+             echo '<script>alert("用户不存在,或者被删除");location.href="index.php?r=index/login"</script>';
+        } elseif($uid == -2) {
+               // $this->error('密码错');
+                 echo '<script>alert("密码错");location.href="index.php?r=index/login"</script>';
+        } else {
+              //  $this->error('未定义');
+                 echo '<script>alert("未定义");location.href="index.php?r=index/login"</script>';
+        }
+      /*  //print_r($_POST);die;
         $username=$_POST['txt_account'];
         $password=$_POST['pwd_password'];
       
@@ -165,18 +197,28 @@ class IndexController extends Controller
             }
         }else{
             echo "<script>alert('用户名与密码不匹配');location.href='index.php?r=index/login'</script>" ;
-        }
+        }*/
     }
     
     //退出登录
     public function actionLogout(){
+        
+        require_once '../../config.inc.php';
+        require_once '../../uc_client/client.php';
+        setcookie('Example_auth', '', -86400);
+        //生成同步退出的代码
+        $ucsynlogout = uc_user_synlogout();
         $session=new \yii\web\Session;
         $session->remove('user_name');
         $session->remove("uid");
+        echo $ucsynlogout.'<br><script>location.href="index.php"</script>';
+  //      session(null);
+        exit;
         $this->redirect("index.php?r=index/index");
     }
     
     public function actionCheck_name(){
+        
        //print_r($_GET["name"]);
        $username=$_GET["name"];   
       // print_r($username);die;
@@ -190,7 +232,27 @@ class IndexController extends Controller
     }
     //注册用户
     public function actionRegister_pro(){
-        //print_R($_POST);
+        require_once '../../config.inc.php';
+        require_once '../../uc_client/client.php';
+        $uid = uc_user_register($_POST['txt_account'], $_POST['pwd_password'], $_POST['txt_email']);
+        if($uid <= 0) {
+                if($uid == -1) {
+                        echo '用户名不合法';
+                } elseif($uid == -2) {
+                        echo '包含要允许注册的词语';
+                } elseif($uid == -3) {
+                        echo '用户名已经存在';
+                } elseif($uid == -4) {
+                        echo 'Email 格式有误';
+                } elseif($uid == -5) {
+                        echo 'Email 不允许注册';
+                } elseif($uid == -6) {
+                        echo '该 Email 已经被注册';
+                } else {
+                        echo '未定义';
+                }
+        } else {
+               //print_R($_POST);
          $arr=array('A','D','R','S','L','a','d','w','y',1,2,3,4,5,6,7,8,9);
         $str='';
         for($i=0;$i<6;$i++){
@@ -223,6 +285,8 @@ class IndexController extends Controller
                  $session->set('u_id',$user['uid']);
               $this->redirect("index.php?r=index/index");
         }
+        }
+        
     }
     
      public function actions(){

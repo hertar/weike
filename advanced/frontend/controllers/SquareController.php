@@ -23,7 +23,7 @@ class SquareController extends Controller
     public function actionSquare_list(){
         $this->layout='@app/views/layouts/public.php'; 
       
-    if($_GET['type']=='all' || empty($_GET['type'])){
+    if(empty($_GET['type']) || $_GET['type']=='all'){
         
     $model=new Query();
     $data = $model->from(['wk_witkey_service'])->where("1=1 order by service_id desc")->all();

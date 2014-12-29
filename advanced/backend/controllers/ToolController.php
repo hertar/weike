@@ -35,11 +35,11 @@ class ToolController extends Controller
     public function actionPv(){
         
         
-        require_once '/public/src/jpgraph.php';
-        require_once '/public/src/jpgraph_line.php';
-        require_once '/public/src/jpgraph_bar.php';
-        require_once ("public/src/jpgraph_pie.php");
-        require_once ("public/src/jpgraph_pie3d.php");   //引用3D饼图PiePlot3D对象所在的类文件
+        require_once '../../public/src/jpgraph.php';
+        require_once '../../public/src/jpgraph_line.php';
+        require_once '../../public/src/jpgraph_bar.php';
+        require_once ("../../public/src/jpgraph_pie.php");
+        require_once ("../../public/src/jpgraph_pie3d.php");   //引用3D饼图PiePlot3D对象所在的类文件
         $arr=  \app\models\Pv::find()->all();
         for($i=0;$i<count($arr);$i++){
             $y[]=$arr[$i]["count"];
