@@ -61,7 +61,7 @@ class IndexController extends Controller
             $reg= \app\models\Region::find()->andWhere(["region_name"=>"$pro","parent_id"=>"1"])->one();
             //print_r($reg);
             $pro_id=$reg['region_id'];
-            $ad=  \app\models\Ad::find()->where(["pro"=>"$pro_id"])->all();
+            $ad=  \app\models\Ad::find()->where(["pro"=>"$pro_id"])->orderby("listorder desc")->all();
             //print_r($ad);
             $data['ad']=$ad;
             
