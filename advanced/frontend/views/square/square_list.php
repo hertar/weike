@@ -392,6 +392,7 @@ objType:'service'
 <!--
     
 	function freeSubs(){  
+       
            if($("#username_login").html()==null){
             alert('请登录');
             location.href="index.php?r=index/login";
