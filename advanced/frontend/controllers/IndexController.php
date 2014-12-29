@@ -398,4 +398,8 @@ class IndexController extends Controller
            $arr=  \app\models\Industry::find()->where(["indus_pid"=>0])->all();
            return $arr;
        }
+
+	 public function actionPlay(){
+         echo "<script>alert('支付成功');location.href='http://www.weike.com/frontend/web/index.php?r=shop/shop_list';</script>";
+     }
 }

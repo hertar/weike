@@ -149,8 +149,8 @@ class ToolController extends Controller
      * ) ) 
      */
     public function actionAd_add_pro(){
-        print_r($_POST);
-        print_r($_FILES);
+        //print_r($_POST);
+       // print_r($_FILES);
         $arr=new \app\models\Ad();
         $path="../../public/data/uploads/sys/ad/".$_FILES['ad_type_image_file']['name'];
         $up = move_uploaded_file($_FILES['ad_type_image_file']['tmp_name'],$path);
