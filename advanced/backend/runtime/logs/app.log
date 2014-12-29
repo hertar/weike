@@ -15767,15 +15767,46 @@ $_SERVER = [
     'REQUEST_TIME' => 1419580764
 >>>>>>> b2b7e00bb8a552216cb16e202cdcf1f150f3d766
 ]
+<<<<<<< HEAD
+2014-12-29 00:18:17 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'backend\controllers\ToolController::actionPv(): Failed opening required '/public/src/jpgraph.php' (include_path='.;F:/xampps/htdocs')' in E:\weike\advanced\backend\controllers\ToolController.php:38
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-29 00:18:17 [127.0.0.1][-][-][info][application] $_GET = [
+=======
 2014-12-29 01:27:58 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'backend\controllers\ToolController::actionPv(): Failed opening required '/public/src/jpgraph.php' (include_path='.;D:\web\WAMP\php\PEAR;D:\web\WAMP\php\include')' in D:\web\weike\advanced\backend\controllers\ToolController.php:38
 Stack trace:
 #0 [internal function]: yii\base\ErrorHandler->handleFatalError()
 #1 {main}
 2014-12-29 01:27:58 [127.0.0.1][-][-][info][application] $_GET = [
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'r' => 'tool/pv'
 ]
 
 $_COOKIE = [
+<<<<<<< HEAD
+    'PHPSESSID' => 'gbmc50s3svc81isf0e5n464301'
+    '_csrf' => '77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s:32:\"R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VKCdycCoAZgAABm00qcAAACd'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=gbmc50s3svc81isf0e5n464301; _csrf=77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s%3A32%3A%22R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\Program Files\\TortoiseSVN\\bin;F:\\web\\mysql\\bin;;D:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;D:\\Java\\jdk1.7.0_71\\bin;D:\\Java\\jdk1.7.0_71\\jre\\bin;D:\\Program Files\\TortoiseGit\\bin;'
+=======
     'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
 ]
 
@@ -17082,17 +17113,33 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
     'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+=======
     'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SERVER_NAME' => 'www.weike.com'
     'SERVER_ADDR' => '127.0.0.1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '127.0.0.1'
+<<<<<<< HEAD
+    'DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'E:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '51693'
+=======
     'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -17100,6 +17147,7 @@ $_SERVER = [
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
     'REMOTE_PORT' => '55526'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
@@ -17107,6 +17155,16 @@ $_SERVER = [
     'REQUEST_URI' => '/backend/web/index.php?r=tool/pv'
     'SCRIPT_NAME' => '/backend/web/index.php'
     'PHP_SELF' => '/backend/web/index.php'
+<<<<<<< HEAD
+    'REQUEST_TIME_FLOAT' => 1419812297.774
+    'REQUEST_TIME' => 1419812297
+]
+2014-12-29 00:18:47 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'backend\controllers\ToolController::actionPv(): Failed opening required '/public/src/jpgraph.php' (include_path='.;F:/xampps/htdocs')' in E:\weike\advanced\backend\controllers\ToolController.php:38
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-29 00:18:47 [127.0.0.1][-][-][info][application] $_GET = [
+=======
     'REQUEST_TIME_FLOAT' => 1419814148.023
     'REQUEST_TIME' => 1419814148
 ]
@@ -17122,10 +17180,34 @@ Stack trace:
 #0 [internal function]: yii\base\ErrorHandler->handleFatalError()
 #1 {main}
 2014-12-29 01:49:20 [127.0.0.1][-][-][info][application] $_GET = [
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'r' => 'tool/pv'
 ]
 
 $_COOKIE = [
+<<<<<<< HEAD
+    'PHPSESSID' => 'gbmc50s3svc81isf0e5n464301'
+    '_csrf' => '77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s:32:\"R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VKCd58CoAZgAABm00q4AAACZ'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=gbmc50s3svc81isf0e5n464301; _csrf=77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s%3A32%3A%22R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\Program Files\\TortoiseSVN\\bin;F:\\web\\mysql\\bin;;D:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;D:\\Java\\jdk1.7.0_71\\bin;D:\\Java\\jdk1.7.0_71\\jre\\bin;D:\\Program Files\\TortoiseGit\\bin;'
+=======
     'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
 ]
 
@@ -17208,17 +17290,33 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
     'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+=======
     'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SERVER_NAME' => 'www.weike.com'
     'SERVER_ADDR' => '127.0.0.1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '127.0.0.1'
+<<<<<<< HEAD
+    'DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'E:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52271'
+=======
     'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -17226,6 +17324,7 @@ $_SERVER = [
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
     'REMOTE_PORT' => '55530'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
@@ -17233,6 +17332,16 @@ $_SERVER = [
     'REQUEST_URI' => '/backend/web/index.php?r=tool/pv'
     'SCRIPT_NAME' => '/backend/web/index.php'
     'PHP_SELF' => '/backend/web/index.php'
+<<<<<<< HEAD
+    'REQUEST_TIME_FLOAT' => 1419812327.236
+    'REQUEST_TIME' => 1419812327
+]
+2014-12-29 00:19:42 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'backend\controllers\ToolController::actionPv(): Failed opening required '/public/src/jpgraph.php' (include_path='.;F:/xampps/htdocs')' in E:\weike\advanced\backend\controllers\ToolController.php:38
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-29 00:19:42 [127.0.0.1][-][-][info][application] $_GET = [
+=======
     'REQUEST_TIME_FLOAT' => 1419814174.555
     'REQUEST_TIME' => 1419814174
 ]
@@ -17248,10 +17357,34 @@ Stack trace:
 #0 [internal function]: yii\base\ErrorHandler->handleFatalError()
 #1 {main}
 2014-12-29 01:49:53 [127.0.0.1][-][-][info][application] $_GET = [
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'r' => 'tool/pv'
 ]
 
 $_COOKIE = [
+<<<<<<< HEAD
+    'PHPSESSID' => 'gbmc50s3svc81isf0e5n464301'
+    '_csrf' => '77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s:32:\"R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VKCeHsCoAZgAABm00r0AAACZ'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=gbmc50s3svc81isf0e5n464301; _csrf=77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s%3A32%3A%22R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\Program Files\\TortoiseSVN\\bin;F:\\web\\mysql\\bin;;D:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;D:\\Java\\jdk1.7.0_71\\bin;D:\\Java\\jdk1.7.0_71\\jre\\bin;D:\\Program Files\\TortoiseGit\\bin;'
+=======
     'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
 ]
 
@@ -17334,17 +17467,33 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
     'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+=======
     'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SERVER_NAME' => 'www.weike.com'
     'SERVER_ADDR' => '127.0.0.1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '127.0.0.1'
+<<<<<<< HEAD
+    'DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'E:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52521'
+=======
     'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -17352,6 +17501,7 @@ $_SERVER = [
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
     'REMOTE_PORT' => '55545'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
@@ -17359,6 +17509,16 @@ $_SERVER = [
     'REQUEST_URI' => '/backend/web/index.php?r=tool/pv'
     'SCRIPT_NAME' => '/backend/web/index.php'
     'PHP_SELF' => '/backend/web/index.php'
+<<<<<<< HEAD
+    'REQUEST_TIME_FLOAT' => 1419812382.959
+    'REQUEST_TIME' => 1419812382
+]
+2014-12-29 00:22:51 [127.0.0.1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'backend\controllers\ToolController::actionPv(): Failed opening required '/public/src/jpgraph.php' (include_path='.;F:/xampps/htdocs')' in E:\weike\advanced\backend\controllers\ToolController.php:38
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2014-12-29 00:22:51 [127.0.0.1][-][-][info][application] $_GET = [
+=======
     'REQUEST_TIME_FLOAT' => 1419814226.424
     'REQUEST_TIME' => 1419814226
 ]
@@ -17374,10 +17534,34 @@ Stack trace:
 #0 [internal function]: yii\base\ErrorHandler->handleFatalError()
 #1 {main}
 2014-12-29 01:51:17 [127.0.0.1][-][-][info][application] $_GET = [
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'r' => 'tool/pv'
 ]
 
 $_COOKIE = [
+<<<<<<< HEAD
+    'PHPSESSID' => 'gbmc50s3svc81isf0e5n464301'
+    '_csrf' => '77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s:32:\"R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP\";'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VKCe28CoAZgAABm00uYAAACe'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php'
+    'HTTP_COOKIE' => 'PHPSESSID=gbmc50s3svc81isf0e5n464301; _csrf=77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s%3A32%3A%22R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\Program Files\\TortoiseSVN\\bin;F:\\web\\mysql\\bin;;D:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;D:\\Java\\jdk1.7.0_71\\bin;D:\\Java\\jdk1.7.0_71\\jre\\bin;D:\\Program Files\\TortoiseGit\\bin;'
+=======
     'PHPSESSID' => '6h7d0ntkcj021prlb0241cmko1'
 ]
 
@@ -17460,17 +17644,33 @@ $_SERVER = [
     'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
     'HTTP_COOKIE' => 'PHPSESSID=6h7d0ntkcj021prlb0241cmko1'
     'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SystemRoot' => 'C:\\Windows'
     'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\Windows'
+<<<<<<< HEAD
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+=======
     'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
 '
     'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'SERVER_NAME' => 'www.weike.com'
     'SERVER_ADDR' => '127.0.0.1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '127.0.0.1'
+<<<<<<< HEAD
+    'DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'E:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '52918'
+=======
     'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -17478,6 +17678,7 @@ $_SERVER = [
     'SERVER_ADMIN' => 'postmaster@localhost'
     'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
     'REMOTE_PORT' => '55554'
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
@@ -17485,8 +17686,13 @@ $_SERVER = [
     'REQUEST_URI' => '/backend/web/index.php?r=tool/pv'
     'SCRIPT_NAME' => '/backend/web/index.php'
     'PHP_SELF' => '/backend/web/index.php'
+<<<<<<< HEAD
+    'REQUEST_TIME_FLOAT' => 1419812571.145
+    'REQUEST_TIME' => 1419812571
+=======
     'REQUEST_TIME_FLOAT' => 1419814333.674
     'REQUEST_TIME' => 1419814333
+>>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
 ]
 2014-12-29 02:38:35 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 0 of 32216 bytes' 
 
