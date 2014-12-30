@@ -116,6 +116,7 @@ class Session extends Component implements \IteratorAggregate, \ArrayAccess, \Co
      */
     public function open()
     {
+		
         if ($this->getIsActive()) {
             return;
         }

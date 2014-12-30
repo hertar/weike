@@ -211,7 +211,7 @@ class IndexController extends Controller
         $ucsynlogout = uc_user_synlogout();
         $session=new \yii\web\Session;
         $session->remove('user_name');
-        $session->remove("uid");
+        $session->remove("u_id");
         echo $ucsynlogout.'<br><script>location.href="index.php"</script>';
   //      session(null);
         exit;
@@ -324,17 +324,41 @@ class IndexController extends Controller
         }
     }
     public function actionGet_step(){
-         $this->layout='@app/views/layouts/public.php';
-         //print_r($_POST);
-         $name=$_POST["txt_account"];
-         $arr=  \app\models\Member::find()->where(['username' => "$name"])->one();
-         $id=$arr["uid"];
-         $data["id"]=$id;
-         $data["name"]=$name;
-         return $this->render("get_step",$data);
+		 $session=new \yii\web\Session();
+		 
+		 if(isset($_POST["txt_account"])){
+			 $this->layout='@app/views/layouts/public.php';
+			 //print_r($_POST);			 
+			 $name=$_POST["txt_account"];
+			 $session->set("re_name",$name);
+			 $arr=  \app\models\Space::find()->where(['username' => "$name"])->one();
+			 $id=$arr["uid"];
+			 $data["id"]=$id;
+			 $data["name"]=$name;
+			 $arrs=array('A','b','c','D','e','f','g','h','i','j','k','R','S','L','w','y',1,2,3,4,5,6,7,8,9);
+			 $str='';
+			 for($i=0;$i<6;$i++){
+					$a=rand(0,10);
+					$str=$str.$arrs[$a];
+			 }
+			 $data["str"]=$str;
+
+			 $session->set("get_yzm",$str);
+			 $tel=$arr["mobile"];       
+			 $tar_content="尊敬的用户，".$str."是您本次的短信验证码。如不是本人操作，请忽略此信息";        
+			 $ret = file_get_contents("http://quanapi.sinaapp.com/fetion.php?u=15712847913&p=liulong5656&to=$tel&m=$tar_content"); 
+			 $retArray = json_decode($ret, true); 
+			 //print_R($retArray["message"]);
+			 if($retArray["message"]=="发送成功"){
+				return $this->render("get_step",$data);
+			 }
+		 }else{
+			$this->redirect("index.php?r=index/get_password");
+		 }
+			
     }
     
-    //发送短信
+    /*//发送短信
     public function actionSends(){
         
         $str=$_GET["str"];
@@ -345,7 +369,7 @@ class IndexController extends Controller
         $ret = file_get_contents("http://quanapi.sinaapp.com/fetion.php?u=15712847913&p=liulong5656&to=$tel&m=$tar_content"); 
         $retArray = json_decode($ret, true); 
         print_R($retArray["message"]);
-    }
+    }*/
     
     //判断验证码
     public function actionReceive(){
@@ -363,12 +387,17 @@ class IndexController extends Controller
     //重置密码
     public function actionRe_password(){
         $this->layout='@app/views/layouts/public.php';
+		$session=new \yii\web\Session();
+		if($session->get("re_name")){
         //print_r($_POST);
         $name=$_POST["user_name"];
         $uid=$_POST["user_id"];
         $data["name"]=$name;
         $data["uid"]=$uid;
         return $this->render("re_password",$data);
+		}else{
+			$this->redirect("index.php?r=index/get_password");
+		}
     }
     public function actionRe_pro(){
         //print_r($_POST);
@@ -400,9 +429,5 @@ class IndexController extends Controller
        public function actionIndus(){
            $arr=  \app\models\Industry::find()->where(["indus_pid"=>0])->all();
            return $arr;
-       }
-
-	 public function actionPlay(){
-         echo "<script>alert('支付成功');location.href='http://www.weike.com/frontend/web/index.php?r=shop/shop_list';</script>";
-     }
+       }	
 }
