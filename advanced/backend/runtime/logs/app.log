@@ -17694,3 +17694,81 @@ $_SERVER = [
     'REQUEST_TIME' => 1419814333
 >>>>>>> 61a1e4fde53afb49f3b79147db94204f49bbc459
 ]
+2014-12-29 08:04:43 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "api/shop_list".' in E:\weike\advanced\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 E:\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('api/shop_list', Array)
+#1 E:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 E:\weike\advanced\backend\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "api/shop_list".' in E:\weike\advanced\vendor\yiisoft\yii2\web\Application.php:95
+Stack trace:
+#0 E:\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 E:\weike\advanced\backend\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2014-12-29 08:04:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'api/shop_list'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'gbmc50s3svc81isf0e5n464301'
+    '_csrf' => '77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s:32:\"R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP\";'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'yzm' => '7c7b'
+    'user_name' => '123123'
+    'u_id' => 35
+    'fl' => '照片美化/编辑'
+    'ms' => '计件悬赏'
+    'sj' => '100-500'
+    'username' => 'admin'
+    'uid' => 1
+    'bulletin' => '1 and art_cat_id=\'17\' and art_title like \'%联系我们%\' order by art_id desc'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'VKELG8CoAZgAABm01osAAACL'
+    'MIBDIRS' => '../php/extras/mibs'
+    'MYSQL_HOME' => '../mysql/bin'
+    'OPENSSL_CONF' => '/conf/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '../php'
+    'PHPRC' => '../php'
+    'TMP' => '../tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:34.0) Gecko/20100101 Firefox/34.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'PHPSESSID=gbmc50s3svc81isf0e5n464301; _csrf=77d966d031584d0ad62af2e57609f23c6a0e8df31c1ba0b4df8bfbf0921c9a98s%3A32%3A%22R-69r6Vzp9kC2J1XZtlC2mME3f-qGwVP%22%3B'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\Program Files\\TortoiseSVN\\bin;F:\\web\\mysql\\bin;;D:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;D:\\Java\\jdk1.7.0_71\\bin;D:\\Java\\jdk1.7.0_71\\jre\\bin;D:\\Program Files\\TortoiseGit\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win64) OpenSSL/1.0.1j PHP/5.6.2'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'E:/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@dummy-host.localhost'
+    'SCRIPT_FILENAME' => 'E:/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '60526'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=api/shop_list'
+    'REQUEST_URI' => '/backend/web/index.php?r=api/shop_list'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419840283.395
+    'REQUEST_TIME' => 1419840283
+]
