@@ -18,8 +18,9 @@ class IndexController extends Controller
 {
      //public $nav=null ;
      public $enableCsrfValidation=false;//加上这句代码,前台可以使用普通的form表单语法
+     
      public function actionShop_order(){  
-   return $this->renderPartial("shop_order");
+         return $this->renderPartial("shop_order");
      }
      
 
