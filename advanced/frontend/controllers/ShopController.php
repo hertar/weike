@@ -18,14 +18,12 @@ use app\models\WkWitkeyService;
 use app\models\WkWitkeyComment;
 use app\models\WkWitkeyOrder;
 class ShopController extends Controller
-{
+{ public $enableCsrfValidation=false;//加上这句代码,前台可以使用普通的form表单语法 
     public function actionShop_list(){
-        $this->layout='@app/views/layouts/public.php';
-        
-        
+        $this->layout='@app/views/layouts/public.php'; 
         $indus_all=WkWitkeyIndustry::find()->where(['indus_pid' => '0'])->all();
         $model=new Query(); 
-        $data=$model->from(['wk_witkey_service','wk_witkey_industry'])->where("wk_witkey_service.indus_id=wk_witkey_industry.indus_id")->all();
+        $data=$model->from(['wk_witkey_service','wk_witkey_industry'])->where("wk_witkey_service.indus_id=wk_witkey_industry.indus_id and service_status=1")->all();
         $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>5]);
         $data=$model->offset($pages->offset)->limit($pages->limit)->all(); 
         foreach($data as $key=>$val){
@@ -44,7 +42,6 @@ class ShopController extends Controller
          $this->layout='@app/views/layouts/public.php';
       $where='1=1';
       $can=[];
-    
       if(!empty($_GET['indus_pid'])){
         
            $where.=" and wk_witkey_service.indus_pid=".$_GET['indus_pid']."  ";
@@ -172,7 +169,7 @@ class ShopController extends Controller
    }
  //生成订单
    public function actionShop_order(){
-         $this->layout='@app/views/layouts/public.php';
+        $this->layout='@app/views/layouts/public.php';
         $session=new \yii\web\Session();
         $service_id=$_GET['service_id']; 
         $where="service_id=".$service_id."";
@@ -214,5 +211,47 @@ class ShopController extends Controller
        }else{
            echo 0;   
        }
+   }
+//发布商品
+   public  function actionShop_add(){
+         $indus_all=WkWitkeyIndustry::find()->where(['indus_pid' => '0'])->all();
+         return $this->renderPartial('shop_add',['indus_all'=>$indus_all]); 
+   }
+  //分类二级
+   public function actionShop_indus(){
+         $indus_id=$_GET['indus_id'];
+         $arr=WkWitkeyIndustry::find()->where(['indus_pid' => $indus_id])->all(); 
+         $str="<option value=''>请选择子分类</option>";
+         foreach($arr as $key=>$val){
+         $str.="<option value=".$val['indus_id'].">".$val['indus_name']."</option>";        
+         }
+     echo $str;    
+   }
+   
+   public function actionShop_add_pro(){    
+       echo $_FILES['upload']['name'];
+      
+        $newpaths="../../public/data/uploads/".$_FILES['upload']['name'];
+        $newpath="data/uploads/".$_FILES['upload']['name'];
+     
+        move_uploaded_file($_FILES['upload']['tmp_name'],$newpaths);
+        return $this->renderPartial('shop_add_pro',['service'=>$_POST,'file'=>$_FILES,'newpath'=>$newpath]);       
+   }
+   
+    public function actionShop_add_pros(){ 
+        $session=new \yii\web\Session();
+        $model = new WkWitkeyService();
+        $model->username=$session->get("user_name");
+        $model->uid=$session->get("u_id");
+        $model->indus_pid=$_POST['indus_pid'];
+        $model->indus_id=$_POST['indus_id'];
+        $model->title=$_POST['txt_title'];
+          $model->content=$_POST['tar_content'];
+        $model->price=$_POST['txt_price'];
+        $model->pic=$_POST['filename'];
+        $model->service_status=0;
+        $model->on_time=time();
+        $model->insert();
+        return $this->renderPartial('shop_add_pros');       
    }
 }
