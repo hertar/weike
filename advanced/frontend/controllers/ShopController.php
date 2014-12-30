@@ -23,7 +23,7 @@ class ShopController extends Controller
         $this->layout='@app/views/layouts/public.php'; 
         $indus_all=WkWitkeyIndustry::find()->where(['indus_pid' => '0'])->all();
         $model=new Query(); 
-        $data=$model->from(['wk_witkey_service','wk_witkey_industry'])->where("wk_witkey_service.indus_id=wk_witkey_industry.indus_id")->all();
+        $data=$model->from(['wk_witkey_service','wk_witkey_industry'])->where("wk_witkey_service.indus_id=wk_witkey_industry.indus_id and service_status=1")->all();
         $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>5]);
         $data=$model->offset($pages->offset)->limit($pages->limit)->all(); 
         foreach($data as $key=>$val){
@@ -229,7 +229,7 @@ class ShopController extends Controller
    }
    
    public function actionShop_add_pro(){    
-  
+       echo $_FILES['upload']['name'];
       
         $newpaths="../../public/data/uploads/".$_FILES['upload']['name'];
         $newpath="data/uploads/".$_FILES['upload']['name'];
@@ -246,6 +246,7 @@ class ShopController extends Controller
         $model->indus_pid=$_POST['indus_pid'];
         $model->indus_id=$_POST['indus_id'];
         $model->title=$_POST['txt_title'];
+          $model->content=$_POST['tar_content'];
         $model->price=$_POST['txt_price'];
         $model->pic=$_POST['filename'];
         $model->service_status=0;

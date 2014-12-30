@@ -323,8 +323,8 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
         <input type="hidden" value="<?php echo $service['tar_content'];?>"  name="tar_content">
         <input type="hidden" value="<?php echo $service['indus_pid'];?>"  name="indus_pid">
         <input type="hidden" value="<?php echo $service['txt_price'];?>"  name="txt_price">
-        <input type="text" value="<?php echo $service['indus_id'];?>"  name="indus_id">
-        <input type="text" value="<?php echo $newpath; ?>"  name="filename">
+        <input type="hidden" value="<?php echo $service['indus_id'];?>"  name="indus_id">
+        <input type="hidden" value="<?php echo $newpath; ?>"  name="filename">
         
         <h3 class="title"><strong><span class="cc00">￥<?php echo $service['txt_price']; ?>元/个</span><span class="c333"><?php echo $service['txt_title']; ?></span></strong></h3>
             <div class="detail">
