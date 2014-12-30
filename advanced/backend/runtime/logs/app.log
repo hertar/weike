@@ -21375,3 +21375,407 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1419922059.25
     'REQUEST_TIME' => 1419922059
 ]
+2014-12-30 11:53:34 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'ini_set(): A session is active. You cannot change the session module's ini settings at this time' in D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php:192
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'ini_set(): A se...', 'D:\\web\\weike\\ad...', 192, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(192): ini_set('session.save_ha...', 'memcache')
+#2 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(130): yii\web\Session->getIsActive()
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(561): yii\web\Session->open()
+#4 D:\web\weike\advanced\backend\controllers\IndexController.php(25): yii\web\Session->get('username')
+#5 [internal function]: backend\controllers\IndexController->actionIndex()
+#6 D:\web\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#9 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#10 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 D:\web\weike\advanced\backend\web\index.php(19): yii\base\Application->run()
+#12 {main}
+2014-12-30 11:53:33 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'uekd6qepgsqh6j9b3dg4insf74'
+    'Example_auth' => '6792Xl/jbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0+jfK'
+    '_csrf' => '8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds:32:\"AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uekd6qepgsqh6j9b3dg4insf74; Example_auth=6792Xl%2FjbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0%2BjfK; _csrf=8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds%3A32%3A%22AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A%22%3B'
+    'PATH' => 'C:\\Program Files\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '65411'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419936813.519
+    'REQUEST_TIME' => 1419936813
+]
+2014-12-30 12:11:53 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message '"yii\web\Session::handler" must implement the SessionHandlerInterface.' in D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php:151
+Stack trace:
+#0 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(124): yii\web\Session->registerSessionHandler()
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(561): yii\web\Session->open()
+#2 D:\web\weike\advanced\backend\controllers\IndexController.php(25): yii\web\Session->get('username')
+#3 [internal function]: backend\controllers\IndexController->actionIndex()
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#7 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#8 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\web\weike\advanced\backend\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2014-12-30 12:11:53 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'uekd6qepgsqh6j9b3dg4insf74'
+    'Example_auth' => '6792Xl/jbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0+jfK'
+    '_csrf' => '8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds:32:\"AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uekd6qepgsqh6j9b3dg4insf74; Example_auth=6792Xl%2FjbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0%2BjfK; _csrf=8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds%3A32%3A%22AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A%22%3B'
+    'PATH' => 'C:\\Program Files\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '51534'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419937912.906
+    'REQUEST_TIME' => 1419937912
+]
+2014-12-30 12:46:57 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message '"yii\web\Session::handler" must implement the SessionHandlerInterface.' in D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php:151
+Stack trace:
+#0 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(124): yii\web\Session->registerSessionHandler()
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(571): yii\web\Session->open()
+#2 D:\web\weike\advanced\backend\controllers\IndexController.php(52): yii\web\Session->set('username', 'admin')
+#3 [internal function]: backend\controllers\IndexController->actionLogin_pro()
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login_pro', Array)
+#7 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('index/login_pro', Array)
+#8 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\web\weike\advanced\backend\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2014-12-30 12:46:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/login_pro'
+]
+
+$_POST = [
+    'username' => 'admin'
+    'password' => 'rootroot'
+    'login' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'uekd6qepgsqh6j9b3dg4insf74'
+    'Example_auth' => '6792Xl/jbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0+jfK'
+    '_csrf' => '8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds:32:\"AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '39'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://www.weike.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uekd6qepgsqh6j9b3dg4insf74; Example_auth=6792Xl%2FjbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0%2BjfK; _csrf=8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds%3A32%3A%22AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A%22%3B'
+    'PATH' => 'C:\\Program Files\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56113'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=index/login_pro'
+    'REQUEST_URI' => '/backend/web/index.php?r=index/login_pro'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419940017.243
+    'REQUEST_TIME' => 1419940017
+]
+2014-12-30 12:47:04 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message '"yii\web\Session::handler" must implement the SessionHandlerInterface.' in D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php:151
+Stack trace:
+#0 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(124): yii\web\Session->registerSessionHandler()
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(559): yii\web\Session->open()
+#2 D:\web\weike\advanced\backend\controllers\IndexController.php(25): yii\web\Session->get('username')
+#3 [internal function]: backend\controllers\IndexController->actionIndex()
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#7 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#8 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\web\weike\advanced\backend\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2014-12-30 12:47:04 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'uekd6qepgsqh6j9b3dg4insf74'
+    'Example_auth' => '6792Xl/jbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0+jfK'
+    '_csrf' => '8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds:32:\"AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uekd6qepgsqh6j9b3dg4insf74; Example_auth=6792Xl%2FjbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0%2BjfK; _csrf=8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds%3A32%3A%22AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A%22%3B'
+    'PATH' => 'C:\\Program Files\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56133'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419940024.517
+    'REQUEST_TIME' => 1419940024
+]
+2014-12-30 12:47:07 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message '"yii\web\Session::handler" must implement the SessionHandlerInterface.' in D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php:151
+Stack trace:
+#0 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(124): yii\web\Session->registerSessionHandler()
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(559): yii\web\Session->open()
+#2 D:\web\weike\advanced\backend\controllers\IndexController.php(25): yii\web\Session->get('username')
+#3 [internal function]: backend\controllers\IndexController->actionIndex()
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#7 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#8 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\web\weike\advanced\backend\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2014-12-30 12:47:07 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'uekd6qepgsqh6j9b3dg4insf74'
+    'Example_auth' => '6792Xl/jbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0+jfK'
+    '_csrf' => '8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds:32:\"AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A\";'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uekd6qepgsqh6j9b3dg4insf74; Example_auth=6792Xl%2FjbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0%2BjfK; _csrf=8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds%3A32%3A%22AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A%22%3B'
+    'PATH' => 'C:\\Program Files\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56134'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419940027.573
+    'REQUEST_TIME' => 1419940027
+]
+2014-12-30 13:05:41 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'ini_set(): A session is active. You cannot change the session module's ini settings at this time' in D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php:93
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'ini_set(): A se...', 'D:\\web\\weike\\ad...', 93, Array)
+#1 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Session.php(93): ini_set('session.save_ha...', 'memcache')
+#2 D:\web\weike\advanced\backend\views\index\index.php(103): yii\web\Session->__construct()
+#3 D:\web\weike\advanced\vendor\yiisoft\yii2\base\View.php(325): require('D:\\web\\weike\\ad...')
+#4 D:\web\weike\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('D:\\web\\weike\\ad...', Array)
+#5 D:\web\weike\advanced\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('D:\\web\\weike\\ad...', Array, Object(backend\controllers\IndexController))
+#6 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(398): yii\base\View->render('index', Array, Object(backend\controllers\IndexController))
+#7 D:\web\weike\advanced\backend\controllers\IndexController.php(26): yii\base\Controller->renderPartial('index')
+#8 [internal function]: backend\controllers\IndexController->actionIndex()
+#9 D:\web\weike\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#11 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#12 D:\web\weike\advanced\vendor\yiisoft\yii2\web\Application.php(83): yii\base\Module->runAction('', Array)
+#13 D:\web\weike\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\web\weike\advanced\backend\web\index.php(19): yii\base\Application->run()
+#15 {main}
+2014-12-30 13:05:41 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    'PHPSESSID' => 'uekd6qepgsqh6j9b3dg4insf74'
+    'Example_auth' => '6792Xl/jbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0+jfK'
+    '_csrf' => '8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds:32:\"AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A\";'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'username' => 'admin'
+    'uid' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/web/WAMP/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/web/WAMP/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'www.weike.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.65 Safari/537.36'
+    'HTTP_REFERER' => 'http://www.weike.com/backend/web/index.php?r=index/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=uekd6qepgsqh6j9b3dg4insf74; Example_auth=6792Xl%2FjbEbsPWCL1ao0uIIHFdyljLbrHtdLaEpXmCm0%2BjfK; _csrf=8fd3e3155d7ee0869c91257a1bcb39eefa6cf04c04443c3e6924575eefb3832ds%3A32%3A%22AvbdwogASZyB_yWuxYJF4tnsfo9I0i7A%22%3B'
+    'PATH' => 'C:\\Program Files\\Common Files\\NetSarang;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files\\NVIDIA Corporation\\PhysX\\Common;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;D:\\php\\Linux\\SVN客户端\\svn\\bin;%J;VA_HOME%\\bin;D:\\php\\cas\\jdk\\jre\\bin;D:\\php\\Linux\\git\\TG\\bin;D:\\php\\cas\\jdk\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at www.weike.com Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'www.weike.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/web/weike/advanced'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/web/weike/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '58533'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/backend/web/index.php'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1419941141.473
+    'REQUEST_TIME' => 1419941141
+]
