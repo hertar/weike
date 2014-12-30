@@ -6,7 +6,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
-
+use app\models\Service;
 use app\models\Shop;
 use app\models\Order;
 use yii\data\Pagination;
@@ -143,7 +143,16 @@ class StoreController extends Controller
     }
     //作品管理
     public function actionWorks(){
-        return $this->renderPartial("works");
+        $data1 = Service::find()->all();
+        $total=$data1->count();
+        echo $totle;die;
+        $pages = new Pagination(['totalCount' =>$total, 'pageSize' =>10 ]);
+        $list = $data->offset($pages->offset)->limit($pages->limit)->all();
+        print_r($list);die;
+        return $this->render('works',[
+              'list' => $list,
+              'pages' => $pages,
+        ]);
     }
     
     //作品配置
