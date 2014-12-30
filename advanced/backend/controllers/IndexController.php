@@ -48,6 +48,8 @@ class IndexController extends Controller
             //echo 12;
             //print_r($user['password']);
             if(md5($password)==$user['password']){
+				ini_set('session.save_handler','memcache');
+				ini_set('session.save_path','192.168.1.153:11211');
                  $session=new \yii\web\Session();
                  $session->set('username',$username);
                  $session->set('uid',$user['uid']);
