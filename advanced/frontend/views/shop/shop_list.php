@@ -592,7 +592,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                                 <div class="grid_4 m_h">
                                         
 <div class="mb_10">
-   	<a href="http://www.wk.com/index.php?do=shop_release" class="submit block">发布商品</a>
+   	<a href="index.php?r=shop/shop_add" class="submit block">发布商品</a>
    </div>
 <div class="box normal2">
                                         <!--任务动态-->
