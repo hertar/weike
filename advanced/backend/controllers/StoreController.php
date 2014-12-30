@@ -12,7 +12,7 @@ use app\models\Order;
 use yii\data\Pagination;
 use app\models\Control;
 use yii\db\ActiveRecord;
-
+use yii\db\Query;
 
 
 class StoreController extends Controller
@@ -143,16 +143,26 @@ class StoreController extends Controller
     }
     //作品管理
     public function actionWorks(){
-        $data1 = Service::find()->all();
-        $pages = new Pagination(['totalCount' =>$data1->count(), 'pageSize' =>10 ]);
+        $this->layout='@app/views/layouts/publics.php';
+        $data=Service::find(); 
+        $pages = new Pagination(['totalCount' =>$data->count(), 'pageSize' =>10 ]);
         $list = $data->offset($pages->offset)->limit($pages->limit)->all();
-        print_r($list);die;
         return $this->render('works',[
               'list' => $list,
               'pages' => $pages,
         ]);
     }
-    
+    //修改状态
+    public function actionUp_workstatus(){
+        $id=$_GET['id'];
+        $stu=$_GET['stu'];
+        //echo $id.$stu;
+        $user = service::findone($id);
+        $user->service_status=$stu;
+         if($user->save()) {
+            $this->redirect("?r=store/works");
+        }
+    }
     //作品配置
     public function actionWorks_config(){
         return $this->renderPartial("works_config");
