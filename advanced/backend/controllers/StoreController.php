@@ -144,9 +144,7 @@ class StoreController extends Controller
     //作品管理
     public function actionWorks(){
         $data1 = Service::find()->all();
-        $total=$data1->count();
-        echo $totle;die;
-        $pages = new Pagination(['totalCount' =>$total, 'pageSize' =>10 ]);
+        $pages = new Pagination(['totalCount' =>$data1->count(), 'pageSize' =>10 ]);
         $list = $data->offset($pages->offset)->limit($pages->limit)->all();
         print_r($list);die;
         return $this->render('works',[
