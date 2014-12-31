@@ -1,5 +1,5 @@
 <?php
-define('UC_CONNECT', 'mysql');
+/*define('UC_CONNECT', 'mysql');
 define('UC_DBHOST', '127.0.0.1');
 define('UC_DBUSER', 'root');
 define('UC_DBPW', 'root');
@@ -12,6 +12,20 @@ define('UC_API', 'http://www.discuz.com/upload/uc_server');
 define('UC_CHARSET', 'utf-8');
 define('UC_IP', '127.0.0.1');
 define('UC_APPID', '2');
+define('UC_PPP', '20');*/
+define('UC_CONNECT', 'mysql');
+define('UC_DBHOST', '192.168.1.66');
+define('UC_DBUSER', 'root');
+define('UC_DBPW', 'root');
+define('UC_DBNAME', 'bbs');
+define('UC_DBCHARSET', 'gbk');
+define('UC_DBTABLEPRE', '`bbs`.pre_ucenter_');
+define('UC_DBCONNECT', '0');
+define('UC_KEY', '123456');
+define('UC_API', 'http://www.bbs.com/discuz/upload/uc_server');
+define('UC_CHARSET', 'gbk');
+define('UC_IP', '');
+define('UC_APPID', '9');
 define('UC_PPP', '20');
 /*
 define('UC_CONNECT', 'mysql');

@@ -16,7 +16,7 @@ return [
         'class' => '\yii\caching\MemCache',
         'servers' => [
             [
-                'host' => '192.168.1.152',
+                'host' => '192.168.1.154',
                 'port' => 11211,
                 'weight' => 100,
             ],

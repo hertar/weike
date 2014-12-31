@@ -214,8 +214,11 @@ a{cursor:pointer;}
                             <li class="clear"></li>
                         </ul>
                     
-                        <!--用户登录后内容 end-->
-
+                    <!--用户登录后内容 end-->
+<!--   
+<?php
+	echo session_id();
+?>-->
 
                     </div>
                     <?php

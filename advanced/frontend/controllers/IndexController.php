@@ -16,6 +16,7 @@ use yii\filters\AccessControl;
 
 class IndexController extends Controller
 {
+	
      //public $nav=null ;
      public $enableCsrfValidation=false;//加上这句代码,前台可以使用普通的form表单语法
      public function actionPlay(){
@@ -72,6 +73,8 @@ class IndexController extends Controller
                                                                 ->limit( 4 )
                                                                 ->all();
             $data["art"]=$art;
+			
+	
             return $this->render("index",$data);
         
     }
@@ -157,6 +160,9 @@ class IndexController extends Controller
         if($uid > 0) {
                 //用户登陆成功，设置 Cookie，加密直接用 uc_authcode 函数，用户使用自己的函数
                 setcookie('Example_auth', uc_authcode($uid."\t".$username, 'ENCODE'));
+				
+				//ini_set("session.save_handler","memcache");
+				//ini_set("session.save_path","192.168.1.153:11211");
                  $session=new \yii\web\Session();
                  $session->set('user_name',$username);
                  $user=  \app\models\Member::find()->where(['username' => "$username"])->one();
