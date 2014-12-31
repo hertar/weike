@@ -28,6 +28,7 @@ LANG       = 'cn',
     CHARSET    = "utf-8";
 </script>
 <link href="/public/resource/css/reset.css" rel="stylesheet" charset="utf-8">
+
 <!--公用样式-->
 <link href="/public/resource/css/base.css" rel="stylesheet" charset="utf-8">
 <!--布局样式-->
@@ -863,3 +864,4 @@ In('header_top','custom','lavalamp','tipsy','autoIMG','slides');
 <!--[if IE 8]></div><![endif]-->
 </body>
 </html>
+<link href=" http://www.dodobook.net/demo/mouse_star/dodobook.js " >
