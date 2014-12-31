@@ -19,8 +19,9 @@ class IndexController extends Controller
 	
      //public $nav=null ;
      public $enableCsrfValidation=false;//加上这句代码,前台可以使用普通的form表单语法
-     public function actionPlay(){
-         echo "<script>alert('支付成功');location.href='http://www.weike.com/frontend/web/index.php?r=shop/shop_list';</script>";
+     
+     public function actionShop_order(){  
+         return $this->renderPartial("shop_order");
      }
      
 

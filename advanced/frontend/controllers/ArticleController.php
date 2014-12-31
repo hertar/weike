@@ -33,9 +33,7 @@ class ArticleController extends Controller
         }
         $pages = new Pagination(['totalCount'=>$model->count(),'pageSize'=>3]);
         $res=$model->offset($pages->offset)->limit($pages->limit)->all();
-        
-        $cat=  \app\models\ArticleCategory::find()->where(["art_cat_pid"=>1])->limit(10)->all();
-        
+        $cat=  \app\models\ArticleCategory::find()->where(["art_cat_pid"=>1])->limit(10)->all();       
         $data["cat"]=$cat;
         $data["res"]=$res;
         $data["pages"]=$pages;

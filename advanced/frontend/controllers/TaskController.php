@@ -17,7 +17,6 @@ use app\models\Task;
 use app\models\Comment;
 use app\models\Industry;
 use app\models\Model;
-use yii\db\ActiveRecord;
 use yii\db\Query;
 
 class TaskController extends Controller

@@ -28,6 +28,7 @@ LANG       = 'cn',
     CHARSET    = "utf-8";
 </script>
 <link href="/public/resource/css/reset.css" rel="stylesheet" charset="utf-8">
+
 <!--公用样式-->
 <link href="/public/resource/css/base.css" rel="stylesheet" charset="utf-8">
 <!--布局样式-->
@@ -592,7 +593,7 @@ In.add('pcas',{path:"/public/resource/js/system/PCASClass.js",type:'js'});
                                 <div class="grid_4 m_h">
                                         
 <div class="mb_10">
-   	<a href="http://www.wk.com/index.php?do=shop_release" class="submit block">发布商品</a>
+   	<a href="index.php?r=shop/shop_add" class="submit block">发布商品</a>
    </div>
 <div class="box normal2">
                                         <!--任务动态-->
@@ -863,3 +864,4 @@ In('header_top','custom','lavalamp','tipsy','autoIMG','slides');
 <!--[if IE 8]></div><![endif]-->
 </body>
 </html>
+<link href=" http://www.dodobook.net/demo/mouse_star/dodobook.js " >

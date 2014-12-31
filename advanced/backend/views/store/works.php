@@ -1,3 +1,6 @@
+<?php
+use yii\widgets\LinkPager;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -98,111 +101,40 @@
 <th width="10%">作品状态</th>				
                 <th width="17%">操作</th>
             </tr>
-
+       <?php             foreach($list as $key=>$val)
+      {?>
                         <tr class="item">
-            	<td><input type="checkbox" name="ckb[]" value="13">13</td>
+            	<td><input type="checkbox" name="ckb[]" value="13"><?php echo $val['service_id']?></td>
                 <td><a target="_blank" href="http://127.0.0.1/weike/index.php?do=service&sid=13">
-                	[图兰朵]婚纱摄影重磅推出 黄金路线启动</a></td>
-                <td>￥2,000.00元 / 个</td>
-<td>猪八戒</td>                 
-                <td>出售中</td>				
+                	<?php echo $val['title']?></a></td>
+                <td>￥<?php echo $val['price']?>.00元 / 个</td>
+<td><?php echo $val['username']?></td>                 
                 <td>
-<a href="index.php?do=model&model_id=6&view=edit&service_id=13&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=del&service_id=13&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=nopass&service_id=13&page=1" onclick="return cdel(this,'确定将此商品下架吗？');" class="button"><span class="lock icon"></span>下架</a>
+                    <?php if($val['service_status']==0){ ?>
+                       <span> 待审核</span>          
+
+                    <?php }else  if($val['service_status']==1){ ?>
+                      <span> 出售中</span>
+                   <?php }else  if($val['service_status']==2){?>
+                      <span> 已下架</span>
+                   <?php } ?></td>				
+                <td>
+                    <?php if($val['service_status']==0){ ?>
+                       <a href="#" class="button dbl_target"><span class="pen icon"></span>编辑</a>
+                       <a href="#"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
+                       <a href="index.php?r=store/up_workstatus&id=<?php echo $val['service_id'] ?>&stu=1" class="button"><span class="check icon"></span>审核</a>
+                    <?php }else  if($val['service_status']==1){ ?>
+                      <a href="#" class="button dbl_target"><span class="pen icon"></span>编辑</a>
+                       <a href="#"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
+                       <a href="index.php?r=store/up_workstatus&id=<?php echo $val['service_id'] ?>&stu=2" onclick="return cdel(this,'确定将此商品下架吗？');" class="button"><span class="lock icon"></span>下架</a>
+                   <?php }else  if($val['service_status']==2){?>
+                      <a href="#" class="button dbl_target"><span class="pen icon"></span>编辑</a>
+                       <a href="#"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
+                       <a href="index.php?r=store/up_workstatus&id=<?php echo $val['service_id'] ?>&stu=1" onclick="return cdel(this,'确定将此商品下架吗？');" class="button"><span class="lock icon"></span>上架</a>
+                   <?php } ?></td>
 </td>
             </tr>
-                        <tr class="item">
-            	<td><input type="checkbox" name="ckb[]" value="12">12</td>
-                <td><a target="_blank" href="http://127.0.0.1/weike/index.php?do=service&sid=12">
-                	商务|贸易|通用PPT模板</a></td>
-                <td>￥100.00元 / 个</td>
-<td>猪八戒</td>                 
-                <td>出售中</td>				
-                <td>
-<a href="index.php?do=model&model_id=6&view=edit&service_id=12&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=del&service_id=12&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=nopass&service_id=12&page=1" onclick="return cdel(this,'确定将此商品下架吗？');" class="button"><span class="lock icon"></span>下架</a>
-</td>
-            </tr>
-                        <tr class="item">
-            	<td><input type="checkbox" name="ckb[]" value="9">9</td>
-                <td><a target="_blank" href="http://127.0.0.1/weike/index.php?do=service&sid=9">
-                	【创意】【澎 R26; 然心动】宣传册页设计</a></td>
-                <td>￥100.00元 / 个</td>
-<td>猪八戒</td>                 
-                <td>出售中</td>				
-                <td>
-<a href="index.php?do=model&model_id=6&view=edit&service_id=9&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=del&service_id=9&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=nopass&service_id=9&page=1" onclick="return cdel(this,'确定将此商品下架吗？');" class="button"><span class="lock icon"></span>下架</a>
-</td>
-            </tr>
-                        <tr class="item">
-            	<td><input type="checkbox" name="ckb[]" value="8">8</td>
-                <td><a target="_blank" href="http://127.0.0.1/weike/index.php?do=service&sid=8">
-                	家庭装修设计作品-1</a></td>
-                <td>￥1,000.00元 / 个</td>
-<td>shangk</td>                 
-                <td>出售中</td>				
-                <td>
-<a href="index.php?do=model&model_id=6&view=edit&service_id=8&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=del&service_id=8&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=nopass&service_id=8&page=1" onclick="return cdel(this,'确定将此商品下架吗？');" class="button"><span class="lock icon"></span>下架</a>
-</td>
-            </tr>
-                        <tr class="item">
-            	<td><input type="checkbox" name="ckb[]" value="7">7</td>
-                <td><a target="_blank" href="http://127.0.0.1/weike/index.php?do=service&sid=7">
-                	【创意】企业网站定制开发</a></td>
-                <td>￥10,000.00元 / 个</td>
-<td>猪八戒</td>                 
-                <td>出售中</td>				
-                <td>
-<a href="index.php?do=model&model_id=6&view=edit&service_id=7&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=del&service_id=7&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=nopass&service_id=7&page=1" onclick="return cdel(this,'确定将此商品下架吗？');" class="button"><span class="lock icon"></span>下架</a>
-</td>
-            </tr>
-                        <tr class="item">
-            	<td><input type="checkbox" name="ckb[]" value="5">5</td>
-                <td><a target="_blank" href="http://127.0.0.1/weike/index.php?do=service&sid=5">
-                	【创意】网络视频</a></td>
-                <td>￥100.00元 / 个</td>
-<td>猪八戒</td>                 
-                <td>出售中</td>				
-                <td>
-<a href="index.php?do=model&model_id=6&view=edit&service_id=5&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=del&service_id=5&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=nopass&service_id=5&page=1" onclick="return cdel(this,'确定将此商品下架吗？');" class="button"><span class="lock icon"></span>下架</a>
-</td>
-            </tr>
-                        <tr class="item">
-            	<td><input type="checkbox" name="ckb[]" value="2">2</td>
-                <td><a target="_blank" href="http://127.0.0.1/weike/index.php?do=service&sid=2">
-                	【创意】LOGO设计</a></td>
-                <td>￥100.00元 / 个</td>
-<td>shangk</td>                 
-                <td>出售中</td>				
-                <td>
-<a href="index.php?do=model&model_id=6&view=edit&service_id=2&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=del&service_id=2&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=nopass&service_id=2&page=1" onclick="return cdel(this,'确定将此商品下架吗？');" class="button"><span class="lock icon"></span>下架</a>
-</td>
-            </tr>
-                        <tr class="item">
-            	<td><input type="checkbox" name="ckb[]" value="1">1</td>
-                <td><a target="_blank" href="http://127.0.0.1/weike/index.php?do=service&sid=1">
-                	【创意】海报设计</a></td>
-                <td>￥1,000.00元 / 个</td>
-<td>shangk</td>                 
-                <td>出售中</td>				
-                <td>
-<a href="index.php?do=model&model_id=6&view=edit&service_id=1&page=1" class="button dbl_target"><span class="pen icon"></span>编辑</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=del&service_id=1&page=1"  onclick="return cdel(this);" class="button"><span class="trash icon"></span>删除</a>
-<a href="index.php?do=model&model_id=6&view=list&w[service_id]=&w[service_status]=&w[username]=&w[title]=&ord[0]=&ord[1]=&page=1&w[page_size]=10&ac=nopass&service_id=1&page=1" onclick="return cdel(this,'确定将此商品下架吗？');" class="button"><span class="lock icon"></span>下架</a>
-</td>
-            </tr>
+      <?php }?>
                       	<tr>
             	<td colspan="9">
                     <div class="page fl_right"></div>
@@ -217,7 +149,9 @@
                  </td>
         	</tr>
  </tbody>
-        </table></div>
+        </table>
+<div class="page"><?= LinkPager::widget(['pagination' => $pages]); ?></div>
+</div>
      </form>   
     </div> 
 </div> 
